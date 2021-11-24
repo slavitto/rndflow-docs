@@ -1,0 +1,16 @@
+{
+  "name": "rndflow-docs",
+  "version": "1.0.0",
+  "description": "R&D Flow Documentation",
+  "main": "index.js",
+  "repository": "https://github.com/rndflow/rndflow-documentation",
+  "author": "R&D Flow",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress-vite": "^2.0.0-beta.27"
+  },
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  }
+}
