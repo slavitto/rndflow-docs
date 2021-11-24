@@ -9,6 +9,8 @@ module.exports = {
   themeConfig: {
     logo: '/images/logo.svg',
     docsRepo: 'https://github.com/rndflow/rndflow-documentation',
+    docsBranch: 'master',
+    docsDir: 'src',
     locales: {
       '/': {
         selectText: 'Языки',
