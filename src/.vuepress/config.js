@@ -1,10 +1,9 @@
 module.exports = {
   lang: 'ru-RU',
   title: 'R&D Flow',
-  description: 'Цифровая экосистема для создания и использования алгоритмов анализа данных и интеллектуальных приложений',
-  head: [
-    ['link', { rel: 'icon', href: 'favicon.svg' }]
-  ],
+  description:
+    'Цифровая экосистема для создания и использования алгоритмов анализа данных и интеллектуальных приложений',
+  head: [['link', { rel: 'icon', href: 'favicon.svg' }]],
 
   themeConfig: {
     logo: '/images/logo.svg',
@@ -20,21 +19,19 @@ module.exports = {
         navbar: [
           {
             text: 'Введение',
-            link: '/intro/'
+            link: '/intro/',
           },
           {
             text: 'Платформа',
-            link: 'https://server.rndflow.com'
-          }
+            link: 'https://server.rndflow.com',
+          },
         ],
         sidebar: {
-          '/intro/': [
-            ''
-          ]
-        }
-      }
-    }
+          '/intro/': ['', 'software', 'definitions', 'architecture'],
+        },
+      },
+    },
   },
 
-  base: '/docs/'
-}
+  base: '/docs/',
+};
