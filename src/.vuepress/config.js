@@ -2,6 +2,9 @@ module.exports = {
   lang: 'ru-RU',
   title: 'R&D Flow',
   description: 'Цифровая экосистема для создания и использования алгоритмов анализа данных и интеллектуальных приложений',
+  head: [
+    ['link', { rel: 'icon', href: 'favicon.svg' }]
+  ],
 
   themeConfig: {
     logo: '/images/logo.svg',
