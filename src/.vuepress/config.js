@@ -23,7 +23,7 @@ module.exports = {
           },
           {
             text: 'Описание',
-            link: '/desc/',
+            link: '/desc/dashboard',
           },
           {
             text: 'Платформа',
