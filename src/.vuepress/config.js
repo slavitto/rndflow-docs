@@ -27,7 +27,12 @@ module.exports = {
           },
         ],
         sidebar: {
-          '/intro/': ['', 'software', 'definitions', 'architecture'],
+          '/intro/': [
+            '/intro/',
+            '/intro/software',
+            '/intro/definitions',
+            '/intro/architecture'
+          ],
         },
       },
     },
