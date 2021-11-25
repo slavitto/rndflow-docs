@@ -37,7 +37,7 @@ module.exports = {
             '/intro/definitions',
             '/intro/architecture',
           ],
-          '/desc/': ['/desc/project'],
+          '/desc/': ['/desc/dashboard', '/desc/workspace', '/desc/project'],
         },
       },
     },
