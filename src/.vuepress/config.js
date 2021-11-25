@@ -22,6 +22,10 @@ module.exports = {
             link: '/intro/',
           },
           {
+            text: 'Описание',
+            link: '/desc/',
+          },
+          {
             text: 'Платформа',
             link: 'https://server.rndflow.com',
           },
@@ -31,8 +35,9 @@ module.exports = {
             '/intro/',
             '/intro/software',
             '/intro/definitions',
-            '/intro/architecture'
+            '/intro/architecture',
           ],
+          '/desc/': ['/desc/project'],
         },
       },
     },
