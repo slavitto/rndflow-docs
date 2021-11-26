@@ -11,10 +11,10 @@
 Включает в себя:
 
 - Панель описания
-- Вкладка [Проекты](#проекты)
-- Вкладка [Участники](#участники)
-- Вкладка [Ресурсы](#ресурсы)
-- Вкладка [Биллинг](#биллинг)
+- <span class="iconify-inline" data-icon="mdi:file-code"></span> Вкладка [Проекты](#проекты)
+- <span class="iconify-inline" data-icon="mdi:account-multiple"></span> Вкладка [Участники](#участники)
+- <span class="iconify-inline" data-icon="mdi:cogs"></span> Вкладка [Ресурсы](#ресурсы)
+- <span class="iconify-inline" data-icon="mdi:credit-card-clock"></span> Вкладка [Биллинг](#биллинг)
 
 ## Проекты
 
@@ -42,8 +42,8 @@
 
 Отображаются ресурсы
 
-- S3 серверы
-- Серверы расчетов
+- <span class="iconify-inline" data-icon="mdi:folder-network"></span> S3 серверы
+- <span class="iconify-inline" data-icon="mdi:server"></span> Серверы расчетов
 
 ![Resources](./images/workspace/resources.png)
 
@@ -61,7 +61,7 @@
 
 - Изображение
 - Название
-- Веб сайт
+- <span class="iconify-inline" data-icon="mdi:link"></span> Веб сайт
 - Описание
 - Переключатель разрешения публичного доступа (Видно всем)
 - Кнопка "РЕДАКТИРОВАТЬ"
