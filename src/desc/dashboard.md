@@ -28,22 +28,22 @@
 ## Структура плитки рабочего пространства
 
 - Изображение
-- <span class="iconify-inline" data-icon="mdi:delete"></span> Иконка удаления
+- <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление рабочего пространства
 - Название
 - Описание
-- Иконка типа прав (Владелец/Участник)
+- Тип прав (Владелец/Участник)
 
 ![Workspace](./images/dashboard/workspace.png)
 
 ## Структура плитки проекта
 
 - Изображение
-- <span class="iconify-inline" data-icon="mdi:delete"></span> Иконка удаления
+- <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление проекта
 - Название
 - Описание
-- <span class="iconify-inline" data-icon="mdi:sitemap"></span> Иконка-ссылка для перехода в редактор графа проекта (Граф)
-- <span class="iconify-inline" data-icon="mdi:shield-account"></span> Иконка-ссылка для перехода в редактор разрешений проекта (Разрешения)
-- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Иконка-ссылка для перехода в редактор API ключей проекта (API ключи)
+- <span class="iconify-inline" data-icon="mdi:sitemap"></span> Ссылка для перехода в редактор графа проекта (Граф)
+- <span class="iconify-inline" data-icon="mdi:shield-account"></span> Ссылка для перехода в редактор разрешений проекта (Разрешения)
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Ссылка для перехода в редактор API ключей проекта (API ключи)
 
 ![Project](./images/dashboard/project.png)
 

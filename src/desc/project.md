@@ -102,8 +102,10 @@
 
 <br clear="right"/>
 
-### Панель поиска
+### Панель действий
 
-Панель поиска <span class="iconify-inline" data-icon="mdi:magnify"></span> позволяет осуществлять поиск графа по его имени.
+Включает в себя:
 
-![Project find panel](./images/project/find_panel.png)
+- Панель поиска <span class="iconify-inline" data-icon="mdi:magnify"></span> позволяет осуществлять поиск графа по его имени.
+  ![Project find panel](./images/project/find_panel.png)
+- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/docs/desc/nodes.html#пакеты)
