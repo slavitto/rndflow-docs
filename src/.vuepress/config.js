@@ -3,7 +3,15 @@ module.exports = {
   title: 'R&D Flow',
   description:
     'Цифровая экосистема для создания и использования алгоритмов анализа данных и интеллектуальных приложений',
-  head: [['link', { rel: 'icon', href: 'favicon.svg' }]],
+  head: [
+    [
+      'script',
+      {
+        src: 'https://code.iconify.design/2/2.1.0/iconify.min.js',
+      },
+    ],
+    ['link', { rel: 'icon', href: 'favicon.svg' }],
+  ],
 
   themeConfig: {
     logo: '/images/logo.svg',
