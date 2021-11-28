@@ -34,6 +34,14 @@ module.exports = {
             link: '/desc/dashboard',
           },
           {
+            text: 'Разработка',
+            link: '/dev/',
+          },
+          {
+            text: 'Инструкции',
+            link: '/instructions/',
+          },
+          {
             text: 'Платформа',
             link: 'https://server.rndflow.com',
           },
@@ -50,7 +58,11 @@ module.exports = {
             '/desc/workspace',
             '/desc/project',
             '/desc/nodes',
+            '/desc/executor',
+            '/desc/s3',
           ],
+          '/dev/': ['/dev/', '/dev/docker'],
+          '/instructions/': ['/instructions/'],
         },
       },
     },
