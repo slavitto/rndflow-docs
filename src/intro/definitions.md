@@ -8,7 +8,7 @@
 
 ![Projects](./images/projects.png)
 
-[Проект-сервис](/docs/desc/project)- проект с разрешенным доступом через открытое API.
+[API ключ](/docs/desc/api_keys)- уникальный jWT идентификатор для программного доступа к проекту согласно разрешениям, которые определены в заданной ему при создании [роли](/docs/desc/project_role) проекта.
 
 ![API](/images/common/api.png)
 

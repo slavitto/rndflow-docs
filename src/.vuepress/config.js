@@ -62,6 +62,7 @@ module.exports = {
             '/desc/project_role',
             '/desc/project_user',
             '/desc/secrets',
+            '/desc/api_keys',
             '/desc/executor',
             '/desc/s3',
           ],
