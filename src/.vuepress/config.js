@@ -31,7 +31,7 @@ module.exports = {
           },
           {
             text: 'Описание',
-            link: '/desc/dashboard',
+            link: '/desc/',
           },
           {
             text: 'Разработка',
@@ -54,10 +54,13 @@ module.exports = {
             '/intro/architecture',
           ],
           '/desc/': [
+            '/desc/',
             '/desc/dashboard',
             '/desc/workspace',
             '/desc/project',
             '/desc/nodes',
+            '/desc/project_role',
+            '/desc/project_user',
             '/desc/executor',
             '/desc/s3',
           ],
