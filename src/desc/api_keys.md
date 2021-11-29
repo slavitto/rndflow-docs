@@ -67,7 +67,7 @@
 
 После того, как владелец проекта [одобрит запрос](#подтверждение-запроса-ключа), будет получено электронное информационное письмо.
 
-![API request](/images/common/api_request_confirmed_letter.png)
+![API confirmation letter](/images/common/api_request_confirmed_letter.png)
 
 Плитка API ключа примет следующий вид:
 
@@ -79,7 +79,7 @@
 
 ![API request letter](/images/common/api_request_letter.png)
 
-Владельцу необходимо перейти в соответствующий проект в раздел <span class="iconify-inline" data-icon="mdi:shield-key"></span>**API ключи** и в секции **Запросы** нажать на кнопку подтверждения запроса.
+Владельцу необходимо перейти в соответствующий проект в раздел <span class="iconify-inline" data-icon="mdi:shield-key"></span>**API ключи** и в секции **Запросы** нажать на кнопку <span class="iconify-inline" data-icon="mdi:check" style="color: green"></span> подтверждения запроса.
 
 ![API request confirmation](/images/common/api_confirmation.png)
 
