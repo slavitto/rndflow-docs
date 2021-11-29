@@ -10,15 +10,15 @@
 
 - [Граф](#граф) - реализующий конкретный алгоритм в составе
   - [Узлы](nodes) и [группы](nodes.html#группа)
-  - Пакеты
-  - Задачи
+  - [Пакеты](./nodes.html#пакеты)
+  - [Задания](./nodes.html#задания)
 - [Секреты](./secrets) - набор секретов для использовании в узлах при их исполнении
-- [Интерфейсы](TODO) - графические интерфейсы управления графом
+- [Интерфейсы](./interface) - графические интерфейсы управления графом
 - [Разрешения](#разрешения) - набор прав доступа
 - [API-ключи](./api_keys) - набор API для внешнего доступа к проекту
 - [Слои данных](/docs/intro/definitions#datalayer)
-- [S3 сервер](/docs/desc/s3) - подключенное к проекту S3 хранилище
-- [Cервер расчетов](/docs/desc/executor) - подключенный к проекту основной сервер расчетов
+- [S3 сервер](./s3) - подключенное к проекту S3 хранилище
+- [Cервер расчетов](./executor) - подключенный к проекту основной сервер расчетов
 
 ## Панель управления проектом
 
@@ -31,21 +31,22 @@
 - Изображение проекта с возможностью редактирования <span class="iconify-inline" data-icon="mdi:pencil"></span> и удаления <span class="iconify-inline" data-icon="mdi:delete"></span>.
 - Название проекта
 - <span class="iconify-inline" data-icon="mdi:notebook"></span> Название родительского рабочего окружения
-- <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемго S3 сервера
+- <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемго [S3 сервера](./s3)
 
 ---
 
 - <span class="iconify-inline" data-icon="mdi:information"></span> Описание проекта и список доступных для внешнего запроса ролей и API ключей (О проекте)
-- <span class="iconify-inline" data-icon="mdi:sitemap"></span> Дизайнер графа проекта (Граф)
-- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> Редактор графических интерфейсов проекта (Интерфейсы)
-- <span class="iconify-inline" data-icon="mdi:eye-off"></span> Редактор секретов проекта (Секреты)
-- <span class="iconify-inline" data-icon="mdi:shield-account"></span> Редактор разрешений проекта (Разрешения)
-- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Редактор API ключей проекта (API ключи)
+- Опциональный список ссылок на [интерфейсы](./interface) проекта
+- <span class="iconify-inline" data-icon="mdi:sitemap"></span> Дизайнер графа проекта ([Граф](#граф))
+- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> Редактор интерфейсов проекта ([Интерфейсы](./interface))
+- <span class="iconify-inline" data-icon="mdi:eye-off"></span> Редактор секретов проекта ([Секреты](./secrets))
+- <span class="iconify-inline" data-icon="mdi:shield-account"></span> Редактор разрешений проекта ( [Разрешения](#разрешения))
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Редактор API ключей проекта ([API-ключи](./api_keys) ключи)
 
 ---
 
 - <span class="iconify-inline" data-icon="mdi:power"></span> Статус проекта (Проект включен/выключен) - разрешает или запрещает проекту информировать сервер расчетов о новых задачах.
-- <span class="iconify-inline" data-icon="mdi:server"></span> Основной сервер расчетов (Сервер расчетов) - отображает выбранный основной сервер расчтетов для проекта и его статус (активен - зеленый, красный - отключен) и описание.
+- <span class="iconify-inline" data-icon="mdi:server"></span> Основной сервер расчетов (Cервер расчетов](./executor)) - отображает выбранный основной сервер расчтетов для проекта и его статус (активен - зеленый, красный - отключен) и описание.
 
 ---
 
