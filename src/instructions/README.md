@@ -75,3 +75,9 @@
 - В рабочем пространстве будет создан новый проект.
 
 ![New project created](/images/common/project_created.png)
+
+## Выход из платформы
+
+Открыть панель ссылок в верхнем правом углу экрана и нажать на кнопку <span class="iconify-inline" data-icon="mdi:logout"></span>.
+
+![Exit](/images/common/link_panel.png)

@@ -61,6 +61,7 @@ module.exports = {
             '/desc/nodes',
             '/desc/project_role',
             '/desc/project_user',
+            '/desc/secrets',
             '/desc/executor',
             '/desc/s3',
           ],
