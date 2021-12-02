@@ -16,41 +16,13 @@
 
 ![Graph](/images/common/graph.png)
 
-[Связь](#link) (Link) - соединение обеспечивающее перемещение пакетов от узла источника к узлу назначения.
+[Связь](/docs/desc/links.md) (Link) - соединение, обеспечивающее перемещение пакетов от узла источника к узлу назначения.
 
-Типы связей между узлами:
-
-- Активная (Push) - пакеты между соединяемыми узлами немедленно продвигаются от узла источника к узлу назначения.
-
-  ![Push link](/images/common/link_push.png)
-
-- Пассивная (Pull)- последний пакет из узла источника запрашивается при каждом новом запуске задания в узле назначения.
-
-  ![Pull link](/images/common/link_pull.png)
-
-- Вход группы (Group input) - связь соединящая вход группы с узлом.
-
-  ![Group input link](/images/common/link_group_input.png)
-
-- Выход группы (Group output) - связь соединящая выход группы с узлом.
-
-  ![Group output link](/images/common/link_group_output.png)
+![Push link](/images/common/link_push.png)
 
 [Узел](/docs/desc/nodes.md) (Node) - отдельный блок графа, представляющий собой этап (операцию) реализуемого алгоритма.
 
-Типы узлов:
-
-- Расчетный узел (Compute) - набор исполняемых программ (скриптов) и их параметров, реализующих заданную пользователем обработку входных пакетов данных.
-
-  ![Compute node](/images/common/node_compute.png)
-
-- Узел данных (Data)- FIFO очередь.
-
-  ![Data node](/images/common/node_data.png)
-
-- SQL узел (Query)- SQL скрипт, реализующий обработку вошедших в него пакетов данных. В отличии от расчетного узла позволяет оперировать данными всех вошедших в него пакетов.
-
-  ![Query node](/images/common/node_query.png)
+![Compute node](/images/common/node_compute.png)
 
 [Группа](/docs/desc/nodes.md#группа) (Group) - совокупность узлов.
 

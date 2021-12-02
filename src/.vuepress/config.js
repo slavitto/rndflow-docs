@@ -59,6 +59,7 @@ module.exports = {
             '/desc/workspace',
             '/desc/project',
             '/desc/nodes',
+            '/desc/links',
             '/desc/project_role',
             '/desc/project_user',
             '/desc/secrets',
