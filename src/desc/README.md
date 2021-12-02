@@ -17,7 +17,7 @@
 
 Структура:
 
-- Ссылка на [панель управления](./dashboard) пользователя
+- Ссылка на [панель управления](./dashboard.html) пользователя
 - <span class="iconify-inline" data-icon="mdi:logout"></span> Кнопка выхода из платформы
 - Ссылка на документацию [API](/docs/dev/README.md/#API)
 
