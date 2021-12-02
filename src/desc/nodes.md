@@ -6,13 +6,13 @@
 
 ### Расчетный узел
 
-<span class="iconify-inline" data-icon="mdi:kubernetes"></span> **Расчетный узел** (Compute) - набор исполняемых программ (скриптов) и их параметров, реализующих заданную пользователем функциональность.
+<span class="iconify-inline" data-icon="mdi:kubernetes"></span> **Расчетный узел** (Compute) - набор исполняемых программ ([скриптов](/docs/dev/#код-расчетного-узла)) и их параметров, реализующих заданную пользователем функциональность.
 
 ![Compute node](/images/common/node_compute.png)
 
 Состав узла:
 
-- <span class="iconify" data-icon="akar-icons:circle-fill" style="color: green; font-size: 10px;"></span> Вход
+- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 10px;"></span> Вход
 - Заголовок
   - <span class="iconify-inline" data-icon="mdi:kubernetes"></span> Иконка типа узла
   - Название узла: _compute_
@@ -28,11 +28,11 @@
 
 - <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Переключатель активности узла
 - Описания узла: _Compute node description_
-- <span class="iconify" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"></span> Одного или несколько выходов
+- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"></span> Одного или несколько выходов
 
 ### SQL узел
 
-<span class="iconify-inline" data-icon="mdi:database"></span> **SQL узел** (Query)- SQL скрипт, реализующий обработку вошедших в него пакетов данных. В отличии от расчетного узла позволяет оперировать данными всех вошедших в него пакетов.
+<span class="iconify-inline" data-icon="mdi:database"></span> **SQL узел** (Query)- [SQL запрос](/docs/dev/#запрос-sql-узла), реализующий выборку и обработку вошедших в него пакетов данных. В отличии от расчетного узла позволяет оперировать данными всех вошедших в него пакетов.
 
 ![Query node](/images/common/node_query.png)
 
