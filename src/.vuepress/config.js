@@ -68,7 +68,7 @@ module.exports = {
             '/desc/executor',
             '/desc/s3',
           ],
-          '/dev/': ['/dev/', '/dev/docker'],
+          '/dev/': ['/dev/', '/dev/compute', '/dev/sql', '/dev/docker'],
           '/instructions/': ['/instructions/'],
         },
       },
