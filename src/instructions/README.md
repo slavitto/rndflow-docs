@@ -31,14 +31,14 @@
 
 ## Переход в рабочее пространство
 
-Перейти в [панель управления](/docs/desc/dashboard.html):
+Перейти в [панель управления](/docs/desc/dashboard.md):
 
 - Открыть панель ссылок **1**
 - Нажать на изображение аватара пользователя **2**.
 
   ![Link panel](/images/common/user_link_panel.png)
 
-- Нажать на [плитку](/docs/desc/dashboard.html#структура-плитки-рабочего-пространства) [рабочего пространства](/docs/desc/workspace.html) **1**.
+- Нажать на [плитку](/docs/desc/dashboard.md#структура-плитки-рабочего-пространства) [рабочего пространства](/docs/desc/workspace.md) **1**.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
   Для нового пользователя автоматически создается [рабочее пространство](/docs/desc/workspace) **1**.
@@ -48,7 +48,7 @@
 
 ## Создание нового проекта
 
-- [Перейти](/docs/instructions/#переход-в-рабочее-пространство) в [рабочее пространство](/docs/desc/workspace.html)
+- [Перейти](/docs/instructions/#переход-в-рабочее-пространство) в [рабочее пространство](/docs/desc/workspace.md)
 
 ![Projects](/images/common/dashboard_user_workspace_projects_clear.png)
 
@@ -56,9 +56,9 @@
 
 ![Resources](/images/common/dashboard_user_workspace_resources_new.png)
 
-- Добавить [S3 хранилище](/docs/desc/s3.html)
+- Добавить [S3 хранилище](/docs/desc/s3.md)
 
-- Добавить [cервер расчетов](/docs/desc/executor.html)
+- Добавить [cервер расчетов](/docs/desc/executor.md)
 
 - Убедиться в наличии ресурсов
 

@@ -9,16 +9,16 @@
 Состав проекта:
 
 - [Граф](#граф) - реализующий конкретный алгоритм в составе
-  - [Узлы](./nodes.html) и [группы](nodes.html#группа)
-  - [Пакеты](./nodes.html#пакеты)
-  - [Задания](./nodes.html#задания)
-- [Секреты](./secrets.html) - набор секретов для использовании в узлах при их исполнении
-- [Интерфейсы](./interface.html) - графические интерфейсы управления графом
+  - [Узлы](./nodes.md) и [группы](./nodes.md#группа)
+  - [Пакеты](./nodes.md#пакеты)
+  - [Задания](./nodes.md#задания)
+- [Секреты](./secrets.md) - набор секретов для использовании в узлах при их исполнении
+- [Интерфейсы](./interface.md) - графические интерфейсы управления графом
 - [Разрешения](#разрешения) - набор прав доступа
-- [API-ключи](./api_keys.html) - набор API для внешнего доступа к проекту
-- [Слои данных](/docs/intro/definitions#datalayer)
-- [S3 сервер](./s3.html) - подключенное к проекту S3 хранилище
-- [Cервер расчетов](./executor.html) - подключенный к проекту основной сервер расчетов
+- [API-ключи](./api_keys.md) - набор API для внешнего доступа к проекту
+- [Слои данных](/docs/intro/definitions.md#datalayer)
+- [S3 сервер](./s3.md) - подключенное к проекту S3 хранилище
+- [Cервер расчетов](./executor.md) - подключенный к проекту основной сервер расчетов
 
 ## Панель управления проектом
 
@@ -31,22 +31,22 @@
 - Изображение проекта с возможностью редактирования <span class="iconify-inline" data-icon="mdi:pencil"></span> и удаления <span class="iconify-inline" data-icon="mdi:delete"></span>.
 - Название проекта
 - <span class="iconify-inline" data-icon="mdi:notebook"></span> Название родительского рабочего окружения
-- <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемго [S3 сервера](./s3.html)
+- <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемго [S3 сервера](./s3.md)
 
 ---
 
 - <span class="iconify-inline" data-icon="mdi:information"></span> Описание проекта и список доступных для внешнего запроса ролей и API ключей (О проекте)
-- Опциональный список ссылок на [интерфейсы](./interface.html) проекта
+- Опциональный список ссылок на [интерфейсы](./interface.md) проекта
 - <span class="iconify-inline" data-icon="mdi:sitemap"></span> Дизайнер графа проекта ([Граф](#граф))
-- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> Редактор интерфейсов проекта ([Интерфейсы](./interface.html))
-- <span class="iconify-inline" data-icon="mdi:eye-off"></span> Редактор секретов проекта ([Секреты](./secrets.html))
+- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> Редактор интерфейсов проекта ([Интерфейсы](./interface.md))
+- <span class="iconify-inline" data-icon="mdi:eye-off"></span> Редактор секретов проекта ([Секреты](./secrets.md))
 - <span class="iconify-inline" data-icon="mdi:shield-account"></span> Редактор разрешений проекта ( [Разрешения](#разрешения))
-- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Редактор API ключей проекта ([API-ключи](./api_keys.html) ключи)
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Редактор API ключей проекта ([API-ключи](./api_keys.md) ключи)
 
 ---
 
 - <span class="iconify-inline" data-icon="mdi:power"></span> Статус проекта (Проект включен/выключен) - разрешает или запрещает проекту информировать сервер расчетов о новых задачах.
-- <span class="iconify-inline" data-icon="mdi:server"></span> Основной сервер расчетов (Cервер расчетов](./executor.html)) - отображает выбранный основной сервер расчтетов для проекта и его статус (активен - зеленый, красный - отключен) и описание.
+- <span class="iconify-inline" data-icon="mdi:server"></span> Основной сервер расчетов (Cервер расчетов](./executor.md)) - отображает выбранный основной сервер расчтетов для проекта и его статус (активен - зеленый, красный - отключен) и описание.
 
 ---
 
@@ -109,7 +109,7 @@
 
 - Панель поиска <span class="iconify-inline" data-icon="mdi:magnify"></span> позволяет осуществлять поиск графа по его имени.
   ![Project find panel](./images/project/find_panel.png)
-- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/docs/desc/nodes.html#пакеты)
+- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/docs/desc/nodes.md#пакеты)
 
 ## Разрешения
 
@@ -120,12 +120,12 @@
 
 ### Роли проекта
 
-Вкладка **РОЛИ** - yправление [ролями проекта](/docs/desc/project_role.html)
+Вкладка **РОЛИ** - yправление [ролями проекта](/docs/desc/project_role.md)
 
 ![Project roles](/images/common/permissions_roles.png)
 
 ### Пользователи проекта
 
-Вкладка **ПОЛЬЗОВАТЕЛИ** - управление [пользователями](/docs/desc/project_user.html)
+Вкладка **ПОЛЬЗОВАТЕЛИ** - управление [пользователями](/docs/desc/project_user.md)
 
 ![Project users](/images/common/permissions_users.png)
