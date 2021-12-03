@@ -210,7 +210,7 @@ Cтруктура:
 
 В узле в соответствующей вкладке **Пакеты** отображается список пакетов узла:
 
-![Node package](/images/common/node_panel_package.png)
+![Node package](/images/common/node_panel_packages.png)
 
 Структура:
 
