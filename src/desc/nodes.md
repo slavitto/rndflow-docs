@@ -121,7 +121,9 @@
 
 <span class="iconify-inline" data-icon="mdi:tune"></span> **Параметры узла** (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
 
-![Node params](/images/common/node_params.png)
+![Node params](/images/common/node_panel_params.png)
+
+Подробное [описание](./node_params.md).
 
 ### Контейнер
 

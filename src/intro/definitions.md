@@ -30,7 +30,7 @@
 
 [Параметры узла](/docs/desc/nodes.md#параметры-узла) (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
 
-![Node params](/images/common/node_params.png)
+![Node params](/images/common/node_panel_params.png)
 
 [Спецификация узла](/docs/desc/nodes.md#спецификация) - опциональное описание состава входных и выходных пакетов узла.
 
