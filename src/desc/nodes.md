@@ -208,6 +208,30 @@ Cтруктура:
 
 **Пакет** (Package) - набор данных, поступающих на обработку на соответствующий узел.
 
+В узле в соответствующей вкладке **Пакеты** отображается список пакетов узла:
+
+![Node package](/images/common/node_panel_package.png)
+
+Структура:
+
+- Панель инструментов
+  - <span class="iconify-inline" data-icon="mdi:package-up"></span> Загрузки/создания пакета
+  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Обработать пакет в узле
+    > Создать новое задание для обработки в текущем узле с выбранным входным пакетом.
+  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Обработка пакета в интерактивном режиме
+  - <span class="iconify-inline" data-icon="mdi:pin"></span>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Выбор/Отмена выбора установки мастер пакета слоя данных
+  - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновление списка пакетов
+  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных пакетов
+- Таблица с списком пакетов
+  - Столбцы таблицы
+    - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора пакета
+    - Id - идентификатор пакета
+    - Метка - имя пакета
+    - Создано - время создания пакета
+    - Владелец - пользователь создавший пакет
+
+Для открытия окна конкретного пакета необходимо щелкнуть по его идентификатору в столбце **Id**.
+
 Структура пакета:
 
 - Метка - имя пакета
@@ -237,30 +261,6 @@ Cтруктура:
 ![Package](/images/common/package.png)
 
 **Мастер пакет** (Master package) - выбранный пользователем корневой пакет слоя данных. Выбор такого пакета позволяет отображать в слое данных только родительские и дочерние пакеты мастер пакета.
-
-В узле в соответствующей вкладке **Пакеты** отображается список пакетов узла:
-
-![Node package](/images/common/node_panel_package.png)
-
-Структура:
-
-- Панель инструментов
-  - <span class="iconify-inline" data-icon="mdi:package-up"></span> Загрузки/создания пакета
-  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Обработать пакет в узле
-    > Создать новое задание для обработки в текущем узле с выбранным входным пакетом.
-  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Обработка пакета в интерактивном режиме
-  - <span class="iconify-inline" data-icon="mdi:pin"></span>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Выбор/Отмена выбора установки мастер пакета слоя данных
-  - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновление списка пакетов
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных пакетов
-- Таблица с списком пакетов
-  - Столбцы таблицы
-    - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора пакета
-    - Id - идентификатор пакета
-    - Метка - имя пакета
-    - Создано - время создания пакета
-    - Владелец - пользователь создавший пакет
-
-Для открытия окна конкретного пакета необходимо щелкнуть по его идентификатору в столбце **Id**.
 
 ### Запрос
 
@@ -339,6 +339,14 @@ Cтруктура:
     - Состояние - текущее состояние выполнения задания
 
 Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
+
+Состояние задания:
+
+- <span class="iconify-inline" data-icon="mdi:circle-outline" style="color: grey"></span> - Создано
+- <span class="iconify-inline" data-icon="mdi:progress-download" style="color: yellow"></span> - На сервере расчетов
+- <span class="iconify-inline" data-icon="mdi:progress-clock" style="color: orange"></span> - В очереди на исполнение
+- <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Стартовало
+- <span class="iconify-inline" data-icon="mdi:check-circle" style="color: green"></span> - Обработано
 
 ## Группа
 

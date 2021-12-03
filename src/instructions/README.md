@@ -23,7 +23,7 @@
 
 - Перейти по указанной в письме ссылке.
 
-  Регистрация подтверждена - [Перейти](#переход-в-рабочее-пространство) в [рабочее пространство](/docs/desc/workspace.md)!
+  Регистрация подтверждена - [Перейти][2] в [рабочее пространство][3]!
 
   ![Registration confirmed](/images/common/registration_confirmed.png)
 
@@ -40,10 +40,10 @@
 
   ![Link panel](/images/common/user_link_panel.png)
 
-- Нажать на [плитку](/docs/desc/dashboard.md#структура-плитки-рабочего-пространства) [рабочего пространства](/docs/desc/workspace.md) **1**.
+- Нажать на [плитку](/docs/desc/dashboard.md#структура-плитки-рабочего-пространства) [рабочего пространства][3] **1**.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-  Для нового пользователя автоматически создается [рабочее пространство](/docs/desc/workspace) **1**.
+  Для нового пользователя автоматически создается [рабочее пространство][3] **1**.
   :::
 
   ![New user dashboard](/images/common/dashboard_user_new.png)
@@ -52,7 +52,7 @@
 
 ### Создание нового проекта
 
-- [Перейти](#переход-в-рабочее-пространство) в [рабочее пространство](/docs/desc/workspace.md)
+- [Перейти][2] в [рабочее пространство][3]
 
 ![Projects](/images/common/dashboard_user_workspace_projects_clear.png)
 
@@ -82,7 +82,7 @@
 
 ### Открытие проекта
 
-- [Перейти](#переход-в-рабочее-пространство) в [рабочее пространство](/docs/desc/workspace.md)
+- [Перейти][2] в [рабочее пространство][3]
 
 - На вкладке <span class="iconify-inline" data-icon="mdi:file-code"></span>**ПРОЕКТЫ** нажать на плитку проекта.
 
@@ -94,7 +94,7 @@
 
 ### Создание расчетного узла
 
-- Открыть [панель создания узлов](/docs/desc/project.md#панель-создания-узлов).
+- Открыть [панель создания узлов][1].
 - Щелкнуть по иконке <span class="iconify-inline" data-icon="mdi:kubernetes"></span> [расчетного узла](/docs/desc/nodes.md#расчетныи-узел).
 - Разместить в необходимом месте экрана и соединить с необходимыми узлами.
 - Переименовать узел и добавить описание
@@ -105,7 +105,7 @@
   - Нажать кнопку **СОХРАНИТЬ**.
 - Создать исполнительный скрипт узла
 
-  - Перейти в панель [Файлы](/docs/desc/nodes.md#файлы) щелкнув по иконке <span class="iconify-inline" data-icon="mdi:file-code"></span> на узле.
+  - Перейти в панель [Файлы][4] щелкнув по иконке <span class="iconify-inline" data-icon="mdi:file-code"></span> на узле.
   - Добавить новый файл нажав на кнопку <span class="iconify-inline" data-icon="mdi:file-plus"></span> и дать уникальное для этого узла название. Название требуется вводить с расширением файла (например, **run.py** ).
   - Щелчком по строке с файлом открыть редактор файла и набрать необходимый [код](/docs/dev/compute.md#код-расчетного-узла).
   - Нажать кнопку **СОХРАНИТЬ**
@@ -115,17 +115,17 @@
 
   - Перейти в панель [Контейнер](/docs/desc/nodes.md#контейнер) щелкнув по иконке <span class="iconify-inline" data-icon="mdi:kubernetes"></span> на узле.
   - В поле **Докер образ** ввести имя используемого докер образа. Можно использовать как [стандартные образы платформы](/docs/dev/docker.md#стандартные-докер-образы) (например, **rndflow/job.py**), так и [создать собственный докер образ](/docs/dev/docker.md#создание-докер-образа).
-  - В поле редактора ниже указать скрипт, который должен быть запущен после запуска контейнера. Требуется указать команду запуска файла, который был добавлен в панели <span class="iconify-inline" data-icon="mdi:file-code"></span>[Файлы](/docs/desc/nodes.md#файлы).
+  - В поле редактора ниже указать скрипт, который должен быть запущен после запуска контейнера. Требуется указать команду запуска файла, который был добавлен в панели <span class="iconify-inline" data-icon="mdi:file-code"></span>[Файлы][4].
 
 ### Создание узла данных
 
-- Открыть [панель создания узлов](/docs/desc/project.md#панель-создания-узлов).
+- Открыть [панель создания узлов][1].
 - Щелкнуть по иконке <span class="iconify-inline" data-icon="mdi:download-circle"></span> [узла данных](/docs/desc/nodes.md#узел-данных).
 - Разместить в необходимом месте экрана и соединить с необходимыми узлами.
 
 ### Создание SQL узла
 
-- Открыть [панель создания узлов](/docs/desc/project.md#панель-создания-узлов).
+- Открыть [панель создания узлов][1].
 - Щелкнуть по иконке <span class="iconify-inline" data-icon="mdi:database"></span> [SQL узла](/docs/desc/nodes.md#sql-узел).
 - Разместить в необходимом месте экрана и соединить с необходимыми узлами.
 - Создать SQL запрос
@@ -140,8 +140,71 @@
 
 - Отпустить кнопку мыши после выделения второго узла (появление красной рамки вокруг второго узла)
 
+### Выполнение узла
+
+Смотрите [обработка пакета](#обработка-пакета).
+
+## Пакеты
+
+### Обработка пакета
+
+- Открыть панель <span class="iconify-inline" data-icon="mdi:package"></span>[Пакеты][5] узла
+- Выбрать необходимый пакет установив напротив него переключатель в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span> **1**.
+- Нажать кнопку **2** <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> на панели инструментов.
+
+  ![Run package](/images/common/node_panel_packages_execute.png)
+
+- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][6] узла, в котором должно появиться новое задание. Может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий.
+
+### Интерактивная обработка пакета
+
+**Запуск**
+
+- Открыть панель <span class="iconify-inline" data-icon="mdi:kubernetes"></span>[Контейнер][8] узла и в параметре **Память** установить не менее 256М.
+- Открыть панель <span class="iconify-inline" data-icon="mdi:package"></span>[Пакеты][5] узла
+- Выбрать необходимый пакет установив напротив него переключатель в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span> **1**.
+- Нажать кнопку **2** <span class="iconify-inline" data-icon="mdi:motion-play"></span> на панели инструментов.
+
+  ![Run package](/images/common/node_panel_packages_execute_jupyter.png)
+
+- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания][6] узла, в котором должно появиться новое задание. Может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий.
+
+- Когда **Состояние** задания станет вида <span class="iconify-inline" data-icon="mdi:motion-play" style="color: green"></span>, щелкнуть по иконке состояния <span class="iconify-inline" data-icon="mdi:motion-play" style="color: green"></span>.
+
+- В браузере будет открыта новая вкладка с [панелью Jupyter][7].
+
+  ![Jupyter](/images/common/jupyter_panel.png)
+
+- После щелчка по скрипту узла в браузере будет открыта новая вкладка с Jupyter редактора с скриптом узла с возможностью интерактивного редактирования и выполнения.
+
+  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+  Стандартные образы контейнеров RnDFlow включают в себя библиотеку [Jupytext](https://jupytext.readthedocs.io/en/latest/), которая позволяет работать с обычными скриптами в Jupyter Notebook. При открытии такого файла он будет автоматически разбиваться на блоки (пустая строка определяет начало блока), можно задавать блоки самостоятельно с помощью комментариев вида: #+ и #- .  
+  :::
+
+  ![Jupyter edit](/images/common/jupyter_panel_edit.png)
+
+**Остановка**
+
+- Сохранить все изменения в вкладке Jupyter редактора с скриптом узла нажав на кнопку сохранения <span class="iconify-inline" data-icon="carbon:save"></span> в панели инструментов Jupyter редактора.
+
+- В вкладке с панель Jupyter нажать кнопку **Quit** (верхний правый угол).
+  ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+  Через определенное время заданное в настройках [исполнителя задач](/docs/desc/executor.md) (по умолчанию 24 часа) интерактивная задача будет автоматически остановлена.
+  :::
+
+- Перенос измененного скрипта в узел **TODO**.
+
 ## Выход из платформы
 
 Открыть панель ссылок в верхнем правом углу экрана и нажать на кнопку <span class="iconify-inline" data-icon="mdi:logout"></span>.
 
 ![Exit](/images/common/link_panel.png)
+
+[1]: /docs/desc/project.md#панель-создания-узлов
+[2]: #переход-в-рабочее-пространство
+[3]: /docs/desc/workspace.md
+[4]: /docs/desc/nodes.md#файлы
+[5]: /docs/desc/nodes.md#пакеты
+[6]: /docs/desc/nodes.md#задания
+[7]: https://jupyter-notebook.readthedocs.io/en/stable/ui_components.html#notebook-dashboard
+[8]: /docs/desc/nodes.md#контеинер
