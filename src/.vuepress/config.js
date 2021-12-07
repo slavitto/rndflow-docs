@@ -52,6 +52,7 @@ module.exports = {
             '/intro/software',
             '/intro/definitions',
             '/intro/architecture',
+            '/intro/literature',
           ],
           '/desc/': [
             '/desc/',
@@ -70,7 +71,7 @@ module.exports = {
             '/desc/s3',
           ],
           '/dev/': ['/dev/', '/dev/compute', '/dev/sql', '/dev/docker'],
-          '/instructions/': ['/instructions/'],
+          '/instructions/': ['/instructions/', '/instructions/video'],
         },
       },
     },
