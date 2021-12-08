@@ -1,18 +1,28 @@
 # Сервер расчетов (Исполнитель задач)
 
-## Описание
-
-**Сервер расчетов или исполнитель задач** (Executor)-cпециальный программный модуль платформы ([исполнитель задач](/docs/intro/architecture.md#компоненты)), который отвечает за запуск задач на определенном вычислительном кластере.
+**Сервер расчетов или исполнитель задач** (Executor) - cпециальный программный модуль платформы ([исполнитель задач](/docs/intro/architecture.md#компоненты)), который отвечает за запуск задач на определенном вычислительном кластере.
 
 В настоящий момент поддерживается исполнитель задач для организации запуска задач в среде [Kubernetes](https://kubernetes.io/). Исполнитель задач позволяет организовать проведение вычислений и на удаленных облачных вычислительных мощностях таких как [Yandex Managed Service for Kubernetes](https://cloud.yandex.com/en/services/managed-kubernetes) и [VK Cloud Containers](https://mcs.mail.ru/containers/). При этом исполнитель задач может располагаться как на стороне вычислительных ресурсов так и в произвольном месте.
 
-## Добавление в рабочее пространство
+![Executor](/images/common/executor.png)
 
-- [Перейти](/docs/instructions/#переход-в-рабочее-пространство) в [рабочее пространство](/docs/desc/workspace.md)
-- Перейти на вкладку **РЕСУРСЫ**
+Структура:
 
-![Resources](/images/common/dashboard_user_workspace_resources_new.png)
+- Логотип
+- Название
+- Описание
+- <span class='iconify-inline' data-icon='mdi:eye' style="color: blue"></span> Общедоступность сервера
+- <span class='iconify-inline' data-icon='mdi:play-circle' style="color: green"></span> Статус
+- Цена за задание - стоимость выполнения одного задания
+- Цена за ядро CPU - стоимость CPU **TODO**
+- Цена за GPU - стоимость GPU **TODO**
+- Цена за МБ - стоимость МБ **TODO**
+- Цена за секунду - стоимость секунды **TODO**
+- Кнопка "РЕДАКТИРОВАТЬ"
 
-- Напротив надписи <span class="iconify-inline" data-icon="mdi:server"></span> **Серверы расчетов** нажать на кнопку <span class="iconify-inline" data-icon="mdi:plus"></span> **1** и далее выбрав сервер из списка **2**.
+Статус сервера:
 
-![Add Executor](/images/common/dashboard_user_workspace_add_executor.png)
+- <span class='iconify-inline' data-icon='mdi:play-circle' style="color: green"></span> Активен
+- <span class='iconify-inline' data-icon='mdi:pause-circle' style="color: orange"></span> Приостановлен
+
+<br clear="right"/>
