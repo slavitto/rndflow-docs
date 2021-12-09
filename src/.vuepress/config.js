@@ -82,6 +82,7 @@ module.exports = {
             '/instructions/executor',
             '/instructions/s3',
             '/instructions/video',
+            '/instructions/examples',
           ],
         },
       },

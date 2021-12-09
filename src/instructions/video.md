@@ -4,7 +4,7 @@
 
 - [Обзор](https://youtu.be/mc--tRHr3T0)
 
-- [Первый проект](https://youtu.be/Cz58cIAJEKk)
+- [Первый проект](https://youtu.be/Cz58cIAJEKk) **Cos**
 
 - [Использование SQL узла](https://youtu.be/QDxujHQTxtA)
 
