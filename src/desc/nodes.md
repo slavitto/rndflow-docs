@@ -197,7 +197,7 @@ Cтруктура:
     - <span class="iconify-inline" data-icon="mdi:vimeo"></span> Включить VIM режим
     - <span class="iconify-inline" data-icon="mdi:fullscreen"></span> Открыть на полный экран
 
-  - История изменений файла: <span style="background-color: green; color: white"> автор / время последних изменений </span>
+  - Кнопка истории изменений файла: <span style="background-color: green; color: white"> автор / время последних изменений </span>
 
 - Кнопка "СОХРАНИТЬ" - для сохранение изменений файла
 - <span class="iconify-inline" data-icon="mdi:file-plus"></span> Кнопка создания нового файла
