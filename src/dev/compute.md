@@ -22,7 +22,7 @@ from rndflow import job
 - **load**(readers={}) - получить переменные пакетов узла
 - **save_package**(label=None, files={}, fields={}, images={}) - сохранить выходной [пакет](/docs/desc/nodes.md#пакеты)
 
-  **label** - метка пакета, **fields** - поля пакета, **files** - файла пакета, **images** - объекты [matplotlib](https://matplotlib.org/) или [plotly](https://plotly.com/python/).
+  **label** - метка пакета, **fields** - поля пакета, **files** - файлы пакета, **images** - объекты [matplotlib](https://matplotlib.org/) или [plotly](https://plotly.com/python/).
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
   Объекты **matplotlib** сохраняются как изображения, по умолчанию если не указано расширение файла, то в **PNG** формате, объекты **plotly** сохраняются в JSON формате.
   :::
@@ -83,20 +83,22 @@ from time import sleep
 # Load packages variables as global variables
 globals().update(job.load())
 
-server = Server(api_key=job.secret('project_server_token'))
+server = Server(api_key=job.secret('server_token'))
 
 # Get secrets
-project = job.secret('project_server_project')
-input_node = job.secret('project_server_input')
-output_node = job.secret('project_server_output')
+project = job.secret('server_project')
+input_node = job.secret('server_input')
+output_node = job.secret('server_output')
 
 # Get last data layer from the server
 layer = server.get(f'/projects/{project}/data_layers/last')
 
 # Post new package to the start node
 p = server.post(f'/projects/{project}/nodes/{input_node}/packages',
-                json=dict(
+                params=dict(
                     data_layer_id=layer['id'],
+                    ),
+                json=dict(
                     label='from_client',
                     fields=dict(size=size, span=span)))
 
@@ -113,10 +115,10 @@ ready = False
 while not ready and datetime.now() < timeout:
     page = server.post(f'/projects/{project}/nodes/{output_node}/packages/search',
         params=dict(
+            data_layer_id=layer['id'],
             page_size=1
             ),
         json=dict(
-            data_layer_id=layer['id'],
             master_id=p['id']
             ))
     for result in page['items']:
