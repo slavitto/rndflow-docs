@@ -78,6 +78,7 @@ module.exports = {
             '/instructions/nodes',
             '/instructions/package',
             '/instructions/link',
+            '/instructions/role',
             '/instructions/executor',
             '/instructions/s3',
             '/instructions/video',
