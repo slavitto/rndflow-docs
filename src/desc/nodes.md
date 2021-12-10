@@ -328,8 +328,23 @@ Cтруктура:
 Структура:
 
 - Панель инструментов
+
+  - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенные задания
+  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Перезапустить выделенные задания
+  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Перезапустить выделенные задания в интерактивном режиме
+  - <span class="iconify-inline" data-icon="mdi:reload-alert"></span> Перезапустить ошибочные задания
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновления списка
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаления выбранных заданий
+  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтрация заданий по состоянию
+  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных заданий
+  - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех заданий
+  - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление переменной пакета
+
+    Добавление переменной пакета в качестве нового столбца в таблице заданий.
+
+    Список добавленных переменных с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'></span> .
+
+  - <span class="iconify-inline" data-icon="mdi:content-save"></span> Сохранение набор текущих столбцов
+
 - Таблица с списком заданий
   - Столбцы таблицы
     - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора задания
@@ -347,6 +362,7 @@ Cтруктура:
 - <span class="iconify-inline" data-icon="mdi:progress-clock" style="color: orange"></span> - В очереди на исполнение
 - <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Стартовало
 - <span class="iconify-inline" data-icon="mdi:check-circle" style="color: green"></span> - Обработано
+- <span class="iconify-inline" data-icon="mdi:alert-circle" style="color: red"></span> - Ошибка
 
 ## Группа
 
