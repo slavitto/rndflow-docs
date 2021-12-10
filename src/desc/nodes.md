@@ -215,13 +215,25 @@ Cтруктура:
 Структура:
 
 - Панель инструментов
-  - <span class="iconify-inline" data-icon="mdi:package-up"></span> Загрузки/создания пакета
-  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Обработать пакет в узле
-    > Создать новое задание для обработки в текущем узле с выбранным входным пакетом.
-  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Обработка пакета в интерактивном режиме
+
+  - <span class="iconify-inline" data-icon="mdi:package-up"></span> Загрузка/создание пакета
+  - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенные пакеты
+  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Обработать выделенные пакеты
+  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Обработать выделенные задания в интерактивном режиме
   - <span class="iconify-inline" data-icon="mdi:pin"></span>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Выбор/Отмена выбора установки мастер пакета слоя данных
+  - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копировать выбранные пакеты между узлами
+  - <span class="iconify-inline" data-icon="mdi:content-paste"></span> Вставить ранее скопированные пакеты
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновление списка пакетов
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных пакетов
+  - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех пакетов
+  - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление переменной пакета
+
+    Добавление переменной пакета в качестве нового столбца в таблице пакетов.
+
+    Список добавленных переменных с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'></span> .
+
+  - <span class="iconify-inline" data-icon="mdi:content-save"></span> Сохранить набор текущих столбцов
+
 - Таблица с списком пакетов
   - Столбцы таблицы
     - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора пакета
@@ -343,7 +355,7 @@ Cтруктура:
 
     Список добавленных переменных с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'></span> .
 
-  - <span class="iconify-inline" data-icon="mdi:content-save"></span> Сохранение набор текущих столбцов
+  - <span class="iconify-inline" data-icon="mdi:content-save"></span> Сохранить набор текущих столбцов
 
 - Таблица с списком заданий
   - Столбцы таблицы

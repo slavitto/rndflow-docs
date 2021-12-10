@@ -105,11 +105,14 @@
 
 ### Панель действий
 
+![Project action panel](./images/project/action_panel.png)
+
 Включает в себя:
 
-- Панель поиска <span class="iconify-inline" data-icon="mdi:magnify"></span> позволяет осуществлять поиск графа по его имени.
-  ![Project find panel](./images/project/find_panel.png)
+- <span class="iconify-inline" data-icon="mdi:magnify"></span> Поиск узла по имени
 - <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/docs/desc/nodes.md#пакеты)
+- <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование узлов
+- <span class="iconify-inline" data-icon="mdi:content-paste"></span> Опциональная кнопка вставки узла
 
 ## Разрешения
 
