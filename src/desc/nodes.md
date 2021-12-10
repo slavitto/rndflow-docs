@@ -101,7 +101,8 @@
 
   - Общие команды
     - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование всех переменных
-    - <span class="iconify-inline" data-icon="mdi:content-paste"></span> Вставка переменных
+    - <span class="iconify-inline" data-icon="mdi:content-paste"></span> Вставка ранее скопированных переменных
+    - <span class="iconify-inline" data-icon="mdi:auto-fix"></span> Автоматическая вставка переменных на основе пакетов
     - <span class="iconify-inline" data-icon="mdi:plus"></span> Добавление переменной
   - Список переменных
 
