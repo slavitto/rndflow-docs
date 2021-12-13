@@ -17,8 +17,8 @@
 ## Обработка пакета
 
 - Открыть панель <span class="iconify-inline" data-icon="mdi:package"></span>[Пакеты][1] узла
-- Выбрать необходимый пакет установив напротив него переключатель в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span> **1**.
-- Нажать кнопку **2** <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> на панели инструментов.
+- Выбрать необходимый пакет установив напротив него переключатель **1** в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span>.
+- Нажать кнопку <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> (**2**) на панели инструментов.
 
   ![Run package](/images/common/node_panel_packages_execute.png)
 
