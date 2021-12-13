@@ -70,5 +70,26 @@
 - копировать
 - перемещать в группы
 
+## Копирование узлов
+
+- Выделить узел (нажать на узел) или [несколько узлов](выделение-нескольких-узлов).
+- Нажать на кнопку <span class="iconify-inline" data-icon="mdi:content-copy"></span> на [панели действий][3].
+
+  ![Project action panel](/images/common/project_action_panel.png)
+
+  На [панели действий][3] должна появиться кнопка <span class="iconify-inline" data-icon="mdi:content-paste"></span>.
+
+- Для копирования в этот же проект нажать на кнопку <span class="iconify-inline" data-icon="mdi:content-paste"></span>
+
+- Для копирования в другой проект
+  - Открыть в новый вкладке необходимый проект или если проект уже открыт, то обновить его по кнопке **F5**.
+    > На [панели действий][3] должна появиться кнопка <span class="iconify-inline" data-icon="mdi:content-paste"></span>.
+  - Нажать на кнопку <span class="iconify-inline" data-icon="mdi:content-paste"></span>
+
+::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+Пакеты при копировании узла не копируются!
+:::
+
 [1]: /docs/desc/project.md#панель-создания-узлов
 [2]: /docs/desc/nodes.md#файлы
+[3]: /docs/desc/project.md#панель-деиствии

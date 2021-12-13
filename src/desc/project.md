@@ -107,7 +107,7 @@
 
 ### Панель действий
 
-![Project action panel](./images/project/action_panel.png)
+![Project action panel](/images/common/project_action_panel.png)
 
 Включает в себя:
 
