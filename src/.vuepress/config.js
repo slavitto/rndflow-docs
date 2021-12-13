@@ -79,6 +79,8 @@ module.exports = {
             '/instructions/package',
             '/instructions/link',
             '/instructions/role',
+            '/instructions/api_keys',
+            '/instructions/secrets',
             '/instructions/executor',
             '/instructions/s3',
             '/instructions/video',
