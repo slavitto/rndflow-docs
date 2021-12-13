@@ -128,6 +128,10 @@
 
 ![Node desc](/images/common/node_panel_spec.png)
 
+::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+Существует возможность [копирования параметров узла][2] в входную спецификацию узла.
+:::
+
 ### Параметры
 
 <span class="iconify-inline" data-icon="mdi:tune"></span> **Параметры узла** (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
@@ -431,3 +435,4 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:location-enter"></span> Переход внутрь группы
 
 [1]: ./project.md#слои-данных
+[2]: /docs/desc/node_params.md#управление-параметрами
