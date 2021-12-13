@@ -28,7 +28,23 @@
 
 - [Перейти][1] в [рабочее пространство][2]
 
-- На вкладке <span class="iconify-inline" data-icon="mdi:file-code"></span>**ПРОЕКТЫ** нажать на плитку проекта.
+- На вкладке <span class="iconify-inline" data-icon="mdi:file-code"></span>**ПРОЕКТЫ** нажать на [плитку проекта][11].
+
+## Активация проекта
+
+Для того, чтобы в проекте появилась возможность обработки пакетов необходимо в [панели управления проектом][8]:
+
+- [Добавить][12] необходимый [сервер расчетов][9]
+
+  ![Executor select](/images/common/project_manage_panel_executor_add.png)
+
+- Активировать [слой данных][10]
+
+  ![Datalayer activate toggle](/images/common/project_manage_panel_datalayer_activate_toggle.png)
+
+- Активировать проект
+
+  ![Project activate toggle](/images/common/project_manage_panel_project_activate_toggle.png)
 
 ## Открыть публичный доступ
 
@@ -57,3 +73,8 @@
 [5]: ./role.md#создание-новои-роли
 [6]: /docs/desc/project_role.md
 [7]: /docs/desc/project_role.md#плитка-роли
+[8]: /docs/desc/project.md#панель-управления-проектом
+[9]: /docs/desc/executor.md
+[10]: /docs/desc/project.md#слои-данных
+[11]: /docs/desc/dashboard.md#структура-плитки-проекта
+[12]: ./s3.md#добавление-в-проект
