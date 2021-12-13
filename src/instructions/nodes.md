@@ -1,5 +1,7 @@
 # Узлы
 
+## Перейти в граф проекта
+
 - [Перейти](./project.md#открытие-проекта) в [проект](/docs/desc/project.md)
 
 - В [панели управления проектом](/docs/desc/project.md#панель-управления-проектом) нажать на <span class="iconify-inline" data-icon="mdi:sitemap"></span>**ГРАФ** и перейти в [дизайнер графа](/docs/desc/project.md#граф).
