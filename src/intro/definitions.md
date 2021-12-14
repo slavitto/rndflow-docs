@@ -28,7 +28,7 @@
 
 ![Group](/images/common/group.png)
 
-[Параметры узла](/docs/desc/nodes.md#параметры-узла) (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
+[Параметры узла](/docs/desc/node_params.md) (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
 
 ![Node params](/images/common/node_panel_params.png)
 
