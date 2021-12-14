@@ -35,7 +35,7 @@
 
 ---
 
-- <span class="iconify-inline" data-icon="mdi:information"></span> Описание проекта и список доступных для внешнего запроса ролей и API ключей (О проекте)
+- <span class="iconify-inline" data-icon="mdi:information"></span> Описание проекта и список доступных для внешнего запроса ролей и API ключей ([О проекте](#описание))
 - Опциональный список ссылок на [интерфейсы](./interface.md) проекта
 - <span class="iconify-inline" data-icon="mdi:sitemap"></span> Дизайнер графа проекта ([Граф](#граф))
 - <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> Редактор интерфейсов проекта ([Интерфейсы](./interface.md))
@@ -63,6 +63,48 @@
 
 <br clear="right"/>
 
+## Описание
+
+Описание публичного проекта доступно пользователям.
+
+Структура:
+
+- Название
+- Описание
+- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> Список интерфейсов
+- <span class="iconify-inline" data-icon="mdi:ticket-account"></span> Список платных ролей
+
+  > Пользователь может [запросить][1] доступ к проекту с указанной ролью.
+
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Список [API-ключей](./api_keys.md)
+
+  > Пользователь может [запросить][2] доступ к проекту с использованием API ключа.
+
+## Слой данных
+
+**Слой данных** (Data layer) - это отдельное состояние графа проекта со своим независимым набором пакетов и параметрами узлов. Слои данных предназначены для изоляции отдельных наборов данных и параметров их обработки внутри одного проекта.
+
+![Data layer](/images/common/datalayer.png)
+
+## Разрешения
+
+Панель позволяет управлять доступом к проекту с помощью:
+
+- [Ролей проекта](#роли-проекта)
+- [Пользователей проекта](#пользователи-проекта)
+
+### Роли проекта
+
+Вкладка **РОЛИ** - yправление [ролями проекта](/docs/desc/project_role.md)
+
+![Project roles](/images/common/permissions_roles.png)
+
+### Пользователи проекта
+
+Вкладка **ПОЛЬЗОВАТЕЛИ** - управление [пользователями](/docs/desc/project_user.md)
+
+![Project users](/images/common/permissions_users.png)
+
 ## Граф
 
 **Граф** (Graph) - интегрированная последовательность узлов и направленных связей между ними, в которой узлы соответствуют отдельным этапам или операциям реализуемого алгоритма, а направленные связи определяют направление передачи данных между ними (результаты выполнения одних узлов передаются в качестве входных данных другим узлам).
@@ -77,6 +119,18 @@
 Общий вид дизайнера графа:
 
 ![Project general view](./images/project/general.png)
+
+### Панель действий
+
+![Project action panel](/images/common/project_action_panel.png)
+
+Включает в себя:
+
+- <span class="iconify-inline" data-icon="mdi:magnify"></span> Поиск узла по имени
+- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/docs/desc/nodes.md#пакеты)
+- <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование узлов
+- <span class="iconify-inline" data-icon="mdi:content-paste"></span> Опциональная кнопка вставки узла
+  > При вставке узла из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.
 
 ### Панель создания узлов
 
@@ -105,39 +159,5 @@
 
 <br clear="right"/>
 
-### Панель действий
-
-![Project action panel](/images/common/project_action_panel.png)
-
-Включает в себя:
-
-- <span class="iconify-inline" data-icon="mdi:magnify"></span> Поиск узла по имени
-- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/docs/desc/nodes.md#пакеты)
-- <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование узлов
-- <span class="iconify-inline" data-icon="mdi:content-paste"></span> Опциональная кнопка вставки узла
-  > При вставке узла из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.
-
-## Слой данных
-
-**Слой данных** (Data layer) - это отдельное состояние графа проекта со своим независимым набором пакетов и параметрами узлов. Слои данных предназначены для изоляции отдельных наборов данных и параметров их обработки внутри одного проекта.
-
-![Data layer](/images/common/datalayer.png)
-
-## Разрешения
-
-Панель позволяет управлять доступом к проекту с помощью:
-
-- [Ролей проекта](#роли-проекта)
-- [Пользователей проекта](#пользователи-проекта)
-
-### Роли проекта
-
-Вкладка **РОЛИ** - yправление [ролями проекта](/docs/desc/project_role.md)
-
-![Project roles](/images/common/permissions_roles.png)
-
-### Пользователи проекта
-
-Вкладка **ПОЛЬЗОВАТЕЛИ** - управление [пользователями](/docs/desc/project_user.md)
-
-![Project users](/images/common/permissions_users.png)
+[1]: /docs/instructions/role.md#запрос-платнои-роли
+[2]: /docs/instructions/api_keys.md#запрос-ключа
