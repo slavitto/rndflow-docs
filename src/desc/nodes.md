@@ -266,8 +266,11 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Обработать выделенные пакеты
   - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Обработать выделенные задания в интерактивном режиме
   - <span class="iconify-inline" data-icon="mdi:pin"></span>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Выбор/Отмена выбора установки мастер пакета слоя данных
-  - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копировать выбранные пакеты между узлами
+  - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копировать выбранные пакеты между узлами и проектами
   - <span class="iconify-inline" data-icon="mdi:content-paste"></span> Вставить ранее скопированные пакеты
+
+    > При вставке пакетов из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.После вставки может понадобиться обновить список пакетов кнопкой <span class="iconify-inline" data-icon="mdi:refresh"></span>.
+
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновление списка пакетов
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных пакетов
   - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех пакетов
