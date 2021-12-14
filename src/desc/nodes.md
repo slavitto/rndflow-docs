@@ -378,8 +378,6 @@ Cтруктура:
 
 **Задание** (Job) - экземпляр выполнения узла с конкретными входными пакетами и параметрами.
 
-![Node job](/images/common/job.png)
-
 Общее количество выполняемых заданий в узле в текущем [слое данных][1] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"></span>:
 
 ![Node packages count](/images/common/node_compute_jobs.png)
@@ -416,8 +414,6 @@ Cтруктура:
     - Владелец - пользователь создавший задание
     - Состояние - текущее состояние выполнения задания
 
-Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
-
 Состояние задания:
 
 - <span class="iconify-inline" data-icon="mdi:circle-outline" style="color: grey"></span> - Создано
@@ -426,6 +422,26 @@ Cтруктура:
 - <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Стартовало
 - <span class="iconify-inline" data-icon="mdi:check-circle" style="color: green"></span> - Обработано
 - <span class="iconify-inline" data-icon="mdi:alert-circle" style="color: red"></span> - Ошибка
+
+Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
+
+Структура отображения состава задания:
+
+- Панель управления
+  - <span class='iconify-inline' data-icon='mdi:fullscreen'></span> Открыть на весь экран
+  - <span class='iconify-inline' data-icon='mdi:close'></span> Закрыть
+- История обработки
+- <span class='iconify-inline' data-icon='mdi:package'></span> Входные пакеты
+- <span class='iconify-inline' data-icon='mdi:package'></span> Выходные пакеты
+- Параметры узла
+- Список файлов с кнопкой сохранения <span class='iconify-inline' data-icon='mdi:content-save'></span> в [файлы](#фаилы) узла
+- Окно отображения выбранного файла
+
+![Node job](/images/common/job.png)
+
+::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
+Процесс выполнения задания можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'></span> **идентификатор_задания.log**, который расположен в списке файлов.
+:::
 
 ## Группа
 

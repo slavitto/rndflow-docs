@@ -24,6 +24,10 @@
 
 - Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][2] узла, в котором должно появиться новое задание. Может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий.
 
+::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
+Процесс выполнения задания можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'></span> **идентификатор_задания.log**, который расположен в списке файлов задания (см. панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][2]).
+:::
+
 ## Интерактивная обработка пакета
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
@@ -64,7 +68,10 @@
   Через определенное время заданное в настройках [исполнителя задач](/docs/desc/executor.md) (по умолчанию 24 часа) интерактивная задача будет автоматически остановлена.
   :::
 
-- Перенос измененного скрипта в узел **TODO**.
+- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания][2] узла и щелкнуть по идентификатору задания в поле **Id**.
+  ![Node job](/images/common/job.png)
+
+- В списке файлов выбрать необходимые файлы и нажать для каждого кнопку <span class='iconify-inline' data-icon='mdi:content-save'></span> для сохранения изменений в [файлы][5] узла.
 
 ## Переименование переменных
 
@@ -78,3 +85,4 @@
 [2]: /docs/desc/nodes.md#задания
 [3]: https://jupyter-notebook.readthedocs.io/en/stable/ui_components.html#notebook-dashboard
 [4]: /docs/desc/nodes.md#контеинер
+[5]: /docs/desc/nodes.md#фаилы
