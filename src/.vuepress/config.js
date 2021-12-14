@@ -81,6 +81,7 @@ module.exports = {
             '/instructions/role',
             '/instructions/api_keys',
             '/instructions/secrets',
+            '/instructions/interface',
             '/instructions/executor',
             '/instructions/s3',
             '/instructions/video',
