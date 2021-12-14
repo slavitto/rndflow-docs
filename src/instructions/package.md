@@ -17,8 +17,8 @@
 ## Обработка пакета
 
 - Открыть панель <span class="iconify-inline" data-icon="mdi:package"></span>[Пакеты][1] узла
-- Выбрать необходимый пакет установив напротив него переключатель **1** в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span>.
-- Нажать кнопку <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> (**2**) на панели инструментов.
+- Выбрать необходимый пакет установив напротив него переключатель <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span> в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span>.
+- Нажать кнопку <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span> на панели инструментов.
 
   ![Run package](/images/common/node_panel_packages_execute.png)
 
@@ -34,8 +34,8 @@
 
 - Открыть панель <span class="iconify-inline" data-icon="mdi:kubernetes"></span>[Контейнер][4] узла и в параметре **Память** установить не менее 256М.
 - Открыть панель <span class="iconify-inline" data-icon="mdi:package"></span>[Пакеты][1] узла
-- Выбрать необходимый пакет установив напротив него переключатель в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span> **1**.
-- Нажать кнопку **2** <span class="iconify-inline" data-icon="mdi:motion-play"></span> на панели инструментов.
+- Выбрать необходимый пакет установив напротив него переключатель <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span> в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span>.
+- Нажать кнопку <span class="iconify-inline" data-icon="mdi:motion-play"></span> <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span> на панели инструментов.
 
   ![Run package](/images/common/node_panel_packages_execute_jupyter.png)
 

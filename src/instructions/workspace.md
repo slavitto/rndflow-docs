@@ -4,15 +4,15 @@
 
 Перейти в [панель управления](/docs/desc/dashboard.md):
 
-- Открыть панель ссылок **1**
-- Нажать на изображение аватара пользователя **2**.
+- Открыть панель ссылок <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>
+- Нажать на изображение аватара пользователя <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
 
   ![Link panel](/images/common/user_link_panel.png)
 
-- Нажать на [плитку](/docs/desc/dashboard.md#структура-плитки-рабочего-пространства) необходимого [рабочего пространства][1] **1**.
+- Нажать на [плитку](/docs/desc/dashboard.md#структура-плитки-рабочего-пространства) необходимого [рабочего пространства][1] <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-  Для нового пользователя автоматически создается [рабочее пространство][1] **1**.
+  Для нового пользователя автоматически создается [рабочее пространство][1] <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>.
   :::
 
   ![New user dashboard](/images/common/dashboard_user_new.png)

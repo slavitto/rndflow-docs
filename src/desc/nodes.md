@@ -225,11 +225,11 @@ Cтруктура:
 
 **Пакет** (Package) - набор данных, поступающих на обработку на соответствующий узел.
 
-Общее количество пакетов в узле в текущем [слое данных][1] отображается в виде ярлыка:
+Общее количество пакетов в узле в текущем [слое данных][1] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"></span>:
 
 ![Node packages count](/images/common/node_compute_packages.png)
 
-**Мастер пакет** (Master package) - выбранный пользователем корневой пакет слоя данных. Выбор такого пакета позволяет отображать в текущем [слое данных][1] только родительские и дочерние пакеты мастер пакета.
+**Мастер пакет** (Master package) <span class='iconify-inline' data-icon='fluent:rectangle-landscape-16-filled' style="color: red"></span> - выбранный пользователем корневой пакет слоя данных. Выбор такого пакета позволяет отображать в текущем [слое данных][1] только родительские и дочерние пакеты мастер пакета.
 
 ![Master package](/images/common/node_panel_packages_master.png)
 
@@ -280,9 +280,14 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:content-save"></span> Сохранить набор текущих столбцов
 
 - Таблица с списком пакетов
+
   - Столбцы таблицы
+
     - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора пакета
     - Id - идентификатор пакета
+
+      Дополнительно на идентификаторе может отображаться ярлык с количеством дочерних заданий: <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"></span>
+
     - Метка - имя пакета
     - Создано - время создания пакета
     - Владелец - пользователь создавший пакет
@@ -375,7 +380,7 @@ Cтруктура:
 
 ![Node job](/images/common/job.png)
 
-Общее количество выполняемых заданий в узле в текущем [слое данных][1] отображается в виде ярлыка:
+Общее количество выполняемых заданий в узле в текущем [слое данных][1] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"></span>:
 
 ![Node packages count](/images/common/node_compute_jobs.png)
 
