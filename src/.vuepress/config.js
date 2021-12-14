@@ -62,6 +62,7 @@ module.exports = {
             '/desc/nodes',
             '/desc/links',
             '/desc/node_params',
+            '/desc/package',
             '/desc/project_role',
             '/desc/project_user',
             '/desc/secrets',

@@ -56,7 +56,7 @@
 
 - Вкладка <span class='iconify-inline' data-icon='mdi:inbox-arrow-down'></span>**ПЕРЕИМЕНОВАНИЕ**
 
-  Вкладка позволяет задать правила переименования переменных пакетов, проходящих по ней. Переименовывать разрешается поля и файла [пакетов][1].
+  Вкладка позволяет задать правила переименования переменных пакетов, проходящих по ней. Переименовывать разрешается [поля][4] и [файлы][4] [пакетов][1].
 
   ![Link rename package variables](/images/common/link_rename_vars.png)
 
@@ -71,6 +71,7 @@
     - Выход - название выходной переменной;
     - <span class='iconify-inline' data-icon='mdi:plus' style="color: green"></span> - кнопка добавления нового правила.
 
-[1]: /docs/desc/nodes.md#пакеты
+[1]: /docs/desc/package.md
 [2]: /docs/desc/nodes.md#группа
 [3]: /docs/desc/nodes.md#задания
+[4]: /docs/desc/package.md#состав

@@ -20,7 +20,7 @@ from rndflow import job
 - **params**() - получить параметры узла
 - **packages**() - получить пакеты узла
 - **load**(readers={}) - получить переменные пакетов узла
-- **save_package**(label=None, files={}, fields={}, images={}) - сохранить выходной [пакет](/docs/desc/nodes.md#пакеты)
+- **save_package**(label=None, files={}, fields={}, images={}) - сохранить выходной [пакет](/docs/desc/package.md)
 
   **label** - метка пакета, **fields** - поля пакета, **files** - файлы пакета, **images** - объекты [matplotlib](https://matplotlib.org/) или [plotly](https://plotly.com/python/).
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
