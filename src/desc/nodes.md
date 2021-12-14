@@ -10,7 +10,7 @@
 
 - <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Отключен
 
-В активном состоянии в узле автоматически обрабатываются (создаются [задания](#задания)) все приходящие в него пакеты.
+В активном состоянии в узле автоматически обрабатываются (создаются [задания][5]) все приходящие в него пакеты.
 
 ## Типы и состав узлов
 
@@ -340,13 +340,7 @@ Cтруктура:
 
 ### Задания
 
-**Задание** (Job) - экземпляр выполнения узла с конкретными входными пакетами и параметрами.
-
-Общее количество выполняемых заданий в узле в текущем [слое данных][1] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"></span>:
-
-![Node packages count](/images/common/node_compute_jobs.png)
-
-В соответствующей вкладке **Задания** узла отображается полных список выполненных ранее и выполняемых заданий:
+В вкладке <span class='iconify-inline' data-icon='mdi:cog-box'></span> **Задания** отображается список [заданий][5] узла в рамках выбранного [слоя данных][1]:
 
 ![Node job list](/images/common/node_panel_job.png)
 
@@ -362,11 +356,11 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтрация заданий по состоянию
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных заданий
   - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех заданий
-  - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление переменной пакета
+  - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление параметра узла
 
-    Добавление переменной пакета в качестве нового столбца в таблице заданий.
+    Добавление параметра узла в качестве нового столбца в таблице заданий.
 
-    Список добавленных переменных с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'></span> .
+    Список добавленных параметров с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'></span> .
 
   - <span class="iconify-inline" data-icon="mdi:content-save"></span> Сохранить набор текущих столбцов
 
@@ -374,26 +368,25 @@ Cтруктура:
   - Столбцы таблицы
     - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора задания
     - Id - идентификатор задания
+    - Пакеты - идентификаторы входных пакетов
     - Создано - время инициации задания
     - Владелец - пользователь создавший задание
-    - Состояние - текущее состояние выполнения задания
-
-Состояние задания:
-
-- <span class="iconify-inline" data-icon="mdi:circle-outline" style="color: grey"></span> - Создано
-- <span class="iconify-inline" data-icon="mdi:progress-download" style="color: yellow"></span> - На сервере расчетов
-- <span class="iconify-inline" data-icon="mdi:progress-clock" style="color: orange"></span> - В очереди на исполнение
-- <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Стартовало
-- <span class="iconify-inline" data-icon="mdi:check-circle" style="color: green"></span> - Обработано
-- <span class="iconify-inline" data-icon="mdi:alert-circle" style="color: red"></span> - Ошибка
+    - Состояние - текущее [состояние][6] выполнения задания
 
 Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
 
 Структура отображения состава задания:
 
 - Панель инструментов
+
+  - <span class='iconify-inline' data-icon='mdi:open-in-new'></span> Открыть задание на новой странице браузера
+    ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
+    При открытии задания на новой странице браузера возвращается прямая ссылка на задание.
+    :::
+
   - <span class='iconify-inline' data-icon='mdi:fullscreen'></span> Открыть на весь экран
   - <span class='iconify-inline' data-icon='mdi:close'></span> Закрыть
+
 - История обработки
 - <span class='iconify-inline' data-icon='mdi:package'></span> Входные пакеты
 - <span class='iconify-inline' data-icon='mdi:package'></span> Выходные пакеты
@@ -423,3 +416,5 @@ Cтруктура:
 [2]: /docs/desc/node_params.md#управление-параметрами
 [3]: /docs/desc/package.md#состав
 [4]: /docs/desc/package.md
+[5]: /docs/desc/job.md
+[6]: /docs/desc/job.md#состояния

@@ -22,10 +22,10 @@
 
   ![Run package](/images/common/node_panel_packages_execute.png)
 
-- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][2] узла, в котором должно появиться новое задание. Может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий.
+- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][2] узла, в котором должно появиться новое [задание][8]. Может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий.
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-Процесс выполнения задания можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'></span> **идентификатор_задания.log**, который расположен в списке файлов задания (см. панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][2]).
+Процесс выполнения [задания][8] можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'></span> **идентификатор_задания.log**, который расположен в списке файлов [задания][8] (см. панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][2]).
 :::
 
 ## Интерактивная обработка пакета
@@ -43,7 +43,7 @@
 
   ![Run package](/images/common/node_panel_packages_execute_jupyter.png)
 
-- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания][2] узла, в котором должно появиться новое задание. Может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий.
+- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания][2] узла, в котором должно появиться новое [задание][8]. Может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий.
 
 - Когда **Состояние** задания станет вида <span class="iconify-inline" data-icon="mdi:motion-play" style="color: green"></span>, щелкнуть по иконке состояния <span class="iconify-inline" data-icon="mdi:motion-play" style="color: green"></span>.
 
@@ -65,10 +65,10 @@
 
 - В вкладке с Jupyter панелью нажать кнопку **Quit** (верхний правый угол).
   ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-  Через определенное время заданное в настройках [исполнителя задач](/docs/desc/executor.md) (по умолчанию 24 часа) интерактивная задача будет автоматически остановлена.
+  Через определенное время заданное в настройках [исполнителя задач](/docs/desc/executor.md) (по умолчанию 24 часа) интерактивное [задание][8] будет автоматически остановлено.
   :::
 
-- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания][2] узла и щелкнуть по идентификатору задания в поле **Id**.
+- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания][2] узла и щелкнуть по идентификатору [задания][8] в поле **Id**.
   ![Node job](/images/common/job.png)
 
 - В списке файлов выбрать необходимые файлы и нажать для каждого кнопку <span class='iconify-inline' data-icon='mdi:content-save'></span> для сохранения изменений в [файлы][5] узла.
@@ -88,3 +88,4 @@
 [5]: /docs/desc/nodes.md#фаилы
 [6]: /docs/desc/package.md
 [7]: /docs/desc/package.md#состав
+[8]: /docs/desc/job.md
