@@ -212,12 +212,32 @@ Cтруктура:
     - <span class="iconify-inline" data-icon="mdi:vimeo"></span> Включить VIM режим
     - <span class="iconify-inline" data-icon="mdi:fullscreen"></span> Открыть на полный экран
 
-  - Кнопка истории изменений файла: <span style="background-color: green; color: white"> автор / время последних изменений </span>
+  - [Кнопка](#история-изменения) истории изменений файла: <span style="background-color: green; color: white"> автор / время последних изменений </span>
 
 - Кнопка "СОХРАНИТЬ" - для сохранение изменений файла
 - <span class="iconify-inline" data-icon="mdi:file-plus"></span> Кнопка создания нового файла
 
 ![Node file](/images/common/node_panel_file.png)
+
+#### История изменения
+
+Для каждого файла доступна история его изменения.
+
+Для получения доступа к ней необходимо выбрать необходимый файл и нажать на кнопку <span style="background-color: green; color: white"> автор / время последних изменений </span>.
+
+История файла содержит список всех его версий.
+
+![File history](/images/common/node_panel_file_history.png)
+
+Состав версии файла в истории:
+
+- Название
+- Дата сохранения
+- Опциональое описание
+- Кнопки управления
+  - <span class='iconify-inline' data-icon='mdi:arrow-left-circle' style="color: green"></span> Восстановить
+  - <span class='iconify-inline' data-icon='mdi:tag' style="color: green" ></span> Задать описание
+  - <span class='iconify-inline' data-icon='mdi:delete' style="color: green"></span> Удалить
 
 ### Пакеты
 
