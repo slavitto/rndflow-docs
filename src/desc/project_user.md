@@ -1,6 +1,6 @@
 # Пользователи проекта
 
-**Пользователь** - уникальный персональный аккаунт платформы.
+**Пользователь** - уникальный персональный участник платформы.
 
 ![Project users](/images/common/permissions_users.png)
 
@@ -15,15 +15,3 @@
 3. Список ролей
 4. <span class="iconify-inline" data-icon="mdi:close-circle"></span> Кнопка удаления всех ролей
 5. <span class="iconify-inline" data-icon="mdi:menu-down"></span> Меню добавления роли
-
-### Добавить пользователя
-
-Нажать на кнопку добавления нового пользователя ![Add button](/images/common/red_plus.png) в правом нижнем углу экрана.
-
-В диалоговом окне выбрать пользователя и его роли в проекте. Нажать кнопку **ДОБАВИТЬ**.
-
-![User add](/images/common/permissions_user_add.png)
-
-### Удалить пользователя
-
-Нажать на кнопку <span class="iconify-inline" data-icon="mdi:close-circle"></span> удаления всех ролей пользователя.

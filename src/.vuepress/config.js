@@ -81,6 +81,7 @@ module.exports = {
             '/instructions/package',
             '/instructions/link',
             '/instructions/role',
+            '/instructions/user',
             '/instructions/api_keys',
             '/instructions/secrets',
             '/instructions/interface',
