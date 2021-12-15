@@ -42,6 +42,10 @@ module.exports = {
             link: '/instructions/',
           },
           {
+            text: 'Администрирование',
+            link: '/admin/',
+          },
+          {
             text: 'Платформа',
             link: 'https://server.rndflow.com',
           },
@@ -90,6 +94,7 @@ module.exports = {
             '/instructions/video',
             '/instructions/examples',
           ],
+          '/admin/': ['/admin/'],
         },
       },
     },
