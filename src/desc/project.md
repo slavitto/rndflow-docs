@@ -33,6 +33,8 @@
 - <span class="iconify-inline" data-icon="mdi:notebook"></span> Название родительского [рабочего пространства](#workspace.md)
 - <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемого [S3 сервера](./s3.md)
 
+  Дополнительно указывается общее количество файлов проекта и их объем.
+
 ---
 
 - <span class="iconify-inline" data-icon="mdi:information"></span> [О проекте](#описание) - доступ к окну описания проекта и списку доступных интерфейсов, платных ролей и API ключей
