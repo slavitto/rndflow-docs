@@ -8,15 +8,15 @@
 
 Состав проекта:
 
-- [Граф](#граф) - реализующий конкретный алгоритм в составе
+- [Граф](#граф) - последовательность узлов, реализующих конкретный алгоритм.
   - [Узлы](./nodes.md) и [группы](./nodes.md#группа)
-  - [Пакеты](./package.md)
-  - [Задания](./job.md)
-- [Секреты](./secrets.md) - набор секретов для использовании в узлах при их исполнении
+  - [Пакеты](./package.md) - пакеты узлов в выбранном [слое данных][3]
+  - [Задания](./job.md) - задания узлов в выбраном [слое данных][3]
+- [Секреты](./secrets.md) - набор секретов для использования в узлах при их выполнении
 - [Интерфейсы](./interface.md) - графические интерфейсы управления графом
 - [Разрешения](#разрешения) - набор прав доступа
 - [API-ключи](./api_keys.md) - набор API для внешнего доступа к проекту
-- [Слои данных](#слои-данных)
+- [Слои данных][3] - список наборов данных
 - [S3 сервер](./s3.md) - подключенное к проекту S3 хранилище
 - [Cервер расчетов](./executor.md) - подключенный к проекту основной сервер расчетов
 
@@ -28,33 +28,31 @@
 
 Панель включает в себя:
 
-- Изображение проекта с возможностью редактирования <span class="iconify-inline" data-icon="mdi:pencil"></span> и удаления <span class="iconify-inline" data-icon="mdi:delete"></span>.
-- Название проекта
-- <span class="iconify-inline" data-icon="mdi:notebook"></span> Название родительского рабочего окружения
-- <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемго [S3 сервера](./s3.md)
+- Изображение с кнопками редактирования <span class="iconify-inline" data-icon="mdi:pencil"></span> и удаления <span class="iconify-inline" data-icon="mdi:delete"></span>.
+- Название
+- <span class="iconify-inline" data-icon="mdi:notebook"></span> Название родительского [рабочего пространства](#workspace.md)
+- <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемого [S3 сервера](./s3.md)
 
 ---
 
-- <span class="iconify-inline" data-icon="mdi:information"></span> Описание проекта и список доступных для внешнего запроса ролей и API ключей ([О проекте](#описание))
+- <span class="iconify-inline" data-icon="mdi:information"></span> [О проекте](#описание) - доступ к окну описания проекта и списку доступных интерфейсов, платных ролей и API ключей
 - Опциональный список ссылок на [интерфейсы](./interface.md) проекта
-- <span class="iconify-inline" data-icon="mdi:sitemap"></span> Дизайнер графа проекта ([Граф](#граф))
-- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> Редактор интерфейсов проекта ([Интерфейсы](./interface.md))
-- <span class="iconify-inline" data-icon="mdi:eye-off"></span> Редактор секретов проекта ([Секреты](./secrets.md))
-- <span class="iconify-inline" data-icon="mdi:shield-account"></span> Редактор разрешений проекта ( [Разрешения](#разрешения))
-- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Редактор API ключей проекта ([API-ключи](./api_keys.md) ключи)
+- <span class="iconify-inline" data-icon="mdi:sitemap"></span> [Граф](#граф) - дизайнер графа
+- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> [Интерфейсы](./interface.md) - дизайнер интерфейсов
+- <span class="iconify-inline" data-icon="mdi:eye-off"></span> [Секреты](./secrets.md) - управление секретами
+- <span class="iconify-inline" data-icon="mdi:shield-account"></span> [Разрешения](#разрешения) - управление разрешениями
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> [API-ключи](./api_keys.md) - управление API ключами
 
 ---
 
-- <span class="iconify-inline" data-icon="mdi:power"></span> Статус проекта (Проект включен/выключен) - разрешает или запрещает проекту информировать сервер расчетов о новых задачах.
-- <span class="iconify-inline" data-icon="mdi:server"></span> Основной сервер расчетов ([Cервер расчетов](./executor.md)) - отображает выбранный основной сервер расчетов для проекта, его описание и статус (активен - зеленый, красный - отключен).
+- <span class="iconify-inline" data-icon="mdi:power"></span> Проект включен/выключен - переключатель разрешения или запрета на передачу заданий на выполнение.
+- <span class="iconify-inline" data-icon="mdi:server"></span> [Cервер расчетов](./executor.md) - выбранный основной сервер расчетов для проекта, его описание и статус (активен - зеленый, красный - отключен).
 
 ---
 
-- <span class="iconify-inline" data-icon="mdi:layers"></span> Список слоев данных проекта (Слой данных) - список слоев данных с возможность редактирования названия и удаления текущего слоя.
-- <span class="iconify-inline" data-icon="mdi:power"></span> Статус текущего слоя данных (Слой данных включен/выключен) - разрешает или запрещает проекту информировать сервер расчетов о новых задачах в текущем слое данных
-- <span class="iconify-inline" data-icon="mdi:account-eye"></span> Возможность общего доступа к слою (Общий слой/Персональный слой) - определяет тип доступа к слою.
-
-  К общему слою данных имет доступ все пользователи, которым доступен данный проект. К персональному слою имеет доступ только создавший его пользователь.
+- <span class="iconify-inline" data-icon="mdi:layers"></span> [Слой данных][3] - список доступных слоев данных и команд управления ими.
+- <span class="iconify-inline" data-icon="mdi:power"></span> Слой данных включен/выключен - переключатель разрешения или запрета на передачу заданий слоя данных на выполнение.
+- <span class="iconify-inline" data-icon="mdi:account-eye"></span> Общий слой/Персональный слой - переключатель типа доступа к [слою данных][3].
 
 ---
 
@@ -84,7 +82,19 @@
 
 **Слой данных** (Data layer) - это отдельное состояние графа проекта со своим независимым набором пакетов и параметрами узлов. Слои данных предназначены для изоляции отдельных наборов данных и параметров их обработки внутри одного проекта.
 
+Типы слоев данных:
+
+- Общие - доступы всем пользователям проекта.
+- Персональные - доступ имеет только создавший пользователь.
+
 ![Data layer](/images/common/datalayer.png)
+
+Структура
+
+- Название текущего слоя
+- <span class='iconify-inline' data-icon='mdi:menu-down'></span> Список доступных слоев
+- <span class='iconify-inline' data-icon='mdi:pencil'></span> Кнопка редактирования
+- <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления
 
 ## Разрешения
 
@@ -161,3 +171,4 @@
 
 [1]: /docs/instructions/role.md#запрос-платнои-роли
 [2]: /docs/instructions/api_keys.md#запрос-ключа
+[3]: #слои-данных
