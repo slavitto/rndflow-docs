@@ -92,6 +92,7 @@ module.exports = {
             '/instructions/interface',
             '/instructions/executor',
             '/instructions/s3',
+            '/instructions/payplan',
             '/instructions/video',
             '/instructions/examples',
           ],
