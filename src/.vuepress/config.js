@@ -75,6 +75,7 @@ module.exports = {
             '/desc/interface',
             '/desc/executor',
             '/desc/s3',
+            '/desc/payplan',
           ],
           '/dev/': ['/dev/', '/dev/compute', '/dev/sql', '/dev/docker'],
           '/instructions/': [
