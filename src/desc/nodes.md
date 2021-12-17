@@ -301,7 +301,18 @@ Cтруктура:
 - Поля и их значения
 - Список файлов с кнопкой скачивания <span class="iconify-inline" data-icon="mdi:download"></span>
 - Окно отображения выбранного файла
-- Кнопка копирования [уникального идентификатора][3] пакета (в правом нижнем углу)
+- Кнопка [уникального идентификатора][3] пакета (в правом нижнем углу)
+
+  - Щелчок по идентификатору копирует его в буфер обмена.
+  - Нажатие на <span class='iconify-inline' data-icon='mdi:menu-down'></span> открывает меню с дополнительными командами
+
+    - <span class='iconify-inline' data-icon='mdi:shield-check'></span>Верификация хеша - осуществляет пересчет идентификатора пакета на основе его состава и истории создания. Может использоваться для проверки пакета и его истории на наличие неправомерных изменений.
+
+      ![Package](/images/common/package_verification_good.png)
+
+      или
+
+      ![Package](/images/common/package_verification_bad.png)
 
 ![Package](/images/common/package.png)
 
