@@ -18,6 +18,7 @@ module.exports = {
     docsRepo: 'https://github.com/rndflow/rndflow-documentation',
     docsBranch: 'master',
     docsDir: 'src',
+    search: true,
     locales: {
       '/': {
         selectText: 'Языки',
@@ -103,4 +104,17 @@ module.exports = {
   },
 
   base: '/docs/',
+
+  plugins: [
+    [
+      '@vuepress/plugin-search',
+      {
+        locales: {
+          '/': {
+            placeholder: 'Поиск'
+          }
+        }
+      }
+    ]
+  ]
 };
