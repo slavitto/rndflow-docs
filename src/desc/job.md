@@ -10,6 +10,10 @@
 
 ![Node packages count](/images/common/node_compute_jobs.png)
 
+Общее количество заданий, завершившихся с ошибкой, в узле в текущем [слое данных][5] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: red"></span>:
+
+![Node packages count](/images/common/node_compute_jobs_error.png)
+
 ## Состояния
 
 Типы состояний заданий:

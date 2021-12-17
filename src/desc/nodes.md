@@ -421,6 +421,7 @@ Cтруктура:
 - История обработки
 - <span class='iconify-inline' data-icon='mdi:package'></span> Входные пакеты
 - <span class='iconify-inline' data-icon='mdi:package'></span> Выходные пакеты
+- Докер образ
 - Параметры узла
 - Список файлов с кнопкой сохранения <span class='iconify-inline' data-icon='mdi:content-save'></span> в [файлы](#фаилы) узла
 - Окно отображения выбранного файла
