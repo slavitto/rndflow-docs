@@ -35,6 +35,7 @@
   - <span class="iconify-inline" data-icon="mdi:file-code"></span> [Файлы](#фаилы)
   - <span class="iconify-inline" data-icon="mdi:package"></span> [Пакеты](#пакеты)
   - <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания](#задания)
+  - <span class="iconify-inline" data-icon="mdi:alert-circle"></span> [Ошибочные задания](#задания) (при наличии)
 
 - <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Переключатель активности узла
 - Описания узла: _Compute node description_
