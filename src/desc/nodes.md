@@ -149,14 +149,17 @@
 
 Cтруктура:
 
-- Докер образ - название докер образа
+- Докер образ - название докер образа и список [докер образов][7] рабочего пространства
+
+  ![Docker images list](/images/common/node_panel_container_dockerslist.png)
+
 - Сервер расчетов - индивидуальный сервер расчета (исполнитель) узла
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
   Выбор происходит по нажатия кнопки <span class="iconify-inline" data-icon="mdi:plus"></span>
   :::
 
-- Главные программный модуль узла - первоначально запускаемый программный модуль или скрипт (см. [Файлы](#фаилы)).
+- Скрипт - первоначально запускаемый программный модуль или скрипт узла (см. [Файлы](#фаилы)).
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
   Запуск должен соответствовать правила запуска в shell-среде ОС Linux.
 
@@ -451,3 +454,4 @@ Cтруктура:
 [4]: /docs/desc/package.md
 [5]: /docs/desc/job.md
 [6]: /docs/desc/job.md#состояния
+[7]: /docs/desc/docker.md

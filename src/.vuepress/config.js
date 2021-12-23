@@ -73,6 +73,7 @@ module.exports = {
             '/desc/project_user',
             '/desc/secrets',
             '/desc/api_keys',
+            '/desc/docker',
             '/desc/interface',
             '/desc/executor',
             '/desc/s3',
@@ -93,6 +94,7 @@ module.exports = {
             '/instructions/interface',
             '/instructions/executor',
             '/instructions/s3',
+            '/instructions/docker',
             '/instructions/payplan',
             '/instructions/video',
             '/instructions/examples',
@@ -111,10 +113,10 @@ module.exports = {
       {
         locales: {
           '/': {
-            placeholder: 'Поиск'
-          }
-        }
-      }
-    ]
-  ]
+            placeholder: 'Поиск',
+          },
+        },
+      },
+    ],
+  ],
 };
