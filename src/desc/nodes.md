@@ -157,6 +157,11 @@ Cтруктура:
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
   Выбор происходит по нажатия кнопки <span class="iconify-inline" data-icon="mdi:plus"></span>
+
+  После этого на панели узла появляется пометка <span class='iconify-inline' data-icon='mdi:circle' style='color: green'></span> над <span class='iconify-inline' data-icon='mdi:kubernetes'></span> :
+
+  ![Compute node with executor](/images/common/node_compute_executor.png)
+
   :::
 
 - Скрипт - первоначально запускаемый программный модуль или скрипт узла (см. [Файлы](#фаилы)).
@@ -425,6 +430,7 @@ Cтруктура:
 - История обработки
 - <span class='iconify-inline' data-icon='mdi:package'></span> Входные пакеты
 - <span class='iconify-inline' data-icon='mdi:package'></span> Выходные пакеты
+- Сервер расчетов
 - Докер образ
 - Параметры узла
 - Список файлов с кнопкой сохранения <span class='iconify-inline' data-icon='mdi:content-save'></span> в [файлы](#фаилы) узла
