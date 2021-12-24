@@ -90,6 +90,7 @@
 
 - <span class="iconify-inline" data-icon="mdi:folder-network"></span> [S3 серверы](/docs/desc/s3.md)
 - <span class="iconify-inline" data-icon="mdi:server"></span> [Серверы расчетов](/docs/desc/executor.md)
+- <span class="iconify-inline" data-icon="mdi:docker"></span> [Docker-образы](/docs/desc/docker.md)
 
 ![Resources](./images/workspace/resources.png)
 
