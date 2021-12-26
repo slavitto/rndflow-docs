@@ -21,7 +21,7 @@
 
 - Перейти на вкладку **РЕСУРСЫ**
 
-![Resources](/images/common/dashboard_user_workspace_resources_new.png)
+  ![Resources](/images/common/dashboard_user_workspace_resources_new.png)
 
 - [Добавить](./executor.md#добавление-в-рабочее-пространство) новое [S3 хранилище](/docs/desc/s3.md)
 

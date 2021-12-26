@@ -75,38 +75,6 @@
   - <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления соответствующего хранилища
   - ![Red add button](/images/common/red_plus.png) Кнопка добавления нового хранилища
 
-### Управление хранилищем
-
-![S3 manage](/images/common/admin_s3_disk.png)
-
-Структура:
-
-- Панель описания
-
-  - Логотип
-  - Название
-  - Описание
-  - <span class='iconify-inline' data-icon='mdi:link'></span> API адрес
-  - <span class='iconify-inline' data-icon='mdi:eye' style="color: blue"></span> Общедоступный - наличие общего доступа
-  - <span class='iconify-inline' data-icon='mdi:bucket-outline'></span> Корзин - общее количество корзин
-  - <span class='iconify-inline' data-icon='mdi:file-multiple-outline'></span> Файлов - общее количество файлов
-  - <span class='iconify-inline' data-icon='mdi:harddisk'></span> Объем - общий занятый объем
-  - <span class='iconify-inline' data-icon='mdi:cash'></span> Цена за МБ - стоимость хранения 1 МБ
-  - Кнопка "РЕДАКТИРОВАТЬ"
-
-- <span class='iconify-inline' data-icon='mdi:folder-information'></span> ДИСКОВОЕ ПРОСТРАНСТВО - панель использования диского пространства
-  - Панель инструментов
-    - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Период график
-    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления графиков
-    - График изменения числа корзин
-    - График изменения числа файлов
-    - График изменения общего занятого объема
-- Журнал очистки хранилища
-  - Панель инструментов
-    - <span class='iconify-inline' data-icon='mdi:cog-clockwise'></span> Кнопка запуска очистки
-    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления таблицы истории очистки
-  - Таблица истории очистки
-
 ## Серверы расчетов
 
 Отображение списка существующих серверов расчетов.
@@ -195,6 +163,16 @@
   - Редактируемое значение показателя (щелкнуть по значению)
 
     ![Payplan edit](/images/common/admin_payplan_edit.png)
+
+## Установка
+
+### Установка платформы
+
+<a href = "mailto: mail@rndflow.com">Свяжитесь с нами.</a>
+
+### Установка сервера расчетов
+
+<a href = "mailto: mail@rndflow.com">Свяжитесь с нами.</a>
 
 [1]: /docs/desc/s3.md
 [2]: /docs/desc/executor.md
