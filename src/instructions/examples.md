@@ -7,5 +7,6 @@
 - API клиента к проекту **Sin-cos**. [URL](https://server.rndflow.com/projects/15/graph?layer=12)
 - Фильтрация и переименование пакетов. Типы связей. [URL](https://server.rndflow.com/projects/29/graph?layer=28)
 - Применение SQL узла. Проект из [видеопримера][1]. [URL](https://server.rndflow.com/projects/32/graph?layer=31)
+- Использование [plotly](https://plotly.com/python/). [URL](https://server.rndflow.com/projects/36/graph?layer=37)
 
 [1]: /docs/instructions/video.md
