@@ -33,6 +33,11 @@
 
   ![Group output link](/images/common/link_group_output.png)
 
+Если связь производит переименование переменных, то связь приобретает вид для активного и пассивного типа соответственно:
+
+![Link var renamed](/images/common/link_var_renamed.png)
+![Link var renamed](/images/common/link_var_renamed_pass.png)
+
 ## Свойства
 
 Структура:

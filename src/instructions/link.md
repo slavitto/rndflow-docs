@@ -14,6 +14,11 @@
 
 ![Link rename package variables](/images/common/link_rename_vars.png)
 
+Связь приобретает вид для активного и пассивного типа соответственно:
+
+![Link var renamed](/images/common/link_var_renamed.png)
+![Link var renamed](/images/common/link_var_renamed_pass.png)
+
 ## Фильтрация пакетов
 
 - Щелкнуть по [связи][1] и нажать на иконку <span class='iconify-inline' data-icon='mdi:edit'></span> для открытия [свойств][2] связи.
