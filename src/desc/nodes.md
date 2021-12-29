@@ -223,32 +223,12 @@ Cтруктура:
     - <span class="iconify-inline" data-icon="mdi:vimeo"></span> Включить VIM режим
     - <span class="iconify-inline" data-icon="mdi:fullscreen"></span> Открыть на полный экран
 
-  - [Кнопка](#история-изменения) истории изменений файла: <span style="background-color: green; color: white"> автор / время последних изменений </span>
+  - [Кнопка](#история-изменения) истории изменений файла: <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>.
 
 - Кнопка "СОХРАНИТЬ" - для сохранение изменений файла
 - <span class="iconify-inline" data-icon="mdi:file-plus"></span> Кнопка создания нового файла
 
 ![Node file](/images/common/node_panel_file.png)
-
-#### История изменения
-
-Для каждого файла доступна история его изменения.
-
-Для получения доступа к ней необходимо выбрать необходимый файл и нажать на кнопку <span style="background-color: green; color: white"> автор / время последних изменений </span>.
-
-История файла содержит список всех его версий.
-
-![File history](/images/common/node_panel_file_history.png)
-
-Состав версии файла в истории:
-
-- Название
-- Дата сохранения
-- Опциональое описание
-- Кнопки управления
-  - <span class='iconify-inline' data-icon='mdi:arrow-left-circle' style="color: green"></span> Восстановить
-  - <span class='iconify-inline' data-icon='mdi:tag' style="color: green" ></span> Задать описание
-  - <span class='iconify-inline' data-icon='mdi:delete' style="color: green"></span> Удалить
 
 ### Пакеты
 
@@ -347,7 +327,10 @@ Cтруктура:
     - <span class="iconify-inline" data-icon="mdi:vimeo"></span> Включить VIM режим
     - <span class="iconify-inline" data-icon="mdi:fullscreen"></span> Открыть на полный экран
 
-  - История изменений запроса: <span style="background-color: green; color: white"> автор / время последних изменений </span>
+  - Кнопка истории изменений запроса: <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>
+
+    Отображение и управление истории аналогично [истории файлов](#история-изменения).
+
   - Кнопка "СОХРАНИТЬ" - для сохранение изменений запроса
 
   ![Node query](/images/common/node_panel_query.png)
@@ -444,6 +427,29 @@ Cтруктура:
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
 Процесс выполнения задания можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'></span> **идентификатор_задания.log**, который расположен в списке файлов.
 :::
+
+### История изменения
+
+Для каждого файла/запроса доступна история его изменения.
+
+Для получения доступа к ней необходимо выбрать необходимый файл/запрос и нажать на кнопку <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>.
+
+История содержит список существующих версий.
+
+![File history](/images/common/node_panel_file_history.png)
+
+Состав версии в истории:
+
+- Название
+- Дата сохранения
+- Опциональое описание
+- Кнопки управления
+
+  - <span class='iconify-inline' data-icon='mdi:arrow-left-circle' style="color: green"></span> Восстановить
+  - <span class='iconify-inline' data-icon='mdi:tag' style="color: green" ></span> Задать описание
+  - <span class='iconify-inline' data-icon='mdi:delete' style="color: green"></span> Удалить
+
+При щелчке по конкретной версии в истории она будет отображена вместо текущего файла в режиме только для чтения. Чтобы выйти из этого режима необходимо закрыть окно истории.
 
 ## Группа
 
