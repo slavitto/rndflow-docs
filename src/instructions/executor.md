@@ -16,7 +16,7 @@
 ## Cоздание нового в рабочем пространстве
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-Сервер расчетов должен быть предварительно [установлен][2] на нeобходимой площадке.
+Сервер расчетов должен быть предварительно [установлен][2] на совместимой площадке, например, [Yandex Managed Service for Kubernetes](https://cloud.yandex.com/en/services/managed-kubernetes), [VK Cloud Containers](https://mcs.mail.ru/containers/), [Amazon EKS](https://aws.amazon.com/eks/) или собственном [Kubernetes](https://kubernetes.io/) кластере.
 :::
 
 Для создания [сервера расчетов][1] в рабочем пространстве:
