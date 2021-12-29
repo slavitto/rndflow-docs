@@ -339,6 +339,7 @@ Cтруктура:
   - Панель инструментов
 
     - <span class="iconify-inline" data-icon="mdi:auto-fix"></span> [SQL мастер](/docs/dev/sql.md#sql-мастер)
+    - <span class="iconify-inline" data-icon="mdi:help-circle" style="color: black"></span> Помощь
     - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"></span> Уменьшить размер шрифта
     - <span style="background-color: green; color: white">Текущий размер шрифта</span>
     - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"></span> Увеличить размер шрифта
