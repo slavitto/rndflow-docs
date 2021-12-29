@@ -153,6 +153,8 @@ Cтруктура:
 
   ![Docker images list](/images/common/node_panel_container_dockerslist.png)
 
+  Необходимый докер образ можно выбрать из списка или набрать название самостоятельно (в последнем случае набор необходимо завершить нажатием **Enter**).
+
 - Сервер расчетов - индивидуальный сервер расчета (исполнитель) узла
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
