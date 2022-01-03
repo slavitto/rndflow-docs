@@ -30,11 +30,7 @@
 
 #### GitHub
 
-Ключ, возвращаемый кнопкой <span class='iconify-inline' data-icon='mdi:key'></span> **СКОПИРОВАТЬ ПУБЛИЧНЫЙ SSH КЛЮЧ**, должен быть добавлен в качестве ключа развертывания (deployment key) в соответствующий [GitHub][6] репозиторий.
-
-::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-Например, для проекта **rndflow/project-example-sin-cos** настройки ключей доступны по адресу: [https://github.com/rndflow/project-example-sin-cos/settings/keys](https://github.com/rndflow/project-example-sin-cos/settings/keys).
-:::
+Ключ, возвращаемый кнопкой <span class='iconify-inline' data-icon='mdi:key'></span> **СКОПИРОВАТЬ ПУБЛИЧНЫЙ SSH КЛЮЧ**, должен быть добавлен разделе **Settings** проекта в качестве ключа развертывания (Deploy key) с правами на запись (<span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: blue"></span>Allow write access) в соответствующий [GitHub][6] репозиторий.
 
 ![Git](/images/common/git_keys.png)
 
