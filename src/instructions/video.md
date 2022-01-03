@@ -11,3 +11,5 @@
 - [Интегация с Jupyter Notebook](https://youtu.be/8a6uzeTHO8k)
 
 - [Создание графических интерфейсов](https://youtu.be/Jvlw78QcWio)
+
+- [Интеграция с GitHUB](https://youtu.be/bnK1qZ-RB1I)
