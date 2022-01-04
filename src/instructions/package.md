@@ -28,6 +28,19 @@
 Процесс выполнения [задания][8] можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'></span> **идентификатор_задания.log**, который расположен в списке файлов [задания][8] (см. панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][2]).
 :::
 
+## Обработка пакета Jupyter скриптом
+
+- Открыть панель <span class="iconify-inline" data-icon="mdi:file-code"></span>[Файлы][5] узла и добавить Jupyter скрипт.
+- Открыть панель <span class="iconify-inline" data-icon="mdi:kubernetes"></span>[Контейнер][4] узла и в **Script** указать:
+  ```
+  jupyter nbconvert --execute --to html script_name.ipynb
+  ```
+  Здесь **script_name.ipynb** - название скрипта, [jupyter nbconvert](https://nbconvert.readthedocs.io/en/latest/) - утилита конвертации.
+
+## Интерактивная обработка пакета с Jupyter Notebook
+
+Смотреть [интерактивная обработка пакета](#интерактивная-обработка-пакета).
+
 ## Интерактивная обработка пакета
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
