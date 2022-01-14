@@ -37,7 +37,7 @@
 ## Структура плитки проекта
 
 - Изображение
-- <span class="iconify-inline" data-icon="mdi:star"></span> - кнопка добавления звезды проекту
+- <span class="iconify-inline" data-icon="mdi:star"></span> - кнопка добавления проекта в избранные
 - <span class='iconify-inline' data-icon='ph:number-square-two-fill' style="color: green"></span> - общее количество <span class="iconify-inline" data-icon="mdi:star"></span> проекта
 - <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления проекта
 - Название
