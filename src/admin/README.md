@@ -9,15 +9,16 @@
 - Открыть панель ссылок <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>
 - Нажать на <span class='iconify-inline' data-icon='mdi:tools'></span> Администрирование <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
 
-  ![Admin дink panel](/images/common/admin_link_panel.png)
+  ![Admin link panel](/images/common/admin_link_panel.png)
 
 ## Панель подразделов
 
 Панель подразделов предоставляет доступ к различным разделам администрирования
 
-<img src="/images/common/admin_manage_panel.png" align="right" alt="Admin action panel" style="margin: 5%;">
+<img src="/images/common/admin_manage_panel.png" align="right" alt="Admin action panel" style="margin: 1%;">
 
 - <span class='iconify-inline' data-icon='mdi:view-dashboard'></span>[Панель управления](#панель-управления) - обзорная информация о платформе
+- <span class='iconify-inline' data-icon='mdi:wallet'></span>[Баланс](#баланс) - финансовая информация платформы
 - <span class='iconify-inline' data-icon='mdi:folder-network'></span>[S3 серверы](#s3-серверы) - управление [S3 хранилищами][1]
 - <span class='iconify-inline' data-icon='mdi:server'></span>[Серверы расчетов](#серверы-расчетов) - управления [серверами расчетов][2]
 - <span class='iconify-inline' data-icon='mdi:account-multiple'></span>[Пользователи](#пользователи) - управления пользователями
@@ -37,11 +38,30 @@
 
 - Панель инструментов
   - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления информации
+  - Общая финансовая информация платформы
   - Общая информация по состоянию пула соединений к базе данных платформы
   - Общая информация по S3 серверам
   - Общая информация по серверам расчетов
   - Общая информация по пользователям
   - Общая информация по рабочим пространствам
+
+## Баланс
+
+Отображение текущего баланса платформы и списка [транзакций][8] с [счетом][9] платформы.
+
+![Balance](/images/common/admin_balance.png)
+
+- Панель инструментов
+
+  - Период - выбор отчетного периода
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка транзакций
+
+- Список транзакций
+
+  - Создано - дата осуществления транзакции
+  - Назначение - тип транзакции
+  - Контрагент - контрагент транзакции
+  - Сумма - сумма транзакции
 
 ## S3 серверы
 
@@ -63,6 +83,8 @@
   - Общедоступный - переключатель общего доступа к хранилищу
 
     При включенном <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> переключателе все пользователи платформы могут использовать его для хранения проектов.
+
+  - Баланс - баланс счета хранилища
 
   - Только для чтения - переключатель возможности записи в хранилище
 
@@ -88,6 +110,8 @@
   - Наименование
 
     При щелчке по наименованию сервера расчетов открывается окно с его [описанием][7].
+
+  - Баланс - баланс счета сервера расчетов.
 
   - Общедоступный - переключатель общего доступа
 
@@ -115,6 +139,7 @@
   - Логин
   - Полное имя
   - Почта - адрес электронной почты
+  - Баланс - баланс счета пользователя
   - Был - время последнего посещения
   - Активен - переключатель разрешения доступа пользователя в платформу
 
@@ -137,6 +162,7 @@
 - Таблица рабочих пространств
   - Наименование
   - Владельцы
+  - Баланс - баланс счета рабочего пространства
   - <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления соответствующего пользователя
 
 ## Тарифы
@@ -157,7 +183,7 @@
 - Название
 - <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления
 - Описание
-- Таблица с показателями тарифа
+- Таблица с [показателями тарифа][10]
 
   - Название показателя
   - Редактируемое значение показателя (щелкнуть по значению)
@@ -181,3 +207,6 @@
 [5]: /docs/desc/payplan.md
 [6]: https://server.rndflow.com/api/redoc
 [7]: /docs/desc/executor.md
+[8]: /docs/desc/finance.md#транзакции
+[9]: /docs/desc/finance.md#счета
+[10]: /docs/desc/payplan.html
