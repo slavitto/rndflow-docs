@@ -27,7 +27,7 @@
 ## Структура плитки рабочего пространства
 
 - Изображение
-- <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление рабочего пространства
+- <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления рабочего пространства
 - Название
 - Описание
 - Тип прав (Владелец/Участник)
@@ -37,7 +37,9 @@
 ## Структура плитки проекта
 
 - Изображение
-- <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление проекта
+- <span class="iconify-inline" data-icon="mdi:star"></span> - кнопка добавления звезды проекту
+- <span class='iconify-inline' data-icon='ph:number-square-two-fill' style="color: green"></span> - общее количество <span class="iconify-inline" data-icon="mdi:star"></span> проекта
+- <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления проекта
 - Название
 - Описание
 - <span class="iconify-inline" data-icon="mdi:sitemap"></span> Ссылка для перехода в редактор графа проекта (Граф)
