@@ -13,11 +13,11 @@
 - Панель описания
 - <span class='iconify-inline' data-icon='mdi:clipboard-pulse'></span>ЗАГРУЖЕННОСТЬ - панель нагрузки на сервер расчетов
   - Панель инструментов
-    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления графиков
+    - <span class='iconify-inline' data-icon='mdi:refresh'></span> - кнопка обновления графиков
     - График изменения числа заданий
-    - Загрузка CPU узлов сервера расчетов
-    - Потребления памяти узлами сервера расчетов
-    - Активность за последний год (заданий за день)
+    - График загрузка CPU узлов сервера расчетов
+    - График потребления памяти узлами сервера расчетов
+    - График активности за последний год (заданий за день)
 
 ## Панель описания
 
@@ -64,8 +64,8 @@
 
 - Панель транзакций
   - Панель инструментов
-    - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Период
-    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления
+    - Период <span class='iconify-inline' data-icon='mdi:calendar-range'></span> - отображаемый период
+    - <span class='iconify-inline' data-icon='mdi:refresh'></span> - кнопка обновления списка
   - Таблица транзакций
     - Создано - дата осуществления транзакции
     - Назначение - тип транзакции

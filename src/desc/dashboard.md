@@ -112,8 +112,8 @@
 
 - Панель транзакций
   - Панель инструментов
-    - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Период
-    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления
+    - Период <span class='iconify-inline' data-icon='mdi:calendar-range'></span> - отображаемый период
+    - <span class='iconify-inline' data-icon='mdi:refresh'></span> - кнопка обновления списка
   - Таблица транзакций
     - Создано - дата осуществления транзакции
     - Назначение - тип транзакции
