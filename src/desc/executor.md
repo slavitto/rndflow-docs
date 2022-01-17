@@ -27,6 +27,10 @@
 - Название
 - Описание
 - <span class='iconify-inline' data-icon='mdi:eye' style="color: blue"></span> Общедоступность сервера
+- <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс [счета][1]
+
+  При нажатии происходит открытие окна [баланса](#баланс) сервера.
+
 - <span class='iconify-inline' data-icon='mdi:play-circle' style="color: green"></span> Статус
 - Цена за задание - стоимость выполнения одного задания
 - Цена за ядро CPU - стоимость использования ядра CPU
@@ -42,3 +46,36 @@
 - <span class='iconify-inline' data-icon='mdi:stop-circle' style="color: red"></span> Выключен
 
 <br clear="right"/>
+
+## Баланс
+
+Окно баланса сервера расчтетов отображает баланс [счета][1] и список [транзакций][2] по вводу и выводу средств на счет.
+
+![Executor balance](/images/common/executor_balance.png)
+
+Структура:
+
+- Панель описания
+
+  - Изображение сервера
+  - Имя-ссылка сервера
+  - <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс счета
+  - Кнопка "ВЫВЕСТИ" - кнопка вывода средств на счет владельца
+
+- Панель транзакций
+  - Панель инструментов
+    - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Период
+    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления
+  - Таблица транзакций
+    - Создано - дата осуществления транзакции
+    - Назначение - тип транзакции
+    - Контрагент - контрагент транзакции
+    - Сумма - сумма транзакции
+  - Панель навигации
+
+После нажатия на кнопку **ВЫВЕСТИ** можно осуществить вывод средств на счет владельца сервера.
+
+![Executor balance out](/images/common/executor_balance_out.png)
+
+[1]: /docs/desc/finance.md#cчета
+[2]: /docs/desc/finance.md#транзакции
