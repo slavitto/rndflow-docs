@@ -10,7 +10,7 @@
 
 - Выбрать новый [тариф][4] нажав на кнопку **ВЫБРАТЬ** на плитке необходимого [тарифа][4].
 
-  ![Billing](/images/common/project_billing_payplans_change.png)
+  ![Billing](/images/common/workspace_billing_payplans_change.png)
 
 [1]: ./workspace.md#переход-в-рабочее-пространство
 [2]: /docs/desc/workspace.md
