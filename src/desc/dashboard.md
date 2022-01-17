@@ -4,22 +4,25 @@
 
 Основные компоненты платформы пользователю доступны с помощью панели управления.
 
-![User dashboard](./images/dashboard/dashboard.png)
+![User dashboard](/images/common/dashboard.png)
 
 Структура:
 
 - <span class="iconify-inline" data-icon="mdi:account"></span> Пользователь - [панель пользователя](#панель-пользователя).
 - [Рабочие пространства][1]
 
-  - <span class='iconify-inline' data-icon='mdi:plus'></span> Кнопка создания нового рабочего пространства
+  - <span class='iconify-inline' data-icon='mdi:plus'></span> - кнопка создания нового рабочего пространства
   - Список плиток доступных [рабочих пространств][1].
 
     > Переход в рабочее пространство осуществляется щелчком по соответсвующем плитке.
 
 - Приглашения в рабочие пространства
+
   - Список плиток приглашений в рабочие пространства (только при наличии приглашения).
+
 - Проекты
 
+  - <span class="iconify-inline" data-icon="mdi:star"></span> - кнопка отображения избранных проектов
   - Список плиток доступных [проектов][2], отсортированных по времени последнего доступа.
 
     > Переход в проект осуществляется щелчком по соответсвующем плитке. Отображаются проекты, в список пользователей которых непосредственно включен текущий пользователь.
@@ -30,9 +33,9 @@
 - <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления рабочего пространства
 - Название
 - Описание
-- Тип прав (Владелец/Участник)
+- Владелец/Участник - [тип прав][3] пользователя
 
-![Workspace](./images/dashboard/workspace.png)
+![Workspace](/images/common/dashboard_workspace_panel.png)
 
 ## Структура плитки проекта
 
@@ -42,11 +45,11 @@
 - <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления проекта
 - Название
 - Описание
-- <span class="iconify-inline" data-icon="mdi:sitemap"></span> Ссылка для перехода в редактор графа проекта (Граф)
-- <span class="iconify-inline" data-icon="mdi:shield-account"></span> Ссылка для перехода в редактор разрешений проекта (Разрешения)
-- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Ссылка для перехода в редактор API ключей проекта (API ключи)
+- <span class="iconify-inline" data-icon="mdi:sitemap"></span> - cсылка для перехода в редактор графа проекта (Граф)
+- <span class="iconify-inline" data-icon="mdi:shield-account"></span> - cсылка для перехода в редактор разрешений проекта (Разрешения)
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> - cсылка для перехода в редактор API ключей проекта (API ключи)
 
-![Project](./images/dashboard/project.png)
+![Project](/images/common/dashboard_project_panel.png)
 
 ## Панель пользователя
 
@@ -58,6 +61,10 @@
 - Имя
 - <span class="iconify-inline" data-icon="mdi:email"></span> Электронная почта
 - <span class="iconify-inline" data-icon="mdi:link"></span> Веб сайт/страница пользователя
+- <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс [счета][1]
+
+  При нажатии происходит открытие окна [баланса](#баланс) пользователя.
+
 - Описание пользователя
 - Время последнего подключения
 - Кнопка "РЕДАКТИРОВАТЬ"
@@ -88,5 +95,34 @@
 
 ![User password edit](/images/common/dashboard_user_password.png)
 
-[1]: ./workspace.md
-[2]: ./project.md
+## Баланс
+
+Окно баланса хранилища отображает баланс [счета][4] и список [транзакций][5] по вводу и выводу средств на счет.
+
+![User balance](/images/common/dashboard_user_balance.png)
+
+Структура:
+
+- Панель описания
+
+  - Аватар
+  - Имя
+  - Имя-ссылка - имя рабочего пространства из которого был осуществлен переход на страницу баланса
+  - <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс счета
+
+- Панель транзакций
+  - Панель инструментов
+    - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Период
+    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления
+  - Таблица транзакций
+    - Создано - дата осуществления транзакции
+    - Назначение - тип транзакции
+    - Контрагент - контрагент транзакции
+    - Сумма - сумма транзакции
+  - Панель навигации
+
+[1]: /docs/desc/finance.md#cчета
+[2]: /docs/desc/finance.md#транзакции
+[3]: /docs/desc/workspace.md#участники
+[4]: ./workspace.md
+[5]: ./project.md
