@@ -80,6 +80,7 @@ module.exports = {
             '/desc/s3',
             '/desc/payplan',
             '/desc/finance',
+            '/desc/explorer',
           ],
           '/dev/': ['/dev/', '/dev/compute', '/dev/sql', '/dev/docker'],
           '/instructions/': [
