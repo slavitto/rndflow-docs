@@ -58,9 +58,10 @@
 Панель пользователя отображает:
 
 - Аватар
-- Имя
-- <span class="iconify-inline" data-icon="mdi:email"></span> Электронная почта
-- <span class="iconify-inline" data-icon="mdi:link"></span> Веб сайт/страница пользователя
+- Полное имя
+- <span class="iconify-inline" data-icon="mdi:at"></span> - логин
+- <span class="iconify-inline" data-icon="mdi:email"></span> - электронная почта
+- <span class="iconify-inline" data-icon="mdi:link"></span> - веб сайт/страница пользователя
 - <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс [счета][1]
 
   При нажатии происходит открытие окна [баланса](#баланс) пользователя.
@@ -76,14 +77,15 @@
 
 ### Редактирование
 
-Позволяет изменить:
+Структура:
 
 - Ававтар - щелкнуть по аватару
-- Имя
-- <span class="iconify-inline" data-icon="mdi:email"></span> Электронная почта
-- <span class="iconify-inline" data-icon="mdi:link"></span> Веб сайт/страница пользователя
-- Описание пользователя
-- Время последнего подключения
+- Логин
+- Полное имя
+- Почта- электронная почта
+- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> Показывать почту в профиле - включает/выключает отображение почты в [галерее][6] в разделе **ПОЛЬЗОВАТЕЛИ**.
+- Веб сайт - веб сайт пользователя
+- Редактор - редактор ввода описания пользователя
 - Кнопка "СОХРАНИТЬ"
 - Кнопка "ОТМЕНА"
 
@@ -126,3 +128,4 @@
 [3]: /docs/desc/workspace.md#участники
 [4]: ./workspace.md
 [5]: ./project.md
+[6]: ./explorer.md
