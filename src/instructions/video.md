@@ -2,7 +2,7 @@
 
 - [Все видео](https://www.youtube.com/channel/UCTKQE6PxB9Ohbmi9gd9Rfvg)
 
-- [Обзор](https://youtu.be/6Jj5QEo_Uvo)
+- [Обзор](https://youtu.be/r6M0ocMDo_w)
 
 - [Первый проект](https://youtu.be/Cz58cIAJEKk) **Cos**
 
