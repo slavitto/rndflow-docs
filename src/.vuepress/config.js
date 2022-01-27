@@ -81,6 +81,7 @@ module.exports = {
             '/desc/payplan',
             '/desc/finance',
             '/desc/explorer',
+            '/desc/tasks',
           ],
           '/dev/': ['/dev/', '/dev/compute', '/dev/sql', '/dev/docker'],
           '/instructions/': [
