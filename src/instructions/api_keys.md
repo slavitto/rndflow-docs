@@ -46,11 +46,11 @@
 
 ![API request confirmation](/images/common/api_confirmation.png)
 
-Ознакомиться с статистикой использования ключа можно в разделе <span class="iconify-inline" data-icon="mdi:script-text-key"></span>[СТАТИСТИКА ИСПОЛЬЗОВАНИЯ][6].
+Ознакомиться с списком выданных ключей и статистикой их использования ключа можно в разделе <span class="iconify-inline" data-icon="mdi:account-key"></span>[ВЫДАННЫЕ КЛЮЧИ][6].
 
 ## Отозвать ключ
 
-- Перейти в раздел <span class="iconify-inline" data-icon="mdi:script-text-key"></span> [**СТАТИСТИКА ИСПОЛЬЗОВАНИЯ**][6].
+- Перейти в раздел <span class="iconify-inline" data-icon="mdi:account-key"></span> [**ВЫДАННЫЕ КЛЮЧИ**][6].
 - В таблице выданных ключей напротив необходимого к отзыву ключа нажать кнопку <span class='iconify-inline' data-icon='mdi:delete'></span>.
 
 ## Импорт ключа
@@ -85,4 +85,4 @@
 [3]: /docs/desc/secrets.md
 [4]: /docs/desc/nodes.md#фаилы
 [5]: /docs/dev/compute.md#api-доступ-к-проекту
-[6]: /docs/desc/api_keys.md#статистика-использования
+[6]: /docs/desc/api_keys.md#выданные-ключи
