@@ -15,3 +15,5 @@
 - [Интеграция с GitHUB](https://youtu.be/bnK1qZ-RB1I)
 
 - [Сборка Докер образа](https://youtu.be/2yTzuTUcoss)
+
+- [Возмездный веб доступ к проекту](https://youtu.be/Clvh7MlBrFI)

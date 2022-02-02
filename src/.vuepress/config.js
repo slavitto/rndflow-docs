@@ -86,6 +86,7 @@ module.exports = {
           '/dev/': ['/dev/', '/dev/compute', '/dev/sql', '/dev/docker'],
           '/instructions/': [
             '/instructions/',
+            '/instructions/video',
             '/instructions/workspace',
             '/instructions/project',
             '/instructions/nodes',
@@ -101,7 +102,6 @@ module.exports = {
             '/instructions/docker',
             '/instructions/git',
             '/instructions/payplan',
-            '/instructions/video',
             '/instructions/examples',
           ],
           '/admin/': ['/admin/'],

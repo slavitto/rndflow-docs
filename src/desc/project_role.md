@@ -82,9 +82,10 @@
 
 1. Редактируемое название
 2. Редактируемое описание
-3. <span class="iconify-inline" data-icon="mdi:shield-edit"></span> "РАЗРЕШЕНИЯ" - управления [разрешениями](#типы-разрешении)
-4. <span class="iconify-inline" data-icon="mdi:eye"></span> Переключатель общедоступности
-5. <span class="iconify-inline" data-icon="mdi:currency-usd"></span> Переключатель платности
-6. <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление роли
+3. Стоимостной коэффициент - редактируемый коэффициент стоимости
+4. <span class="iconify-inline" data-icon="mdi:shield-edit"></span> "РАЗРЕШЕНИЯ" - управления [разрешениями](#типы-разрешении)
+5. <span class="iconify-inline" data-icon="mdi:eye"></span> - переключатель общедоступности
+6. <span class="iconify-inline" data-icon="mdi:currency-usd"></span> - переключатель платности
+7. <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления роли
 
 [1]: ./project.md#слои-данных
