@@ -17,3 +17,5 @@
 - [Сборка Докер образа](https://youtu.be/2yTzuTUcoss)
 
 - [Возмездный веб доступ к проекту](https://youtu.be/Clvh7MlBrFI)
+
+- [Возмездный API доступ к проекту](https://youtu.be/gDD2Xk95qdc)
