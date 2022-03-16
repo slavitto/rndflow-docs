@@ -20,11 +20,13 @@
 
 - В [панели управления проектом][4] выбрать <span class="iconify-inline" data-icon="mdi:git"></span>**История проекта** для перехода в раздел **Синхронизация с Git**.
 
-- В поле ввода **Адрес репозитория Git (в формате SSH)** ввести адрес существующего удаленного репозитория.
+- В поле ввода **Адрес репозитория Git (в формате SSH)** ввести адрес существующего инициализированного Git репозитория.
 
   > Пример: git@github.com:user/project.git
 
-- Сохранить адрес нажатием кнопки <span class='iconify-inline' data-icon='mdi:content-save'></span>
+- Сохранить адрес нажатием кнопки <span class='iconify-inline' data-icon='mdi:content-save'></span>.
+
+  Ниже адресной строки появится ссылка на раздел в Git репозитории, в котором требуется добавить SSH ключ.
 
 - Нажать на кнопку <span class='iconify-inline' data-icon='mdi:key'></span> **СКОПИРОВАТЬ ПУБЛИЧНЫЙ SSH КЛЮЧ** - для копировать в буфер обмена публичного SSH ключа.
 
@@ -34,9 +36,15 @@
 
 #### GitHub
 
-Ключ, возвращаемый кнопкой <span class='iconify-inline' data-icon='mdi:key'></span> **СКОПИРОВАТЬ ПУБЛИЧНЫЙ SSH КЛЮЧ**, должен быть добавлен разделе **Settings** проекта в качестве ключа развертывания (Deploy key) с правами на запись (<span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: blue"></span>Allow write access) в соответствующий [GitHub][6] репозиторий.
+Ключ, возвращаемый кнопкой <span class='iconify-inline' data-icon='mdi:key'></span> **СКОПИРОВАТЬ ПУБЛИЧНЫЙ SSH КЛЮЧ**, должен быть добавлен разделе **Settings** в качестве ключа развертывания (Deploy key) с правами на запись (<span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: blue"></span>Allow write access) в соответствующий [GitHub][6] репозиторий.
 
 ![Git](/images/common/git_keys.png)
+
+#### GitLab
+
+Ключ, возвращаемый кнопкой <span class='iconify-inline' data-icon='mdi:key'></span> **СКОПИРОВАТЬ ПУБЛИЧНЫЙ SSH КЛЮЧ**, должен быть добавлен в разделе **Settings/Repository** в качестве ключа развертывания (Deploy keys) с правами на запись (<span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: blue"></span>Grant write permissions to this key) в соответствующий [GitLab][7] репозиторий.
+
+![Git](/images/common/gitlab_keys.png)
 
 ## Сохранить новую версию
 
@@ -75,3 +83,4 @@
 [4]: /docs/desc/project.md#панель-управления-проектом
 [5]: #добавление-ключеи-развертывания
 [6]: htts://github.com
+[7]: htts://gitlab.com
