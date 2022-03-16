@@ -112,7 +112,7 @@
 
    **Вариант 2**
 
-   В случае необходимости использовать образ операционной системы отличный от используемого в [rndflow/job.py](https://hub.docker.com/r/rndflow/job.py/tags?page=1&ordering=last_updated) необходимо самостоятельно устанавливать библиотекy [job.py](https://github.com/rndflow/rndflow-job-py). Также необходимо установить библиотеки moreutils,curl, zlib-dev, libjpeg-dev.
+   В случае необходимости использовать образ операционной системы отличный от используемого в [rndflow/job.py](https://hub.docker.com/r/rndflow/job.py/tags?page=1&ordering=last_updated) необходимо самостоятельно устанавливать библиотекy [job.py](https://github.com/rndflow/rndflow-job-py). Также необходимо установить библиотеки moreutils,curl, zlib1g-dev, libjpeg-dev.
 
    ```dockerfile:no-line-numbers
    FROM ...
