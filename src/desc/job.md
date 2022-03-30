@@ -24,6 +24,7 @@
 - <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Стартовало
 - <span class="iconify-inline" data-icon="mdi:check-circle" style="color: green"></span> - Обработано
 - <span class="iconify-inline" data-icon="mdi:alert-circle" style="color: red"></span> - Ошибка
+- <span class="iconify-inline" data-icon="mdi:emoticon-cry-outline" style="color: red"></span> - Отсутствует сердцебиение более 3 минут
 
 [1]: /docs/desc/package.md
 [2]: /docs/desc/node_params.md
