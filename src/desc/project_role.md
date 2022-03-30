@@ -13,6 +13,11 @@
 
 - Обычная
 - Общедоступная - роль доступна всем, в том числе не авторизированным пользователям
+
+  ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+  Не авторизированные пользователи в этом случае имеют доступ только на чтение вне зависимости от разрешений роли.
+  :::
+
 - Платная - роль, обеспечивающая доступ к проекту на платной основе
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>

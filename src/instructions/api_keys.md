@@ -18,6 +18,10 @@
 
   ![Add Information field](/images/common/api.png)
 
+::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+Роль, привязываемая к API шаблону, должна иметь [разрешение][permissions] **project_view** в случае, если в проекте отсутствует общедоступная роль.
+:::
+
 ## Запрос ключа
 
 В проекте перейти в раздел <span class="iconify-inline" data-icon="mdi:information"></span>**О проекте** и в секции <span class="iconify-inline" data-icon="mdi:shield-key"></span>**API ключи** на плитке необходимого API нажать кнопку **ЗАПРОСИТЬ**.
@@ -91,3 +95,4 @@
 [5]: /docs/dev/compute.md#api-доступ-к-проекту
 [6]: /docs/desc/api_keys.md#выданные-ключи
 [video]: ./video.md
+[permissions]: /docs/desc/project_role.md#типы-разрешении
