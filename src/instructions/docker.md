@@ -62,6 +62,10 @@
 
 - Ввести при необходимости логин и пароль к реестру (для публичного реестра платформы можно не вводить).
 
+- Ввести при необходимости персональный токен для доступа к Git репозиторию.
+
+  > Описание создания персонального токена для [GitHub][8] и [GitLab][9].
+
   ![Docker image editor](/images/common/dashboard_user_workspace_resources_docker_editor_auth.png)
 
 - Нажать кнопку **СОБРАТЬ**.
@@ -166,3 +170,5 @@
 [5]: #создание-докер-образа-вне-платформы
 [6]: /docs/dev/docker.md
 [7]: https://docs.docker.com/engine/reference/builder/
+[8]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+[9]: https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
