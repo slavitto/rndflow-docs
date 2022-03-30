@@ -227,6 +227,7 @@ Cтруктура:
 
 - Кнопка "СОХРАНИТЬ" - для сохранение изменений файла
 - <span class="iconify-inline" data-icon="mdi:file-plus"></span> Кнопка создания нового файла
+- <span class="iconify-inline" data-icon="mdi:file-upload"></span> Кнопка загрузки нового файла
 
 ![Node file](/images/common/node_panel_file.png)
 
