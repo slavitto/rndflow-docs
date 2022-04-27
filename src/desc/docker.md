@@ -73,8 +73,9 @@
 
   При изменении контекста сборки на **GIT РЕПОЗИТОРИЙ** отображается:
 
-  - URL - публичный репозиторий с файлами сборки Докер образа.
-
+  - URL Git репозитория - репозиторий с файлами сборки Докер образа.
+  - Директория с Dockerfile - опциональный путь к директории с файлом Dockerfile, если он расположен не в корне репозитория.
+  
   ![Docker image editor git context](/images/common/dashboard_user_workspace_resources_docker_editor_git.png)
 
 [1]: https://docs.docker.com/get-started/overview/
