@@ -2,7 +2,7 @@
 
 ## Регистрация
 
-- Перейти по ссылке [https://server.rndflow.com/signin](https://server.rndflow.com/signin) или нажать кнопку **ВХОД** в верхнем правом углу [главной страницы](https://server.rndflow.com/) платформы.
+- Перейти по ссылке [https://server.rndflow.com/signup](https://server.rndflow.com/signup) или нажать кнопку **ВХОД** в верхнем правом углу [главной страницы](https://server.rndflow.com/) платформы.
 
   ![Signin](/images/common/signin.png)
 
@@ -44,6 +44,35 @@
 В этом случае после подтверждения регистрации пользователь получает письмо следующего вида:
 
 ![Registration audit letter](/images/common/registration_audit_wait.png)
+
+## Cброс пароля
+
+- Перейти по ссылке [https://server.rndflow.com/recovery](https://server.rndflow.com/recovery) или нажать кнопку **CБРОС** на панели страницы логина или регистрации.
+
+- Ввести корректный логин пользователя и его почтовый адрес.
+
+- Нажать кнопку **СБРОС**.
+
+![Password reset](/images/common/password_recovery.png)
+
+- При наличии активного пользователя с указанным логином и почтовым адресом будет отображено подтвержение запроса на сброс пароля.
+
+![Password reset message](/images/common/password_recovery_message.png)
+
+- На указанный почтовый ящик придет письмо с подтверждением на сброс пароля.
+
+![Password reset email](/images/common/password_recovery_email.png)
+
+- Для сброса пароля необходимо нажать на кнопку с надписью **Confirm your password reset request**.
+
+- Будет открыто окно с новым паролем 
+
+![Password reset email](/images/common/password_recovery_reset.png)
+
+- На указанный ранее почтовый ящик придет информация с подтверждением о завершении процедуры сброса пароля
+
+![Password reset email](/images/common/password_recovery_reset_email.png)
+
 
 
 ## Выход из платформы
