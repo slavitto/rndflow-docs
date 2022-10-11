@@ -1,5 +1,11 @@
 # Публикации
 
+- <img src="/images/common/draft.jpg" align="left" alt="Draft" height=30  style="margin: 1%"> Галимов М.Р. [URL](https://drive.google.com/file/d/1_q3Iyr9L4ycLTT82N-KzE5D35aSsM80b/view?usp=sharing)
+
+  **Инструмент разработки и эксплуатации результатов совместных научных исследований.**
+
+  Предпринт, 23.08.2022 г.
+
 - <img src="/images/common/lit_ljm.png" align="left" alt="LJM logo" height=40 style="margin: 1%"> E. V. Birialtsev, M.R.Galimov, D.E.Demidov, and A.M.Elizarov. [URL](https://link.springer.com/epdf/10.1134/S1995080221110081?sharing_token=_ZSQRYSkRATco1niR87QZUckSORA_DxfnEvY7GoQybaKrBvH4DbmgZiS8DYG7N7monZtfCFnafElcXj6AI81B0m92NFkVuY04phdLd9OdQcwezDqa_h2CXjuZh2xCtlLZ4Rp1H-DTofDx5M9HEvJQ9anImIt0i3kcKgCD2UbK_Q%3D)
 
   **Comprehensive Internet Software Platform for Implementation of Digital Projects.**
