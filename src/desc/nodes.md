@@ -254,6 +254,12 @@ Cтруктура:
     > При вставке пакетов из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.После вставки может понадобиться обновить список пакетов кнопкой <span class="iconify-inline" data-icon="mdi:refresh"></span>.
 
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновление списка пакетов
+
+    Может содержать дополнительно два вида ярлыков:
+
+    - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>- информирует об изменении количества пакетов в узле.
+    - Нижний ярлык оранжевого цвета <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: orange"></span> - информирует об изменении количества заданий некоторых пакетов в списке.
+
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных пакетов
   - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех пакетов
   - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтр по количеству заданий
@@ -392,6 +398,10 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Перезапустить выделенные задания в интерактивном режиме
   - <span class="iconify-inline" data-icon="mdi:reload-alert"></span> Перезапустить ошибочные задания
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновления списка
+
+      Может содержать дополнительный ярлык:
+      - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>- информирует об изменении количества заданий в узле.
+
   - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтрация заданий по состоянию
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных заданий
   - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех заданий
