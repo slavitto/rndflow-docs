@@ -256,6 +256,16 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновление списка пакетов
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных пакетов
   - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех пакетов
+  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтр по количеству заданий
+
+    По нажатию открывается окно настроек фильтра:
+
+    - Активировать - активация фильтра
+    - Тип операции - позволяет выбрать тип проверки количества заданий на равенство указанному значению или на превышение.
+    - Количество заданий 
+
+    ![Package](/images/common/node_panel_packages_filter.png)
+
   - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление переменной пакета
 
     Добавление переменной пакета в качестве нового столбца в таблице пакетов.
@@ -280,6 +290,8 @@ Cтруктура:
 Для открытия окна конкретного пакета необходимо щелкнуть по его идентификатору в столбце **Id**.
 
 Структура отображения состава [пакета][4]:
+
+![Package](/images/common/package.png)
 
 - Панель инструментов
 
@@ -307,8 +319,6 @@ Cтруктура:
       или
 
       ![Package](/images/common/package_verification_bad.png)
-
-![Package](/images/common/package.png)
 
 ### Запрос
 
