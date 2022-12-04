@@ -4,7 +4,7 @@
 
 ## Состояние
 
-Узел может находить в состояниях:
+Узел в текущем [слое данных][1] может находиться в следущих состояниях:
 
 - <span class="iconify-inline" data-icon="bi:toggle2-on" style="color: green"></span> Активен
 
@@ -37,7 +37,7 @@
   - <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания](#задания)
   - <span class="iconify-inline" data-icon="mdi:alert-circle"></span> [Ошибочные задания](#задания) (при наличии)
 
-- <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Переключатель активности узла
+- <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Переключатель активности узла в текущем [слое данных][1]
 - Описания узла: _Compute node description_
 - <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"></span> Одного или несколько выходов
 
