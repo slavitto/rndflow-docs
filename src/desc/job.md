@@ -6,11 +6,11 @@
 
 Список заданий отображается в [панели узла][3] в вкладке <span class='iconify-inline' data-icon='mdi:cog-box'></span> [**Задания**][4].
 
-Общее количество выполняемых заданий в узле в текущем [слое данных][5] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-square-three-fill' style="color: green"></span>:
+Общее количество выполняемых заданий в узле в текущем [слое данных][5] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>:
 
 ![Node packages count](/images/common/node_compute_jobs.png)
 
-Общее количество заданий, завершившихся с ошибкой, в узле в текущем [слое данных][5] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: red"></span>:
+Общее количество заданий, завершившихся с ошибкой, в узле в текущем [слое данных][5] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>:
 
 ![Node packages count](/images/common/node_compute_jobs_error.png)
 

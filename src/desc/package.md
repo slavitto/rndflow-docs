@@ -6,9 +6,13 @@
 
 Список пакетов отображается в [панели узла][1] в вкладке <span class='iconify-inline' data-icon='mdi:package'></span> [**Пакеты**][2].
 
-Общее количество пакетов в узле в текущем [слое данных][3] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"></span>:
+Общее количество пакетов в узле в текущем [слое данных][3] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-circle-three-fill' style="color: green"></span>:
 
 ![Node packages count](/images/common/node_compute_packages.png)
+
+Количество пакетов в узле в текущем [слое данных][3] без дочерних [заданий][9] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: orange"></span>:
+
+![Node packages count](/images/common/node_compute_packages_no_jobs.png)
 
 **Мастер пакет** (Master package) <span class='iconify-inline' data-icon='fluent:rectangle-landscape-16-filled' style="color: red"></span> - выбранный пользователем корневой пакет слоя данных. Выбор такого пакета позволяет отображать в текущем [слое данных][3] только родительские и дочерние пакеты мастер пакета.
 
