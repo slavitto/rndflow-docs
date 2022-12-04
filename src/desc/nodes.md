@@ -208,6 +208,7 @@ Cтруктура:
   Структура каждого элемента списка:
 
   - Иконка типа файла
+  - <span class="iconify-inline" data-icon="mdi:content-save-alert" style="color: red"></span> Иконка наличия несохраненных изменений
   - Название файла с возможностью переименования файла при щелчке по нему
   - <span class="iconify-inline" data-icon="mdi:cog-clockwise" style="color: green"></span> Установить свойство файла: исполняемый
   - <span class="iconify-inline" data-icon="mdi:hexadecimal"></span> Установить свойство файла: бинарный
