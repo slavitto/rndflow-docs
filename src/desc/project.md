@@ -29,8 +29,12 @@
 
 Панель включает в себя:
 
-- Изображение с кнопками редактирования <span class="iconify-inline" data-icon="mdi:pencil"></span> и удаления <span class="iconify-inline" data-icon="mdi:delete"></span>.
-- Название
+- Изображение проекта с кнопками
+  - <span class="iconify-inline" data-icon="mdi:star"></span> - добавления в избранные проекты
+  - <span class="iconify-inline" data-icon="mdi:pencil"></span> - редактирования информации о проекте
+  - <span class="iconify-inline" data-icon="mdi:delete"></span> - удаления проекта
+
+- Название проекта
 - <span class="iconify-inline" data-icon="mdi:notebook"></span> Название родительского [рабочего пространства](#workspace.md)
 - <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемого [S3 сервера](./s3.md)
 
@@ -39,6 +43,9 @@
 ---
 
 - <span class="iconify-inline" data-icon="mdi:information"></span> [О проекте](#описание) - доступ к окну описания проекта и списку доступных интерфейсов, платных ролей и API ключей
+
+- <span class="iconify-inline" data-icon="mdi:wallet"></span> [Баланс](#баланс) - доступ к окну баланса проекта
+
 - Опциональный список ссылок на [интерфейсы](./interface.md) проекта
 - <span class="iconify-inline" data-icon="mdi:sitemap"></span> [Граф](#граф) - дизайнер графа
 - <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> [Интерфейсы](./interface.md) - дизайнер интерфейсов
@@ -81,6 +88,38 @@
 - <span class="iconify-inline" data-icon="mdi:shield-key"></span> Список [API-ключей](./api_keys.md)
 
   > Пользователь может [запросить][2] доступ к проекту с использованием API ключа.
+
+## Баланс
+
+Окно баланса проекта отображает список сырых или сгруппированных по типу ввода/вывода средств [транзакций][8]. 
+
+![Project balance](/images/common/project_balance_raw.png)
+
+Структура:
+
+- Панель инструментов
+
+  - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Период
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления
+
+- Панель вкладок группировок транзакций
+
+  - ГРУППИРОВКА ПО ДАТЕ - суммарная информация по датам
+  - ПО ПОЛЬЗОВАТЕЛЮ - суммарная информация по пользователям
+  - ПО ПРОЕКТУ - суммарная информация по текущему проекту
+  - ПО КОНТРАГЕНТУ - суммарная информация по контрагентам
+  - СЫРЫЕ ТРАНЗАКЦИИ - все транзакции без группировки
+
+- Таблица транзакций для вкладки **СЫРЫЕ ТРАНЗАКЦИИ**
+  - Создано - дата осуществления транзакции
+  - Назначение - тип транзакции
+  - Контрагент - контрагент транзакции
+  - Сумма - сумма транзакции
+- Панель навигации
+
+::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+  Проект не имеет отдельно [счета][9]. Информация о транзациях получается с использованием информации о движении средств со счета рабочего пространства.
+:::
 
 ## Слой данных
 
@@ -192,3 +231,5 @@
 [5]: https://git-scm.com/
 [6]: /docs/desc/project_role.md
 [7]: /docs/desc/api_keys.md
+[8]: /docs/desc/finance.md#транзакции
+[9]: /docs/desc/finance.md#cчета
