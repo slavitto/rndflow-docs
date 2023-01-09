@@ -64,6 +64,8 @@ job.save_package(
 
 ### Python
 
+#### Низкоуровневый пример
+
 Импорт библиотеки:
 
 ```python:no-line-numbers
@@ -71,76 +73,111 @@ from rndflow import job
 from rndflow.server import Server
 ```
 
-Пример:
+Использование:
+
+@[code python:no-line-numbers](../dev/examples/api/example_raw.py)
+
+#### Примеры использования обертки ServerProxy
+
+Существует возможность использования вспомогательного класса-обертки [ServerProxy](https://github.com/rndflow/rndflow-job-py/blob/d78de01f5f8aa91ad5b1a1c023978d9e8f5eb239/rndflow/server.py#L192).
+
+ServerProxy предлагает к использованию следующие методы:
+
+- ServerProxy - инициациализация объекта класса обертки.
+
+  Параметры:
+  - api_key (str): API key
+  - project (int): Project-server ID
+  - input_node (int): Input node ID of project-server
+  - output_node (int): Output node ID of project-server
+  - api_server (str, optional): API server URL. Defaults to None.
+
+- getServer - получение объекта класса обертки с использованием значений секретов.
+
+  Параметры:
+  - prefix (str): API key secrets common prefix name
+  - api_server (str,optional): API server URL. Defaults to None.
+
+- getLastDataLayer - получить идентификатор последнего доступного слоя данных.
+
+- getDataLayers - получить список доступных объектов слоев данных.
+
+- postPackage - передать данные в входной узел проекта и получить идентификатор созданного пакета.
+
+  Параметры:
+  - layer (int): data layerd ID
+  - label (str): package label
+  - fields (dict): package fields
+
+- postPackage - передать данные в входной узел проекта и получить идентификатор созданного пакета.
+
+  Параметры:
+  - layer (int): data layerd ID
+  - package (dict): package
+
+- searchByMaster - запросить результат обработки из выходного узла проекта, соответствующий переданным ранее в входной узел данным.
+
+  Параметры:
+  - layer (int): data layerd ID
+  - master (int): master package id
+  - page (int): page number, defaults to 1.
+  - page_size (int): packages count on page, defaults to 1.
+
+  Возвращаемый результат - словарь с полями `total` - общее количество пакетов, `items` - список пакетов (количество зависит от общего количества пакетов и параметров page и page_size).
+
+- waitResult - вернуть пакеты из выходного узла проекта, соответствующие переданным ранее в входной узел данным; возвращается список пакетов и их общее количество или выбрасывает Timeout исключение.
+
+  Параметры:
+  - layer (int): data layerd ID
+  - master (int):  master package id
+  - timeout (timedelta, optional): Timeout. Defaults to timedelta(minutes=5).
+  - retry_pause (int, optional): Pause between requests to output node. Defaults to 5.
+  - page (int): page number, defaults to 1.
+  - page_size (int): packages count on page, defaults to 10.
+
+- waitOneResult - вернуть первый пакет из выходного узла проекта, соответствующий переданному ранее в входной узел данным; возвращает идентификатор пакета и его поля или выбрасывает Timeout исключение.
+
+  Параметры:
+  - layer (int): data layerd ID
+  - master (int):  master package id
+  - timeout (timedelta, optional): Timeout. Defaults to timedelta(minutes=5).
+  - retry_pause (int, optional): Pause between requests to output node. Defaults to 5.
+
+- getFilesList - возвращает список файлов для пакета с указанным идентификатором.
+
+  Параметры:
+  - ident (int): package ID
+
+- waitOneResultAndFiles - вернуть первый пакет из выходного узла проекта, соответствующий переданным ранее в входной узел данным; возвращает идентификатор пакета, его поля и файлы или выбрасывает Timeout исключение.
+
+  Параметры:
+  - layer (int): data layerd ID
+  - master (int):  master package id
+  - timeout (timedelta, optional): Timeout. Defaults to timedelta(minutes=5).
+  - retry_pause (int, optional): Pause between requests to output node. Defaults to 5.
+
+Импорт библиотеки:
 
 ```python:no-line-numbers
-#!/usr/bin/env python
 from rndflow import job
-from rndflow.server import Server
-from datetime import datetime, timedelta
-from time import sleep
-
-# Load packages variables as global variables
-globals().update(job.load())
-
-server = Server(api_key=job.secret('server_token'))
-
-# Get secrets
-project = job.secret('server_project')
-input_node = job.secret('server_input')
-output_node = job.secret('server_output')
-
-# Get last data layer from the server
-layer = server.get(f'/projects/{project}/data_layers/last')
-
-# Post new package to the start node
-p = server.post(f'/projects/{project}/nodes/{input_node}/packages',
-                params=dict(
-                    data_layer_id=layer['id'],
-                    ),
-                json=dict(
-                    label='from_client',
-                    fields=dict(size=size, span=span)))
-
-print('Sent workload to the server')
-
-#---------------------------------------------------------------------------
-# Poll server to get the resulting package.
-# This allows to exit on timeout.
-#---------------------------------------------------------------------------
-print('Waiting for the results...')
-timeout = datetime.now() + timedelta(minutes=5)
-
-ready = False
-while not ready and datetime.now() < timeout:
-    page = server.post(f'/projects/{project}/nodes/{output_node}/packages/search',
-        params=dict(
-            data_layer_id=layer['id'],
-            page_size=1
-            ),
-        json=dict(
-            master_id=p['id']
-            ))
-    for result in page['items']:
-        ready = True
-        break
-    else:
-        sleep(5)
-
-if not ready:
-    raise Exception('Timeout!')
-
-print('Done')
-
-files = server.get(f'/projects/{project}/nodes/{output_node}/packages/{result["id"]}/files')
-
-def download_file(f):
-    return lambda path: server.download(f, path)
-
-# Save output package
-job.save_package(
-    label='result',
-    fields={f['name'] : f['value'] for f in result['fields']},
-    files={f['name']: download_file(f) for f in files}
-    )
+from rndflow.server import ServerProxy
 ```
+
+Пример: Отправка и получение результата с использованием `searchByMaster`:
+
+@[code python:no-line-numbers](../dev/examples/api/example1.py)
+
+Пример: Отправка и получение результата с использованием `waitOneResult`:
+
+@[code python:no-line-numbers](../dev/examples/api/example2.py)
+
+Пример: Отправка и получение результата с использованием `getServer` и `waitOneResultAndFiles`:
+
+@[code python:no-line-numbers](../dev/examples/api/example3.py)
+
+Пример: Получение нескольких результирующих пакетов
+
+@[code python:no-line-numbers](../dev/examples/api/example_multi1.py)
+
+Пример: Получение всех пакетов из выходного узла.
+@[code python:no-line-numbers](../dev/examples/api/getter.py)
