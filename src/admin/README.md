@@ -24,7 +24,7 @@
 - <span class='iconify-inline' data-icon='mdi:account-multiple'></span>[Пользователи](#пользователи) - управления пользователями
 - <span class='iconify-inline' data-icon='mdi:notebook-multiple'></span>[Рабочие пространства](#рабочие-пространства) - управление [рабочими пространствами][4]
 - <span class='iconify-inline' data-icon='mdi:credit-card-clock'></span>[Тарифы](#тарифы) - управления [тарифами][5]
-- <span class='iconify-inline' data-icon='mdi:help-circle-multiple'></span>Документация API - [API документация][6] платформы
+- <span class='iconify-inline' data-icon='mdi:cog-box'></span>Задания - управление всеми [заданиями][12]
 
 <br clear="right"/>
 
@@ -44,6 +44,7 @@
   - Общая информация по серверам расчетов
   - Общая информация по пользователям
   - Общая информация по рабочим пространствам
+  - Общая информация по заданиям
 
 ## Баланс
 
@@ -198,6 +199,41 @@
 
     ![Payplan edit](/images/common/admin_payplan_edit.png)
 
+## Задания
+
+Отображение и управление списком заданий на платформе.
+
+![Jobs panel](/images/common/admin_jobs.png)
+
+Структура:
+
+- Панель инструментов
+
+  - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенное задание  
+  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Перезапустить выделенные задания
+  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Перезапустить выделенные задания в интерактивном режиме
+  - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновления списка
+
+    >  Может содержать дополнительный ярлык:
+    >  - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>-  информирует об изменении количества заданий в узле.
+
+  - <span class="iconify-inline" data-icon="mdi:progress-check"></span> Фильтрация заданий по состоянию
+  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных заданий
+  - Проекты - фильтрация по проектам
+  - Колонки - изменение отображаемых столбцов таблицы
+
+- Таблица с списком заданий
+  - Столбцы таблицы
+    - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора задания
+    - Id - идентификатор задания
+    - Проект - проект задания
+    - Создано - время инициации задания
+    - Владелец - пользователь создавший задание
+    - Состояние - текущее [состояние][6] выполнения задания
+
+Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
+
+
 ## Установка
 
 ### Установка платформы
@@ -249,3 +285,4 @@
 [9]: /docs/desc/finance.md#счета
 [10]: /docs/desc/payplan.html
 [11]: /docs/instructions/#cброс-пароля
+[12]: /docs/desc/job.md
