@@ -256,22 +256,33 @@ Cтруктура:
 
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновление списка пакетов
 
-    Может содержать дополнительно два вида ярлыков:
+    >Может содержать дополнительно два вида ярлыков:
 
-    - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>- информирует об изменении количества пакетов в узле.
-    - Нижний ярлык оранжевого цвета <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: orange"></span> - информирует об изменении количества заданий некоторых пакетов в списке.
+    >- Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>- информирует об изменении количества пакетов в узле.
+    >- Нижний ярлык оранжевого цвета <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: orange"></span> - информирует об изменении количества заданий некоторых пакетов в списке.
 
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных пакетов
   - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех пакетов
-  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтр по количеству заданий
+  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтр по количеству заданий  
 
     По нажатию открывается окно настроек фильтра:
 
     - Активировать - активация фильтра
-    - Тип операции - позволяет выбрать тип проверки количества заданий на равенство указанному значению или на превышение.
+    - Тип операции - выбор типа проверки количества заданий по отношению к указанному значению в поле "Количество заданий".
     - Количество заданий 
 
     ![Package](/images/common/node_panel_packages_filter.png)
+
+  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"></span> Фильтр по спецификации
+
+    По нажатию открывается окно настроек фильтра:
+
+    - Активировать - активация фильтра
+    - Поля  - выбор переменной из спецификации по которой будет производиться фильтрация
+    - Тип операции - позволяет выбрать тип проверки по отношению к указанному значению в нижнем поле ввода.
+    - Поле ввода ограничения
+
+    ![Package](/images/common/node_panel_packages_spec_filter.png)
 
   - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление переменной пакета
 
