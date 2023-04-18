@@ -22,9 +22,18 @@
 - <span class="iconify-inline" data-icon="mdi:progress-download" style="color: yellow"></span> - На [сервере расчетов][6]
 - <span class="iconify-inline" data-icon="mdi:progress-clock" style="color: orange"></span> - В очереди на исполнение
 - <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Стартовало
+- <span class="iconify-inline" data-icon="mdi:progress-download" style="color: teal"></span> - Сгрузило данные
+    > Обрабатываемые данные загружены в контейнер задания.
+- <span class="iconify-inline" data-icon="mdi:progress-wrench" style="color: green"></span> - Выполнено
+    > Завершено выполнение [скрипта][7].
+- <span class="iconify-inline" data-icon="mdi:progress-upload" style="color: teal"></span> - Загрузило данные
+    > Созданные данные загружены в платформу.
+- <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Сформировало пакеты
+    > Сгенерированы выходные пакеты.
 - <span class="iconify-inline" data-icon="mdi:check-circle" style="color: green"></span> - Обработано
+    > Обработка полностью успешно завершена.
 - <span class="iconify-inline" data-icon="mdi:alert-circle" style="color: red"></span> - Ошибка
-- <span class="iconify-inline" data-icon="mdi:emoticon-cry-outline" style="color: red"></span> - Отсутствует сердцебиение более 3 минут
+- <span class="iconify-inline" data-icon="mdi:emoticon-cry-outline" style="color: red"></span> - Отсутствует сердцебиение более 5 минут
 
 [1]: /docs/desc/package.md
 [2]: /docs/desc/node_params.md
@@ -32,3 +41,5 @@
 [4]: /docs/desc/nodes.md#задания
 [5]: ./project.md#слои-данных
 [6]: /docs/desc/executor.md
+[7]: /docs/desc/nodes.md#контеинер
+
