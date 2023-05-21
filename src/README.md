@@ -17,5 +17,5 @@ features:
     details: Сохраняйте историю разработки в Git репозитории.
   - title: Интеграция с облачными провайдерами.
     details: Используйте любые Kubernetes площадки и вычислительные ресурсы Yandex, VK Cloud или AWS.
-footer: R&DFlow 2021-2022
+footer: R&DFlow 2021-2023
 ---
