@@ -416,7 +416,12 @@ Cтруктура:
       Может содержать дополнительный ярлык:
       - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>- информирует об изменении количества заданий в узле.
 
-  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтрация заданий по состоянию
+  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> Фильтрация заданий по [состоянию][6]
+
+    ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+    Cостояние "<span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/>&nbsp;Стартовало" дополнительно содержит переключатель <span class="iconify-inline" data-icon="mdi:tray-full" style="color: green"/>&nbsp;/&nbsp;<span class="iconify-inline" data-icon="mdi:tray" style="color: green"/>, что позволяет соответственно включать или исключать из этого фильтра дочерние состояния: <span class="iconify-inline" data-icon="mdi:progress-download" style="color: teal"/>&nbsp;Сгрузило данные, <span class="iconify-inline" data-icon="mdi:progress-wrench" style="color: green"/>&nbsp;Выполнено, <span class="iconify-inline" data-icon="mdi:progress-upload" style="color: teal"/>&nbsp;Загрузило данные, <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/>&nbsp;Cформировало пакеты.
+    :::
+
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных заданий
   - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех заданий
   - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление параметра узла
