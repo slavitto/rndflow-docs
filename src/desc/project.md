@@ -194,6 +194,8 @@
 - <span class="iconify-inline" data-icon="mdi:magnify"></span> Поиск узла по имени
 - <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/docs/desc/nodes.md#пакеты)
 - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование узлов
+- <span class="iconify-inline" data-icon="mdi:image-filter-center-focus"></span> Опциональная кнопка приближения к выбранному узлу/узлам
+  > Аналогично двойному щелчку на выбранном узле.
 - <span class="iconify-inline" data-icon="mdi:content-paste"></span> Опциональная кнопка вставки узла
   > При вставке узла из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.
 
