@@ -247,6 +247,7 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:package-up"></span> Загрузка/создание пакета
   - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенные пакеты
   - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Обработать выделенные пакеты
+  - <span class="iconify-inline" data-icon="mdi:update"></span> Использовать выделенные пакеты для запуска [заданий-инициаторов][8] (запуск заданий по расписанию)
   - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Обработать выделенные задания в интерактивном режиме
   - <span class="iconify-inline" data-icon="mdi:pin"></span>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Выбор/Отмена выбора установки мастер пакета слоя данных
   - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копировать выбранные пакеты между узлами и проектами
@@ -409,6 +410,7 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Перезапустить выделенные задания
   - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Перезапустить выделенные задания в интерактивном режиме
   - <span class="iconify-inline" data-icon="mdi:reload-alert"></span> Перезапустить ошибочные задания
+  - <span class="iconify-inline" data-icon="mdi:play-pause"></span> Поставить на паузу или активировать [задание-инициатор][8]
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновления списка
 
       Может содержать дополнительный ярлык:
@@ -513,3 +515,4 @@ Cтруктура:
 [5]: /docs/desc/job.md
 [6]: /docs/desc/job.md#состояния
 [7]: /docs/desc/docker.md
+[8]: /docs/desc/job.md#типы

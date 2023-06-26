@@ -91,6 +91,7 @@ module.exports = {
             '/instructions/project',
             '/instructions/nodes',
             '/instructions/package',
+            '/instructions/job',
             '/instructions/link',
             '/instructions/role',
             '/instructions/user',
