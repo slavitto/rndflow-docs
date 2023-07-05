@@ -26,7 +26,7 @@
 2. Редактируемая иконка интерфейса, с которой интерфейс отображается в [панели управления проектом][4].
 3. Редактируемое название
 4. Редактируемое описание
-5. <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Переключатель видимости - позволяет скрыть интерфейс от пользователей проекта
+5. <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Переключатель видимости - позволяет убрать интерфейс с панели управления проектом
 6. <span class="iconify-inline" data-icon="mdi:image"></span>ВЫБЕРИТЕ ЛОГОТИП - изменения логотипа
 7. <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление интерфейса
 8. <span class="iconify-inline" data-icon="mdi:view-dashboard"></span> [Редактор интерфейса](#редактор)

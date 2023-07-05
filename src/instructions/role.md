@@ -10,22 +10,10 @@
 
 ### Установить разрешения
 
-На [плитке роли][1] нажать на кнопку <span class="iconify-inline" data-icon="mdi:shield-edit"></span> **РАЗРЕШЕНИЯ** и в диалоговом окне установить необходимые [типы разрешений][2] для доступа к проекту и/или отдельным узлам.
+На [плитке роли][1] нажать на кнопку <span class="iconify-inline" data-icon="mdi:shield-edit"></span> **РАЗРЕШЕНИЯ** и в диалоговом [окне][4] установить необходимые [типы разрешений][2] для доступа к проекту, отдельным узлам и интерфейсам.
 
 ![Set permissions](/images/common/permissions_role_set_permissions.png)
 
-Структура:
-
-- <span class="iconify-inline" data-icon="mdi:magnify"></span> Панель поиска
-- <span class="iconify-inline" data-icon="mdi:sitemap"></span> Разрешения проекта
-- Список узлов с разрешениями
-
-Структура панели ввода разрешений:
-
-- Перечень установленных разрешений
-- <span class="iconify-inline" data-icon="mdi:check-all"></span> Кнопка добавления всех возможных разрешений
-- <span class="iconify-inline" data-icon="mdi:close-circle"></span> Кнопка удаления всех установленных разрешений
-- <span class="iconify-inline" data-icon="mdi:menu-down"></span> Меню выбора разрешений
 
 ## Запрос платной роли
 
@@ -62,3 +50,4 @@
 [1]: /docs/desc/project_role.md#плитка-роли
 [2]: /docs/desc/project_role.md#типы-разрешении
 [3]: /docs/desc/project.md#слои-данных
+[4]: /docs/desc/project_role.md#диалог-управления-разрешениями
