@@ -153,6 +153,7 @@
 
 - Узел
   - Создание - graph_edit, code_edit на уровне проекта
+    Вставка  - graph_edit, code_edit на уровне проекта
   - Удаление - graph_edit, code_edit и package_delete на уровне проекта или узла
   - Активация - graph_edit, package_create
   - Информация о исполнителе - package_create или code_view.

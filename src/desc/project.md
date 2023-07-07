@@ -203,14 +203,15 @@
 
 Для добавления узлов используется панель создания узлов.
 
-<img src="./images/project/create_panel.png" align="right" alt="Node create panel" style="margin: 5%;">
+<img src="/images/common/project_create_nodes_panel.png" align="right" alt="Node create panel" style="margin: 5%;">
 
 Панель позволяет добавить:
 
-- <span class="iconify-inline" data-icon="mdi:kubernetes"></span> Расчетный узел
-- <span class="iconify-inline" data-icon="mdi:download-circle"></span> Узел данных
-- <span class="iconify-inline" data-icon="mdi:database"></span> SQL узел
-- <span class="iconify-inline" data-icon="mdi:group"></span> Группу узлов
+- <span class="iconify-inline" data-icon="mdi:kubernetes"></span> - расчетный узел
+- <span class="iconify-inline" data-icon="mdi:download-circle"></span> - узел данных
+- <span class="iconify-inline" data-icon="mdi:database"></span> - SQL узел
+- <span class="iconify-inline" data-icon="mdi:group"></span> - группу узлов
+- <span class="iconify-inline" data-icon="mdi:view-gallery-outline"></span> - узел из других проектов с помощью [диалога коллекции узлов](#диалог-коллекции-узлов)
 
 <br clear="right"/>
 
@@ -225,6 +226,45 @@
 - <span class="iconify-inline" data-icon="mdi:auto-fix"></span> Разместить узлы графа автоматичеки (Расположить узлы автоматически)
 
 <br clear="right"/>
+
+### Диалог коллекции узлов
+
+Диалог коллекции узлов позволяет:
+
+- Вставить в текущий проект некоторый узел из внешнего проекта.
+- Вставить в внешний проект некоторый узел, скопированный из текущего проекта.
+
+<b>Окно выбора проекта</b>
+
+<img src="/images/common/nodes_collections_projects.png">
+
+Состав:
+
+- <span class="iconify-inline" data-icon="mdi:star" color="yellow"/> - переключатель поиска по избранным проектам
+  > Если отключен то поиск идет по всем проектам, доступным пользователю.
+- <span class="iconify-inline" data-icon="mdi:magnify"/> - поле ввода имени проекта
+  >  Ищется любое вхождение строки из поля ввода в имени проекта.
+- Список проектов
+- Кнопка закрытия диалога
+
+По щелчку мышкой по одному из проектов открывается окно выбора узлов.
+
+<b>Окно выбора узла</b>
+
+<img src="/images/common/nodes_collections_nodes.png">
+
+Состав:
+
+- <span class="iconify-inline" data-icon="mdi:magnify"/>  - поле ввода имени узла
+  >  Ищется любое вхождение строки из поля ввода в имени узла.
+- <span class="iconify-inline" data-icon="mdi:arrow-left-circle"/> - кнопка возврата в окно выбора проектов или узлов (если находимся в группе узлов)
+- <span class="iconify-inline" data-icon="mdi:content-paste"/> - опциональная кнопка вставки в выбранный проект узлов, скопированных из текущего проекта.
+- Список узлов
+- Кнопка закрытия диалога
+
+По щелчку мышкой по одному из узлов открывается окно подтверждения вставки узла в текущий проект.
+При щелчке по группе узлов осуществляется открытие списка узлов данной группы.
+
 
 [1]: /docs/instructions/role.md#запрос-платнои-роли
 [2]: /docs/instructions/api_keys.md#запрос-ключа
