@@ -26,6 +26,7 @@
 - Заголовок
   - <span class="iconify-inline" data-icon="mdi:kubernetes"></span> Иконка типа узла
   - Название узла: _compute_
+  - <span class="iconify-inline" data-icon="mdi:bell-plus-outline"></span> Кнопка открытия диалога управления [оповещениями](#оповещения-узла) узла
   - <span class="iconify-inline" data-icon="mdi:delete"></span> Кнопка удаления узла
 - Кнопки для доступа к соответствующим вкладкам панели узла
 
@@ -53,7 +54,7 @@
   - <span class="iconify-inline" data-icon="mdi:card-text"></span> [Описание](#описание)
   - <span class="iconify-inline" data-icon="mdi:tune"></span> [Параметры](#параметры)
   - <span class="iconify-inline" data-icon="mdi:database"></span> [Запрос](#запрос)
-  - <span class="iconify-inline" data-icon="mdi:package"></span> [Пакеты][#пакеты]
+  - <span class="iconify-inline" data-icon="mdi:package"></span> [Пакеты](#пакеты)
 
 ### Узел данных
 
@@ -66,7 +67,30 @@
 - Кнопки для доступа к соответствующим свойствам узла
   - <span class="iconify-inline" data-icon="mdi:card-text"></span> [Описание](#описание)
   - <span class="iconify-inline" data-icon="mdi:tune"></span> [Параметры](#параметры)
-  - <span class="iconify-inline" data-icon="mdi:package"></span> [Пакеты][#пакеты]
+  - <span class="iconify-inline" data-icon="mdi:package"></span> [Пакеты](#пакеты)
+
+
+## Оповещения узла
+
+Оповещения расчетного узла предназначены для рассылки уведомлений, подписавшимся пользователям, о произошедщих событиях в узле с объектами (задания), создателем которых является пользователь.
+
+В окне оповещений узла доступно:
+
+- Кнопка <span class="iconify-inline" color="teal" data-icon="mdi:email-outline"/> или <span class="iconify-inline" color="blue" data-icon="mdi:send-circle-outline"/> - выбор способа оповещений (электронная почта <span class="iconify-inline" color="teal" data-icon="mdi:email-outline"/> или телеграмм <span class="iconify-inline" color="blue" data-icon="mdi:send-circle-outline"/>).
+  > Для использования уведомлений с помощью Телеграмм необходимо, чтобы экземляр платформы поддерживал данный способ уведомлений,
+    а также чтобы в [настройках пользователя][9] был включен переключатель интеграции с Телеграмм .
+- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> Оповещения включены/выключены - переключатель включение/выключение оповещений.
+- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> - переключатели включение/выключение отдельных типов оповещений.
+
+Типы оповещений:
+- Задание выполнено - задание успешно завершено.
+- Все задания выполнены - все задания завершены (как успешно, так и с ошибками).
+  > Проверка наличия заданий осуществляется только в текущем узле поэтому возможны ложно-положительные уведомления.
+- Задание не выполнено - завершено с ошибкой.
+
+::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+ В связи с наличием [ограничений](https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this) Телеграмм платформа может ограничивать количество отправляемых оповещений для пользователя при их большом количестве.
+ :::
 
 ## Панели узла
 
@@ -523,3 +547,4 @@ Cтруктура:
 [6]: /docs/desc/job.md#состояния
 [7]: /docs/desc/docker.md
 [8]: /docs/desc/job.md#типы
+[9]: /docs/desc/dashboard.md#редактирование

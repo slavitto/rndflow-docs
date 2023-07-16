@@ -152,6 +152,7 @@
 <b>Управление другими возможностями:</b>
 
 - Узел
+  - Доступ к диалогу оповещения узла - package_create и package_view для узла 
   - Создание - graph_edit, code_edit на уровне проекта
     Вставка  - graph_edit, code_edit на уровне проекта
   - Удаление - graph_edit, code_edit и package_delete на уровне проекта или узла
