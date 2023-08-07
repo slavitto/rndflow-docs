@@ -2,16 +2,18 @@
 
 # Запуск задания по расписанию
 
-[Задания-инициаторы][1] позволяют запускать стандартные задания по заданному пользователем расписанию (согласно определенной периодичностью).
+[Задания-инициаторы][1] позволяют запускать стандартные задания по заданному пользователем расписанию (запуск с указанной периодичностью).
 
 
-- Открыть панель <span class="iconify-inline" data-icon="mdi:package"></span>[Пакеты][2] узла
+- Открыть панель <span class="iconify-inline" data-icon="mdi:package"></span>[Пакеты][2] узла.
+
 - Выбрать необходимый пакет, установив напротив него переключатель <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span> в значение <span class="iconify-inline" data-icon="mdi:checkbox-marked"></span>.
+
 - Нажать кнопку <span class="iconify-inline" data-icon="mdi:update"></span> <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span> на панели инструментов.
 
   ![Scheduler package](/images/common/node_panel_packages_schedule.png)
 
-- Задать расписание (периодичность) запуска в поле <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span> в Cron-формате
+- Задать расписание (периодичность) запуска в поле <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span> в Cron-формате.
 
   Формат:
 
@@ -35,10 +37,14 @@
   ![Packages schedulers start time](/images/common/node_panel_packages_schedule_time.png)
 
   - В выпадающем списке примеров <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span> можно выбрать подходящий шаблон.
-  - С дополнительными примерами можно ознакомиться после перехода по сслыке <span class='iconify-inline' data-icon='ph:number-circle-three-fill' style="color: red"></span>. 
 
-- Нажать на кнопку "СОХРАНИТЬ"
-- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][3] узла, в котором должно появиться новое задание (может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий). Наличие у задания статуса <span class="iconify-inline" data-icon="mdi:sleep" style="color: grey"></span> сообщает об успешном запуске "будильника". 
+  - С дополнительными примерами можно ознакомиться после перехода по сслыке <span class='iconify-inline' data-icon='ph:number-circle-three-fill' style="color: red"/>.
+
+- Установить переключатель <span class='iconify-inline' data-icon='ph:number-circle-four-fill' style="color: red"/> в значение <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> Задание-инициатор.
+
+- Нажать на кнопку "СОХРАНИТЬ".
+
+- Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][3] узла, в котором должно появиться новое задание (может потребоваться обновить <span class="iconify-inline" data-icon="mdi:refresh"></span> список заданий). Наличие у задания статуса <span class="iconify-inline" data-icon="mdi:sleep" style="color: grey"></span> сообщает об успешном запуске "будильника".
 
 - Согласно заданному расписанию (по мере срабатывания "будильника") в панеле <span class="iconify-inline" data-icon="mdi:package"></span>[Пакеты][2] узла будут появлять пакеты, созданные заданием-инициатором,  а в панеле <span class="iconify-inline" data-icon="mdi:cog-box"></span>[Задания][3] узла соответствующие им стандартные задания.
 
