@@ -34,9 +34,16 @@
 В тестовых целях возможно использовать локальный публичный реестре платформы. В этом случае названия Докер образов будут иметь вид:
 
 `rep.rndflow.com/myrepo/myimagename:latest`
+
+<div class="custom-container danger">
+  <p class="custom-container-title"><span class='iconify' data-icon='gg:danger' style='color: #cc0000; font-size: 18px;'/></p>
+  <p style='font-size: 14px;'>Файлы, размещенные в тестовом репозитории, могут быть удалены без предупреждения!</p>
+</div>
+
 :::
 
-::: danger <span class='iconify' data-icon='gg:danger' style='color: #cc0000; font-size: 24px;'></span>
+
+::: danger <span class='iconify' data-icon='gg:danger' style='color: #cc0000; font-size: 24px;'/>
 Для Докер образа действуют следующие правила:
 
 - Название образа должно быть уникальным для **всей** платформы.
