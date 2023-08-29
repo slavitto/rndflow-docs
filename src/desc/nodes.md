@@ -6,9 +6,9 @@
 
 Узел в текущем [слое данных][1] может находиться в следущих состояниях:
 
-- <span class="iconify-inline" data-icon="bi:toggle2-on" style="color: green"></span> Активен
+- <span class="iconify-inline" data-icon="bi:toggle2-on" style="color: green"/> Активен
 
-- <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Отключен
+- <span class="iconify-inline" data-icon="bi:toggle2-off"/> Отключен
 
 В активном состоянии в узле автоматически обрабатываются (создаются [задания][5]) все приходящие в него пакеты.
 
@@ -16,58 +16,58 @@
 
 ### Расчетный узел
 
-<span class="iconify-inline" data-icon="mdi:kubernetes"></span> **Расчетный узел** (Compute) - набор исполняемых программ ([скриптов](/docs/dev/compute.md#код-расчетного-узла)) и их параметров, реализующих заданную пользователем функциональность.
+<span class="iconify-inline" data-icon="mdi:kubernetes"/> **Расчетный узел** (Compute) - набор исполняемых программ ([скриптов](/docs/dev/compute.md#код-расчетного-узла)) и их параметров, реализующих заданную пользователем функциональность.
 
 ![Compute node](/images/common/node_compute.png)
 
 Состав узла:
 
-- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 10px;"></span> Вход
+- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 10px;"/> Вход
 - Заголовок
-  - <span class="iconify-inline" data-icon="mdi:kubernetes"></span> Иконка типа узла
+  - <span class="iconify-inline" data-icon="mdi:kubernetes"/> Иконка типа узла
   - Название узла: _compute_
-  - <span class="iconify-inline" data-icon="mdi:bell-plus-outline"></span> Кнопка открытия диалога управления [оповещениями](#оповещения-узла) узла
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> Кнопка удаления узла
+  - <span class="iconify-inline" data-icon="mdi:bell-plus-outline"/> Кнопка открытия диалога управления [оповещениями](#оповещения-узла) узла
+  - <span class="iconify-inline" data-icon="mdi:delete"/> Кнопка удаления узла
 - Кнопки для доступа к соответствующим вкладкам панели узла
 
   - <span class="iconify-inline" data-icon="mdi:card-text"> </span> [Описание](#описание)
-  - <span class="iconify-inline" data-icon="mdi:tune"></span> [Параметры](#параметры)
-  - <span class="iconify-inline" data-icon="mdi:kubernetes"></span> [Контейнер](#контейнер)
-  - <span class="iconify-inline" data-icon="mdi:file-code"></span> [Файлы](#фаилы)
-  - <span class="iconify-inline" data-icon="mdi:package"></span> [Пакеты](#пакеты)
-  - <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания](#задания)
-  - <span class="iconify-inline" data-icon="mdi:alert-circle"></span> [Ошибочные задания](#задания) (при наличии)
+  - <span class="iconify-inline" data-icon="mdi:tune"/> [Параметры](#параметры)
+  - <span class="iconify-inline" data-icon="mdi:kubernetes"/> [Контейнер](#контейнер)
+  - <span class="iconify-inline" data-icon="mdi:file-code"/> [Файлы](#фаилы)
+  - <span class="iconify-inline" data-icon="mdi:package"/> [Пакеты](#пакеты)
+  - <span class="iconify-inline" data-icon="mdi:cog-box"/> [Задания](#задания)
+  - <span class="iconify-inline" data-icon="mdi:alert-circle"/> [Ошибочные задания](#задания) (при наличии)
 
-- <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Переключатель активности узла в текущем [слое данных][1]
+- <span class="iconify-inline" data-icon="bi:toggle2-off"/> Переключатель активности узла в текущем [слое данных][1]
 - Описания узла: _Compute node description_
-- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"></span> Одного или несколько выходов
+- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"/> Одного или несколько выходов
 
 ### SQL узел
 
-<span class="iconify-inline" data-icon="mdi:database"></span> **SQL узел** (Query)- [SQL запрос](/docs/dev/sql.md#запрос-sql-узла), реализующий выборку и обработку вошедших в него пакетов данных. В отличии от расчетного узла позволяет оперировать данными всех вошедших в него пакетов.
+<span class="iconify-inline" data-icon="mdi:database"/> **SQL узел** (Query)- [SQL запрос](/docs/dev/sql.md#запрос-sql-узла), реализующий выборку и обработку вошедших в него пакетов данных. В отличии от расчетного узла позволяет оперировать данными всех вошедших в него пакетов.
 
 ![Query node](/images/common/node_query.png)
 
 Общий состав аналогичен [виду расчетного узла](#расчетныи-узел). Но доступ обеспечивается только к следующим вкладкам панели узла:
 
 - Кнопки для доступа к соответствующим свойствам узла
-  - <span class="iconify-inline" data-icon="mdi:card-text"></span> [Описание](#описание)
-  - <span class="iconify-inline" data-icon="mdi:tune"></span> [Параметры](#параметры)
-  - <span class="iconify-inline" data-icon="mdi:database"></span> [Запрос](#запрос)
-  - <span class="iconify-inline" data-icon="mdi:package"></span> [Пакеты](#пакеты)
+  - <span class="iconify-inline" data-icon="mdi:card-text"/> [Описание](#описание)
+  - <span class="iconify-inline" data-icon="mdi:tune"/> [Параметры](#параметры)
+  - <span class="iconify-inline" data-icon="mdi:database"/> [Запрос](#запрос)
+  - <span class="iconify-inline" data-icon="mdi:package"/> [Пакеты](#пакеты)
 
 ### Узел данных
 
-<span class="iconify-inline" data-icon="mdi:download-circle"></span> **Узел данных** (Data)- промежуточный этап хранения данных в виде FIFO очереди.
+<span class="iconify-inline" data-icon="mdi:download-circle"/> **Узел данных** (Data)- промежуточный этап хранения данных в виде FIFO очереди.
 
 ![Data node](/images/common/node_data.png)
 
 Общий состав аналогичен [виду расчетного узла](#расчетныи-узел). Но доступ обеспечивается только к следующим вкладкам панели узла:
 
 - Кнопки для доступа к соответствующим свойствам узла
-  - <span class="iconify-inline" data-icon="mdi:card-text"></span> [Описание](#описание)
-  - <span class="iconify-inline" data-icon="mdi:tune"></span> [Параметры](#параметры)
-  - <span class="iconify-inline" data-icon="mdi:package"></span> [Пакеты](#пакеты)
+  - <span class="iconify-inline" data-icon="mdi:card-text"/> [Описание](#описание)
+  - <span class="iconify-inline" data-icon="mdi:tune"/> [Параметры](#параметры)
+  - <span class="iconify-inline" data-icon="mdi:package"/> [Пакеты](#пакеты)
 
 
 ## Оповещения узла
@@ -79,8 +79,8 @@
 - Кнопка <span class="iconify-inline" color="teal" data-icon="mdi:email-outline"/> или <span class="iconify-inline" color="blue" data-icon="mdi:send-circle-outline"/> - выбор способа оповещений (электронная почта <span class="iconify-inline" color="teal" data-icon="mdi:email-outline"/> или телеграмм <span class="iconify-inline" color="blue" data-icon="mdi:send-circle-outline"/>).
   > Для использования уведомлений с помощью Телеграмм необходимо, чтобы экземляр платформы поддерживал данный способ уведомлений,
     а также чтобы в [настройках пользователя][9] был включен переключатель интеграции с Телеграмм .
-- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> Оповещения включены/выключены - переключатель включение/выключение оповещений.
-- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> - переключатели включение/выключение отдельных типов оповещений.
+- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> Оповещения включены/выключены - переключатель включение/выключение оповещений.
+- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> - переключатели включение/выключение отдельных типов оповещений.
 
 Типы оповещений:
 - Задание выполнено - задание успешно завершено.
@@ -88,7 +88,7 @@
   > Проверка наличия заданий осуществляется только в текущем узле поэтому возможны ложно-положительные уведомления.
 - Задание не выполнено - завершено с ошибкой.
 
-::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"/>
  В связи с наличием [ограничений](https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this) Телеграмм платформа может ограничивать количество отправляемых оповещений для пользователя при их большом количестве.
  :::
 
@@ -100,9 +100,9 @@
 
 Общие управляющие кнопки:
 
-- <span class="iconify-inline" data-icon="mdi:dock-right"></span> Изменить расположение панели (в нижней или правой части экрана)
-- <span class="iconify-inline" data-icon="mdi:fullscreen"></span> Открыть панель на полный экран
-- <span class="iconify-inline" data-icon="mdi:close"></span> Закрыть панель
+- <span class="iconify-inline" data-icon="mdi:dock-right"/> Изменить расположение панели (в нижней или правой части экрана)
+- <span class="iconify-inline" data-icon="mdi:fullscreen"/> Открыть панель на полный экран
+- <span class="iconify-inline" data-icon="mdi:close"/> Закрыть панель
 
 ### Описание
 
@@ -135,31 +135,31 @@
 - Вход - входные переменные узла
 
   - Общие команды
-    - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование всех переменных
-    - <span class="iconify-inline" data-icon="mdi:content-paste"></span> Вставка ранее скопированных переменных
-    - <span class="iconify-inline" data-icon="mdi:auto-fix"></span> Автоматическая вставка переменных на основе пакетов
-    - <span class="iconify-inline" data-icon="mdi:plus"></span> Добавление переменной
+    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Копирование всех переменных
+    - <span class="iconify-inline" data-icon="mdi:content-paste"/> Вставка ранее скопированных переменных
+    - <span class="iconify-inline" data-icon="mdi:auto-fix"/> Автоматическая вставка переменных на основе пакетов
+    - <span class="iconify-inline" data-icon="mdi:plus"/> Добавление переменной
   - Список переменных
 
     Структура каждого элемента списка:
 
-    - Тип переменной <span class="iconify-inline" data-icon="mdi:code-json"></span> [Поле][3] или <span class="iconify-inline" data-icon="mdi:file"></span> [Файл][3] или <span class="iconify-inline" data-icon="mdi:package"></span> [Вложенные пакеты][3] с возможностью изменения при щелчке по ней
+    - Тип переменной <span class="iconify-inline" data-icon="mdi:code-json"/> [Поле][3] или <span class="iconify-inline" data-icon="mdi:file"/> [Файл][3] или <span class="iconify-inline" data-icon="mdi:package"/> [Вложенные пакеты][3] с возможностью изменения при щелчке по ней
     - Название переменной с возможностью переименования при щелчке по ней
     - Описание переменной с возможностью переименования при щелчке по нему
-    - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование переменной
-    - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление переменной
+    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Копирование переменной
+    - <span class="iconify-inline" data-icon="mdi:delete"/> Удаление переменной
 
 - Выход - выходные переменные узла аналогично входным переменным.
 
 ![Node desc](/images/common/node_panel_spec.png)
 
-::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
 Существует возможность [копирования параметров узла][2] в входную спецификацию узла.
 :::
 
 ### Параметры
 
-<span class="iconify-inline" data-icon="mdi:tune"></span> **Параметры узла** (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
+<span class="iconify-inline" data-icon="mdi:tune"/> **Параметры узла** (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
 
 ![Node params](/images/common/node_panel_params.png)
 
@@ -187,11 +187,11 @@ Cтруктура:
   - Никогда -  не загружать докер образ из внешнего репозитория. Использовать только локальную версию.
   - Исполнитель - использовать значение по умолчанию [исполнителя][10].
 
-  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
   Все типы политик, кроме типа "Исполнитель", соответствуют стандартным [политикам](https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy) Kubernetes. 
   :::
 
-  ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+  ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"/>
   Рекомендуемая политика по умолчанию "При отсутствии". Временное переключение на политику "Всегда" необходимо при обновлении используемого образа (образ обновляется только на том узле, на котором выполняется задание с указанной политикой).
 
   При постоянном использовании политики "Всегда" без промежуточного кеширующего прокси возможно превышение лимитов на доступ к регистру хранения (лимиты определяются самими регистром, например, для [Dockerhub](https://hub.docker.com/) задаются следущие [лимиты](https://docs.docker.com/docker-hub/download-rate-limit/)). 
@@ -201,17 +201,17 @@ Cтруктура:
 
 - Сервер расчетов - индивидуальный сервер расчета (исполнитель) узла.
 
-  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-  Выбор происходит по нажатия кнопки <span class="iconify-inline" data-icon="mdi:plus"></span>
+  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
+  Выбор происходит по нажатия кнопки <span class="iconify-inline" data-icon="mdi:plus"/>
 
-  После этого на панели узла появляется пометка <span class='iconify-inline' data-icon='mdi:circle' style='color: green'></span> над <span class='iconify-inline' data-icon='mdi:kubernetes'></span> :
+  После этого на панели узла появляется пометка <span class='iconify-inline' data-icon='mdi:circle' style='color: green'/> над <span class='iconify-inline' data-icon='mdi:kubernetes'/> :
 
   ![Compute node with executor](/images/common/node_compute_executor.png)
 
   :::
 
 - Скрипт - первоначально запускаемый программный модуль или скрипт узла (см. [Файлы](#фаилы)).
-  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
   Запуск должен соответствовать правила запуска в shell-среде ОС Linux.
 
   > Например:
@@ -250,130 +250,137 @@ Cтруктура:
   Структура каждого элемента списка:
 
   - Иконка типа файла
-  - <span class="iconify-inline" data-icon="mdi:content-save-alert" style="color: red"></span> Иконка наличия несохраненных изменений
+  - <span class="iconify-inline" data-icon="mdi:content-save-alert" style="color: red"/> Иконка наличия несохраненных изменений
   - Название файла с возможностью переименования файла при щелчке по нему
-  - <span class="iconify-inline" data-icon="mdi:cog-clockwise" style="color: green"></span> Установить свойство файла: исполняемый
-  - <span class="iconify-inline" data-icon="mdi:hexadecimal"></span> Установить свойство файла: бинарный
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление файла
+  - <span class="iconify-inline" data-icon="mdi:cog-clockwise" style="color: green"/> Установить свойство файла: исполняемый
+  - <span class="iconify-inline" data-icon="mdi:hexadecimal"/> Установить свойство файла: бинарный
+  - <span class="iconify-inline" data-icon="mdi:delete"/> Удаление файла
 
 - Редактор файла
 
   - Название файла
   - Панель инструментов
 
-    - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"></span> Уменьшить размер шрифта
+    - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"/> Уменьшить размер шрифта
     - <span style="background-color: green; color: white">Текущий размер шрифта</span>
-    - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"></span> Увеличить размер шрифта
-    - <span class="iconify-inline" data-icon="mdi:wrap"></span> Включить/Выключить перенос строк
-    - <span class="iconify-inline" data-icon="mdi:vimeo"></span> Включить VIM режим
-    - <span class="iconify-inline" data-icon="mdi:fullscreen"></span> Открыть на полный экран
+    - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"/> Увеличить размер шрифта
+    - <span class="iconify-inline" data-icon="mdi:wrap"/> Включить/Выключить перенос строк
+    - <span class="iconify-inline" data-icon="mdi:vimeo"/> Включить VIM режим
+    - <span class="iconify-inline" data-icon="mdi:fullscreen"/> Открыть на полный экран
 
   - [Кнопка](#история-изменения) истории изменений файла: <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>.
 
 - Кнопка "СОХРАНИТЬ" - для сохранение изменений файла
-- <span class="iconify-inline" data-icon="mdi:file-plus"></span> Кнопка создания нового файла
-- <span class="iconify-inline" data-icon="mdi:file-upload"></span> Кнопка загрузки нового файла
+- <span class="iconify-inline" data-icon="mdi:file-plus"/> Кнопка создания нового файла
+- <span class="iconify-inline" data-icon="mdi:file-upload"/> Кнопка загрузки нового файла
 
 ![Node file](/images/common/node_panel_file.png)
 
 ### Пакеты
 
-В вкладке <span class='iconify-inline' data-icon='mdi:package'></span> **Пакеты** отображается список [пакетов][4] узла в рамках выбранного [слоя данных][1]:
+В вкладке <span class='iconify-inline' data-icon='mdi:package'/> **Пакеты** отображается список [пакетов][4] узла в рамках выбранного [слоя данных][1]:
 
 ![Node package](/images/common/node_panel_packages.png)
 
-Структура:
+#### Панель инструментов
 
-- Панель инструментов
+- <span class="iconify-inline" data-icon="mdi:package-up"/> Загрузка/создание пакета
+- <span class="iconify-inline" data-icon="mdi:download"/> Скачать выделенные пакеты
+- <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Обработать выделенные пакеты
+- <span class="iconify-inline" data-icon="mdi:update"/> Использовать выделенные пакеты для запуска [заданий-инициаторов][8] (запуск заданий по расписанию)
+- <span class="iconify-inline" data-icon="mdi:motion-play"/> Обработать выделенные задания в интерактивном режиме
+- <span class="iconify-inline" data-icon="mdi:pin"/>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"/> Выбор/Отмена выбора установки мастер пакета слоя данных
+- <span class="iconify-inline" data-icon="mdi:content-copy"/> Копировать выбранные пакеты между узлами и проектами
+- <span class="iconify-inline" data-icon="mdi:content-paste"/> Вставить ранее скопированные пакеты
 
-  - <span class="iconify-inline" data-icon="mdi:package-up"></span> Загрузка/создание пакета
-  - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенные пакеты
-  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Обработать выделенные пакеты
-  - <span class="iconify-inline" data-icon="mdi:update"></span> Использовать выделенные пакеты для запуска [заданий-инициаторов][8] (запуск заданий по расписанию)
-  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Обработать выделенные задания в интерактивном режиме
-  - <span class="iconify-inline" data-icon="mdi:pin"></span>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Выбор/Отмена выбора установки мастер пакета слоя данных
-  - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копировать выбранные пакеты между узлами и проектами
-  - <span class="iconify-inline" data-icon="mdi:content-paste"></span> Вставить ранее скопированные пакеты
+  > При вставке пакетов из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.После вставки может понадобиться обновить список пакетов кнопкой <span class="iconify-inline" data-icon="mdi:refresh"/>.
 
-    > При вставке пакетов из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.После вставки может понадобиться обновить список пакетов кнопкой <span class="iconify-inline" data-icon="mdi:refresh"></span>.
+- <span class="iconify-inline" data-icon="mdi:refresh"/> Обновление списка пакетов
 
-  - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновление списка пакетов
+  >Может содержать дополнительно два вида ярлыков:
 
-    >Может содержать дополнительно два вида ярлыков:
+  >- Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"/>- информирует об изменении количества пакетов в узле.
+  >- Нижний ярлык оранжевого цвета <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: orange"/> - информирует об изменении количества заданий некоторых пакетов в списке.
 
-    >- Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>- информирует об изменении количества пакетов в узле.
-    >- Нижний ярлык оранжевого цвета <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: orange"></span> - информирует об изменении количества заданий некоторых пакетов в списке.
+- <span class="iconify-inline" data-icon="mdi:delete"/> Удаление выбранных пакетов
 
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных пакетов
-  - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех пакетов
-  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"></span> Фильтр по количеству заданий  
+- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление всех пакетов
 
-    По нажатию открывается окно настроек фильтра:
+- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> [Фильтр по количеству заданий](#фильтр-по-количеству-заданий)
 
-    - Активировать - активация фильтра
-    - Тип операции - выбор типа проверки количества заданий по отношению к указанному значению в поле "Количество заданий".
-    - Количество заданий 
+- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> [Фильтр по спецификации](#фильтр-по-спецификации)
 
-    ![Package](/images/common/node_panel_packages_filter.png)
+- <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление переменной пакета
 
-  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"></span> Фильтр по спецификации
+  Добавление переменной пакета в качестве нового столбца в таблице пакетов.
 
-    По нажатию открывается окно настроек фильтра:
+  Список добавленных переменных с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'/>.
 
-    - Активировать - активация фильтра
-    - Поля  - выбор переменной из спецификации по которой будет производиться фильтрация
-    - Тип операции - позволяет выбрать тип проверки по отношению к указанному значению в нижнем поле ввода.
-    - Поле ввода ограничения
+- <span class="iconify-inline" data-icon="mdi:content-save"/> Сохранить набор текущих столбцов
 
-    ![Package](/images/common/node_panel_packages_spec_filter.png)
+#### Таблица пакетов
 
-  - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление переменной пакета
+- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - переключатель выбора пакета
+- Id - идентификатор пакета
 
-    Добавление переменной пакета в качестве нового столбца в таблице пакетов.
+  Дополнительно на идентификаторе может отображаться ярлык с количеством дочерних заданий: <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"/>
 
-    Список добавленных переменных с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'></span> .
+  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
+  Для просмотра конкретного пакета в отдельном [окне](#окно-просмотра-пакета) необходимо щелкнуть по его идентификатору в столбце **Id**.
+  :::
 
-  - <span class="iconify-inline" data-icon="mdi:content-save"></span> Сохранить набор текущих столбцов
+- Метка - имя пакета
+- Создано - время создания пакета
+- Владелец - пользователь создавший пакет
 
-- Таблица с списком пакетов
+##### Фильтр по количеству заданий
+Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:horizontal-circle-outline"/> в [панели инструментов](#панель-инструментов).
 
-  - Столбцы таблицы
+![Package](/images/common/node_panel_packages_filter.png)
 
-    - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора пакета
-    - Id - идентификатор пакета
+- Активировать - активация фильтра
+- Тип операции - выбор типа проверки количества заданий по отношению к указанному значению в поле "Количество заданий".
+- Количество заданий 
 
-      Дополнительно на идентификаторе может отображаться ярлык с количеством дочерних заданий: <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"></span>
+##### Фильтр по спецификации
 
-    - Метка - имя пакета
-    - Создано - время создания пакета
-    - Владелец - пользователь создавший пакет
+Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> в [панели инструментов](#панель-инструментов).
 
-Для открытия окна конкретного пакета необходимо щелкнуть по его идентификатору в столбце **Id**.
+![Package](/images/common/node_panel_packages_spec_filter.png)
 
-Структура отображения состава [пакета][4]:
+- Активировать - активация фильтра
+- Поля  - выбор переменной из спецификации по которой будет производиться фильтрация
+- Тип операции - позволяет выбрать тип проверки по отношению к указанному значению в нижнем поле ввода.
+- Поле ввода ограничения
+
+#### Окно просмотра пакета
+
+Открывается по щелчку по идентификатору пакета в столбце **Id** в [таблице](#таблица-пакетов) со списком пакетов.
 
 ![Package](/images/common/package.png)
 
+Состав [пакета][4]:
+
 - Панель инструментов
 
-  - <span class='iconify-inline' data-icon='mdi:open-in-new'></span> Открыть пакет на новой странице браузера
-    ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
+  - <span class='iconify-inline' data-icon='mdi:open-in-new'/> Открыть пакет на новой странице браузера
+    ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'/>
     При открытии пакета на новой странице браузера возвращается прямая ссылка на пакет.
     :::
 
-  - <span class='iconify-inline' data-icon='mdi:fullscreen'></span> Открыть на весь экран
-  - <span class='iconify-inline' data-icon='mdi:close'></span> Закрыть
+  - <span class='iconify-inline' data-icon='mdi:fullscreen'/> Открыть на весь экран
+  - <span class='iconify-inline' data-icon='mdi:close'/> Закрыть
 
 - Метка
 - Поля и их значения
-- Список файлов с кнопкой скачивания <span class="iconify-inline" data-icon="mdi:download"></span>
+- Список файлов с кнопкой скачивания <span class="iconify-inline" data-icon="mdi:download"/>
 - Окно отображения выбранного файла
 - Кнопка [уникального идентификатора][3] пакета (в правом нижнем углу)
 
   - Щелчок по идентификатору копирует его в буфер обмена.
-  - Нажатие на <span class='iconify-inline' data-icon='mdi:menu-down'></span> открывает меню с дополнительными командами
+  - Нажатие на <span class='iconify-inline' data-icon='mdi:menu-down'/> открывает меню с дополнительными командами
 
-    - <span class='iconify-inline' data-icon='mdi:shield-check'></span>Верификация хеша - осуществляет пересчет идентификатора пакета на основе его состава и истории создания. Может использоваться для проверки пакета и его истории на наличие неправомерных изменений.
+    - <span class='iconify-inline' data-icon='mdi:shield-check'/>Верификация хеша - осуществляет пересчет идентификатора пакета на основе его состава и истории создания. Может использоваться для проверки пакета и его истории на наличие неправомерных изменений.
 
       ![Package](/images/common/package_verification_good.png)
 
@@ -392,14 +399,14 @@ Cтруктура:
   - Редактор SQL запроса
   - Панель инструментов
 
-    - <span class="iconify-inline" data-icon="mdi:auto-fix"></span> [SQL мастер](/docs/dev/sql.md#sql-мастер)
-    - <span class="iconify-inline" data-icon="mdi:help-circle" style="color: black"></span> Помощь
-    - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"></span> Уменьшить размер шрифта
+    - <span class="iconify-inline" data-icon="mdi:auto-fix"/> [SQL мастер](/docs/dev/sql.md#sql-мастер)
+    - <span class="iconify-inline" data-icon="mdi:help-circle" style="color: black"/> Помощь
+    - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"/> Уменьшить размер шрифта
     - <span style="background-color: green; color: white">Текущий размер шрифта</span>
-    - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"></span> Увеличить размер шрифта
-    - <span class="iconify-inline" data-icon="mdi:wrap"></span> Включить/Выключить перенос строк
-    - <span class="iconify-inline" data-icon="mdi:vimeo"></span> Включить VIM режим
-    - <span class="iconify-inline" data-icon="mdi:fullscreen"></span> Открыть на полный экран
+    - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"/> Увеличить размер шрифта
+    - <span class="iconify-inline" data-icon="mdi:wrap"/> Включить/Выключить перенос строк
+    - <span class="iconify-inline" data-icon="mdi:vimeo"/> Включить VIM режим
+    - <span class="iconify-inline" data-icon="mdi:fullscreen"/> Открыть на полный экран
 
   - Кнопка истории изменений запроса: <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>
 
@@ -414,8 +421,8 @@ Cтруктура:
   > Отображение результата тестового выполнения запроса.
 
   - Панель инструментов
-    - <span class="iconify-inline" data-icon="mdi:refresh"></span> Тестовый запуск запроса
-    - <span class="iconify-inline" data-icon="bi:toggle2-off"></span> Показывать только новые результаты запроса
+    - <span class="iconify-inline" data-icon="mdi:refresh"/> Тестовый запуск запроса
+    - <span class="iconify-inline" data-icon="bi:toggle2-off"/> Показывать только новые результаты запроса
   - Таблица с результатом
     - Столбцы таблицы
       - Пакеты - идентификаторы выбранных входных пакетов
@@ -428,11 +435,11 @@ Cтруктура:
   > Результаты запроса переданные в следующий узел.
 
   - Панель инструментов
-    - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновления списка
-    - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаления выбранных заданий
+    - <span class="iconify-inline" data-icon="mdi:refresh"/> Обновления списка
+    - <span class="iconify-inline" data-icon="mdi:delete"/> Удаления выбранных заданий
   - Таблица с списком заданий
     - Столбцы таблицы
-      - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора результатов
+      - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - переключатель выбора результатов
       - Входные пакеты - идентификаторы входных пакетов
       - Выходные пакеты - идентификаторы выходных пакетов
 
@@ -440,67 +447,71 @@ Cтруктура:
 
 ### Задания
 
-В вкладке <span class='iconify-inline' data-icon='mdi:cog-box'></span> **Задания** отображается список [заданий][5] узла в рамках выбранного [слоя данных][1]:
+В вкладке <span class='iconify-inline' data-icon='mdi:cog-box'/> **Задания** отображается список [заданий][5] узла в рамках выбранного [слоя данных][1]:
 
 ![Node job list](/images/common/node_panel_job.png)
 
-Структура:
+#### Панель инструментов
 
-- Панель инструментов
+- <span class="iconify-inline" data-icon="mdi:download"/> Скачать выделенные задания
+- <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Перезапустить выделенные задания
+- <span class="iconify-inline" data-icon="mdi:motion-play"/> Перезапустить выделенные задания в интерактивном режиме
+- <span class="iconify-inline" data-icon="mdi:reload-alert"/> Перезапустить ошибочные задания
+- <span class="iconify-inline" data-icon="mdi:play-pause"/> Поставить на паузу или активировать [задание-инициатор][8]
+- <span class="iconify-inline" data-icon="mdi:refresh"/> Обновления списка
 
-  - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенные задания
-  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Перезапустить выделенные задания
-  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Перезапустить выделенные задания в интерактивном режиме
-  - <span class="iconify-inline" data-icon="mdi:reload-alert"></span> Перезапустить ошибочные задания
-  - <span class="iconify-inline" data-icon="mdi:play-pause"></span> Поставить на паузу или активировать [задание-инициатор][8]
-  - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновления списка
+    Может содержать дополнительный ярлык:
+    - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"/>- информирует об изменении количества заданий в узле.
 
-      Может содержать дополнительный ярлык:
-      - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>- информирует об изменении количества заданий в узле.
+- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> Фильтрация заданий по [состоянию][6]
 
-  - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> Фильтрация заданий по [состоянию][6]
+  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
+  Cостояние "<span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/>&nbsp;Стартовало" дополнительно содержит переключатель <span class="iconify-inline" data-icon="mdi:tray-full" style="color: green"/>&nbsp;/&nbsp;<span class="iconify-inline" data-icon="mdi:tray" style="color: green"/>, что позволяет соответственно включать или исключать из этого фильтра дочерние состояния: <span class="iconify-inline" data-icon="mdi:progress-download" style="color: teal"/>&nbsp;Сгрузило данные, <span class="iconify-inline" data-icon="mdi:progress-wrench" style="color: green"/>&nbsp;Выполнено, <span class="iconify-inline" data-icon="mdi:progress-upload" style="color: teal"/>&nbsp;Загрузило данные, <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/>&nbsp;Cформировало пакеты.
+  :::
 
-    ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-    Cостояние "<span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/>&nbsp;Стартовало" дополнительно содержит переключатель <span class="iconify-inline" data-icon="mdi:tray-full" style="color: green"/>&nbsp;/&nbsp;<span class="iconify-inline" data-icon="mdi:tray" style="color: green"/>, что позволяет соответственно включать или исключать из этого фильтра дочерние состояния: <span class="iconify-inline" data-icon="mdi:progress-download" style="color: teal"/>&nbsp;Сгрузило данные, <span class="iconify-inline" data-icon="mdi:progress-wrench" style="color: green"/>&nbsp;Выполнено, <span class="iconify-inline" data-icon="mdi:progress-upload" style="color: teal"/>&nbsp;Загрузило данные, <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/>&nbsp;Cформировало пакеты.
-    :::
+- <span class="iconify-inline" data-icon="mdi:delete"/> Удаление выбранных заданий
+- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление всех заданий
+- <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление параметра узла
 
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных заданий
-  - <span class="iconify-inline" data-icon="mdi:delete-sweep"></span> Удаление всех заданий
-  - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"></span> Добавление параметра узла
+  Добавление параметра узла в качестве нового столбца в таблице заданий.
 
-    Добавление параметра узла в качестве нового столбца в таблице заданий.
+  Список добавленных параметров с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'/> .
 
-    Список добавленных параметров с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'></span> .
+- <span class="iconify-inline" data-icon="mdi:content-save"/> Сохранить набор текущих столбцов
 
-  - <span class="iconify-inline" data-icon="mdi:content-save"></span> Сохранить набор текущих столбцов
+#### Таблица заданий
 
-- Таблица с списком заданий
-  - Столбцы таблицы
-    - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора задания
-    - Id - идентификатор задания
-    - Пакеты - идентификаторы входных пакетов
-    - Создано - время инициации задания
-    - Владелец - пользователь создавший задание
-    - Приоритет - приоритет выполнения задания
-    - Состояние - текущее [состояние][6] выполнения задания
+- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - переключатель выбора задания
+- Id - идентификатор задания
+- Пакеты - идентификаторы входных пакетов
+- Создано - время инициации задания
+- Владелец - пользователь создавший задание
+- Приоритет - приоритет выполнения задания
+- Состояние - текущее [состояние][6] выполнения задания
 
 Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
 
-Структура отображения состава задания:
+#### Окно просмотра задания
+
+Открывается щелчком по идентификатору конкретного задания в столбце **Id** в [таблице заданий](#таблица-заданий).
+
+![Node job](/images/common/job.png)
+
+Состав задания:
 
 - Панель инструментов
 
-  - <span class='iconify-inline' data-icon='mdi:open-in-new'></span> Открыть задание на новой странице браузера
-    ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
+  - <span class='iconify-inline' data-icon='mdi:open-in-new'/> Открыть задание на новой странице браузера
+    ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'/>
     При открытии задания на новой странице браузера возвращается прямая ссылка на задание.
     :::
 
-  - <span class='iconify-inline' data-icon='mdi:fullscreen'></span> Открыть на весь экран
-  - <span class='iconify-inline' data-icon='mdi:close'></span> Закрыть
+  - <span class='iconify-inline' data-icon='mdi:fullscreen'/> Открыть на весь экран
+  - <span class='iconify-inline' data-icon='mdi:close'/> Закрыть
 
 - История состояний обработки
-- <span class='iconify-inline' data-icon='mdi:package'></span> Входные пакеты
-- <span class='iconify-inline' data-icon='mdi:package'></span> Выходные пакеты
+- <span class='iconify-inline' data-icon='mdi:package'/> Входные пакеты
+- <span class='iconify-inline' data-icon='mdi:package'/> Выходные пакеты
 - Сервер расчетов
 - Узел задания с возможностью перехода на него
 - Параметры контейнера
@@ -513,16 +524,14 @@ Cтруктура:
 - Периодичность запуска (только для [заданий-инициаторов][8])
 - Докер образ
 - Параметры узла
-- Список файлов с кнопкой сохранения <span class='iconify-inline' data-icon='mdi:content-save'></span> в [файлы](#фаилы) узла
+- Список файлов с кнопкой сохранения <span class='iconify-inline' data-icon='mdi:content-save'/> в [файлы](#фаилы) узла
 - Окно отображения выбранного файла
 
-![Node job](/images/common/job.png)
-
-::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-Процесс выполнения задания можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'></span> **идентификатор_задания.log**, который расположен в списке файлов.
+::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'/>
+Процесс выполнения задания можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'/> **идентификатор_задания.log**, который расположен в списке файлов.
 :::
 
-### История изменения
+#### История изменения
 
 Для каждого файла/запроса доступна история его изменения.
 
@@ -539,23 +548,23 @@ Cтруктура:
 - Опциональое описание
 - Кнопки управления
 
-  - <span class='iconify-inline' data-icon='mdi:arrow-left-circle' style="color: green"></span> Восстановить
-  - <span class='iconify-inline' data-icon='mdi:tag' style="color: green" ></span> Задать описание
-  - <span class='iconify-inline' data-icon='mdi:delete' style="color: green"></span> Удалить
+  - <span class='iconify-inline' data-icon='mdi:arrow-left-circle' style="color: green"/> Восстановить
+  - <span class='iconify-inline' data-icon='mdi:tag' style="color: green" /> Задать описание
+  - <span class='iconify-inline' data-icon='mdi:delete' style="color: green"/> Удалить
 
 При щелчке по конкретной версии в истории она будет отображена вместо текущего файла в режиме только для чтения. Чтобы выйти из этого режима необходимо закрыть окно истории.
 
 ## Группа
 
-<span class="iconify-inline" data-icon="mdi:group"></span> **Группа** (Group) - совокупность узлов.
+<span class="iconify-inline" data-icon="mdi:group"/> **Группа** (Group) - совокупность узлов.
 
 ![Group](/images/common/group.png)
 
 Общий состав аналогичен [виду расчетного узла](#расчетныи-узел). Но доступ обеспечивается только к следующим свойствам узла:
 
 - Кнопки для доступа к соответствующим свойствам узла
-  - <span class="iconify-inline" data-icon="mdi:card-text"></span> Описание
-  - <span class="iconify-inline" data-icon="mdi:location-enter"></span> Переход внутрь группы
+  - <span class="iconify-inline" data-icon="mdi:card-text"/> Описание
+  - <span class="iconify-inline" data-icon="mdi:location-enter"/> Переход внутрь группы
 
 [1]: ./project.md#слои-данных
 [2]: /docs/desc/node_params.md#управление-параметрами
