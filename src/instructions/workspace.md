@@ -2,14 +2,14 @@
 
 ## Переход в рабочее пространство
 
-Перейти в [панель управления](/docs/desc/dashboard.md):
+Перейти в [панель управления](/desc/dashboard.md):
 
 - Открыть панель ссылок <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>
 - Нажать на изображение аватара пользователя <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
 
   ![Link panel](/images/common/user_link_panel.png)
 
-- Нажать на [плитку](/docs/desc/dashboard.md#структура-плитки-рабочего-пространства) необходимого [рабочего пространства][1] <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>.
+- Нажать на [плитку](/desc/dashboard.md#структура-плитки-рабочего-пространства) необходимого [рабочего пространства][1] <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
   Для нового пользователя автоматически создается [рабочее пространство][1] <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>.
@@ -23,9 +23,9 @@
 
   ![Resources](/images/common/dashboard_user_workspace_resources_new.png)
 
-- [Добавить](./executor.md#добавление-в-рабочее-пространство) новое [S3 хранилище](/docs/desc/s3.md)
+- [Добавить](./executor.md#добавление-в-рабочее-пространство) новое [S3 хранилище](/desc/s3.md)
 
-- [Добавить](./s3.md#добавление-в-рабочее-пространство) новый [cервер расчетов](/docs/desc/executor.md)
+- [Добавить](./s3.md#добавление-в-рабочее-пространство) новый [cервер расчетов](/desc/executor.md)
 
 - Убедиться в наличии ресурсов
 
@@ -66,11 +66,11 @@
 
 - На [плитке участника][6] нажать на кнопку <span class="iconify-inline" data-icon="mdi:close-circle"></span> для удаления роли и самого участника.
 
-[1]: /docs/desc/workspace.md
+[1]: /desc/workspace.md
 [2]: ./project.md#открыть-публичныи-доступ
 [3]: ./project.md#oткрыть-возмедныи-доступ
 [4]: ./workspace.md#переход-в-рабочее-пространство
-[5]: /docs/desc/workspace.md#панель-описания
-[6]: /docs/desc/workspace.html#структура-плитки-участника
-[7]: /docs/desc/dashboard.html#описание
-[8]: /docs/desc/workspace.html#типы-участников
+[5]: /desc/workspace.md#панель-описания
+[6]: /desc/workspace.html#структура-плитки-участника
+[7]: /desc/dashboard.html#описание
+[8]: /desc/workspace.html#типы-участников

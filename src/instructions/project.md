@@ -91,19 +91,19 @@
 :::
 
 [1]: ./workspace.md#переход-в-рабочее-пространство
-[2]: /docs/desc/workspace.md
+[2]: /desc/workspace.md
 [3]: ./workspace.md#инициализация-рабочего-пространства
 [4]: ./workspace.md#открыть-публичныи-доступ
 [5]: ./role.md#создание-новои-роли
-[6]: /docs/desc/project_role.md
-[7]: /docs/desc/project_role.md#плитка-роли
-[8]: /docs/desc/project.md#панель-управления-проектом
-[9]: /docs/desc/executor.md
-[10]: /docs/desc/project.md#слои-данных
-[11]: /docs/desc/dashboard.md#структура-плитки-проекта
+[6]: /desc/project_role.md
+[7]: /desc/project_role.md#плитка-роли
+[8]: /desc/project.md#панель-управления-проектом
+[9]: /desc/executor.md
+[10]: /desc/project.md#слои-данных
+[11]: /desc/dashboard.md#структура-плитки-проекта
 [12]: ./s3.md#добавление-в-проект
 [13]: #открытие-проекта
 [14]: #создание-нового-проекта
 [15]: #открыть-публичныи-доступ
-[16]: /docs/desc/explorer.md
+[16]: /desc/explorer.md
 [17]: ./video.md

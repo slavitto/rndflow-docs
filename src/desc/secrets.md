@@ -30,4 +30,4 @@
 6. <span class="iconify-inline" data-icon="mdi:delete"></span> Удалить
 7. <span class="iconify-inline" data-icon="mdi:eye"></span> Показать значение
 
-[1]: /docs/desc/api_keys.md
+[1]: /desc/api_keys.md

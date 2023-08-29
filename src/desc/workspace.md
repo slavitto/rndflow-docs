@@ -100,17 +100,17 @@
 
 Структура:
 
-- <span class="iconify-inline" data-icon="mdi:folder-network"></span> [S3 серверы](/docs/desc/s3.md)
+- <span class="iconify-inline" data-icon="mdi:folder-network"></span> [S3 серверы](/desc/s3.md)
 
   - <span class="iconify-inline" data-icon="mdi:magnify"></span> - кнопка [добавления][4] публичного S3 сервера
   - <span class="iconify-inline" data-icon="mdi:plus"></span> - кнопка [создания][5] нового S3 сервера (при наличии разрешений в [тарифе][9])
   - список добавленных/созданных S3 серверов
 
-- <span class="iconify-inline" data-icon="mdi:server"></span> [Серверы расчетов](/docs/desc/executor.md)
+- <span class="iconify-inline" data-icon="mdi:server"></span> [Серверы расчетов](/desc/executor.md)
   - <span class="iconify-inline" data-icon="mdi:magnify"></span> - кнопка [добавления][6] публичного сервера расчетов
   - <span class="iconify-inline" data-icon="mdi:plus"></span> - кнопка [cоздания][7] нового сервера расчетов (при наличии разрешений в [тарифе][9])
   - список добавленных/созданных серверов расчетов
-- <span class="iconify-inline" data-icon="mdi:docker"></span> [Docker-образы](/docs/desc/docker.md)
+- <span class="iconify-inline" data-icon="mdi:docker"></span> [Docker-образы](/desc/docker.md)
   - <span class="iconify-inline" data-icon="mdi:plus"></span> - кнопка [создания][8] нового Докер образа
   - список созданных Докер образов
 
@@ -179,11 +179,11 @@
 [1]: ./payplan.md
 [2]: ./project_role.md
 [3]: ./api_keys.md
-[4]: /docs/instructions/s3.md#добавление-в-рабочее-пространство
-[5]: /docs/instructions/s3.md#cоздание-нового-в-рабочем-пространстве
-[6]: /docs/instructions/executor.md#добавление-в-рабочее-пространство
-[7]: /docs/instructions/executor.md#cоздание-нового-в-рабочем-пространстве
-[8]: /docs/instructions/docker.md#создание-докер-образа-в-рабочем-пространстве
-[9]: /docs/desc/payplan.md
-[10]: /docs/desc/finance.md#cчета
-[11]: /docs/desc/finance.md#транзакции
+[4]: /instructions/s3.md#добавление-в-рабочее-пространство
+[5]: /instructions/s3.md#cоздание-нового-в-рабочем-пространстве
+[6]: /instructions/executor.md#добавление-в-рабочее-пространство
+[7]: /instructions/executor.md#cоздание-нового-в-рабочем-пространстве
+[8]: /instructions/docker.md#создание-докер-образа-в-рабочем-пространстве
+[9]: /desc/payplan.md
+[10]: /desc/finance.md#cчета
+[11]: /desc/finance.md#транзакции

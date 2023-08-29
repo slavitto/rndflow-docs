@@ -103,10 +103,10 @@
   :::
 
 
-[1]: /docs/desc/git.md
-[2]: /docs/desc/git.md#разрешения
+[1]: /desc/git.md
+[2]: /desc/git.md#разрешения
 [3]: ./project.md#открытие-проекта
-[4]: /docs/desc/project.md#панель-управления-проектом
+[4]: /desc/project.md#панель-управления-проектом
 [5]: #добавление-ключеи-развертывания
 [6]: htts://github.com
 [7]: htts://gitlab.com

@@ -59,15 +59,15 @@
 - <span class="iconify-inline" data-icon="mdi:motion-pause-outline" style="color: grey"></span> - Пауза
     > Пользователь поставил на паузу следущие запуски заданий (формирование инициирующих пакетов) по расписанию.
 
-[1]: /docs/desc/package.md
-[2]: /docs/desc/node_params.md
-[3]: /docs/desc/nodes.md#панели-узла
-[4]: /docs/desc/nodes.md#задания
+[1]: /desc/package.md
+[2]: /desc/node_params.md
+[3]: /desc/nodes.md#панели-узла
+[4]: /desc/nodes.md#задания
 [5]: ./project.md#слои-данных
-[6]: /docs/desc/executor.md
-[7]: /docs/desc/nodes.md#контеинер
-[8]: /docs/desc/nodes.md#фаилы
-[9]: /docs/instructions/package.md#обработка-пакета
-[10]: /docs/instructions/package.html#интерактивная-обработка-пакета
-[11]: /docs/instructions/package.html#обработка-пакета-по-расписанию
-[12]: /docs/instructions/job.html#запуск-задания-по-расписанию
+[6]: /desc/executor.md
+[7]: /desc/nodes.md#контеинер
+[8]: /desc/nodes.md#фаилы
+[9]: /instructions/package.md#обработка-пакета
+[10]: /instructions/package.html#интерактивная-обработка-пакета
+[11]: /instructions/package.html#обработка-пакета-по-расписанию
+[12]: /instructions/job.html#запуск-задания-по-расписанию

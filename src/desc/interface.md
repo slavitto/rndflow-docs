@@ -131,7 +131,7 @@
   Для настройки в [вкладке][3] **НАСТРОЙКИ** необходимо задать:
 
   - Узел - поле ввода узла, из которого будет отображаться пакет <span class="iconify-inline" data-icon="mdi:magnify"></span>.
-  - Шаблон имени файла - шаблон для выбора файла, должен использоваться [синтаксис регулярных выражений](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp) JavaScript.
+  - Шаблон имени файла - шаблон для выбора файла, должен использоваться [синтаксис регулярных выражений](https://developer.mozilla.org/ru/Web/JavaScript/Reference/Global_Objects/RegExp) JavaScript.
 
 - **Прогресс** - отображение прогресса выполнения проекта в виде последовательности шагов.
 
@@ -229,6 +229,6 @@
 [2]: https://quasarframework.github.io/quasar-ui-qmarkdown/examples
 [3]: #добавление-виджета
 [4]: ./project.md#панель-управления-проектом
-[5]: /docs/desc/node_params.md
-[6]: /docs/desc/nodes.html#панели-узла
-[7]: /docs/desc/links.html#своиства
+[5]: /desc/node_params.md
+[6]: /desc/nodes.html#панели-узла
+[7]: /desc/links.html#своиства

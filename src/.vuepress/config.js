@@ -1,3 +1,6 @@
+import { defaultTheme } from 'vuepress'
+import { searchPlugin } from '@vuepress/plugin-search'
+
 module.exports = {
   lang: 'ru-RU',
   title: 'R&D Flow',
@@ -13,7 +16,7 @@ module.exports = {
     ['link', { rel: 'icon', href: 'favicon.svg' }],
   ],
 
-  themeConfig: {
+  theme: defaultTheme({
     logo: '/images/logo.svg',
     docsRepo: 'https://github.com/rndflow/rndflow-documentation',
     docsBranch: 'master',
@@ -109,13 +112,12 @@ module.exports = {
         },
       },
     },
-  },
+  }),
 
   base: '/docs/',
 
   plugins: [
-    [
-      '@vuepress/plugin-search',
+    searchPlugin(
       {
         locales: {
           '/': {
@@ -123,6 +125,6 @@ module.exports = {
           },
         },
       },
-    ],
+    ),
   ],
 };

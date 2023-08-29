@@ -54,9 +54,9 @@
 Такие пакеты не сохраняют ссылки на родительское задание-инициатор!
 :::
 
-[1]: /docs/desc/job.md#типы
-[2]: /docs/desc/nodes.md#пакеты
-[3]: /docs/desc/nodes.md#задания
+[1]: /desc/job.md#типы
+[2]: /desc/nodes.md#пакеты
+[3]: /desc/nodes.md#задания
 
 
 

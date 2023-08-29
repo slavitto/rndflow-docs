@@ -82,4 +82,4 @@
 ![Exit](/images/common/link_panel.png)
 
 [1]: #переход-в-рабочее-пространство
-[2]: /docs/desc/workspace.md
+[2]: /desc/workspace.md

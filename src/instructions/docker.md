@@ -170,12 +170,12 @@
 
 10. Если сборка идет на стороннем сервисе, то рекомендуется отсоединиться от реестра: `docker logout`
 
-[1]: /docs/desc/docker.md
-[2]: /docs/instructions/workspace.html#переход-в-рабочее-пространство
-[3]: /docs/desc/workspace.md
-[4]: /docs/desc/docker.md#плитка
+[1]: /desc/docker.md
+[2]: /instructions/workspace.html#переход-в-рабочее-пространство
+[3]: /desc/workspace.md
+[4]: /desc/docker.md#плитка
 [5]: #создание-докер-образа-вне-платформы
-[6]: /docs/dev/docker.md
+[6]: /dev/docker.md
 [7]: https://docs.docker.com/engine/reference/builder/
 [8]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 [9]: https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html

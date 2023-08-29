@@ -16,7 +16,7 @@
 
 ### Расчетный узел
 
-<span class="iconify-inline" data-icon="mdi:kubernetes"/> **Расчетный узел** (Compute) - набор исполняемых программ ([скриптов](/docs/dev/compute.md#код-расчетного-узла)) и их параметров, реализующих заданную пользователем функциональность.
+<span class="iconify-inline" data-icon="mdi:kubernetes"/> **Расчетный узел** (Compute) - набор исполняемых программ ([скриптов](/dev/compute.md#код-расчетного-узла)) и их параметров, реализующих заданную пользователем функциональность.
 
 ![Compute node](/images/common/node_compute.png)
 
@@ -44,7 +44,7 @@
 
 ### SQL узел
 
-<span class="iconify-inline" data-icon="mdi:database"/> **SQL узел** (Query)- [SQL запрос](/docs/dev/sql.md#запрос-sql-узла), реализующий выборку и обработку вошедших в него пакетов данных. В отличии от расчетного узла позволяет оперировать данными всех вошедших в него пакетов.
+<span class="iconify-inline" data-icon="mdi:database"/> **SQL узел** (Query)- [SQL запрос](/dev/sql.md#запрос-sql-узла), реализующий выборку и обработку вошедших в него пакетов данных. В отличии от расчетного узла позволяет оперировать данными всех вошедших в него пакетов.
 
 ![Query node](/images/common/node_query.png)
 
@@ -188,7 +188,7 @@ Cтруктура:
   - Исполнитель - использовать значение по умолчанию [исполнителя][10].
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-  Все типы политик, кроме типа "Исполнитель", соответствуют стандартным [политикам](https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy) Kubernetes. 
+  Все типы политик, кроме типа "Исполнитель", соответствуют стандартным [политикам](https://kubernetes.io/concepts/containers/images/#image-pull-policy) Kubernetes. 
   :::
 
   ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"/>
@@ -306,7 +306,7 @@ Cтруктура:
 
 - <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление всех пакетов
 
-- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> [Фильтр по количеству заданий](#фильтр-по-количеству-заданий)
+- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> [Фильтр по количеству заданий](#фильтр-по-количеству-задании)
 
 - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> [Фильтр по спецификации](#фильтр-по-спецификации)
 
@@ -390,7 +390,7 @@ Cтруктура:
 
 ### Запрос
 
-**Запрос** - [SQL скрипт](/docs/dev/sql.md#запрос-sql-узла) для формирования выходных пакетов по заданным условия. В качестве параметров запроса возможно использовать переменные пакета типа **поле**.
+**Запрос** - [SQL скрипт](/dev/sql.md#запрос-sql-узла) для формирования выходных пакетов по заданным условия. В качестве параметров запроса возможно использовать переменные пакета типа **поле**.
 
 Структура:
 
@@ -399,7 +399,7 @@ Cтруктура:
   - Редактор SQL запроса
   - Панель инструментов
 
-    - <span class="iconify-inline" data-icon="mdi:auto-fix"/> [SQL мастер](/docs/dev/sql.md#sql-мастер)
+    - <span class="iconify-inline" data-icon="mdi:auto-fix"/> [SQL мастер](/dev/sql.md#sql-мастер)
     - <span class="iconify-inline" data-icon="mdi:help-circle" style="color: black"/> Помощь
     - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"/> Уменьшить размер шрифта
     - <span style="background-color: green; color: white">Текущий размер шрифта</span>
@@ -567,12 +567,12 @@ Cтруктура:
   - <span class="iconify-inline" data-icon="mdi:location-enter"/> Переход внутрь группы
 
 [1]: ./project.md#слои-данных
-[2]: /docs/desc/node_params.md#управление-параметрами
-[3]: /docs/desc/package.md#состав
-[4]: /docs/desc/package.md
-[5]: /docs/desc/job.md
-[6]: /docs/desc/job.md#состояния
-[7]: /docs/desc/docker.md
-[8]: /docs/desc/job.md#типы
-[9]: /docs/desc/dashboard.md#редактирование
-[10]: /docs/desc/executor.html
+[2]: /desc/node_params.md#управление-параметрами
+[3]: /desc/package.md#состав
+[4]: /desc/package.md
+[5]: /desc/job.md
+[6]: /desc/job.md#состояния
+[7]: /desc/docker.md
+[8]: /desc/job.md#типы
+[9]: /desc/dashboard.md#редактирование
+[10]: /desc/executor.html

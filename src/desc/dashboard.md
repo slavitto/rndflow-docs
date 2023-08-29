@@ -127,9 +127,9 @@
     - Сумма - сумма транзакции
   - Панель навигации
 
-[1]: /docs/desc/finance.md#cчета
-[2]: /docs/desc/finance.md#транзакции
-[3]: /docs/desc/workspace.md#участники
+[1]: /desc/finance.md#cчета
+[2]: /desc/finance.md#транзакции
+[3]: /desc/workspace.md#участники
 [4]: ./workspace.md
 [5]: ./project.md
 [6]: ./explorer.md

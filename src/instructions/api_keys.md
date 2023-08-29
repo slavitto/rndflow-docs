@@ -88,11 +88,11 @@
 - [Импортировать ключ в проект](#импорт-ключа)
 - Перейти в раздел <span class="iconify-inline" data-icon="mdi:sitemap"></span>**Граф** и в вкладке [Файлы][4] узла, у которого есть доступ к [секрету][3] соответствующего [API ключа][1], в программном модуле или скрипте необходимо использовать следующий [код][5].
 
-[1]: /docs/desc/api_keys.md
-[2]: /docs/desc/api_keys.md#плитка-шаблона
-[3]: /docs/desc/secrets.md
-[4]: /docs/desc/nodes.md#фаилы
-[5]: /docs/dev/compute.md#api-доступ-к-проекту
-[6]: /docs/desc/api_keys.md#выданные-ключи
+[1]: /desc/api_keys.md
+[2]: /desc/api_keys.md#плитка-шаблона
+[3]: /desc/secrets.md
+[4]: /desc/nodes.md#фаилы
+[5]: /dev/compute.md#api-доступ-к-проекту
+[6]: /desc/api_keys.md#выданные-ключи
 [video]: ./video.md
-[permissions]: /docs/desc/project_role.md#типы-разрешении
+[permissions]: /desc/project_role.md#типы-разрешении

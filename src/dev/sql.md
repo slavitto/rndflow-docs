@@ -6,13 +6,13 @@
 
 Имя таблицы соответствует имени этого предыдущего узла.
 
-Столбцами таблицы являются имена переменных [пакета][1], выходящего из предыдущего узла учетом возможных переименований, заданных во входящей [связи](/docs/desc/links.md).
+Столбцами таблицы являются имена переменных [пакета][1], выходящего из предыдущего узла учетом возможных переименований, заданных во входящей [связи](/desc/links.md).
 
 Если в [SQL узел][2] входят пакеты из разных узлов, то для каждого узла будет собственная виртуальная таблица.
 
 ## Запрос SQL узла
 
-[SQL узел][2] должен содержать SQL запрос выбора данных. Общие правила создания запроса должны соответствовать требованиям использования SQL команды ([SELECT](https://www.postgresql.org/docs/13/sql-select.html)) на диалекте СУБД [PostgreSQL](https://www.postgresql.org).
+[SQL узел][2] должен содержать SQL запрос выбора данных. Общие правила создания запроса должны соответствовать требованиям использования SQL команды ([SELECT](https://www.postgresql.org/13/sql-select.html)) на диалекте СУБД [PostgreSQL](https://www.postgresql.org).
 
 Выбор данных производится из [виртуальных таблиц][5].
 
@@ -52,7 +52,7 @@ from sin s join cos c on s.job_id = c.job_id
 - `array[c.id, s.id] as packages` - получение массива с идентификаторами исходных пакетов (см. [правило № 1][4]);
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
 
-  Официальная [документация](https://www.postgresql.org/docs/13/arrays.html) на функцию `array`.
+  Официальная [документация](https://www.postgresql.org/13/arrays.html) на функцию `array`.
 
   :::
 
@@ -96,7 +96,7 @@ group by ...
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
 
-  Официальная [документация](https://www.postgresql.org/docs/13/functions-aggregate.html) функции `array_agg`.
+  Официальная [документация](https://www.postgresql.org/13/functions-aggregate.html) функции `array_agg`.
 
   Дополнительные разъяснения об [использовании](https://www.postgresqltutorial.com/postgresql-aggregate-functions/postgresql-array_agg-function/) функции `array_agg`.
 
@@ -109,9 +109,9 @@ group by ...
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
 
-  Официальная [документация](https://www.postgresql.org/docs/13/functions-aggregate.html) функции `json_agg`.
+  Официальная [документация](https://www.postgresql.org/13/functions-aggregate.html) функции `json_agg`.
 
-  Официальная [документация](https://www.postgresql.org/docs/13/functions-json.html#FUNCTIONS-JSON-PROCESSING) функции `json_build_object`.
+  Официальная [документация](https://www.postgresql.org/13/functions-json.html#FUNCTIONS-JSON-PROCESSING) функции `json_build_object`.
 
   Дополнительные разъяснения об [использовании](https://www.dbrnd.com/2016/03/postgresql-using-json_agg-aggregate-table-data-into-a-json-formatted-array/) функции `json_agg`.
 
@@ -121,7 +121,7 @@ group by ...
 
 **SQL мастер** - используется для быстрого построения шаблона для [SQL запроса](#запрос-sql-узла).
 
-Для вызова SQL мастера необходимо нажать на иконку <span class="iconify-inline" data-icon="mdi:auto-fix"></span> на [панели SQL узла](/docs/desc/nodes.md#запрос)
+Для вызова SQL мастера необходимо нажать на иконку <span class="iconify-inline" data-icon="mdi:auto-fix"></span> на [панели SQL узла](/desc/nodes.md#запрос)
 
 ![SQL Master](/images/common/sql_wizard.png)
 
@@ -151,9 +151,9 @@ group by ...
 - Кнопка "ДОБАВИТЬ" - добавить запрос к существующему запросу узла
 - Кнопка "ОТМЕНА" - выйти из мастера
 
-[1]: /docs/desc/package.md
-[2]: /docs/desc/nodes.md#sql-узел
-[3]: /docs/desc/nodes.md#спецификация
+[1]: /desc/package.md
+[2]: /desc/nodes.md#sql-узел
+[3]: /desc/nodes.md#спецификация
 [4]: #правила-формирования-запроса
 [5]: #виртуальная-таблица
-[6]: /docs/desc/package.md#состав
+[6]: /desc/package.md#состав

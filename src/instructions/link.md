@@ -25,12 +25,12 @@
 
   ![Link edit](/images/common/link_edit.png)
 
-- В вкладке <span class='iconify-inline' data-icon='mdi:transit-connection-horizontal'></span>**СВЯЗЬ** в поле ввода <span class='iconify-inline' data-icon='mdi:magnify'></span> **Фильтр пакетов** ввести регулярное выражение названия меток пакетов, которым разрешено перемещаться по этой связи. Для регулярного выражения должен использоваться [диалект PostgreSQL](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-POSIX-REGEXP).
+- В вкладке <span class='iconify-inline' data-icon='mdi:transit-connection-horizontal'></span>**СВЯЗЬ** в поле ввода <span class='iconify-inline' data-icon='mdi:magnify'></span> **Фильтр пакетов** ввести регулярное выражение названия меток пакетов, которым разрешено перемещаться по этой связи. Для регулярного выражения должен использоваться [диалект PostgreSQL](https://www.postgresql.org/current/functions-matching.html#FUNCTIONS-POSIX-REGEXP).
 
   Пример добавление нескольких фильтров:
 
   ![Links filtration](/images/common/link_filters.png)
 
-[1]: /docs/desc/links.md
-[2]: /docs/desc/links.md#своиства
-[3]: /docs/desc/links.md#типы-связеи
+[1]: /desc/links.md
+[2]: /desc/links.md#своиства
+[3]: /desc/links.md#типы-связеи

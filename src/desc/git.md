@@ -123,11 +123,11 @@ Git репозиторий является единым для всего пр�
 
 [1]: https://git-scm.com/
 [2]: htts://github.com
-[3]: /docs/desc/project_role.md#типы-разрешении
-[4]: /docs/desc/project.md
-[5]: /docs/desc/project.md#граф
-[6]: /docs/desc/nodes.md
-[7]: /docs/desc/nodes.md#фаилы
-[8]: /docs/desc/project.html#слои-данных
-[9]: /docs/desc/interface.md
+[3]: /desc/project_role.md#типы-разрешении
+[4]: /desc/project.md
+[5]: /desc/project.md#граф
+[6]: /desc/nodes.md
+[7]: /desc/nodes.md#фаилы
+[8]: /desc/project.html#слои-данных
+[9]: /desc/interface.md
 [10]: https://gitlab.com/

@@ -2,7 +2,7 @@
 
 ## Код расчетного узла
 
-В [расчетном узле](/docs/desc/nodes.md#расчетныи-узел) размещаются исполнительные модули (программ, скрипты).
+В [расчетном узле](/desc/nodes.md#расчетныи-узел) размещаются исполнительные модули (программ, скрипты).
 Для взаимодействия с сервером платформы используются специальные библиотеки.
 
 ### Python
@@ -20,7 +20,7 @@ from rndflow import job
 - **params**() - получить параметры узла
 - **packages**() - получить пакеты узла
 - **load**(readers={}) - получить переменные пакетов узла
-- **save_package**(label=None, files={}, fields={}, images={}) - сохранить выходной [пакет](/docs/desc/package.md)
+- **save_package**(label=None, files={}, fields={}, images={}) - сохранить выходной [пакет](/desc/package.md)
 
   **label** - метка пакета, **fields** - поля пакета, **files** - файлы пакета, **images** - объекты [matplotlib](https://matplotlib.org/) или [plotly](https://plotly.com/python/).
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
@@ -60,7 +60,7 @@ job.save_package(
 
 ## API доступ к проекту
 
-Для программного доступа к проекту используются [API ключи](/docs/desc/api_keys.md).
+Для программного доступа к проекту используются [API ключи](/desc/api_keys.md).
 
 ### Python
 

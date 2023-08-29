@@ -122,7 +122,7 @@
 
 - В вкладке с Jupyter панелью нажать кнопку **Quit** (верхний правый угол).
   ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-  Через определенное время неактивности, заданное в настройках [исполнителя задач](/docs/desc/executor.md) (по умолчанию 24 часа), интерактивное [задание][8] будет автоматически остановлено.
+  Через определенное время неактивности, заданное в настройках [исполнителя задач](/desc/executor.md) (по умолчанию 24 часа), интерактивное [задание][8] будет автоматически остановлено.
   :::
 
 - Перейти в панель <span class="iconify-inline" data-icon="mdi:cog-box"></span> [Задания][2] узла и щелкнуть по идентификатору [задания][8] в поле **Id**.
@@ -138,11 +138,11 @@
 
 Смотреть [фильтрация пакетов](./link.md#фильтрация-пакетов) в разделе [Связи](./link.md).
 
-[1]: /docs/desc/nodes.md#пакеты
-[2]: /docs/desc/nodes.md#задания
+[1]: /desc/nodes.md#пакеты
+[2]: /desc/nodes.md#задания
 [3]: https://jupyter-notebook.readthedocs.io/en/stable/ui_components.html#notebook-dashboard
-[4]: /docs/desc/nodes.md#контеинер
-[5]: /docs/desc/nodes.md#фаилы
-[6]: /docs/desc/package.md
-[7]: /docs/desc/package.md#состав
-[8]: /docs/desc/job.md
+[4]: /desc/nodes.md#контеинер
+[5]: /desc/nodes.md#фаилы
+[6]: /desc/package.md
+[7]: /desc/package.md#состав
+[8]: /desc/job.md

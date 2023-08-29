@@ -25,7 +25,7 @@ from rndflow import job
 secret_value = job.secret('My_secret')
 ```
 
-[1]: /docs/desc/secrets.md
-[2]: /docs/desc/project.md#панель-управления-проектом
-[3]: /docs/desc/secrets.md#плитка-секрета
-[4]: /docs/desc/nodes.md#фаилы
+[1]: /desc/secrets.md
+[2]: /desc/project.md#панель-управления-проектом
+[3]: /desc/secrets.md#плитка-секрета
+[4]: /desc/nodes.md#фаилы

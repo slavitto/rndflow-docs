@@ -274,15 +274,15 @@
   - *название исполнителя*-rndflow-executor-metrics-reporter-...
   - *название исполнителя*-rndflow-executor-pod-watcher-...
 
-[1]: /docs/desc/s3.md
-[2]: /docs/desc/executor.md
-[3]: /docs/desc/project_user.md
-[4]: /docs/desc/workspace.md
-[5]: /docs/desc/payplan.md
+[1]: /desc/s3.md
+[2]: /desc/executor.md
+[3]: /desc/project_user.md
+[4]: /desc/workspace.md
+[5]: /desc/payplan.md
 [6]: https://server.rndflow.com/api/redoc
-[7]: /docs/desc/executor.md
-[8]: /docs/desc/finance.md#транзакции
-[9]: /docs/desc/finance.md#счета
-[10]: /docs/desc/payplan.html
-[11]: /docs/instructions/#cброс-пароля
-[12]: /docs/desc/job.md
+[7]: /desc/executor.md
+[8]: /desc/finance.md#транзакции
+[9]: /desc/finance.md#счета
+[10]: /desc/payplan.html
+[11]: /instructions/#cброс-пароля
+[12]: /desc/job.md

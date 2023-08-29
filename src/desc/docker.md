@@ -79,6 +79,6 @@
   ![Docker image editor git context](/images/common/dashboard_user_workspace_resources_docker_editor_git.png)
 
 [1]: https://docs.docker.com/get-started/overview/
-[2]: /docs/desc/workspace.md
-[3]: /docs/desc/nodes.md#контеинер
-[4]: /docs/desc/nodes.md#расчетныи-узел
+[2]: /desc/workspace.md
+[3]: /desc/nodes.md#контеинер
+[4]: /desc/nodes.md#расчетныи-узел

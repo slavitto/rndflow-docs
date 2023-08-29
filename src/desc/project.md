@@ -154,13 +154,13 @@
 
 ### Роли проекта
 
-Вкладка **РОЛИ** - yправление [ролями проекта](/docs/desc/project_role.md)
+Вкладка **РОЛИ** - yправление [ролями проекта](/desc/project_role.md)
 
 ![Project roles](/images/common/permissions_roles.png)
 
 ### Пользователи проекта
 
-Вкладка **ПОЛЬЗОВАТЕЛИ** - управление [пользователями](/docs/desc/project_user.md)
+Вкладка **ПОЛЬЗОВАТЕЛИ** - управление [пользователями](/desc/project_user.md)
 
 ![Project users](/images/common/permissions_users.png)
 
@@ -192,7 +192,7 @@
 Включает в себя:
 
 - <span class="iconify-inline" data-icon="mdi:magnify"></span> Поиск узла по имени
-- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/docs/desc/nodes.md#пакеты)
+- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/desc/nodes.md#пакеты)
 - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование узлов
 - <span class="iconify-inline" data-icon="mdi:image-filter-center-focus"></span> Опциональная кнопка приближения к выбранному узлу/узлам
   > Аналогично двойному щелчку на выбранном узле.
@@ -266,12 +266,12 @@
 При щелчке по группе узлов осуществляется открытие списка узлов данной группы.
 
 
-[1]: /docs/instructions/role.md#запрос-платнои-роли
-[2]: /docs/instructions/api_keys.md#запрос-ключа
+[1]: /instructions/role.md#запрос-платнои-роли
+[2]: /instructions/api_keys.md#запрос-ключа
 [3]: #слои-данных
-[4]: /docs/desc/git.md
+[4]: /desc/git.md
 [5]: https://git-scm.com/
-[6]: /docs/desc/project_role.md
-[7]: /docs/desc/api_keys.md
-[8]: /docs/desc/finance.md#транзакции
-[9]: /docs/desc/finance.md#cчета
+[6]: /desc/project_role.md
+[7]: /desc/api_keys.md
+[8]: /desc/finance.md#транзакции
+[9]: /desc/finance.md#cчета

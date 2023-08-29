@@ -22,9 +22,9 @@
 - Аватар - ссылка на [панель управления](./dashboard.md) пользователя
 - <span class="iconify-inline" data-icon="mdi:logout"></span> - кнопка выхода из платформы
 - <span class="iconify-inline" data-icon="mdi:wallet"></span> Баланс - ссылка на [баланс][2] пользователя
-- Документация API - cсылка на [API](/docs/dev/README.md/#API) платформы
+- Документация API - cсылка на [API](/dev/README.md/#API) платформы
 
 ![Link panel](/images/common/link_panel.png)
 
-[1]: /docs/desc/explorer.md
-[2]: /docs/desc/dashboard.md#баланс
+[1]: /desc/explorer.md
+[2]: /desc/dashboard.md#баланс

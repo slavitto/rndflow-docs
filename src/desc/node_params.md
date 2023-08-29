@@ -128,7 +128,7 @@
 
 - Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
 - <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Обязательное поле - требовать или нет ввода значения по умолчанию
-- Регулярное выражение - формат ввода строки, используется [синтаксис регулярных выражений JavaScript](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- Регулярное выражение - формат ввода строки, используется [синтаксис регулярных выражений JavaScript](https://developer.mozilla.org/ru/Web/JavaScript/Reference/Global_Objects/RegExp)
 - Сообщение об ошибке - сообщение при вводе значения, которое не соответствует регулярному выражению
 
 #### Число
@@ -168,5 +168,5 @@
 
 - Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
 
-[1]: /docs/desc/project.md#слои-данных
+[1]: /desc/project.md#слои-данных
 [2]: http://htmlbook.ru/html/input/step

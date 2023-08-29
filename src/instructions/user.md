@@ -42,12 +42,12 @@
 
 Смотреть [удаление][9] участника в разделе [Рабочее пространство][8].
 
-[1]: /docs/desc/project_user.md
+[1]: /desc/project_user.md
 [2]: ./project.md#открытие-проекта
-[3]: /docs/desc/project.md#панель-управления-проектом
-[4]: /docs/desc/project_user.md#плитка-пользователя
+[3]: /desc/project.md#панель-управления-проектом
+[4]: /desc/project_user.md#плитка-пользователя
 [5]: ./role.md#создание-новой-роли
-[6]: /docs/desc/project_role.md
+[6]: /desc/project_role.md
 [7]: ./workspace.md#добавить-участника
 [8]: ./workspace.md
 [9]: ./workspace.md#удалить-участника

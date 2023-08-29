@@ -57,15 +57,15 @@
 
    Пакет отправляется на первичную или повторную обработку интерактивную обработку вручную.
 
-[1]: /docs/desc/nodes.md#панели-узла
-[2]: /docs/desc/nodes.md#пакеты
+[1]: /desc/nodes.md#панели-узла
+[2]: /desc/nodes.md#пакеты
 [3]: ./project.md#слои-данных
-[4]: /docs/desc/nodes.md
-[5]: /docs/dev/sql.md#пример-формирования-пакета-с-переменнои-типа-массив-пакетов
-[6]: /docs/desc/nodes.md#sql-узел
-[7]: /docs/desc/nodes.md#расчетныи-узел
-[8]: /docs/desc/nodes.md#состояние
-[9]: /docs/desc/job.md
-[10]: /docs/instructions/package.md#обработка-пакета
-[11]: /docs/instructions/package.md#интерактивная-обработка-пакета
+[4]: /desc/nodes.md
+[5]: /dev/sql.md#пример-формирования-пакета-с-переменнои-типа-массив-пакетов
+[6]: /desc/nodes.md#sql-узел
+[7]: /desc/nodes.md#расчетныи-узел
+[8]: /desc/nodes.md#состояние
+[9]: /desc/job.md
+[10]: /instructions/package.md#обработка-пакета
+[11]: /instructions/package.md#интерактивная-обработка-пакета
 [12]: https://en.wikipedia.org/wiki/SHA-2

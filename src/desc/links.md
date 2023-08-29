@@ -55,7 +55,7 @@
   - Тип связи - изменение типа связи.
   - <span class='iconify-inline' data-icon='mdi:magnify'></span> Фильтр пакетов - определения пакетов, которые будут передаваться по ней.
 
-  По этой связи будут продвигаться только пакеты с подходящими метками. Фильтр - это регулярное выражение с использованием [диалекта PostgreSQL](https://www.postgresql.org/docs/current/functions-matching.html#FUNCTIONS-POSIX-REGEXP).
+  По этой связи будут продвигаться только пакеты с подходящими метками. Фильтр - это регулярное выражение с использованием [диалекта PostgreSQL](https://www.postgresql.org/current/functions-matching.html#FUNCTIONS-POSIX-REGEXP).
 
   - Кнопка **СОХРАНИТЬ** - сохранить изменения.
 
@@ -76,8 +76,8 @@
     - Выход - название выходной переменной;
     - <span class='iconify-inline' data-icon='mdi:plus' style="color: green"></span> - кнопка добавления нового правила.
 
-[1]: /docs/desc/package.md
-[2]: /docs/desc/nodes.md#группа
-[3]: /docs/desc/job.md
-[4]: /docs/desc/package.md#состав
-[5]: /docs/desc/nodes.md
+[1]: /desc/package.md
+[2]: /desc/nodes.md#группа
+[3]: /desc/job.md
+[4]: /desc/package.md#состав
+[5]: /desc/nodes.md

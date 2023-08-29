@@ -18,6 +18,6 @@
 
 
 [1]: ./workspace.md#переход-в-рабочее-пространство
-[2]: /docs/desc/workspace.md
-[3]: /docs/desc/workspace.md#биллинг
-[4]: /docs/desc/payplan.md
+[2]: /desc/workspace.md
+[3]: /desc/workspace.md#биллинг
+[4]: /desc/payplan.md

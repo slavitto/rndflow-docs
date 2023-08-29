@@ -22,9 +22,9 @@
 С видео примером можно ознакомиться в разделе [видео](./video.md).
 :::
 
-[1]: /docs/desc/interface.md
+[1]: /desc/interface.md
 [2]: ./project.md#открытие-проекта
-[3]: /docs/desc/project.md#панель-управления-проектом
-[4]: /docs/desc/interface.md#плитка-интерфеиса
-[5]: /docs/desc/interface.md#редактор
-[6]: /docs/desc/interface.md#добавление-виджета
+[3]: /desc/project.md#панель-управления-проектом
+[4]: /desc/interface.md#плитка-интерфеиса
+[5]: /desc/interface.md#редактор
+[6]: /desc/interface.md#добавление-виджета

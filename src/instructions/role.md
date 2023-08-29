@@ -47,7 +47,7 @@
 
 ![API request confirmation](/images/common/permissions_role_confirmation.png)
 
-[1]: /docs/desc/project_role.md#плитка-роли
-[2]: /docs/desc/project_role.md#типы-разрешении
-[3]: /docs/desc/project.md#слои-данных
-[4]: /docs/desc/project_role.md#диалог-управления-разрешениями
+[1]: /desc/project_role.md#плитка-роли
+[2]: /desc/project_role.md#типы-разрешении
+[3]: /desc/project.md#слои-данных
+[4]: /desc/project_role.md#диалог-управления-разрешениями
