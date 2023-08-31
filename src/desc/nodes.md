@@ -308,7 +308,9 @@ Cтруктура:
 
 - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> [Фильтр по количеству заданий](#фильтр-по-количеству-задании)
 
-- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> [Фильтр по спецификации](#фильтр-по-спецификации)
+- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> [Фильтр по входной спецификации](#фильтр-по-спецификации)
+
+- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Совместный просмотр выбранных пакетов](#окно-просмотра-пакетов)
 
 - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление переменной пакета
 
@@ -344,12 +346,12 @@ Cтруктура:
 
 ##### Фильтр по спецификации
 
-Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> в [панели инструментов](#панель-инструментов).
+Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> в [панели инструментов](#панель-инструментов). Осуществляет фильтрацию по входной спецификации узла.
 
 ![Package](/images/common/node_panel_packages_spec_filter.png)
 
 - Активировать - активация фильтра
-- Поля  - выбор переменной из спецификации по которой будет производиться фильтрация
+- Поля - выбор переменной из спецификации, по которой будет производиться фильтрация
 - Тип операции - позволяет выбрать тип проверки по отношению к указанному значению в нижнем поле ввода.
 - Поле ввода ограничения
 
@@ -387,6 +389,13 @@ Cтруктура:
       или
 
       ![Package](/images/common/package_verification_bad.png)
+
+#### Окно просмотра-пакетов
+
+Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> в [панели инструментов](#панель-инструментов). 
+
+Позволяет одновременно просматривать файлы из выбранных пакетов.
+
 
 ### Запрос
 
