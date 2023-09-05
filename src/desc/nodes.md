@@ -310,7 +310,7 @@ Cтруктура:
 
 - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> [Фильтр по спецификации](#фильтр-по-спецификации)
 
-- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Сравнение файлов выбранных пакетов](#сравнение-фаилов-выбранных-пакетов)
+- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Окно просмотра пакетов](#окно-просмотра-пакетов)
 
 - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление переменной пакета
 
@@ -390,9 +390,11 @@ Cтруктура:
 
       ![Package](/images/common/package_verification_bad.png)
 
-#### Сравнение файлов выбранных пакетов
+#### Окно просмотра пакетов
 
-Открывается по нажатию кнопки <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> при наличии выбранных пакетов в [таблице](#таблица-пакетов) со списком пакетов.
+Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> в [панели инструментов](#панель-инструментов).
+
+Позволяет одновременно просматривать файлы из выбранных пакетов.
 
 ![Package](/images/common/package_panel_compare.png)
 
