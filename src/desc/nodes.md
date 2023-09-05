@@ -312,6 +312,8 @@ Cтруктура:
 
 - <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Совместный просмотр выбранных пакетов](#окно-просмотра-пакетов)
 
+- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Окно просмотра пакетов](#окно-просмотра-пакетов)
+
 - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление переменной пакета
 
   Добавление переменной пакета в качестве нового столбца в таблице пакетов.
@@ -335,7 +337,7 @@ Cтруктура:
 - Создано - время создания пакета
 - Владелец - пользователь создавший пакет
 
-##### Фильтр по количеству заданий
+#### Фильтр по количеству заданий
 Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:horizontal-circle-outline"/> в [панели инструментов](#панель-инструментов).
 
 ![Package](/images/common/node_panel_packages_filter.png)
@@ -344,7 +346,7 @@ Cтруктура:
 - Тип операции - выбор типа проверки количества заданий по отношению к указанному значению в поле "Количество заданий".
 - Количество заданий 
 
-##### Фильтр по спецификации
+#### Фильтр по спецификации
 
 Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> в [панели инструментов](#панель-инструментов). Осуществляет фильтрацию по входной спецификации узла.
 
@@ -390,11 +392,34 @@ Cтруктура:
 
       ![Package](/images/common/package_verification_bad.png)
 
-#### Окно просмотра-пакетов
+#### Окно просмотра пакетов
 
-Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> в [панели инструментов](#панель-инструментов). 
+Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> в [панели инструментов](#панель-инструментов).
 
 Позволяет одновременно просматривать файлы из выбранных пакетов.
+
+![Package](/images/common/package_panel_compare.png)
+
+- Панель инструментов
+
+  - <span style="padding: 0 12px; border: #CCC 1px solid; border-radius: 40px;">
+      <span class='iconify-inline' data-icon='mdi:view-grid'/> <small style="padding: 4px">1 x 2</small>
+    </span> Выбор размера сетки отображения файлов
+
+    > Для изменения размерности сетки требуется щелкнуть по столбцу соответствующего измерения 
+
+  - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Кнопка с списком фильтров файлов :
+    - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Группировка по родительским пакетам (по умолчанию)
+    - <span class='iconify-inline' data-icon='mdi:not-equal-variant'/> Группировка по уникальнымому содержимому
+    - <span class='iconify-inline' data-icon='mdi:file-multiple'/> Группировка по имени файла
+
+  - <span class='iconify-inline' data-icon='mdi:selection-remove'/> Кнопка для закрытия всех выбранных файлов.
+
+  - Дерево файлов с корневыми элементами, отображающими идентификатор пакета в случае группировки по пакетам, либо имя файла в случае группировки по файлам. Cодержит элементы управления:
+    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Кнопка отображения всех файлов с выбранным именем
+    - <span class="iconify-inline" data-icon="mdi:download"/> Кнопка скачивания файла
+
+  - Сетка для отображения выбранных файлов
 
 
 ### Запрос
