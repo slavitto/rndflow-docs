@@ -403,7 +403,7 @@ Cтруктура:
 - Панель инструментов
 
   - <span style="padding: 0 12px; border: #CCC 1px solid; border-radius: 40px;">
-      <span class='iconify-inline' data-icon='mdi:view-grid'/> <small style="padding: 4px">2 x 2</small>
+      <span class='iconify-inline' data-icon='mdi:view-grid'/> <small style="padding: 4px">1 x 2</small>
     </span> Выбор размера сетки отображения файлов
 
     > Для изменения размерности сетки требуется щелкнуть по столбцу соответствующего измерения 
