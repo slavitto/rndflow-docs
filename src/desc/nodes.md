@@ -310,6 +310,8 @@ Cтруктура:
 
 - <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> [Фильтр по спецификации](#фильтр-по-спецификации)
 
+- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Сравнение файлов выбранных пакетов](#сравнение-фаилов-выбранных-пакетов)
+
 - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление переменной пакета
 
   Добавление переменной пакета в качестве нового столбца в таблице пакетов.
@@ -387,6 +389,31 @@ Cтруктура:
       или
 
       ![Package](/images/common/package_verification_bad.png)
+
+#### Сравнение файлов выбранных пакетов
+
+Открывается по нажатию кнопки <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> при наличии выбранных пакетов в [таблице](#таблица-пакетов) со списком пакетов.
+
+![Package](/images/common/package_panel_compare.png)
+
+- Панель инструментов
+
+  - <span style="padding: 0 12px; border: #CCC 1px solid; border-radius: 40px;">
+      <span class='iconify-inline' data-icon='mdi:view-grid'/> <small style="padding: 4px">2 x 2</small>
+    </span> Выбор размера сетки (выпадающие списки)
+
+  - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Кнопка выбора фильтра с выпадающим списком фильтров:
+    - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Выбор всех файлов, сгруппированных по пакетам (по умолчанию)
+    - <span class='iconify-inline' data-icon='mdi:not-equal-variant'/> Выбор файлов только с уникальным содержимым
+    - <span class='iconify-inline' data-icon='mdi:file-multiple'/> Выбор файлов сгруппированных по имени файла
+
+  - <span class='iconify-inline' data-icon='mdi:selection-remove'/> Кнопка для закрытия всех выбранных файлов.
+
+  - Дерево файлов с корневыми элементами отображающими Id пакета в случае группировки по пакетам, либо имя файла в случае группировки по файлам. Cодержит элементы управления:
+    - <span class="iconify-inline" data-icon="mdi:download"/> Кнопка скачивания файла
+    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Кнопка выбора всех файлов с этим именем
+
+  - Сетка для отображения выбранных файлов
 
 ### Запрос
 
