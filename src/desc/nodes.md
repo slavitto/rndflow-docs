@@ -179,13 +179,18 @@ Cтруктура:
 
   Необходимый докер образ можно выбрать из списка или набрать название самостоятельно (в последнем случае набор необходимо завершить нажатием **Enter**).
 
-- Загрузка - политика загрузки докер образа узла.
+- <span class="iconify-inline" data-icon="mdi:all-inclusive" style="color: red"/> -  Загрузка, политика загрузки докер образа узла.
 
-  Типы политик:  
-  - Всегда - загружать докер образ в случае его изменения, иначе использовать локальную версию.
-  - При отсутствии - загружать докер образ при его отсутствии на узле.
-  - Никогда -  не загружать докер образ из внешнего репозитория. Использовать только локальную версию.
-  - Исполнитель - использовать значение по умолчанию [исполнителя][10].
+  Типы:
+  - <span class="iconify-inline" data-icon="mdi:all-inclusive" style="color: red"/> - Всегда, загружать докер образ в случае его изменения, иначе использовать локальную версию.
+
+  - <span class="iconify-inline" data-icon="mdi:repeat-once" style="color: blue"/> - При отсутствии, загружать докер образ при его отсутствии на узле.
+
+  - <span class="iconify-inline" data-icon="mdi:download-off-outline" style="color: orange"/> - Никогда, не загружать докер образ из внешнего репозитория. Использовать только локальную версию.
+
+  - <span class="iconify-inline" data-icon="mdi-robot-outline" style="color: blue"/> - Исполнитель, использовать значение по умолчанию [исполнителя][10].
+
+  Знак <span class="iconify-inline" data-icon="mdi-lock"/> появляется если к узлу подключен [секрет][11], типа ["Загрузка образов"][12], то есть если необходимо подключение к приватному Докер реестру.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
   Все типы политик, кроме типа "Исполнитель", соответствуют стандартным [политикам](https://kubernetes.io/concepts/containers/images/#image-pull-policy) Kubernetes. 
@@ -197,14 +202,19 @@ Cтруктура:
   При постоянном использовании политики "Всегда" без промежуточного кеширующего прокси возможно превышение лимитов на доступ к регистру хранения (лимиты определяются самими регистром, например, для [Dockerhub](https://hub.docker.com/) задаются следущие [лимиты](https://docs.docker.com/docker-hub/download-rate-limit/)). 
   :::
 
-- Приоритет - приоритет выполнения заданий.
+- <span class="iconify-inline" data-icon="mdi:speedometer-medium"  style="color: orange"/> - Приоритет, приоритет выполнения заданий.
 
-- Сервер расчетов - индивидуальный сервер расчета (исполнитель) узла.
+  Типы:
+
+  - <span class="iconify-inline" data-icon="mdi:speedometer-slow" style="color: red"/> - низкий
+  - <span class="iconify-inline" data-icon="mdi:speedometer-medium" style="color: orange"/> - нормальный
+  - <span class="iconify-inline" data-icon="mdi:speedometer" style="color: green"/> - высокий
+
+- <span class="iconify-inline" data-icon="mdi:server-plus" style="color: green"/> - [Сервер расчетов][10], индивидуальный сервер расчета (исполнитель) узла.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-  Выбор происходит по нажатия кнопки <span class="iconify-inline" data-icon="mdi:plus"/>
 
-  После этого на панели узла появляется пометка <span class='iconify-inline' data-icon='mdi:circle' style='color: green'/> над <span class='iconify-inline' data-icon='mdi:kubernetes'/> :
+  После выбора сервера расчетов, кнопка заменяется на иконку соответстующего сервера расчетов, а на панели узла появляется пометка <span class='iconify-inline' data-icon='mdi:circle' style='color: green'/> над <span class='iconify-inline' data-icon='mdi:kubernetes'/> :
 
   ![Compute node with executor](/images/common/node_compute_executor.png)
 
@@ -609,4 +619,6 @@ Cтруктура:
 [7]: /desc/docker.md
 [8]: /desc/job.md#типы
 [9]: /desc/dashboard.md#редактирование
-[10]: /desc/executor.html
+[10]: /desc/executor.md
+[11]: /desc/secrets.md
+[12]: /desc/secrets.md#типы-секретов
