@@ -193,13 +193,13 @@ Cтруктура:
   Знак <span class="iconify-inline" data-icon="mdi-lock"/> появляется если к узлу подключен [секрет][11], типа ["Загрузка образов"][12], то есть если необходимо подключение к приватному Докер реестру.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-  Все типы политик, кроме типа "Исполнитель", соответствуют стандартным [политикам](https://kubernetes.io/concepts/containers/images/#image-pull-policy) Kubernetes. 
+  Все типы политик, кроме типа "Исполнитель", соответствуют стандартным [политикам](https://kubernetes.io/concepts/containers/images/#image-pull-policy) Kubernetes.
   :::
 
   ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"/>
   Рекомендуемая политика по умолчанию "При отсутствии". Временное переключение на политику "Всегда" необходимо при обновлении используемого образа (образ обновляется только на том узле, на котором выполняется задание с указанной политикой).
 
-  При постоянном использовании политики "Всегда" без промежуточного кеширующего прокси возможно превышение лимитов на доступ к регистру хранения (лимиты определяются самими регистром, например, для [Dockerhub](https://hub.docker.com/) задаются следущие [лимиты](https://docs.docker.com/docker-hub/download-rate-limit/)). 
+  При постоянном использовании политики "Всегда" без промежуточного кеширующего прокси возможно превышение лимитов на доступ к регистру хранения (лимиты определяются самими регистром, например, для [Dockerhub](https://hub.docker.com/) задаются следущие [лимиты](https://docs.docker.com/docker-hub/download-rate-limit/)).
   :::
 
 - <span class="iconify-inline" data-icon="mdi:speedometer-medium"  style="color: orange"/> - Приоритет, приоритет выполнения заданий.
@@ -297,6 +297,7 @@ Cтруктура:
 - <span class="iconify-inline" data-icon="mdi:package-up"/> Загрузка/создание пакета
 - <span class="iconify-inline" data-icon="mdi:download"/> Скачать выделенные пакеты
 - <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Обработать выделенные пакеты
+- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Перезапустить все пакеты
 - <span class="iconify-inline" data-icon="mdi:update"/> Использовать выделенные пакеты для запуска [заданий-инициаторов][8] (запуск заданий по расписанию)
 - <span class="iconify-inline" data-icon="mdi:motion-play"/> Обработать выделенные задания в интерактивном режиме
 - <span class="iconify-inline" data-icon="mdi:pin"/>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"/> Выбор/Отмена выбора установки мастер пакета слоя данных
@@ -354,7 +355,7 @@ Cтруктура:
 
 - Активировать - активация фильтра
 - Тип операции - выбор типа проверки количества заданий по отношению к указанному значению в поле "Количество заданий".
-- Количество заданий 
+- Количество заданий
 
 #### Фильтр по спецификации
 
@@ -416,7 +417,7 @@ Cтруктура:
       <span class='iconify-inline' data-icon='mdi:view-grid'/> <small style="padding: 4px">1 x 2</small>
     </span> Выбор размера сетки отображения файлов
 
-    > Для изменения размерности сетки требуется щелкнуть по столбцу соответствующего измерения 
+    > Для изменения размерности сетки требуется щелкнуть по столбцу соответствующего измерения
 
   - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Кнопка с списком фильтров файлов :
     - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Группировка по родительским пакетам (по умолчанию)
@@ -500,6 +501,7 @@ Cтруктура:
 - <span class="iconify-inline" data-icon="mdi:download"/> Скачать выделенные задания
 - <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Перезапустить выделенные задания
 - <span class="iconify-inline" data-icon="mdi:motion-play"/> Перезапустить выделенные задания в интерактивном режиме
+- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Перезапустить все задания
 - <span class="iconify-inline" data-icon="mdi:reload-alert"/> Перезапустить ошибочные задания
 - <span class="iconify-inline" data-icon="mdi:play-pause"/> Поставить на паузу или активировать [задание-инициатор][8]
 - <span class="iconify-inline" data-icon="mdi:refresh"/> Обновления списка
