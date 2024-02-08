@@ -23,6 +23,7 @@
 - <span class='iconify-inline' data-icon='mdi:server'></span>[Серверы расчетов](#серверы-расчетов) - управления [серверами расчетов][2]
 - <span class='iconify-inline' data-icon='mdi:account-multiple'></span>[Пользователи](#пользователи) - управления пользователями
 - <span class='iconify-inline' data-icon='mdi:notebook-multiple'></span>[Рабочие пространства](#рабочие-пространства) - управление [рабочими пространствами][4]
+- <span class='iconify-inline' data-icon='mdi:graph-outline'></span>[Проекты](#проекты) - управление [проектами][13]
 - <span class='iconify-inline' data-icon='mdi:credit-card-clock'></span>[Тарифы](#тарифы) - управления [тарифами][5]
 - <span class='iconify-inline' data-icon='mdi:cog-box'></span>Задания - управление всеми [заданиями][12]
 
@@ -172,7 +173,30 @@
   - Наименование
   - Владельцы
   - Баланс - баланс счета рабочего пространства
-  - <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления соответствующего пользователя
+  - <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления соответствующего проекта
+
+## Проекты
+
+Отображение списка существующих проектов.
+
+![Workspaces panel](/images/common/admin_projects.png)
+
+Структура:
+
+- Панель инструментов
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка проектов
+  - Выпадающий список отображаемых колонок
+- Таблица проектов
+  - Название
+  - Рабочее пространство
+  - Занятый объем
+  - Пользователи
+  > Отображается ограниченное количество пользователей. В случае если количество пользователей превышает установленный лимит, то справа от столбца с пользователями отображается флаг с количеством пользователей. Для получения полного списка пользователя необходимо навести указатель мыши на список пользователей и в появившейся таблице выбрать необходимое количество отображаемых пользователей или нужную страницу таблицы. Открытая таблица пользователей закроется самостоятельно через некоторое время. Также таблицу можно закрыть с помощью кнопки закрытия слева от столбца.
+  - Проект включен
+  - S3 сервер проекта
+  - Сервер расчета
+  - Действия : <span class='iconify-inline' data-icon='mdi:delete'></span> кнопка удаления соответствующего проекта
+
 
 ## Тарифы
 
@@ -209,7 +233,7 @@
 
 - Панель инструментов
 
-  - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенное задание  
+  - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенное задание
   - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Перезапустить выделенные задания
   - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Перезапустить выделенные задания в интерактивном режиме
   - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновления списка
@@ -261,15 +285,17 @@
   - *название сервера*-rndflow-server-frontend-...
   - *название сервера*-rndflow-server-pg-rmq-proxy-...
 - База данных PostgreSQL
-  - rndflow-postgresql-0 
+  - rndflow-postgresql-0
 - Файловый сервер MinIO
   - rndflow-minio-....
 - Брокер сообщений
   - rndflow-rabbitmqserver-0
+- Модуль интеграции с Телеграмм
+  - rndflow-server-tbot-8547d5479c-*
 - Исполнитель
   - *название исполнителя*-rndflow-executor-event-watcher-...
-  - *название исполнителя*-rndflow-executor-executor-... 
-  - *название исполнителя*-rndflow-executor-jupyter-proxy-... 
+  - *название исполнителя*-rndflow-executor-executor-...
+  - *название исполнителя*-rndflow-executor-jupyter-proxy-...
   - *название исполнителя*-rndflow-executor-jupyter-watcher-..
   - *название исполнителя*-rndflow-executor-metrics-reporter-...
   - *название исполнителя*-rndflow-executor-pod-watcher-...
@@ -286,3 +312,4 @@
 [10]: /desc/payplan.html
 [11]: /instructions/#cброс-пароля
 [12]: /desc/job.md
+[13]: /desc/project.md
