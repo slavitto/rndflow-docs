@@ -8,4 +8,4 @@ RUN yarn build
 FROM nginx:1.23 as production-stage
 COPY --from=build-stage /app/src/.vuepress/dist /app
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY RELEASE-VERSION RELEASE-VERSION
+COPY RELEASE-VERSION app/RELEASE-VERSION
