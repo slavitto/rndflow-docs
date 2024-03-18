@@ -69,6 +69,17 @@
   - <span class="iconify-inline" data-icon="mdi:tune"/> [Параметры](#параметры)
   - <span class="iconify-inline" data-icon="mdi:package"/> [Пакеты](#пакеты)
 
+### Группа
+
+<span class="iconify-inline" data-icon="mdi:group"/> **Группа** (Group) - совокупность узлов.
+
+![Group](/images/common/group.png)
+
+Общий состав аналогичен [виду расчетного узла](#расчетныи-узел). Но доступ обеспечивается только к следующим свойствам узла:
+
+- Кнопки для доступа к соответствующим свойствам узла
+  - <span class="iconify-inline" data-icon="mdi:card-text"/> Описание
+  - <span class="iconify-inline" data-icon="mdi:location-enter"/> Переход внутрь группы
 
 ## Оповещения узла
 
@@ -278,7 +289,7 @@ Cтруктура:
     - <span class="iconify-inline" data-icon="mdi:vimeo"/> Включить VIM режим
     - <span class="iconify-inline" data-icon="mdi:fullscreen"/> Открыть на полный экран
 
-  - [Кнопка](#история-изменения) истории изменений файла: <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>.
+  - Кнопка открытия [истории изменений](#история-изменения) файла: <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>.
 
 - Кнопка "СОХРАНИТЬ" - для сохранение изменений файла
 - <span class="iconify-inline" data-icon="mdi:file-plus"/> Кнопка создания нового файла
@@ -596,21 +607,14 @@ Cтруктура:
 
   - <span class='iconify-inline' data-icon='mdi:arrow-left-circle' style="color: green"/> Восстановить
   - <span class='iconify-inline' data-icon='mdi:tag' style="color: green" /> Задать описание
+  - <span class='iconify-inline' data-icon='mdi:vector-difference' style="color: green" /> Открыть окно сравнения версий файла
   - <span class='iconify-inline' data-icon='mdi:delete' style="color: green"/> Удалить
 
 При щелчке по конкретной версии в истории она будет отображена вместо текущего файла в режиме только для чтения. Чтобы выйти из этого режима необходимо закрыть окно истории.
 
-## Группа
+Окно сравнения версий файлов
 
-<span class="iconify-inline" data-icon="mdi:group"/> **Группа** (Group) - совокупность узлов.
-
-![Group](/images/common/group.png)
-
-Общий состав аналогичен [виду расчетного узла](#расчетныи-узел). Но доступ обеспечивается только к следующим свойствам узла:
-
-- Кнопки для доступа к соответствующим свойствам узла
-  - <span class="iconify-inline" data-icon="mdi:card-text"/> Описание
-  - <span class="iconify-inline" data-icon="mdi:location-enter"/> Переход внутрь группы
+![File history](/images/common/node_panel_file_history_diff.png)
 
 [1]: ./project.md#слои-данных
 [2]: /desc/node_params.md#управление-параметрами

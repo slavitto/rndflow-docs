@@ -257,6 +257,7 @@
 
 - <span class="iconify-inline" data-icon="mdi:magnify"/>  - поле ввода имени узла
   >  Ищется любое вхождение строки из поля ввода в имени узла.
+- <span class="iconify-inline" data-icon="mdi:package-variant-minus"/> - кнопка разрешения копирования вместе с узлом и входящих в него пакетов.
 - <span class="iconify-inline" data-icon="mdi:arrow-left-circle"/> - кнопка возврата в окно выбора проектов или узлов (если находимся в группе узлов)
 - <span class="iconify-inline" data-icon="mdi:content-paste"/> - опциональная кнопка вставки в выбранный проект узлов, скопированных из текущего проекта.
 - Список узлов
