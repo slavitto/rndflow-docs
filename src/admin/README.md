@@ -74,8 +74,8 @@
 
 - Управление
   - Колонка *Значение* - позволяет изменить состояние параметра
-  - Колонка *Вкл/Выкл* - позволяето активировать или деактивировать параметр платформы (опционально).
-  - В крайней правой колонке без названия отображается кнопка сохранения <span class='iconify-inline' data-icon='mdi:save' style="color: green"></span> при изменении значения параметра.
+  - Колонка *Вкл/Выкл* - позволяет активировать или деактивировать параметр (опционально).
+  - Справа от параметра при изменении его значения/активности отображается кнопка сохранения <span class='iconify-inline' data-icon='mdi:content-save' style="color: black"></span> изменений.
 
 ![Settings](/images/common/admin_settings.png)
 
@@ -321,6 +321,49 @@ Cтруктура:
 
 Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
 
+## Инструкции
+
+### Подключение внешней авторизации
+
+В настоящий момент поддерживается возможность внешней авторизации с использованием трех внешних источников:
+
+- [Google](https://google.com)
+- [Яндекс](https://yandex.ru)
+- [Mail.ru](https://e.mail.ru)
+
+Перед началом использования необходимо:
+
+- Зарегистрировать экземпляр платформы на соответстующем источнике
+
+  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
+  1. Указывать тип приложения: **Веб приложение**.
+  2. В качестве Redirect URI указывать: https://**адрес_сервера**/provider/callback
+  :::
+
+  - Google: [документация](https://developers.google.com/identity/protocols/oauth2/production-readiness/policy-compliance) и [консоль управления](https://console.cloud.google.com/apis/credentials)
+
+  - Яндекс: [документация](https://yandex.ru/dev/id/doc/ru/register-client) и [консоль управления](https://oauth.yandex.ru/)
+
+  - Mail.ru : [документация](https://id.vk.com/about/business/go/docs/ru/vkid/latest/oauth-mail/create-application) и [консоль управления](https://o2.mail.ru/app/)
+
+
+
+- Вставить полученные **client_id** и **client_secret** в соответстующие поля соответстующего источника в подразделе [**Настройки**](#настроики) платформы.
+- Активировать cooтветствующий внешний источник.
+- Сохранить внесенные изменения.
+
+### Подключение Telegram бота
+
+- Подключиться к [BotFather](https://t.me/botfather)
+- Создание бота
+  - Написать команду /newbot
+  - Ответить на вопросы по поводу имени нового бота (отображается в контактах и может быть изменено) и его username (короткое имя на латинице и не может быть изменено) и т.д.
+  - Записать полученный токен в конфигурационный файл и переустановить или обновить платформу.
+
+::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+Для получения дополнительной информации обратитесь к [официальному сайту][15] или другим информационным ресурсам, например [сюда][16].
+:::
+
 
 ## Установка
 
@@ -355,7 +398,7 @@ Cтруктура:
 - Брокер сообщений
   - rndflow-rabbitmqserver-0
 - Модуль интеграции с Телеграмм
-  - rndflow-server-tbot-8547d5479c-*
+  - rndflow-server-tbot-*
 - Исполнитель
   - *название исполнителя*-rndflow-executor-event-watcher-...
   - *название исполнителя*-rndflow-executor-executor-...
@@ -378,3 +421,5 @@ Cтруктура:
 [12]: /desc/job.md
 [13]: /desc/project.md
 [14]: /desc/docker.md
+[15]: https://core.telegram.org/bots/features#botfather
+[16]: https://tlgrm.ru/docs/bots#botfather
