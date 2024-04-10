@@ -17,9 +17,13 @@ from rndflow import job
 
 [Методы](https://github.com/rndflow/rndflow-job-py/blob/master/rndflow/job.py)
 
-- **params**() - получить параметры узла
-- **packages**() - получить пакеты узла
-- **load**(readers={}) - получить переменные пакетов узла
+- **params**() - получить параметры узла во время запуска задания
+- **packages**() - получить пакеты задания
+- **files**(*suffixes) - загрузить данные файлов пакетов
+- **load**(readers={}) - получить поля пакетов задания и параметров узла в время запуска задания
+  ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+  Если имена полей пакетов и имена параметров узла совпадают, то будет загружено значение поля пакета.
+  :::
 - **save_package**(label=None, files={}, fields={}, images={}) - сохранить выходной [пакет](/desc/package.md)
 
   **label** - метка пакета, **fields** - поля пакета, **files** - файлы пакета, **images** - объекты [matplotlib](https://matplotlib.org/) или [plotly](https://plotly.com/python/).
