@@ -513,7 +513,7 @@ Cтруктура:
 - <span class="iconify-inline" data-icon="mdi:download"/> Скачать выделенные задания
 - <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Перезапустить выделенные задания
 - <span class="iconify-inline" data-icon="mdi:motion-play"/> Перезапустить выделенные задания в интерактивном режиме
-- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Перезапустить задания с выбранным статусом
+- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Перезапустить задания с выбранным [состояним][6]
 - <span class="iconify-inline" data-icon="mdi:play-pause"/> Поставить на паузу или активировать [задание-инициатор][8]
 - <span class="iconify-inline" data-icon="mdi:refresh"/> Обновления списка
 
@@ -527,7 +527,7 @@ Cтруктура:
   :::
 
 - <span class="iconify-inline" data-icon="mdi:delete"/> Удаление выбранных заданий
-- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление заданий с выбранным статусом
+- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление заданий с выбранным [состоянием][6]
 - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление параметра узла
 
   Добавление параметра узла в качестве нового столбца в таблице заданий.
