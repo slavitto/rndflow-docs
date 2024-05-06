@@ -413,7 +413,7 @@ Cтруктура:
 [3]: /desc/project_user.md
 [4]: /desc/workspace.md
 [5]: /desc/payplan.md
-[6]: https://server.rndflow.com/api/redoc
+[6]: /desc/job.md#состояния
 [7]: /desc/executor.md
 [8]: /desc/finance.md#транзакции
 [9]: /desc/finance.md#счета
