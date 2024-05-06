@@ -32,7 +32,7 @@
 
   - <span class="iconify-inline" data-icon="mdi:card-text"> </span> [Описание](#описание)
   - <span class="iconify-inline" data-icon="mdi:tune"/> [Параметры](#параметры)
-  - <span class="iconify-inline" data-icon="mdi:kubernetes"/> [Контейнер](#контейнер)
+  - <span class="iconify-inline" data-icon="mdi:kubernetes"/> [Контейнер](#контеинер)
   - <span class="iconify-inline" data-icon="mdi:file-code"/> [Файлы](#фаилы)
   - <span class="iconify-inline" data-icon="mdi:package"/> [Пакеты](#пакеты)
   - <span class="iconify-inline" data-icon="mdi:cog-box"/> [Задания](#задания)
@@ -258,6 +258,7 @@ Cтруктура:
   - Ядра ЦПУ - запрашиваемое количество процессоров (ядер) центрального процессора
   - ГПУ - запрашиваемое количество графических процессоров (видекарт)
   - Лимит времени (минуты) - максимальное время выполнения задания в минутах
+- Параллелизация заданий - ограничение максимального количества одновременно выполняемых заданий (задание считается выполняемым, если оно было передано на выполнение в кластер Kubernetes).
 
 ### Файлы
 
@@ -512,8 +513,7 @@ Cтруктура:
 - <span class="iconify-inline" data-icon="mdi:download"/> Скачать выделенные задания
 - <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Перезапустить выделенные задания
 - <span class="iconify-inline" data-icon="mdi:motion-play"/> Перезапустить выделенные задания в интерактивном режиме
-- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Перезапустить все задания
-- <span class="iconify-inline" data-icon="mdi:reload-alert"/> Перезапустить ошибочные задания
+- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Перезапустить задания с выбранным статусом
 - <span class="iconify-inline" data-icon="mdi:play-pause"/> Поставить на паузу или активировать [задание-инициатор][8]
 - <span class="iconify-inline" data-icon="mdi:refresh"/> Обновления списка
 
@@ -527,12 +527,12 @@ Cтруктура:
   :::
 
 - <span class="iconify-inline" data-icon="mdi:delete"/> Удаление выбранных заданий
-- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление всех заданий
+- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление заданий с выбранным статусом
 - <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление параметра узла
 
   Добавление параметра узла в качестве нового столбца в таблице заданий.
 
-  Список добавленных параметров с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'/> .
+  Список добавленных параметров с возможностью удаления кнопкой <span class='iconify-inline' data-icon='mdi:close'/> .
 
 - <span class="iconify-inline" data-icon="mdi:content-save"/> Сохранить набор текущих столбцов
 
