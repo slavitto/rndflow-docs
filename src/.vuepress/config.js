@@ -22,6 +22,8 @@ module.exports = {
     docsBranch: 'master',
     docsDir: 'src',
     search: true,
+    editLink: false,
+    contributors: false,
     locales: {
       '/': {
         selectText: 'Языки',
