@@ -2,10 +2,10 @@ import { defaultTheme } from 'vuepress'
 import { searchPlugin } from '@vuepress/plugin-search'
 
 module.exports = {
-  lang: 'ru-RU',
+  lang: 'en-US',
   title: 'R&D Flow',
   description:
-    'Цифровая экосистема для создания и использования алгоритмов анализа данных и интеллектуальных приложений',
+    'Digital ecosystem for creating and using data analytics algorithms and intelligent applications',
   head: [
     [
       'script',
@@ -26,33 +26,33 @@ module.exports = {
     contributors: false,
     locales: {
       '/': {
-        selectText: 'Языки',
-        label: 'Русский',
-        ariaLabel: 'Языки',
-        editLinkText: 'Редактировать страницу',
+        selectText: 'languages',
+        label: 'English',
+        ariaLabel: 'languages',
+        editLinkText: 'Edit page',
         navbar: [
           {
-            text: 'Введение',
+            text: 'Intro',
             link: '/intro/',
           },
           {
-            text: 'Описание',
+            text: 'Description',
             link: '/desc/',
           },
           {
-            text: 'Разработка',
+            text: 'Development',
             link: '/dev/',
           },
           {
-            text: 'Инструкции',
+            text: 'Instructions',
             link: '/instructions/',
           },
           {
-            text: 'Администрирование',
+            text: 'Administration',
             link: '/admin/',
           },
           {
-            text: 'Платформа',
+            text: 'Platform',
             link: 'https://server.rndflow.com',
           },
         ],
@@ -123,7 +123,7 @@ module.exports = {
       {
         locales: {
           '/': {
-            placeholder: 'Поиск',
+            placeholder: 'Search',
           },
         },
       },

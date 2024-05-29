@@ -1,179 +1,195 @@
-# Роли проекта
+# Project Roles
 
-**Роль** - набор разрешений для управления проектом.
+**Role** - A set of permissions for managing a project.
 
 ![Resources](/images/common/permissions_roles.png)
 
-## Структyра панели
+## Panel Structure
 
-- Список [плиток](#плитка-роли) имеющихся ролей
-- <span class="iconify-inline" data-icon="mdi:account-alert"/> Запросы на получение доступа к платной роли
+- List of existing role [tiles](#role-tile)
+- <span class="iconify-inline" data-icon="mdi:account-alert"/> Requests to access a paid role
 
-## Плитка роли
+## Role Tile
 
 ![Resources](/images/common/permissions_role_panel.png)
 
-1. Редактируемое название
-2. Редактируемое описание
-3. Стоимостной коэффициент - редактируемый коэффициент стоимости
-4. <span class="iconify-inline" data-icon="mdi:shield-edit"></span> "РАЗРЕШЕНИЯ" - управления [разрешениями](#типы-разрешении)
-5. <span class="iconify-inline" data-icon="mdi:eye"></span> - переключатель общедоступности
-6. <span class="iconify-inline" data-icon="mdi:currency-usd"></span> - переключатель платности
-7. <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления роли
+1. Editable name
+2. Editable description
+3. Cost coefficient - editable cost coefficient
+4. <span class="iconify-inline" data-icon="mdi:shield-edit"></span> "PERMISSIONS" - managing [permissions](#permission-types)
+5. <span class="iconify-inline" data-icon="mdi:eye"></span> - public access toggle
+6. <span class="iconify-inline" data-icon="mdi:currency-usd"></span> - paid access toggle
+7. <span class="iconify-inline" data-icon="mdi:delete"></span> - delete role button
 
-## Диалог управления разрешениями
+## Permission Management Dialog
 
-Установка необходимых [типов разрешений](#типы-разрешении) для доступа к проекту, отдельным узлам и интерфейсам.
+Setting the required [permission types](#permission-types) for access to the project, individual nodes, and interfaces.
 
-Вкладки:
+Tabs:
 
-- <span class="iconify-inline" data-icon="mdi:view-module"/> Узлы - управление разрешениями для узлов
-- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"/>Интерфейсы - управление разрешениями для интерфейсов
+- <span class="iconify-inline" data-icon="mdi:view-module"/> Nodes - managing permissions for nodes
+- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"/> Interfaces - managing permissions for interfaces
 
-Вкладка <span class="iconify-inline" data-icon="mdi:view-module"/> Узлы:
+**Nodes** tab:
 
 ![Set permissions](/images/common/permissions_role_set_permissions.png)
 
-- <span class="iconify-inline" data-icon="mdi:magnify"/> Поиск- панель поиска/фильтрации
-- <span class="iconify-inline" data-icon="mdi:sitemap"/> Проект- разрешения уровня проекта
-- Список узлов с разрешениями
+- <span class="iconify-inline" data-icon="mdi:magnify"/> Search - search/filter panel
+- <span class="iconify-inline" data-icon="mdi:sitemap"/> Project - project-level permissions
+- List of nodes with permissions
 
-Структура панели ввода разрешений:
+Permission input panel structure:
 
-- Перечень установленных разрешений
-- <span class="iconify-inline" data-icon="mdi:code-tags-check"></span> - кнопка добавления/удаления разрешений по подтипам
-- <span class="iconify-inline" data-icon="mdi:check-all"></span> - кнопка добавления всех возможных разрешений
-- <span class="iconify-inline" data-icon="mdi:close-circle"></span> - кнопка удаления всех установленных разрешений
-- <span class="iconify-inline" data-icon="mdi:menu-down"></span> - меню выбора разрешений
+- List of set permissions
+- <span class="iconify-inline" data-icon="mdi:code-tags-check"></span> - add/remove permissions by sub-types button
+- <span class="iconify-inline" data-icon="mdi:check-all"></span> - add all possible permissions button
+- <span class="iconify-inline" data-icon="mdi:close-circle"></span> - remove all set permissions button
+- <span class="iconify-inline" data-icon="mdi:menu-down"></span> - permission selection menu
 
-
-Вкладка <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"/>Интерфейсы:
+**Interfaces** tab:
 
 ![Set permissions](/images/common/permissions_role_set_permissions_interface.png)
 
-- <span class="iconify-inline" data-icon="mdi:magnify"/> Поиск - панель поиска/фильтрации
-- <span class="iconify-inline" data-icon="mdi:sitemap"/> Проект - разрешения уровня проекта
-- Список интерфейсов с разрешениями
-  > [Cкрытые с панели управления проектом][3] интерфейсы отображаются светло-серым цветом.
+- <span class="iconify-inline" data-icon="mdi:magnify"/> Search - search/filter panel
+- <span class="iconify-inline" data-icon="mdi:sitemap"/> Project - project-level permissions
+- List of interfaces with permissions
+  > Interfaces [hidden from the project management panel][3] are displayed in light gray.
 
-Структура панели ввода разрешений:
+Permission input panel structure:
 
-- Перечень установленных разрешений
-- <span class="iconify-inline" data-icon="mdi:code-tags-check"></span> - кнопка добавления/удаления разрешений для всех интерфейсов
-- <span class="iconify-inline" data-icon="mdi:check-all"></span> - кнопка добавления всех возможных разрешений
-- <span class="iconify-inline" data-icon="mdi:close-circle"></span> - кнопка удаления всех установленных разрешений
-- <span class="iconify-inline" data-icon="mdi:menu-down"></span> - меню выбора разрешений
+- List of set permissions
+- <span class="iconify-inline" data-icon="mdi:code-tags-check"></span> - add/remove permissions for all interfaces button
+- <span class="iconify-inline" data-icon="mdi:check-all"></span> - add all possible permissions button
+- <span class="iconify-inline" data-icon="mdi:close-circle"></span> - remove all set permissions button
+- <span class="iconify-inline" data-icon="mdi:menu-down"></span> - permission selection menu
 
-## Типы ролей
+## Role Types
 
-- Обычная
-- Общедоступная - роль доступна всем, в том числе не авторизированным пользователям
+- Regular
+- Public - role available to everyone, including unauthorized users
 
   ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-  Не авторизированные пользователи в этом случае имеют доступ только на чтение вне зависимости от разрешений роли.
+  Unauthorized users in this case only have read access regardless of role permissions.
   :::
 
-- Платная - роль, обеспечивающая доступ к проекту на платной основе
+- Paid - role providing access to the project on a paid basis
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-  При создании проекта автоматически создается роль **owner** с полными правами на проект. Данная роль автоматически присваивается пользователю создавшему проект.
+  When a project is created, an **owner** role with full project rights is automatically created. This role is automatically assigned to the user who created the project.
   :::
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-  После получения пользователем платной роли для него автоматически создается новый [слой данных][1] в проекте.
+  After a user obtains a paid role, a new [data layer][1] is automatically created for them in the project.
   :::
 
-## Типы разрешений
+## Permission Types
 
-- <span style="background-color: blue; color: white; border-radius: 5px;">&nbsp;view&nbsp;</span> - просмотр
-- <span style="background-color: orange; color: white; border-radius: 5px;">&nbsp;edit&nbsp;</span> - редактирование
-- <span style="background-color: red; color: white; border-radius: 5px;">&nbsp;manage&nbsp;</span> - управление
-- <span style="background-color: red; color: white; border-radius: 5px;">&nbsp;delete&nbsp;</span> - удаление
+### General Information
 
+- There are three levels of permissions: project level, node level, and interface level.
+- Permissions are granted or revoked using the role management dialog.
+- Depending on the permissions a user has, they will have access to certain elements and functions.
 
-Имеется 3 уровня разрешений:
+### Project Level Permissions
 
-- Уровня проекта  - устанавливаются во вкладках <span class="iconify-inline" data-icon="mdi:view-module"/> Узлы и <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"/>Интерфейсы в корневом узле <div><span class="iconify-inline" data-icon="mdi:sitemap"/> Проект.</div>
-- Уровня узла - устанавливаются во вкладке <span class="iconify-inline" data-icon="mdi:view-module"/> Узлы.
-- Уровня интерфейса - устанавливаются во вкладке <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"/> Интерфейсы.
+**Project**
 
-<b>Разрешения уровня проекта:</b>
+- `project_view`: Allows access to the project.
+- `project_edit`: Allows editing project properties, project activity, and removing project executors.
+- `project_manage`: Allows deleting the project, managing roles, users, secrets, API, and access to the balance.
 
-- Проект
-  - project_view - разрешен доступ к проекту
-  - project_edit - разрешено редактировать свойства проекта, активность проекта, удалять исполнители проекта.
-  - project_manage - разрешено удалять проект, управлять ролями, пользователями, секретами, API, доступ к балансу.
-- Граф
-  - graph_ui   - доступна вся информация о структуре графа и разрешен доступ к [графическому интерфейсу][2].
-  - graph_view - доступна разрешенная информацию о структуре графа
-    > Должны быть любые права на код или пакеты соответствующего узла. Права на связь определяются правами на оба её узла.
-  - graph_edit - доступна возможность создавать новые элементы графа и редактировать разрешенную структуру графа
-    > Должны быть права code_edit на соответствующий узел. Для связи правa code_edit должны быть для обоих узлов.
-- Код
-  - code_edit - разрешено редактировать код всех узлов
-  - code_view - разрешено просматривать код всех узлов
-- Интерфейс
-  - interface_manage - управление разрешенными интерфейсами, разрешено создание новых интерфейсов
-- Пакеты
-  - package_view - разрешено просматривать пакеты во всех узлах
-  - package_create - разрешено создавать пакеты во всех узлах, а также устанавливать параметры запуска контейнера (кроме образа контейнера и скрипта запуска)
-  - package_delete - разрешено удалять пакеты во всех узлах
+**Graph**
 
-<b>Разрешения уровня узла:</b>
+- `graph_ui`: Provides access to all information about the graph structure and allows access to the [graphical interface][2].
+- `graph_view`: Provides access to authorized information about the graph structure.
+    > Any rights to the code or packages of the corresponding node are required. Rights to a connection are determined by the rights to both of its nodes.
+- `graph_edit`: Allows creating new graph elements and editing the authorized graph structure.
+    > `code_edit` rights are required for the corresponding node. For a connection, `code_edit` rights must be present for both nodes.
 
-- Код
-  - code_edit - разрешено редактировать код, секреты и другие параметы узла.
-  - code_view - разрешено просматривать код, секреты.
-- Пакеты
-  - package_create - разрешено создавать пакеты, а также устанавливать параметры запуска контейнера (кроме образа контейнера и скрипта запуска)
-  - package_delete - разрешено удалять
-  - package_view - разрешено просматривать
+**Code**
 
-<b>Разрешения уровня интерфейса:</b>
+- `code_edit`: Allows editing the code of all nodes.
+- `code_view`: Allows viewing the code of all nodes.
 
- - view - разрешен доступ
- - edit - разрешен доступ и редактирование интерфейса
- - delete - разрешен доступ и удаление интерфейса
+**Interface**
 
-В зависимости от имеющихся разрешений пользователь получает доступ к тем или иным элементам и функциям.
+- `interface_manage`: Allows managing authorized interfaces and creating new interfaces.
 
-<b>Доступ к вкладкам узла:</b>
+**Packages**
 
-У узла должны быть разрешения ниже.
+- `package_view`: Allows viewing packages in all nodes.
+- `package_create`: Allows creating packages in all nodes, as well as setting container startup parameters (except for the container image and startup script).
+- `package_delete`: Allows deleting packages in all nodes.
 
-- Вкладка [Параметры][4] - package_create
-- Вкладка [Контейнер][5]- сode_view или code_edit или package_create
-- Вкладка [Пакеты][6] - package_view
-- Вкладка [Задания][7] - package_create и package_view
-- Вкладка [Файлы][8] - сode_view
-- Вкладка [Запрос][9] - сode_view
+### Node Level Permissions
 
+**Code**
 
-<b>Управление другими возможностями:</b>
+- `code_edit`: Allows editing the code, secrets, and other parameters of the node.
+- `code_view`: Allows viewing the code and secrets.
 
-- Узел
-  - Доступ к диалогу оповещения узла - package_create и package_view для узла 
-  - Создание - graph_edit, code_edit на уровне проекта
-    Вставка  - graph_edit, code_edit на уровне проекта
-  - Удаление - graph_edit, code_edit и package_delete на уровне проекта или узла
-  - Активация - graph_edit, package_create
-  - Информация о исполнителе - package_create или code_view.
-- Связи между узлами
-  - Создание - graph_edit, code_edit у каждого из узлов
-  - Удаление - graph_edit, code_edit у каждого из узлов
-- Слой данных
-  - Создания - package_create на уровне проекта
-  - Удаления - package_delete на уровне проекта
-- Импорт проекта - graph_edit, interface_manage, code_edit на уровне проекта
-- Экспорт проекта - graph_ui и code_view или code_edit на уровне проекта
-- Доступ к Git странице - project_edit, graph_ui, graph_edit, interface_manage, code_edit на уровне проекта
+**Packages**
+
+- `package_create`: Allows creating packages, as well as setting container startup parameters (except for the container image and startup script).
+- `package_delete`: Allows deleting packages.
+- `package_view`: Allows viewing packages.
+
+### Interface Level Permissions
+
+- `view`: Allows access to the interface.
+- `edit`: Allows editing the interface.
+- `delete`: Allows deleting the interface.
+
+**Node Tab Access**
+
+The following permissions are required for a node to have access to specific tabs:
+
+- **Parameters Tab** [4]: `package_create`
+- **Container Tab** [5]: `code_view`, `code_edit`, or `package_create`
+- **Packages Tab** [6]: `package_view`
+- **Jobs Tab** [7]: `package_create` and `package_view`
+- **Files Tab** [8]: `code_view`
+- **Request Tab** [9]: `code_view`
+
+**Management of Other Features**
+
+**Node**
+
+- Access to the node notification dialog: `package_create` and `package_view` for the node.
+- Creation: `graph_edit`, `code_edit` at the project level.
+- Insertion: `graph_edit`, `code_edit` at the project level.
+- Deletion: `graph_edit`, `code_edit`, and `package_delete` at the project or node level.
+- Activation: `graph_edit`, `package_create`
+- Executor information: `package_create` or `code_view`.
+
+**Connections Between Nodes**
+
+- Creation: `graph_edit`, `code_edit` for each of the nodes.
+- Deletion: `graph_edit`, `code_edit` for each of the nodes.
+
+**Data Layer**
+
+- Creation: `package_create` at the project level.
+- Deletion: `package_delete` at the project level.
+
+**Project Import**
+
+- `graph_edit`, `interface_manage`, `code_edit` at the project level.
+
+**Project Export**
+
+- `graph_ui` and `code_view` or `code_edit` at the project level.
+
+**Access to Git Page**
+
+- `project_edit`, `graph_ui`, `graph_edit`, `interface_manage`, `code_edit` at the project level.
 
 ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-Для [владельцев][10] рабочего пространства ограничений нет.
+There are no restrictions for [workspace owners][10].
 :::
 
 ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-Если пользователь, создавший интерфейс, не является администратором или владельцем рабочего пространства, то всем ролям, к которому принадлежит данный пользователь будут даны полные права на этот интерфейс.
+If the user who created the interface is not an administrator or workspace owner, then all roles to which the user belongs will be given full rights to that interface.
 :::
 
 

@@ -1,73 +1,70 @@
-# Задания
+# Jobs
 
-## Описание
+## Description
 
-**Задание** (Job) - экземпляр выполнения узла с конкретными входными [пакетами][1] и [параметрами][2].
+**Job** - an instance of node execution with specific input [packages][1] and [parameters][2].
 
+The list of jobs is displayed in the [node panel][3] under the <span class='iconify-inline' data-icon='mdi:cog-box'></span> [**Jobs**][4] tab.
 
-Список заданий отображается в [панели узла][3] в вкладке <span class='iconify-inline' data-icon='mdi:cog-box'></span> [**Задания**][4].
-
-Общее количество выполняемых заданий в узле в текущем [слое данных][5] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>:
+The total number of running jobs in the node in the current [data layer][5] is displayed as a label <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>:
 
 ![Node packages count](/images/common/node_compute_jobs.png)
 
-Общее количество заданий, завершившихся с ошибкой, в узле в текущем [слое данных][5] отображается в виде ярлыка <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>:
+The total number of jobs that ended with errors in the node in the current [data layer][5] is displayed as a label <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>:
 
 ![Node packages count](/images/common/node_compute_jobs_error.png)
 
+## Types
 
-## Типы
+Types of jobs:
+- Standard jobs - created directly after the user clicks the button <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> for [batch][9] and <span class="iconify-inline" data-icon="mdi:motion-play"/> [interactive][10] package processing, or automatically after a new package appears in the node
 
-Типы заданий:
-- Стандартные задания - создаются непосредственно после нажатия пользователем кнопки <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> [пакетной][9] и <span class="iconify-inline" data-icon="mdi:motion-play"/> [интерактивной][10] обработки пакета или автоматически после появления нового пакета в узле
+  > Such jobs directly process the input packages according to the node's [parameters][2] using the node's [files][8].
 
-  > Такие задания непосредственно осуществляют обработку полученных на входе пакетов согласно [параметрам][2] узла с помощью [файлов][8] узла.
+- Scheduled standard jobs - created in the **Schedule** dialog, which opens after clicking the button <span class="iconify-inline" data-icon="mdi:update"/> for [scheduled][11] package processing, setting the switch to <span class="iconify-inline" data-icon="bi:toggle2-off"/> One-time job execution and specifying the corresponding launch schedule.
 
-- Стандартные задания по расписанию - создаются в диалоге **Запланировать**, который открывается после нажатия кнопки <span class="iconify-inline" data-icon="mdi:update"/> обработки пакета [по расписанию][11], установки переключателя в значение  <span class="iconify-inline" data-icon="bi:toggle2-off"/> Одноразовое выполнение задания и указания соответствующего расписания запуска.
+  > Such jobs directly process the input packages according to the node's [parameters][2] using the node's [files][8].
 
-  > Такие задания непосредственно осуществляют обработку полученных на входе пакетов согласно [параметрам][2] узла с помощью [файлов][8] узла.
+- Trigger jobs - jobs that initiate the creation of standard jobs according to a schedule. Created in the **Schedule** dialog, which opens after clicking the button <span class="iconify-inline" data-icon="mdi:update"/> for [creating][12] a trigger job, setting the switch to <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> Trigger job and specifying the corresponding launch schedule.
 
-- Задания-инициаторы - задания, инициирующие создание стандартных заданий согласно расписанию. Создаются в диалоге **Запланировать**, который открывается после нажатия кнопки <span class="iconify-inline" data-icon="mdi:update"/> [создания][12] задания-инициатора, установки переключателя в значение <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> Задание-инициатор и указания соответствующего расписания запуска.
+  > Such jobs periodically create copies of the initiating package in the current node, which leads to the launch of standard jobs. Thus, standard jobs are launched according to the specified schedule. Trigger jobs ignore the node's [parameters][2] and [files][8].
 
-  > Такие задания осуществляют периодическое создание в текущем узле копий инициировашего их пакета, что приводит к запуску стандартных заданий. Таким образом, осуществляется запуск стандартных заданий согласно заданному расписанию. Задания-инициаторы игнорируют [параметры][2] и [файлы][8] узла.
+## States
 
+Main job states:
 
-## Состояния
+- <span class="iconify-inline" data-icon="mdi:circle-outline" style="color: grey"></span> - Created
+- <span class="iconify-inline" data-icon="mdi:progress-download" style="color: yellow"></span> - On [computation server][6]
+- <span class="iconify-inline" data-icon="mdi:progress-clock" style="color: orange"></span> - In execution queue
+- <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Started
+- <span class="iconify-inline" data-icon="mdi:progress-download" style="color: teal"></span> - Data loaded
+    > The processed data is loaded into the job container.
+- <span class="iconify-inline" data-icon="mdi:progress-wrench" style="color: green"></span> - Completed
+    > Script execution [completed][7].
+- <span class="iconify-inline" data-icon="mdi:progress-upload" style="color: teal"></span> - Data uploaded
+    > Created data uploaded to the platform.
+- <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Packages generated
+    > Output packages generated.
+- <span class="iconify-inline" data-icon="mdi:check-circle" style="color: green"></span> - Processed
+    > Processing successfully completed.
+- <span class="iconify-inline" data-icon="mdi:alert-circle" style="color: red"></span> - Error
+- <span class="iconify-inline" data-icon="mdi:emoticon-cry-outline" style="color: red"></span> - No heartbeat for over 5 minutes
 
-Основные типы состояний заданий:
+Additional states for [trigger jobs](#types):
 
-- <span class="iconify-inline" data-icon="mdi:circle-outline" style="color: grey"></span> - Создано
-- <span class="iconify-inline" data-icon="mdi:progress-download" style="color: yellow"></span> - На [сервере расчетов][6]
-- <span class="iconify-inline" data-icon="mdi:progress-clock" style="color: orange"></span> - В очереди на исполнение
-- <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Стартовало
-- <span class="iconify-inline" data-icon="mdi:progress-download" style="color: teal"></span> - Сгрузило данные
-    > Обрабатываемые данные загружены в контейнер задания.
-- <span class="iconify-inline" data-icon="mdi:progress-wrench" style="color: green"></span> - Выполнено
-    > Завершено выполнение [скрипта][7].
-- <span class="iconify-inline" data-icon="mdi:progress-upload" style="color: teal"></span> - Загрузило данные
-    > Созданные данные загружены в платформу.
-- <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"></span> - Сформировало пакеты
-    > Сгенерированы выходные пакеты.
-- <span class="iconify-inline" data-icon="mdi:check-circle" style="color: green"></span> - Обработано
-    > Обработка полностью успешно завершена.
-- <span class="iconify-inline" data-icon="mdi:alert-circle" style="color: red"></span> - Ошибка
-- <span class="iconify-inline" data-icon="mdi:emoticon-cry-outline" style="color: red"></span> - Отсутствует сердцебиение более 5 минут
-
-Дополнительные типы состояний для [заданий-инициаторов](#типы):
-
-- <span class="iconify-inline" data-icon="mdi:sleep" style="color: grey"></span> - В ожидании запуска по расписанию
-- <span class="iconify-inline" data-icon="mdi:motion-pause-outline" style="color: grey"></span> - Пауза
-    > Пользователь поставил на паузу следущие запуски заданий (формирование инициирующих пакетов) по расписанию.
+- <span class="iconify-inline" data-icon="mdi:sleep" style="color: grey"></span> - Waiting for scheduled launch
+- <span class="iconify-inline" data-icon="mdi:motion-pause-outline" style="color: grey"></span> - Paused
+    > User paused the subsequent job launches (initiating package creation) according to the schedule.
 
 [1]: /desc/package.md
 [2]: /desc/node_params.md
-[3]: /desc/nodes.md#панели-узла
-[4]: /desc/nodes.md#задания
-[5]: ./project.md#слои-данных
+[3]: /desc/nodes.md#node-panels
+[4]: /desc/nodes.md#jobs
+[5]: ./project.md#data-layers
 [6]: /desc/executor.md
-[7]: /desc/nodes.md#контеинер
-[8]: /desc/nodes.md#фаилы
-[9]: /instructions/package.md#обработка-пакета
-[10]: /instructions/package.html#интерактивная-обработка-пакета
-[11]: /instructions/package.html#обработка-пакета-по-расписанию
-[12]: /instructions/job.html#запуск-задания-по-расписанию
+[7]: /desc/nodes.md#container
+[8]: /desc/nodes.md#files
+[9]: /instructions/package.md#package-processing
+[10]: /instructions/package.html#interactive-package-processing
+[11]: /instructions/package.html#scheduled-package-processing
+[12]: /instructions/job.html#scheduled-job-launch

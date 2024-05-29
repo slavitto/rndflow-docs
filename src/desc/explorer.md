@@ -1,18 +1,18 @@
-# Галерея
+# Gallery
 
-**Галерея** - инструмент предоставления возможности поиска по всем доступным пользователю электронным каталогам:
+The **Gallery** is a tool that provides the ability to search across all electronic catalogs available to the user:
 
-- Проектов
-- [Задачи][1] пользователей
-- Рабочих пространств
-- Пользователей
+- Projects
+- User [Tasks][1]
+- Workspaces
+- Users
 
-  ![Explorer projects](/images/common/explorer_projects.png)
+ ![Explorer projects](/images/common/explorer_projects.png)
 
-  Общая структура:
+ General structure:
 
-  - Поиск - поле ввода поискового запроса.
-  - Список результата поиска
-  - Панель навигации
+ - Search - search query input field.
+ - Search result list
+ - Navigation panel
 
 [1]: /desc/tasks.md

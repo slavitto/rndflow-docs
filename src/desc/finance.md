@@ -1,156 +1,156 @@
-# Управление платежами
+# Payment Management
 
 ::: danger <span class='iconify' data-icon='gg:danger' style='color: #cc0000; font-size: 24px;'></span>
-В связи с тестовым периодом эксплуатации платформы указанная ниже информация может изменяться!
+Due to the platform's trial period, the information provided below may change!
 :::
 
-Управление платежами осуществляется с использованием счетов и транзакций.
+Payment management is carried out using accounts and transactions.
 
-## Cчета
+## Accounts
 
-**Счет** - это учетная запись, соответствующая сумме принадлежащих полььзователю денежных средств. Счет используется платформой и ее пользователями для учёта финансовых операций.
+An **Account** is a record corresponding to the amount of funds belonging to a user. The account is used by the platform and its users for financial operations accounting.
 
-Тип валюты:
+Currency type:
 
-- рубль
+- Russian ruble
 
-Типы счетов:
+Account types:
 
-- Пользовательские
-- Рабочего пространства
-- S3 хранилища
-- Сервера расчетов
-- Платформы
+- User accounts
+- Workspace accounts
+- S3 storage accounts
+- Compute server accounts
+- Platform accounts
 
-## Транзакции
+## Transactions
 
-**Транзакция** - в общем случае, любая поддерживаемая платформой сделка или пакет сделок с использованием счетов.
+A **Transaction** is, in general, any platform-supported deal or package of deals using accounts.
 
-Типы транзакций:
+Transaction types:
 
-- [Зачисление средств на счет][1]
-- [Вывод средств с счета][2]
-- [Прямой перевод между счетами][3]
-- [Оплата использования исполнителя расчетов][4]
-- [Оплата использования S3 хранилища][5]
-- [Оплата использования API ключа проекта][6]
-- [Оплата использования платной роли проекта][7]
-- [Комиссия платформы][8]
+- [Deposit funds to account][1]
+- [Withdraw funds from account][2]
+- [Direct transfer between accounts][3]
+- [Payment for using a compute server][4]
+- [Payment for using S3 storage][5]
+- [Payment for using a project API key][6]
+- [Payment for using a paid project role][7]
+- [Platform commission][8]
 
-Виды транзакций:
+Transaction types:
 
-- Онлайн транзакции
+- Online transactions
 
-  Оплата происходит непосредственно после завершения возмездных операций.
-  К ним относятся все типы транзакций кроме [Оплата использования S3 хранилища][5].
+ Payment occurs immediately after completing paid operations.
+ This includes all transaction types except [Payment for using S3 storage][5].
 
-- Транзакции по расписанию
+- Scheduled transactions
 
-  Транзакции [Оплата использования S3 хранилища][5] происходят или ежедневно после запуска процедуры очистки, или после запуска очистки владельцем хранилища.
+ [Payment for using S3 storage][5] transactions occur either daily after the cleanup procedure is launched or after the storage owner launches the cleanup.
 
-- Явные
+- Explicit
 
-  Оплата осуществляется непосредственно пользователями.
-  К ним относятся: [Зачисление средств на счет][1], [Вывод средств с счета][2], [Прямой перевод между счетами][3].
+ Payment is made directly by users.
+ These include: [Deposit funds to account][1], [Withdraw funds from account][2], [Direct transfer between accounts][3].
 
-- Косвенные
+- Indirect
 
-  Оплата осуществляется автоматически платформой за проведение возмездных операций.
-  К ним относятся все транзакции вида **Оплата …** и [Комиссия платформы][8].
+ Payment is made automatically by the platform for conducting paid operations.
+ These include all transactions of the **Payment for...** type and [Platform commission][8].
 
-## Детализация транзакций
+## Transaction Details
 
-### Зачисление средств на счет
+### Deposit Funds to Account
 
-Используется для ввода средств на платформу.
+Used to deposit funds into the platform.
 
-### Вывод средств с счета
+### Withdraw Funds from Account
 
-Используется для вывода средств с платформы.
+Used to withdraw funds from the platform.
 
-### Прямой перевод между счетами
+### Direct Transfer Between Accounts
 
-Используется для перевода средств между счетами пользователей и другими типами счетов.
+Used to transfer funds between user accounts and other account types.
 
-Пользователь может самостоятельно перевести средства рабочему пространству.
+Users can transfer funds to a workspace on their own.
 
-Владельцы рабочего пространства, S3 хранилища или сервера расчетов могут самостоятельно вывести средства на собственные счета.
+Workspace, S3 storage, or compute server owners can withdraw funds to their own accounts.
 
-### Оплата использования исполнителя расчетов
+### Payment for Using a Compute Server
 
-Автоматическое списание средств рабочего пространства за использование вычислительных ресурсов.
+Automatic deduction of funds from the workspace account for using computing resources.
 
-Расчет стоимости использования производится для каждого обрабатываемого задания.
+The cost of usage is calculated for each processed task.
 
-Стоимость использования рассчитывается после завершения выполнения задания и вычисляется как сумма произведений заданных для [сервера расчетов][9] показателей и параметров задания:
+The usage cost is calculated after the task execution is completed and is calculated as the sum of the products of the [compute server][9] indicators and task parameters:
 
-- **Цена за задание**
-- **Цена за секунду** умноженная на длительность задания
-- **Цена за ядро CPU** умноженная на количество запрошенных ядер и на длительность задания
-- **Цена за GPU** умноженная на количество использованных GPU и на длительность задания
-- **Цена за МБ** умноженная на количество запрошенного ОЗУ
+- **Price per task**
+- **Price per second** multiplied by the task duration
+- **Price per CPU core** multiplied by the number of requested cores and the task duration
+- **Price per GPU** multiplied by the number of used GPUs and the task duration
+- **Price per MB** multiplied by the amount of requested RAM
 
-После перевода средств с счета рабочего пространства на счет сервера расчетов с последнего списывается [Комиссия платформы][8].
+After transferring funds from the workspace account to the compute server account, the [Platform commission][8] is deducted from the latter.
 
-### Оплата использования S3 хранилища
+### Payment for Using S3 Storage
 
-Автоматическое списание средств рабочего пространства за хранение данных в S3 хранилище.
+Automatic deduction of funds from the workspace account for storing data in S3 storage.
 
-Стоимость хранения рассчитывается ежедневно или после ручного запуска очистки хранилища владельцем.
+The storage cost is calculated daily or after the storage owner manually launches the storage cleanup.
 
-Стоимость хранения вычисляется как заданная для [S3 хранилища][10] **Цена за МБ** умноженная на объем хранилища, занятый файлами проектов рабочего пространства на момент проведения очистки хранилища.
+The storage cost is calculated as the [S3 storage][10] **Price per MB** multiplied by the storage volume occupied by the workspace project files at the time of the storage cleanup.
 
-После перевода средств с счета рабочего пространства на счет S3 хранилища с последнего списывается [Комиссия платформы][8].
+After transferring funds from the workspace account to the S3 storage account, the [Platform commission][8] is deducted from the latter.
 
-### Оплата использования API ключа проекта
+### Payment for Using a Project API Key
 
-Автоматическое списание средств пользователя за использование [API ключа][11] на счет рабочего пространства проекта.
+Automatic deduction of user funds for using a [project API key][11] to the project workspace account.
 
-Стоимость использования включает в себя:
+The usage cost includes:
 
-- **Цена за обращение** указанная на соответствующем API.
+- **Price per request** specified on the corresponding API.
 
-  Списывается с счета пользователя непосредственно после вызова API.
+ Deducted from the user's account immediately after the API call.
 
-- Стоимость затраченных вычислительных ресурсов
+- Cost of consumed computing resources
 
-  Списывается с счета пользователя после завершения задания и проведения расчетов между рабочим пространством и сервером расчетов.
+ Deducted from the user's account after the task is completed and calculations are made between the workspace and the compute server.
 
-После перевода средств за **обращение** с счета пользователя на счет рабочего пространства с последнего списывается [Комиссия платформы][8].
+After transferring funds for the **request** from the user's account to the workspace account, the [Platform commission][8] is deducted from the latter.
 
-### Оплата использования платной роли проекта
+### Payment for Using a Paid Project Role
 
-Автоматическое списание средств пользователя за использование [платной роли][12] проекта на счет рабочего пространства проекта.
+Automatic deduction of user funds for using a [paid project role][12] to the project workspace account.
 
-Стоимость использования включает в себя:
+The usage cost includes:
 
-- Стоимость затраченных вычислительных ресурсов
+- Cost of consumed computing resources
 
-  Списывается с счета пользователя после завершения задания и проведения расчетов между рабочим пространством и сервером расчетов.
+ Deducted from the user's account after the task is completed and calculations are made between the workspace and the compute server.
 
-Списания происходят при работе пользователя с проектом, на который у него существует платная роль.
+Deductions occur when the user works with a project for which they have a paid role.
 
-### Комиссия платформы
+### Platform Commission
 
-Отчисления платформе за пользование.
+Platform fees for usage.
 
-Комиссия платформы снимается с:
+The platform commission is charged to:
 
-- Владельцев S3 хранилищ предоставляющих возмездных услуги хранения данных;
-- Владельцев серверов расчетов предоставляющих возмездных услуги по использованию вычислительных ресурсов.
+- Owners of S3 storages providing paid data storage services;
+- Owners of compute servers providing paid computing resource usage services.
 
-Комиссия платформы указывается как **Стоимостной коэффициент** в [тарифе][13] владельца.
+The platform commission is specified as the **Cost Coefficient** in the owner's [pricing plan][13].
 
-[1]: #зачисление-средств-на-счет
-[2]: #вывод-средств-с-счета
-[3]: #прямои-перевод-между-счетами
-[4]: #оплата-использования-исполнителя-расчетов
-[5]: #оплата-использования-s3-хранилища
-[6]: #оплата-использования-api-ключа-проекта
-[7]: #оплата-использования-платнои-роли-проекта
-[8]: #комиссия-платформы
+[1]: #deposit-funds-to-account
+[2]: #withdraw-funds-from-account
+[3]: #direct-transfer-between-accounts
+[4]: #payment-for-using-a-compute-server
+[5]: #payment-for-using-s3-storage
+[6]: #payment-for-using-a-project-api-key
+[7]: #payment-for-using-a-paid-project-role
+[8]: #platform-commission
 [9]: ./executor.md
 [10]: ./s3.md
 [11]: ./api_keys.md
-[12]: ./project_role.md#типы-ролеи
+[12]: ./project_role.md#role-types
 [13]: ./payplan.md

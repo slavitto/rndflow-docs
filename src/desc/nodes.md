@@ -1,630 +1,598 @@
-# Узлы
+# Nodes
 
-**Узел** - отдельный блок графа, представляющий собой этап (операцию) реализуемого алгоритма.
+**Node** - a separate block of the graph representing a stage (operation) of the implemented algorithm.
 
-## Состояние
+## Status
 
-Узел в текущем [слое данных][1] может находиться в следущих состояниях:
+A node in the current [data layer][1] can be in the following states:
 
-- <span class="iconify-inline" data-icon="bi:toggle2-on" style="color: green"/> Активен
+- <span class="iconify-inline" data-icon="bi:toggle2-on" style="color: green"/> Active
 
-- <span class="iconify-inline" data-icon="bi:toggle2-off"/> Отключен
+- <span class="iconify-inline" data-icon="bi:toggle2-off"/> Disabled
 
-В активном состоянии в узле автоматически обрабатываются (создаются [задания][5]) все приходящие в него пакеты.
+In the active state, all incoming packets to the node are automatically processed ([tasks][5] are created).
 
-## Типы и состав узлов
+## Types and Composition of Nodes
 
-### Расчетный узел
+### Compute Node
 
-<span class="iconify-inline" data-icon="mdi:kubernetes"/> **Расчетный узел** (Compute) - набор исполняемых программ ([скриптов](/dev/compute.md#код-расчетного-узла)) и их параметров, реализующих заданную пользователем функциональность.
+<span class="iconify-inline" data-icon="mdi:kubernetes"/> **Compute Node** - a set of executable programs ([scripts](/dev/compute.md#compute-node-code)) and their parameters implementing the functionality specified by the user.
 
 ![Compute node](/images/common/node_compute.png)
 
-Состав узла:
+Node composition:
 
-- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 10px;"/> Вход
-- Заголовок
-  - <span class="iconify-inline" data-icon="mdi:kubernetes"/> Иконка типа узла
-  - Название узла: _compute_
-  - <span class="iconify-inline" data-icon="mdi:bell-plus-outline"/> Кнопка открытия диалога управления [оповещениями](#оповещения-узла) узла
-  - <span class="iconify-inline" data-icon="mdi:delete"/> Кнопка удаления узла
-- Кнопки для доступа к соответствующим вкладкам панели узла
+- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 10px;"/> Input
+- Header
+  - <span class="iconify-inline" data-icon="mdi:kubernetes"/> Node type icon
+  - Node name: _compute_
+  - <span class="iconify-inline" data-icon="mdi:bell-plus-outline"/> Button to open the node [notification](#node-notifications) management dialog
+  - <span class="iconify-inline" data-icon="mdi:delete"/> Node deletion button
+- Buttons for accessing the corresponding tabs of the node panel
 
-  - <span class="iconify-inline" data-icon="mdi:card-text"> </span> [Описание](#описание)
-  - <span class="iconify-inline" data-icon="mdi:tune"/> [Параметры](#параметры)
-  - <span class="iconify-inline" data-icon="mdi:kubernetes"/> [Контейнер](#контеинер)
-  - <span class="iconify-inline" data-icon="mdi:file-code"/> [Файлы](#фаилы)
-  - <span class="iconify-inline" data-icon="mdi:package"/> [Пакеты](#пакеты)
-  - <span class="iconify-inline" data-icon="mdi:cog-box"/> [Задания](#задания)
-  - <span class="iconify-inline" data-icon="mdi:alert-circle"/> [Ошибочные задания](#задания) (при наличии)
+  - <span class="iconify-inline" data-icon="mdi:card-text"> </span> [Description](#description)
+  - <span class="iconify-inline" data-icon="mdi:tune"/> [Parameters](#parameters)
+  - <span class="iconify-inline" data-icon="mdi:kubernetes"/> [Container](#container)
+  - <span class="iconify-inline" data-icon="mdi:file-code"/> [Files](#files)
+  - <span class="iconify-inline" data-icon="mdi:package"/> [Packages](#packages)
+  - <span class="iconify-inline" data-icon="mdi:cog-box"/> [Jobs](#jobs)
+  - <span class="iconify-inline" data-icon="mdi:alert-circle"/> [Failed jobs](#jobs) (if any)
 
-- <span class="iconify-inline" data-icon="bi:toggle2-off"/> Переключатель активности узла в текущем [слое данных][1]
-- Описания узла: _Compute node description_
-- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"/> Одного или несколько выходов
+- <span class="iconify-inline" data-icon="bi:toggle2-off"/> Node activity switch in the current [data layer][1]
+- Node description: _Compute node description_
+- <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"/> One or more outputs
 
-### SQL узел
+### SQL Node
 
-<span class="iconify-inline" data-icon="mdi:database"/> **SQL узел** (Query)- [SQL запрос](/dev/sql.md#запрос-sql-узла), реализующий выборку и обработку вошедших в него пакетов данных. В отличии от расчетного узла позволяет оперировать данными всех вошедших в него пакетов.
+<span class="iconify-inline" data-icon="mdi:database"/> **SQL Node** (Query) - [SQL query](/dev/sql.md#sql-node-query) implementing the selection and processing of incoming packets. Unlike the compute node, it allows operating on the data of all packets incoming to it.
 
 ![Query node](/images/common/node_query.png)
 
-Общий состав аналогичен [виду расчетного узла](#расчетныи-узел). Но доступ обеспечивается только к следующим вкладкам панели узла:
+The general composition is similar to the [compute node view](#compute-node). However, access is provided only to the following tabs of the node panel:
 
-- Кнопки для доступа к соответствующим свойствам узла
-  - <span class="iconify-inline" data-icon="mdi:card-text"/> [Описание](#описание)
-  - <span class="iconify-inline" data-icon="mdi:tune"/> [Параметры](#параметры)
-  - <span class="iconify-inline" data-icon="mdi:database"/> [Запрос](#запрос)
-  - <span class="iconify-inline" data-icon="mdi:package"/> [Пакеты](#пакеты)
+- Buttons for accessing the corresponding node properties
+  - <span class="iconify-inline" data-icon="mdi:card-text"/> [Description](#description)
+  - <span class="iconify-inline" data-icon="mdi:tune"/> [Parameters](#parameters)
+  - <span class="iconify-inline" data-icon="mdi:database"/> [Query](#query)
+  - <span class="iconify-inline" data-icon="mdi:package"/> [Packages](#packages)
 
-### Узел данных
+### Data Node
 
-<span class="iconify-inline" data-icon="mdi:download-circle"/> **Узел данных** (Data)- промежуточный этап хранения данных в виде FIFO очереди.
+<span class="iconify-inline" data-icon="mdi:download-circle"/> **Data Node** - an intermediate stage of storing data in the form of a FIFO queue.
 
 ![Data node](/images/common/node_data.png)
 
-Общий состав аналогичен [виду расчетного узла](#расчетныи-узел). Но доступ обеспечивается только к следующим вкладкам панели узла:
+The general composition is similar to the [compute node view](#compute-node). However, access is provided only to the following tabs of the node panel:
 
-- Кнопки для доступа к соответствующим свойствам узла
-  - <span class="iconify-inline" data-icon="mdi:card-text"/> [Описание](#описание)
-  - <span class="iconify-inline" data-icon="mdi:tune"/> [Параметры](#параметры)
-  - <span class="iconify-inline" data-icon="mdi:package"/> [Пакеты](#пакеты)
+- Buttons for accessing the corresponding node properties
+  - <span class="iconify-inline" data-icon="mdi:card-text"/> [Description](#description)
+  - <span class="iconify-inline" data-icon="mdi:tune"/> [Parameters](#parameters)
+  - <span class="iconify-inline" data-icon="mdi:package"/> [Packages](#packages)
 
-### Группа
+### Group
 
-<span class="iconify-inline" data-icon="mdi:group"/> **Группа** (Group) - совокупность узлов.
+<span class="iconify-inline" data-icon="mdi:group"/> **Group** - a set of nodes.
 
 ![Group](/images/common/group.png)
 
-Общий состав аналогичен [виду расчетного узла](#расчетныи-узел). Но доступ обеспечивается только к следующим свойствам узла:
+The general composition is similar to the [compute node view](#compute-node). However, access is provided only to the following node properties:
 
-- Кнопки для доступа к соответствующим свойствам узла
-  - <span class="iconify-inline" data-icon="mdi:card-text"/> Описание
-  - <span class="iconify-inline" data-icon="mdi:location-enter"/> Переход внутрь группы
+- Buttons for accessing the corresponding node properties
+  - <span class="iconify-inline" data-icon="mdi:card-text"/> Description
+  - <span class="iconify-inline" data-icon="mdi:location-enter"/> Go inside the group
 
-## Оповещения узла
+## Node Notifications
 
-Оповещения расчетного узла предназначены для рассылки уведомлений, подписавшимся пользователям, о произошедщих событиях в узле с объектами (задания), создателем которых является пользователь.
+Node notifications are intended for sending notifications to subscribed users about events that occurred in the node with objects (tasks) created by the user.
 
-В окне оповещений узла доступно:
+The node notifications window provides:
 
-- Кнопка <span class="iconify-inline" color="teal" data-icon="mdi:email-outline"/> или <span class="iconify-inline" color="blue" data-icon="mdi:send-circle-outline"/> - выбор способа оповещений (электронная почта <span class="iconify-inline" color="teal" data-icon="mdi:email-outline"/> или телеграмм <span class="iconify-inline" color="blue" data-icon="mdi:send-circle-outline"/>).
-  > Для использования уведомлений с помощью Телеграмм необходимо, чтобы экземляр платформы поддерживал данный способ уведомлений,
-    а также чтобы в [настройках пользователя][9] был включен переключатель интеграции с Телеграмм .
-- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> Оповещения включены/выключены - переключатель включение/выключение оповещений.
-- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> - переключатели включение/выключение отдельных типов оповещений.
+- Button <span class="iconify-inline" color="teal" data-icon="mdi:email-outline"/> or <span class="iconify-inline" color="blue" data-icon="mdi:send-circle-outline"/> - select the notification method (email <span class="iconify-inline" color="teal" data-icon="mdi:email-outline"/> or Telegram <span class="iconify-inline" color="blue" data-icon="mdi:send-circle-outline"/>).
+  > To use Telegram notifications, the platform instance must support this notification method,
+    and the Telegram integration switch must be enabled in the [user settings][9].
+- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> Notifications enabled/disabled - toggle to enable/disable notifications.
+- <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"/> - toggles to enable/disable individual types of notifications.
 
-Типы оповещений:
-- Задание выполнено - задание успешно завершено.
-- Все задания выполнены - все задания завершены (как успешно, так и с ошибками).
-  > Проверка наличия заданий осуществляется только в текущем узле поэтому возможны ложно-положительные уведомления.
-- Задание не выполнено - завершено с ошибкой.
+Types of notifications:
+- Task completed - task successfully completed.
+- All tasks completed - all tasks completed (both successfully and with errors).
+  > Task checking is performed only in the current node, so false-positive notifications are possible.
+- Task failed - completed with an error.
 
 ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"/>
- В связи с наличием [ограничений](https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this) Телеграмм платформа может ограничивать количество отправляемых оповещений для пользователя при их большом количестве.
+ Due to the presence of [limitations](https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this), Telegram may limit the number of notifications sent to a user if there are a large number of them.
  :::
 
-## Панели узла
+## Node Panels
 
-Панель узла - панель для установки различных параметров и свойств узла.
+Node panel - a panel for setting various node parameters and properties.
 
 ![Node panels](/images/common/node_panels.png)
 
-Общие управляющие кнопки:
+General control buttons:
 
-- <span class="iconify-inline" data-icon="mdi:dock-right"/> Изменить расположение панели (в нижней или правой части экрана)
-- <span class="iconify-inline" data-icon="mdi:fullscreen"/> Открыть панель на полный экран
-- <span class="iconify-inline" data-icon="mdi:close"/> Закрыть панель
+- <span class="iconify-inline" data-icon="mdi:dock-right"/> Change the panel location (at the bottom or right side of the screen)
+- <span class="iconify-inline" data-icon="mdi:fullscreen"/> Open the panel in full screen
+- <span class="iconify-inline" data-icon="mdi:close"/> Close the panel
 
-### Описание
+### Description
 
-**Описание узла** - название, текстовое описание назначения и [спецификация](#спецификация) узла.
+**Node Description** - the name, text description of the purpose, and [specification](#specification) of the node.
 
 ![Node description](/images/common/node_panel_desc.png)
 
-Структура:
+Structure:
 
-- Название узла
-- Описание узла
-- [Спецификация](#спецификация) узла
-- Кнопка "РЕДАКТИРОВАТЬ"
+- Node name
+- Node description
+- Node [specification](#specification)
+- "EDIT" button
 
-По нажатию кнопки **РЕДАКТИРОВАТЬ** окно переходит в режим редактирования описания и заголовка узла:
+When clicking the **EDIT** button, the window switches to the description and node header editing mode:
 
 ![Node edit description ](/images/common/node_panel_desc_edit.png)
 
-### Спецификация
+### Specification
 
-**Спецификация узла** - опциональное описание состава входных и состава выходных пакетов узла.
+**Node Specification** - an optional description of the composition of input and output packets of the node.
 
-Выполняет две функции:
+It serves two functions:
 
-- Информационную - для представления формата, состава и назначения переменных пакета.
-- Служебную - для обеспечения возможности фильтрации поступления пакета в узел.
+- Informational - to present the format, composition, and purpose of the packet variables.
+- Service - to enable packet filtering for input to the node.
 
-Структура:
+Structure:
 
-- Вход - входные переменные узла
+- Input - input variables of the node
 
-  - Общие команды
-    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Копирование всех переменных
-    - <span class="iconify-inline" data-icon="mdi:content-paste"/> Вставка ранее скопированных переменных
-    - <span class="iconify-inline" data-icon="mdi:auto-fix"/> Автоматическая вставка переменных на основе пакетов
-    - <span class="iconify-inline" data-icon="mdi:plus"/> Добавление переменной
-  - Список переменных
+  - General commands
+    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Copy all variables
+    - <span class="iconify-inline" data-icon="mdi:content-paste"/> Paste previously copied variables
+    - <span class="iconify-inline" data-icon="mdi:auto-fix"/> Automatic variable insertion based on packages
+    - <span class="iconify-inline" data-icon="mdi:plus"/> Add variable
+  - List of variables
 
-    Структура каждого элемента списка:
+    Structure of each list item:
 
-    - Тип переменной <span class="iconify-inline" data-icon="mdi:code-json"/> [Поле][3] или <span class="iconify-inline" data-icon="mdi:file"/> [Файл][3] или <span class="iconify-inline" data-icon="mdi:package"/> [Вложенные пакеты][3] с возможностью изменения при щелчке по ней
-    - Название переменной с возможностью переименования при щелчке по ней
-    - Описание переменной с возможностью переименования при щелчке по нему
-    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Копирование переменной
-    - <span class="iconify-inline" data-icon="mdi:delete"/> Удаление переменной
+    - Variable type <span class="iconify-inline" data-icon="mdi:code-json"/> [Field][3] or <span class="iconify-inline" data-icon="mdi:file"/> [File][3] or <span class="iconify-inline" data-icon="mdi:package"/> [Nested packages][3] with the ability to change it by clicking on it
+    - Variable name with the ability to rename by clicking on it
+    - Variable description with the ability to rename by clicking on it
+    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Copy variable
+    - <span class="iconify-inline" data-icon="mdi:delete"/> Delete variable
 
-- Выход - выходные переменные узла аналогично входным переменным.
+- Output - node output variables similar to input variables.
 
 ![Node desc](/images/common/node_panel_spec.png)
 
 ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-Существует возможность [копирования параметров узла][2] в входную спецификацию узла.
+It is possible to [copy node parameters][2] to the node's input specification.
 :::
 
-### Параметры
+### Parameters
 
-<span class="iconify-inline" data-icon="mdi:tune"/> **Параметры узла** (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
+<span class="iconify-inline" data-icon="mdi:tune"/> **Node Parameters** (Parameters) - parameters that control the execution of the node, passed to the node's script.
 
 ![Node params](/images/common/node_panel_params.png)
 
-Подробное [описание](./node_params.md).
+Detailed [description](./node_params.md).
 
-### Контейнер
+### Container
 
-**Среда исполнения. Контейнер** - Докер образ на основе которого будет создаваться контейнер для выполнения программных модулей узла в рамках конкретного задания.
+**Execution Environment. Container** - Docker image based on which the container for executing the node's software modules in a specific task will be created.
 
 ![Node container](/images/common/node_panel_container.png)
 
-Cтруктура:
+Structure:
 
-- Докер образ - название докер образа и список [докер образов][7] рабочего пространства.
+- Docker image - the name of the docker image and the list of workspace [docker images][7].
 
   ![Docker images list](/images/common/node_panel_container_dockerslist.png)
 
-  Необходимый докер образ можно выбрать из списка или набрать название самостоятельно (в последнем случае набор необходимо завершить нажатием **Enter**).
+  The required docker image can be selected from the list or entered manually (in the latter case, you need to finish typing by pressing **Enter**).
 
-- <span class="iconify-inline" data-icon="mdi:all-inclusive" style="color: red"/> -  Загрузка, политика загрузки докер образа узла.
+- <span class="iconify-inline" data-icon="mdi:all-inclusive" style="color: red"/> - Loading, node docker image loading policy.
 
-  Типы:
-  - <span class="iconify-inline" data-icon="mdi:all-inclusive" style="color: red"/> - Всегда, загружать докер образ в случае его изменения, иначе использовать локальную версию.
+  Types:
+  - <span class="iconify-inline" data-icon="mdi:all-inclusive" style="color: red"/> - Always, load the docker image if it has changed, otherwise use the local version.
 
-  - <span class="iconify-inline" data-icon="mdi:repeat-once" style="color: blue"/> - При отсутствии, загружать докер образ при его отсутствии на узле.
+  - <span class="iconify-inline" data-icon="mdi:repeat-once" style="color: blue"/> - If not present, load the docker image if it is not on the node.
 
-  - <span class="iconify-inline" data-icon="mdi:download-off-outline" style="color: orange"/> - Никогда, не загружать докер образ из внешнего репозитория. Использовать только локальную версию.
+  - <span class="iconify-inline" data-icon="mdi:download-off-outline" style="color: orange"/> - Never, do not load the docker image from an external repository. Use only the local version.
 
-  - <span class="iconify-inline" data-icon="mdi-robot-outline" style="color: blue"/> - Исполнитель, использовать значение по умолчанию [исполнителя][10].
+  - <span class="iconify-inline" data-icon="mdi:robot-outline" style="color: blue"/> - Executor, use the default value of the [executor][10].
 
-  Знак <span class="iconify-inline" data-icon="mdi-lock"/> появляется если к узлу подключен [секрет][11], типа ["Загрузка образов"][12], то есть если необходимо подключение к приватному Докер реестру.
+  The icon <span class="iconify-inline" data-icon="mdi:lock"/> appears if a [secret][11] of the type ["Image Pull Secrets"][12] is connected to the node, i.e., if a connection to a private Docker registry is required.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-  Все типы политик, кроме типа "Исполнитель", соответствуют стандартным [политикам](https://kubernetes.io/concepts/containers/images/#image-pull-policy) Kubernetes.
+  All policies, except for the "Executor" type, correspond to the standard [Kubernetes policies](https://kubernetes.io/concepts/containers/images/#image-pull-policy).
   :::
 
   ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"/>
-  Рекомендуемая политика по умолчанию "При отсутствии". Временное переключение на политику "Всегда" необходимо при обновлении используемого образа (образ обновляется только на том узле, на котором выполняется задание с указанной политикой).
+  The recommended default policy is "If not present". Temporary switching to the "Always" policy is necessary when updating the used image (the image is updated only on the node where the task with the specified policy is executed).
 
-  При постоянном использовании политики "Всегда" без промежуточного кеширующего прокси возможно превышение лимитов на доступ к регистру хранения (лимиты определяются самими регистром, например, для [Dockerhub](https://hub.docker.com/) задаются следущие [лимиты](https://docs.docker.com/docker-hub/download-rate-limit/)).
+  Constant use of the "Always" policy without an intermediate caching proxy may exceed access limits to the storage registry (limits are defined by the registry itself, for example, [Dockerhub](https://hub.docker.com/) sets the following [limits](https://docs.docker.com/docker-hub/download-rate-limit/)).
   :::
 
-- <span class="iconify-inline" data-icon="mdi:speedometer-medium"  style="color: orange"/> - Приоритет, приоритет выполнения заданий.
+- <span class="iconify-inline" data-icon="mdi:speedometer-medium" style="color: orange"/> - Priority, task execution priority.
 
-  Типы:
+  Types:
 
-  - <span class="iconify-inline" data-icon="mdi:speedometer-slow" style="color: red"/> - низкий
-  - <span class="iconify-inline" data-icon="mdi:speedometer-medium" style="color: orange"/> - нормальный
-  - <span class="iconify-inline" data-icon="mdi:speedometer" style="color: green"/> - высокий
+  - <span class="iconify-inline" data-icon="mdi:speedometer-slow" style="color: red"/> - low
+  - <span class="iconify-inline" data-icon="mdi:speedometer-medium" style="color: orange"/> - normal
+  - <span class="iconify-inline" data-icon="mdi:speedometer" style="color: green"/> - high
 
-- <span class="iconify-inline" data-icon="mdi:server-plus" style="color: green"/> - [Сервер расчетов][10], индивидуальный сервер расчета (исполнитель) узла.
+- <span class="iconify-inline" data-icon="mdi:server-plus" style="color: green"/> - [Compute Server][10], individual calculation server (executor) of the node.
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
 
-  После выбора сервера расчетов, кнопка заменяется на иконку соответстующего сервера расчетов, а на панели узла появляется пометка <span class='iconify-inline' data-icon='mdi:circle' style='color: green'/> над <span class='iconify-inline' data-icon='mdi:kubernetes'/> :
+  After selecting the compute server, the button is replaced with the icon of the corresponding compute server, and a mark <span class='iconify-inline' data-icon='mdi:circle' style='color: green'/> appears on the node panel above <span class='iconify-inline' data-icon='mdi:kubernetes'/> :
 
   ![Compute node with executor](/images/common/node_compute_executor.png)
 
   :::
 
-- Скрипт - первоначально запускаемый программный модуль или скрипт узла (см. [Файлы](#фаилы)).
+- Script - the initially launched software module or node script (see [Files](#files)).
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-  Запуск должен соответствовать правила запуска в shell-среде ОС Linux.
+  The launch must comply with the launch rules in the Linux OS shell environment.
 
-  > Например:
+  > For example:
   >
   > ```:no-line-numbers
   > ./run.py
   > ```
   >
-  > или
+  > or
   >
   > ```:no-line-numbers
   > bash run.sh
   > ```
   >
-  > или
+  > or
   >
   > ```:no-line-numbers
   > python script.py
   > ```
 
-- Требования - запрашиваемые вычислительные ресурсы для запуска докер контейнера.
-  - Память - запрашиваемая оперативная память
-  - Ядра ЦПУ - запрашиваемое количество процессоров (ядер) центрального процессора
-  - ГПУ - запрашиваемое количество графических процессоров (видекарт)
-  - Лимит времени (минуты) - максимальное время выполнения задания в минутах
-- Параллелизация заданий - ограничение максимального количества одновременно выполняемых заданий (задание считается выполняемым, если оно было передано на выполнение в кластер Kubernetes).
+- Requirements - requested computational resources for launching the docker container.
+  - Memory - requested RAM
+  - CPU cores - requested number of central processor cores
+  - GPUs - requested number of graphics processors (video cards)
+  - Time limit (minutes) - maximum task execution time in minutes
+- Job parallelization - limitation of the maximum number of concurrently running jobs (a job is considered running if it has been submitted for execution to the Kubernetes cluster).
 
-### Файлы
 
-**Файл** - программный модуль, скрипт или библиотека предназначенные для выполнения в узле.
+### Files
 
-В узле в соответствующей вкладке **Файлы** отображается список файлов.
-Структура:
+**File** - a program module, script, or library intended to be executed in the node.
 
-- Список файлов
+In the node, the **Files** tab displays a list of files.
+Structure:
 
-  Структура каждого элемента списка:
+- List of files
 
-  - Иконка типа файла
-  - <span class="iconify-inline" data-icon="mdi:content-save-alert" style="color: red"/> Иконка наличия несохраненных изменений
-  - Название файла с возможностью переименования файла при щелчке по нему
-  - <span class="iconify-inline" data-icon="mdi:cog-clockwise" style="color: green"/> Установить свойство файла: исполняемый
-  - <span class="iconify-inline" data-icon="mdi:hexadecimal"/> Установить свойство файла: бинарный
-  - <span class="iconify-inline" data-icon="mdi:delete"/> Удаление файла
+  Structure of each list item:
 
-- Редактор файла
+  - File type icon
+  - <span class="iconify-inline" data-icon="mdi:content-save-alert" style="color: red"/> Unsaved changes icon
+  - File name with the ability to rename the file by clicking on it
+  - <span class="iconify-inline" data-icon="mdi:cog-clockwise" style="color: green"/> Set file property: executable
+  - <span class="iconify-inline" data-icon="mdi:hexadecimal"/> Set file property: binary
+  - <span class="iconify-inline" data-icon="mdi:delete"/> Delete file
 
-  - Название файла
-  - Панель инструментов
+- File editor
 
-    - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"/> Уменьшить размер шрифта
-    - <span style="background-color: green; color: white">Текущий размер шрифта</span>
-    - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"/> Увеличить размер шрифта
-    - <span class="iconify-inline" data-icon="mdi:wrap"/> Включить/Выключить перенос строк
-    - <span class="iconify-inline" data-icon="mdi:vimeo"/> Включить VIM режим
-    - <span class="iconify-inline" data-icon="mdi:fullscreen"/> Открыть на полный экран
+  - File name
+  - Toolbar
 
-  - Кнопка открытия [истории изменений](#история-изменения) файла: <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>.
+    - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"/> Decrease font size
+    - <span style="background-color: green; color: white">Current font size</span>
+    - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"/> Increase font size
+    - <span class="iconify-inline" data-icon="mdi:wrap"/> Toggle word wrap
+    - <span class="iconify-inline" data-icon="mdi:vimeo"/> Enable VIM mode
+    - <span class="iconify-inline" data-icon="mdi:fullscreen"/> Open full screen
 
-- Кнопка "СОХРАНИТЬ" - для сохранение изменений файла
-- <span class="iconify-inline" data-icon="mdi:file-plus"/> Кнопка создания нового файла
-- <span class="iconify-inline" data-icon="mdi:file-upload"/> Кнопка загрузки нового файла
+  - Button to open the [file change history](#история-изменения): <span style="color: green; border: 1px solid green"> author / last modification time </span>.
+
+- "SAVE" button - to save file changes
+- <span class="iconify-inline" data-icon="mdi:file-plus"/> Button to create a new file
+- <span class="iconify-inline" data-icon="mdi:file-upload"/> Button to upload a new file
 
 ![Node file](/images/common/node_panel_file.png)
 
-### Пакеты
+### Packages
 
-В вкладке <span class='iconify-inline' data-icon='mdi:package'/> **Пакеты** отображается список [пакетов][4] узла в рамках выбранного [слоя данных][1]:
+In the <span class='iconify-inline' data-icon='mdi:package'/> **Packages** tab, a list of the node's [packages][4] within the selected [data layer][1] is displayed:
 
 ![Node package](/images/common/node_panel_packages.png)
 
-#### Панель инструментов
+#### Toolbar
 
-- <span class="iconify-inline" data-icon="mdi:package-up"/> Загрузка/создание пакета
-- <span class="iconify-inline" data-icon="mdi:download"/> Скачать выделенные пакеты
-- <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Обработать выделенные пакеты
-- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Перезапустить все пакеты
-- <span class="iconify-inline" data-icon="mdi:update"/> Использовать выделенные пакеты для запуска [заданий-инициаторов][8] (запуск заданий по расписанию)
-- <span class="iconify-inline" data-icon="mdi:motion-play"/> Обработать выделенные задания в интерактивном режиме
-- <span class="iconify-inline" data-icon="mdi:pin"/>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"/> Выбор/Отмена выбора установки мастер пакета слоя данных
-- <span class="iconify-inline" data-icon="mdi:content-copy"/> Копировать выбранные пакеты между узлами и проектами
-- <span class="iconify-inline" data-icon="mdi:content-paste"/> Вставить ранее скопированные пакеты
+- <span class="iconify-inline" data-icon="mdi:package-up"/> Upload/Create package
+- <span class="iconify-inline" data-icon="mdi:download"/> Download selected packages
+- <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Process selected packages
+- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Restart all packages
+- <span class="iconify-inline" data-icon="mdi:update"/> Use selected packages to run [initiator tasks][8] (scheduled tasks)
+- <span class="iconify-inline" data-icon="mdi:motion-play"/> Process selected tasks in interactive mode
+- <span class="iconify-inline" data-icon="mdi:pin"/>/<span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"/> Select/Unselect master package of the data layer
+- <span class="iconify-inline" data-icon="mdi:content-copy"/> Copy selected packages between nodes and projects
+- <span class="iconify-inline" data-icon="mdi:content-paste"/> Paste previously copied packages
 
-  > При вставке пакетов из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.После вставки может понадобиться обновить список пакетов кнопкой <span class="iconify-inline" data-icon="mdi:refresh"/>.
+  > When pasting packages from another project, you must first refresh the target project by pressing **F5**. After pasting, you may need to update the package list by clicking the <span class="iconify-inline" data-icon="mdi:refresh"/> button.
 
-- <span class="iconify-inline" data-icon="mdi:refresh"/> Обновление списка пакетов
+- <span class="iconify-inline" data-icon="mdi:refresh"/> Refresh package list
 
-  >Может содержать дополнительно два вида ярлыков:
+  > May additionally contain two types of labels:
 
-  >- Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"/>- информирует об изменении количества пакетов в узле.
-  >- Нижний ярлык оранжевого цвета <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: orange"/> - информирует об изменении количества заданий некоторых пакетов в списке.
+  > - Upper green label <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"/> - indicates a change in the number of packages in the node.
+  > - Lower orange label <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: orange"/> - indicates a change in the number of tasks for some packages in the list.
 
-- <span class="iconify-inline" data-icon="mdi:delete"/> Удаление выбранных пакетов
+- <span class="iconify-inline" data-icon="mdi:delete"/> Delete selected packages
 
-- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление всех пакетов
+- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Delete all packages
 
-- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> [Фильтр по количеству заданий](#фильтр-по-количеству-задании)
+- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> [Filter by task count](#фильтр-по-количеству-задании)
 
-- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> [Фильтр по входной спецификации](#фильтр-по-спецификации)
+- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> [Filter by input specification](#фильтр-по-спецификации)
 
-- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Совместный просмотр выбранных пакетов](#окно-просмотра-пакетов)
+- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Joint view of selected packages](#окно-просмотра-пакетов)
 
-- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Окно просмотра пакетов](#окно-просмотра-пакетов)
+- <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> [Package viewing window](#окно-просмотра-пакетов)
 
-- <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление переменной пакета
+- <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Add package variable
 
-  Добавление переменной пакета в качестве нового столбца в таблице пакетов.
+  Add a package variable as a new column in the package table.
 
-  Список добавленных переменных с возможностью удаления <span class='iconify-inline' data-icon='mdi:close'/>.
+  List of added variables with the ability to delete <span class='iconify-inline' data-icon='mdi:close'/>.
 
-- <span class="iconify-inline" data-icon="mdi:content-save"/> Сохранить набор текущих столбцов
+- <span class="iconify-inline" data-icon="mdi:content-save"/> Save the current set of columns
 
-#### Таблица пакетов
 
-- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - переключатель выбора пакета
-- Id - идентификатор пакета
+#### Package Table
 
-  Дополнительно на идентификаторе может отображаться ярлык с количеством дочерних заданий: <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"/>
+- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - package selection toggle
+- Id - package identifier
+
+  Additionally, a label with the number of child tasks may be displayed on the identifier: <span class='iconify-inline' data-icon='ph:number-square-one-fill' style="color: green"/>
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-  Для просмотра конкретного пакета в отдельном [окне](#окно-просмотра-пакета) необходимо щелкнуть по его идентификатору в столбце **Id**.
+  To view a specific package in a separate [window](#package-view-window), click on its identifier in the **Id** column.
   :::
 
-- Метка - имя пакета
-- Создано - время создания пакета
-- Владелец - пользователь создавший пакет
+- Label - package name
+- Created - package creation time
+- Owner - user who created the package
 
-#### Фильтр по количеству заданий
-Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:horizontal-circle-outline"/> в [панели инструментов](#панель-инструментов).
+#### Task Count Filter
+
+Opens by clicking <span class="iconify-inline" data-icon="mdi:horizontal-circle-outline"/> in the [toolbar](#toolbar).
 
 ![Package](/images/common/node_panel_packages_filter.png)
 
-- Активировать - активация фильтра
-- Тип операции - выбор типа проверки количества заданий по отношению к указанному значению в поле "Количество заданий".
-- Количество заданий
+- Activate - filter activation
+- Operation Type - select the type of task count check relative to the specified value in the "Task Count" field.
+- Task Count
 
-#### Фильтр по спецификации
+#### Specification Filter
 
-Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> в [панели инструментов](#панель-инструментов). Осуществляет фильтрацию по входной спецификации узла.
+Opens by clicking <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle"/> in the [toolbar](#toolbar). Filters by node input specification.
 
 ![Package](/images/common/node_panel_packages_spec_filter.png)
 
-- Активировать - активация фильтра
-- Поля - выбор переменной из спецификации, по которой будет производиться фильтрация
-- Тип операции - позволяет выбрать тип проверки по отношению к указанному значению в нижнем поле ввода.
-- Поле ввода ограничения
+- Activate - filter activation
+- Fields - select a variable from the specification to filter by
+- Operation Type - choose the check type relative to the value specified in the bottom input field.
+- Input Restriction Field
 
-#### Окно просмотра пакета
+#### Package View Window
 
-Открывается по щелчку по идентификатору пакета в столбце **Id** в [таблице](#таблица-пакетов) со списком пакетов.
+Opens by clicking <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> in the [toolbar](#toolbar).
 
-![Package](/images/common/package.png)
-
-Состав [пакета][4]:
-
-- Панель инструментов
-
-  - <span class='iconify-inline' data-icon='mdi:open-in-new'/> Открыть пакет на новой странице браузера
-    ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'/>
-    При открытии пакета на новой странице браузера возвращается прямая ссылка на пакет.
-    :::
-
-  - <span class='iconify-inline' data-icon='mdi:fullscreen'/> Открыть на весь экран
-  - <span class='iconify-inline' data-icon='mdi:close'/> Закрыть
-
-- Метка
-- Поля и их значения
-- Список файлов с кнопкой скачивания <span class="iconify-inline" data-icon="mdi:download"/>
-- Окно отображения выбранного файла
-- Кнопка [уникального идентификатора][3] пакета (в правом нижнем углу)
-
-  - Щелчок по идентификатору копирует его в буфер обмена.
-  - Нажатие на <span class='iconify-inline' data-icon='mdi:menu-down'/> открывает меню с дополнительными командами
-
-    - <span class='iconify-inline' data-icon='mdi:shield-check'/>Верификация хеша - осуществляет пересчет идентификатора пакета на основе его состава и истории создания. Может использоваться для проверки пакета и его истории на наличие неправомерных изменений.
-
-      ![Package](/images/common/package_verification_good.png)
-
-      или
-
-      ![Package](/images/common/package_verification_bad.png)
-
-#### Окно просмотра пакетов
-
-Открывается по щелчку по <span class="iconify-inline" data-icon="mdi:chart-scatter-plot"/> в [панели инструментов](#панель-инструментов).
-
-Позволяет одновременно просматривать файлы из выбранных пакетов.
+Allows viewing files from selected packages simultaneously.
 
 ![Package](/images/common/package_panel_compare.png)
 
-- Панель инструментов
+- Toolbar
 
   - <span style="padding: 0 12px; border: #CCC 1px solid; border-radius: 40px;">
       <span class='iconify-inline' data-icon='mdi:view-grid'/> <small style="padding: 4px">1 x 2</small>
-    </span> Выбор размера сетки отображения файлов
+    </span> Selection of the display grid size for files
 
-    > Для изменения размерности сетки требуется щелкнуть по столбцу соответствующего измерения
+    > To change the grid dimension, click on the column for the corresponding dimension
 
-  - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Кнопка с списком фильтров файлов :
-    - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Группировка по родительским пакетам (по умолчанию)
-    - <span class='iconify-inline' data-icon='mdi:not-equal-variant'/> Группировка по уникальнымому содержимому
-    - <span class='iconify-inline' data-icon='mdi:file-multiple'/> Группировка по имени файла
+  - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Button with file filters list :
+    - <span class='iconify-inline' data-icon='mdi:file-table-box-multiple-outline'/> Grouping by parent packages (default)
+    - <span class='iconify-inline' data-icon='mdi:not-equal-variant'/> Grouping by unique content
+    - <span class='iconify-inline' data-icon='mdi:file-multiple'/> Grouping by file name
 
-  - <span class='iconify-inline' data-icon='mdi:selection-remove'/> Кнопка для закрытия всех выбранных файлов.
+  - <span class='iconify-inline' data-icon='mdi:selection-remove'/> Button to close all selected files.
 
-  - Дерево файлов с корневыми элементами, отображающими идентификатор пакета в случае группировки по пакетам, либо имя файла в случае группировки по файлам. Cодержит элементы управления:
-    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Кнопка отображения всех файлов с выбранным именем
-    - <span class="iconify-inline" data-icon="mdi:download"/> Кнопка скачивания файла
+  - File tree with root elements displaying the package identifier in case of grouping by packages, or the file name in case of grouping by files. Contains control elements:
+    - <span class="iconify-inline" data-icon="mdi:content-copy"/> Button to display all files with the selected name
+    - <span class="iconify-inline" data-icon="mdi:download"/> File download button
 
-  - Сетка для отображения выбранных файлов
+  - Grid for displaying selected files
 
 
-### Запрос
+### Query
 
-**Запрос** - [SQL скрипт](/dev/sql.md#запрос-sql-узла) для формирования выходных пакетов по заданным условия. В качестве параметров запроса возможно использовать переменные пакета типа **поле**.
+**Query** - [SQL script](/dev/sql.md#sql-query-node) to generate output packages based on specified conditions. Package-type variables can be used as query parameters.
 
-Структура:
+Structure:
 
-- Вкладка по умолчанию "ТЕКСТ ЗАПРОСА"
+- Default tab "QUERY TEXT"
 
-  - Редактор SQL запроса
-  - Панель инструментов
+  - SQL query editor
+  - Toolbar
 
-    - <span class="iconify-inline" data-icon="mdi:auto-fix"/> [SQL мастер](/dev/sql.md#sql-мастер)
-    - <span class="iconify-inline" data-icon="mdi:help-circle" style="color: black"/> Помощь
-    - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"/> Уменьшить размер шрифта
-    - <span style="background-color: green; color: white">Текущий размер шрифта</span>
-    - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"/> Увеличить размер шрифта
-    - <span class="iconify-inline" data-icon="mdi:wrap"/> Включить/Выключить перенос строк
-    - <span class="iconify-inline" data-icon="mdi:vimeo"/> Включить VIM режим
-    - <span class="iconify-inline" data-icon="mdi:fullscreen"/> Открыть на полный экран
+    - <span class="iconify-inline" data-icon="mdi:auto-fix"/> [SQL Master](/dev/sql.md#sql-master)
+    - <span class="iconify-inline" data-icon="mdi:help-circle" style="color: black"/> Help
+    - <span class="iconify-inline" data-icon="mdi:format-font-size-decrease"/> Decrease Font Size
+    - <span style="background-color: green; color: white">Current Font Size</span>
+    - <span class="iconify-inline" data-icon="mdi:format-font-size-increase"/> Increase Font Size
+    - <span class="iconify-inline" data-icon="mdi:wrap"/> Wrap Text
+    - <span class="iconify-inline" data-icon="mdi:vimeo"/> VIM Mode
+    - <span class="iconify-inline" data-icon="mdi:fullscreen"/> Open Full Screen
 
-  - Кнопка истории изменений запроса: <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>
+  - Query history change button: <span style="color: green; border: 1px solid green"> author / last modified time </span>
 
-    Отображение и управление истории аналогично [истории файлов](#история-изменения).
+    Show and manage history similar to [file history](#file-history).
 
-  - Кнопка "СОХРАНИТЬ" - для сохранение изменений запроса
+  - "SAVE" button - to save changes to the query
 
-  ![Node query](/images/common/node_panel_query.png)
+  ![Node query panel](/images/common/node_panel_query.png)
 
-- Вкладка "ТЕСТ"
+- "TEST" tab
 
-  > Отображение результата тестового выполнения запроса.
+  > Displays the result of a test run of the query.
 
-  - Панель инструментов
-    - <span class="iconify-inline" data-icon="mdi:refresh"/> Тестовый запуск запроса
-    - <span class="iconify-inline" data-icon="bi:toggle2-off"/> Показывать только новые результаты запроса
-  - Таблица с результатом
-    - Столбцы таблицы
-      - Пакеты - идентификаторы выбранных входных пакетов
-      - Переменные - переменные (поля и файлы) выходного пакета
+  - Toolbar
+    - <span class="iconify-inline" data-icon="mdi:refresh"/> Test query run
+    - <span class="iconify-inline" data-icon="bi:toggle2-off"/> Show only new query results
+  - Results table
+    - Table columns
+      - Packets - Identifiers of selected input packets
+      - Variables - Variables (fields and files) of the output packet
 
-  ![Node query results](/images/common/node_panel_query_test.png)
+  ![Node query results panel](/images/common/node_panel_query_test.png)
 
-- Вкладка "РЕЗУЛЬТАТЫ"
+- "RESULTS" tab
 
-  > Результаты запроса переданные в следующий узел.
+  > Query results passed to the next node.
 
-  - Панель инструментов
-    - <span class="iconify-inline" data-icon="mdi:refresh"/> Обновления списка
-    - <span class="iconify-inline" data-icon="mdi:delete"/> Удаления выбранных заданий
-  - Таблица с списком заданий
-    - Столбцы таблицы
-      - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - переключатель выбора результатов
-      - Входные пакеты - идентификаторы входных пакетов
-      - Выходные пакеты - идентификаторы выходных пакетов
+  - Toolbar
+    - <span class="iconify-inline" data-icon="mdi:refresh"/> Refresh list
+    - <span class="iconify-inline" data-icon="mdi:delete"/> Delete selected jobs
+  - Job list table
+    - Table columns
+      - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - Job selection switch
+      - Input Packets - Identifiers of input packets
+      - Output Packets - Identifiers of output packets
 
-  ![Node query results](/images/common/node_panel_query_result.png)
+  ![Node query results panel](/images/common/node_panel_query_result.png)
 
-### Задания
+### Jobs
 
-В вкладке <span class='iconify-inline' data-icon='mdi:cog-box'/> **Задания** отображается список [заданий][5] узла в рамках выбранного [слоя данных][1]:
+The <span class='iconify-inline' data-icon='mdi:cog-box'/> **Jobs** tab displays a list of [jobs][5] for the node within the selected [data layer][1]:
 
 ![Node job list](/images/common/node_panel_job.png)
 
-#### Панель инструментов
+#### Toolbar
 
-- <span class="iconify-inline" data-icon="mdi:download"/> Скачать выделенные задания
-- <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Перезапустить выделенные задания
-- <span class="iconify-inline" data-icon="mdi:motion-play"/> Перезапустить выделенные задания в интерактивном режиме
-- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Перезапустить задания с выбранным [состояним][6]
-- <span class="iconify-inline" data-icon="mdi:play-pause"/> Поставить на паузу или активировать [задание-инициатор][8]
-- <span class="iconify-inline" data-icon="mdi:refresh"/> Обновления списка
+- <span class="iconify-inline" data-icon="mdi:download"/> Download selected jobs
+- <span class="iconify-inline" data-icon="mdi:cog-clockwise"/> Restart selected jobs
+- <span class="iconify-inline" data-icon="mdi:motion-play"/> Restart selected jobs in interactive mode
+- <span class="iconify-inline" data-icon="mdi:refresh-auto"/> Restart jobs with the selected [status][6]
+- <span class="iconify-inline" data-icon="mdi:play-pause"/> Pause or activate [initiator job][8]
+- <span class="iconify-inline" data-icon="mdi:refresh"/> Refresh list
 
-    Может содержать дополнительный ярлык:
-    - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"/>- информирует об изменении количества заданий в узле.
+    May contain an additional label:
+    - Top green label  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"/>- informs about the change in the number of jobs in the node.
 
-- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> Фильтрация заданий по [состоянию][6]
+- <span class="iconify-inline" data-icon="mdi:dots-horizontal-circle-outline"/> Filter jobs by [status][6]
 
   ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-  Cостояние "<span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/>&nbsp;Стартовало" дополнительно содержит переключатель <span class="iconify-inline" data-icon="mdi:tray-full" style="color: green"/>&nbsp;/&nbsp;<span class="iconify-inline" data-icon="mdi:tray" style="color: green"/>, что позволяет соответственно включать или исключать из этого фильтра дочерние состояния: <span class="iconify-inline" data-icon="mdi:progress-download" style="color: teal"/>&nbsp;Сгрузило данные, <span class="iconify-inline" data-icon="mdi:progress-wrench" style="color: green"/>&nbsp;Выполнено, <span class="iconify-inline" data-icon="mdi:progress-upload" style="color: teal"/>&nbsp;Загрузило данные, <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/>&nbsp;Cформировало пакеты.
+  The "Started" <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/> status additionally includes a toggle switch <span class="iconify-inline" data-icon="mdi:tray-full" style="color: green"/> / <span class="iconify-inline" data-icon="mdi:tray" style="color: green"/>, which allows you to respectively include or exclude from this filter the following sub-statuses: <span class="iconify-inline" data-icon="mdi:progress-download" style="color: teal"/> Downloaded data, <span class="iconify-inline" data-icon="mdi:progress-wrench" style="color: green"/> Completed, <span class="iconify-inline" data-icon="mdi:progress-upload" style="color: teal"/> Uploaded data, <span class="iconify-inline" data-icon="mdi:progress-check" style="color: green"/> Formed packages.
   :::
 
-- <span class="iconify-inline" data-icon="mdi:delete"/> Удаление выбранных заданий
-- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Удаление заданий с выбранным [состоянием][6]
-- <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Добавление параметра узла
+- <span class="iconify-inline" data-icon="mdi:delete"/> Delete selected jobs
+- <span class="iconify-inline" data-icon="mdi:delete-sweep"/> Delete jobs with the selected [status][6]
+- <span class="iconify-inline" data-icon="mdi:table-column-plus-after"/> Add node parameter
 
-  Добавление параметра узла в качестве нового столбца в таблице заданий.
+  Add a node parameter as a new column in the job table.
 
-  Список добавленных параметров с возможностью удаления кнопкой <span class='iconify-inline' data-icon='mdi:close'/> .
+  A list of added parameters with the option to delete them using the <span class='iconify-inline' data-icon='mdi:close'/> button.
 
-- <span class="iconify-inline" data-icon="mdi:content-save"/> Сохранить набор текущих столбцов
+- <span class="iconify-inline" data-icon="mdi:content-save"/> Save the set of current columns
 
-#### Таблица заданий
+## Job Table
 
-- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - переключатель выбора задания
-- Id - идентификатор задания
-- Пакеты - идентификаторы входных пакетов
-- Создано - время инициации задания
-- Владелец - пользователь создавший задание
-- Приоритет - приоритет выполнения задания
-- Состояние - текущее [состояние][6] выполнения задания
+- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"/> - Job selection switch
+- Id - Job identifier
+- Packages - Identifiers of input packages
+- Created - Job initiation time
+- Owner - User who created the job
+- Priority - Job execution priority
+- Status - Current [status][6] of job execution
 
-Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
+To open the window for a specific job, click on its identifier in the **Id** column.
 
-#### Окно просмотра задания
+## Job View Window
 
-Открывается щелчком по идентификатору конкретного задания в столбце **Id** в [таблице заданий](#таблица-заданий).
+Opens by clicking on the identifier of a specific job in the **Id** column in the [job table](#job-table).
 
 ![Node job](/images/common/job.png)
 
-Состав задания:
+Job composition:
 
-- Панель инструментов
+- Toolbar
 
-  - <span class='iconify-inline' data-icon='mdi:open-in-new'/> Открыть задание на новой странице браузера
+  - <span class='iconify-inline' data-icon='mdi:open-in-new'/> Open job on a new browser page
     ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'/>
-    При открытии задания на новой странице браузера возвращается прямая ссылка на задание.
+    Opening a job on a new browser page returns a direct link to the job.
     :::
 
-  - <span class='iconify-inline' data-icon='mdi:fullscreen'/> Открыть на весь экран
-  - <span class='iconify-inline' data-icon='mdi:close'/> Закрыть
+  - <span class='iconify-inline' data-icon='mdi:fullscreen'/> Open full screen
+  - <span class='iconify-inline' data-icon='mdi:close'/> Close
 
-- История состояний обработки
-- <span class='iconify-inline' data-icon='mdi:package'/> Входные пакеты
-- <span class='iconify-inline' data-icon='mdi:package'/> Выходные пакеты
-- Сервер расчетов
-- Узел задания с возможностью перехода на него
-- Параметры контейнера
-  - скрипт запуска
-  - Требования - запрошенные  вычислительные ресурсы при запуске докер контейнера.
-    - Память - запрошенная оперативная память
-    - Ядра ЦПУ - запрошенное количество процессоров (ядер) центрального процессора
-    - ГПУ - запрошенное количество графических процессоров (видекарт)
-    - Лимит времени (минуты) - установленное максимальное время выполнения задания в минутах
-- Периодичность запуска (только для [заданий-инициаторов][8])
-- Докер образ
-- Параметры узла на момент запуска
-- Список файлов с кнопкой сохранения <span class='iconify-inline' data-icon='mdi:content-save'/> в [файлы](#фаилы) узла
-- Окно отображения выбранного файла
+- Job processing status history
+- <span class='iconify-inline' data-icon='mdi:package'/> Input packages
+- <span class='iconify-inline' data-icon='mdi:package'/> Output packages
+- Calculation server
+- Job node with the ability to navigate to it
+- Container parameters
+  - Startup script
+  - Requirements - Requested compute resources when running a docker container.
+    - Memory - Requested RAM
+    - CPU cores - Requested number of CPU cores
+    - GPUs - Requested number of GPUs (video cards)
+    - Time limit (minutes) - Set maximum job execution time in minutes
+- Startup frequency (only for [initiator jobs][8])
+- Docker image
+- Node parameters at startup
+- List of files with a save button <span class='iconify-inline' data-icon='mdi:content-save'/> in [files](#files) of the node
+- Selected file display window
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'/>
-Процесс выполнения задания можно контролировать с помощью файла журнала <span class='iconify-inline' data-icon='mdi:file-clock'/> **идентификатор_задания.log**, который расположен в списке файлов.
+The job execution process can be controlled using the log file <span class='iconify-inline' data-icon='mdi:file-clock'/> **job_id.log**, which is located in the list of files.
 :::
 
-#### История изменения
+## Change History
 
-Для каждого файла/запроса доступна история его изменения.
+Change history is available for each file/request.
 
-Для получения доступа к ней необходимо выбрать необходимый файл/запрос и нажать на кнопку <span style="color: green; border: 1px solid green"> автор / время последних изменений </span>.
+To access it, select the desired file/request and click on the button <span style="color: green; border: 1px solid green"> author / last modified time </span>.
 
-История содержит список существующих версий.
+The history contains a list of existing versions.
 
 ![File history](/images/common/node_panel_file_history.png)
 
-Состав версии в истории:
+Version composition in history:
 
-- Название
-- Дата сохранения
-- Опциональое описание
-- Кнопки управления
+- Name
+- Save date
+- Optional description
+- Control buttons
 
-  - <span class='iconify-inline' data-icon='mdi:arrow-left-circle' style="color: green"/> Восстановить
-  - <span class='iconify-inline' data-icon='mdi:tag' style="color: green" /> Задать описание
-  - <span class='iconify-inline' data-icon='mdi:vector-difference' style="color: green" /> Открыть окно сравнения версий файла
-  - <span class='iconify-inline' data-icon='mdi:delete' style="color: green"/> Удалить
+  - <span class='iconify-inline' data-icon='mdi:arrow-left-circle' style="color: green"/> Restore
+  - <span class='iconify-inline' data-icon='mdi:tag' style="color: green" /> Set description
+  - <span class='iconify-inline' data-icon='mdi:vector-difference' style="color: green" /> Open file version comparison window
+  - <span class='iconify-inline' data-icon='mdi:delete' style="color: green"/> Delete
 
-При щелчке по конкретной версии в истории она будет отображена вместо текущего файла в режиме только для чтения. Чтобы выйти из этого режима необходимо закрыть окно истории.
+Clicking on a specific version in the history will display it instead of the current file in read-only mode. To exit this mode, close the history window.
 
-Окно сравнения версий файлов
+File version comparison window
 
 ![File history](/images/common/node_panel_file_history_diff.png)
 
-[1]: ./project.md#слои-данных
-[2]: /desc/node_params.md#управление-параметрами
-[3]: /desc/package.md#состав
+[1]: ./project.md#data-layers
+[2]: /desc/node_params.md#parameter-management
+[3]: /desc/package.md#composition
 [4]: /desc/package.md
 [5]: /desc/job.md
-[6]: /desc/job.md#состояния
+[6]: /desc/job.md#statuses
 [7]: /desc/docker.md
-[8]: /desc/job.md#типы
-[9]: /desc/dashboard.md#редактирование
+[8]: /desc/job.md#types
+[9]: /desc/dashboard.md#editing
 [10]: /desc/executor.md
 [11]: /desc/secrets.md
-[12]: /desc/secrets.md#типы-секретов
+[12]: /desc/secrets.md#secret-

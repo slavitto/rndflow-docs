@@ -1,15 +1,15 @@
-# Продукт
+# Product
 
-**R&D Flow** - цифровая платформа для создания, использования и монетизации алгоритмов анализа данных и интеллектуальных приложений.
+**R&D Flow** is a digital platform for creating, using, and monetizing data analysis algorithms and intelligent applications.
 
 <img src="/images/overview.jpeg" align="left" width="50%" alt="Overview" style="margin: 1%;">
 
-Платформа предназначена для организации облачной или локальной инфраструктуры для создания, управления, эксплуатации и монетизации интеллектуальных программных систем, программ анализа, обработки и моделирования данных с целью решения и реализации научно-исследовательских, инженерных, производственных и других практических задач различных отраслей экономики в распределенной высокопроизводительной среде.
+The platform is designed to organize cloud or local infrastructure for creating, managing, operating, and monetizing intelligent software systems, analysis programs, data processing and modeling programs to solve and implement scientific research, engineering, production, and other practical tasks in various economic sectors in a distributed high-performance environment.
 
-Платформа представляет собой набор программных модулей, которые обеспечивают:
+The platform is a set of software modules that provide:
 
-- взаимодействие пользователя с сервисами платформы с помощью веб-клиента;
-- создание интеллектуальных приложений и алгоритмов в онлайн-редакторе;
-- создание графического пользовательского интерфейса с помощью специального онлайн-конструктора;
-- использование или подключение как собственных, так и сторонних объектных хранилищ для размещения данных и вычислительных ресурсов, с возможностью биллинга их использования;
-- функционирование электронных каталогов приложений и алгоритмов; электронных каталогов вычислительных ресурсов и ресурсов хранения данных; электронных каталогов услуг с возможностью биллинга их использования.
+- User interaction with platform services via a web client;
+- Creating intelligent applications and algorithms in an online editor;
+- Creating a graphical user interface using a special online builder;
+- Using or connecting both proprietary and third-party object storages for storing data and computing resources, with the ability to bill their usage;
+- Functioning of electronic application and algorithm catalogs; electronic catalogs of computing resources and data storage resources; electronic service catalogs with the ability to bill their usage.

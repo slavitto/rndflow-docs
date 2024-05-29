@@ -1,178 +1,178 @@
-# Рабочее пространство
+# Workspace
 
-## Структура
+## Structure
 
-Рабочее пространство доступно пользователю из [панели управления](dashboard).
+The workspace is available to the user from the [dashboard](dashboard).
 
-Общий вид рабочего пространства:
+General view of the workspace:
 
 ![Workspace](/images/common/workspace_general.png)
 
-Включает в себя:
+It includes:
 
-- [Панель описания](#панель-описания)
-- <span class="iconify-inline" data-icon="mdi:file-code"></span> Вкладка [Проекты](#проекты)
-- <span class="iconify-inline" data-icon="mdi:account-multiple"></span> Вкладка [Участники](#участники)
-- <span class="iconify-inline" data-icon="mdi:cogs"></span> Вкладка [Ресурсы](#ресурсы)
-- <span class="iconify-inline" data-icon="mdi:credit-card-clock"></span> Вкладка [Биллинг](#биллинг)
-- ![Add button](/images/common/red_plus.png) - кнопка создания нового проекта
+- [Description panel](#description-panel)
+- <span class="iconify-inline" data-icon="mdi:file-code"></span> [Projects](#projects) tab
+- <span class="iconify-inline" data-icon="mdi:account-multiple"></span> [Members](#members) tab
+- <span class="iconify-inline" data-icon="mdi:cogs"></span> [Resources](#resources) tab
+- <span class="iconify-inline" data-icon="mdi:credit-card-clock"></span> [Billing](#billing) tab
+- ![Add button](/images/common/red_plus.png) - button to create a new project
 
-## Панель описания
+## Description panel
 
-### Структура
+### Structure
 
-Панель отображает:
+The panel displays:
 
-- Панель инструментов
-  - <span class="iconify-inline" data-icon="mdi:pencil"></span> Кнопка редактирования информации о рабочем пространстве
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> Кнопка удаления рабочего пространства
-- Изображение
-- Название
-- <span class="iconify-inline" data-icon="mdi:link"></span> Веб сайт
-- Описание
-- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Видно всем - переключатель разрешения публичного доступа
-- <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс [счета][10]
+- Toolbar
+  - <span class="iconify-inline" data-icon="mdi:pencil"></span> Button to edit workspace information
+  - <span class="iconify-inline" data-icon="mdi:delete"></span> Button to delete workspace
+- Image
+- Name
+- <span class="iconify-inline" data-icon="mdi:link"></span> Website
+- Description
+- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Visible to everyone - toggle switch for public access permission
+- <span class='iconify-inline' data-icon='mdi:wallet'></span> Balance - balance of the [account][10]
 
-  При нажатии происходит открытие окна [баланса](#баланс) рабочего пространства.
+Clicking on it opens the workspace's [balance](#balance) window.
 
-### Редактирование
+### Editing
 
-Нажатие кнопки <span class="iconify-inline" data-icon="mdi:pencil"></span> переведет панель в режим редактирования:
+Clicking the <span class="iconify-inline" data-icon="mdi:pencil"></span> button will switch the panel to edit mode:
 
 ![User edit](/images/common/workspace_edit.png)
 
-## Проекты
+## Projects
 
-Отображается список [плиток проектов](./dashboard.md#структура-плитки-проекта).
+Displays a list of [project tiles](./dashboard.md#project-tile-structure).
 
 ![Projects](/images/common/workspace_projects.png)
 
-## Участники
+## Members
 
 ![Members](/images/common/workspace_members.png)
 
-Структура панели:
+Panel structure:
 
-- Кнопка "ПРИГЛАСИТЬ ПОЛЬЗОВАТЕЛЯ" - кнопка приглашения нового участника в рабочее пространство
-- Список плиток пользователей
-  - Список
-  - Панель навигации
-- Список "Приглашенные пользователи"
-  - Список
-  - Панель навигации
+- "INVITE USER" button - button to invite a new member to the workspace
+- List of user tiles
+  - List
+  - Navigation panel
+- List of "Invited users"
+  - List
+  - Navigation panel
 
-Структура плитки участника:
+Member tile structure:
 
-- Аватар
-- Имя
-- Электронный адрес
-- Владелец/Участник - тип участника
-  > При нажатии на <span class="iconify-inline" data-icon="mdi:close-circle"></span> открывается диалог удаления пользователя из рабочего пространства.
+- Avatar
+- Name
+- Email
+- Owner/Participant - member type
+  > Clicking on <span class="iconify-inline" data-icon="mdi:close-circle"></span> opens a dialog to remove the user from the workspace.
 
-Для приглашенного пользователя дополнительно отображается:
+For an invited user, it also displays:
 
-- Кнопка "ОТОЗВАТЬ ПРИГЛАШЕНИЕ"
+- "REVOKE INVITATION" button
 
-Типы участников и права:
+Member types and rights:
 
-- Владелец
-  - Создание/удаление приглашения пользователя
-  - Добавление/удаление S3 сервера
-  - Добавление/удаление сервера расчетов
-  - Обновление описания рабочего пространства
-  - Удаление участника или другого владельца из рабочего пространства
-  - Удаление рабочего пространства
-  - Доступ к полному биллингу
-  - Создание нового проекта
-  - Удаление любого проекта
-  - Просмотр списка проектов
-  - Использование/редактирование любого проекта
-- Участник
-- Создание нового проекта
-- Удаление проекта (при наличии прав владельца проекта)
-- Использование/редактирование проекта (при наличии прав в проекте)
-- Доступ к списку серверов расчета
-- Доступ к списку S3 серверов
-- Доступ к списку приглашений в проект
-- Доступ к общей статистике биллинга проекта
+- Owner
+  - Create/delete user invitations
+  - Add/remove S3 server
+  - Add/remove billing server
+  - Update workspace description
+  - Remove a member or other owner from the workspace
+  - Delete workspace
+  - Access full billing
+  - Create a new project
+  - Delete any project
+  - View project list
+  - Use/edit any project
+- Participant
+  - Create a new project
+  - Delete a project (if project owner rights are present)
+  - Use/edit project (if project rights are present)
+  - Access the list of billing servers
+  - Access the list of S3 servers
+  - Access the list of project invitations
+  - Access project billing general statistics
 
-## Ресурсы
+## Resources
 
-Структура:
+Structure:
 
-- <span class="iconify-inline" data-icon="mdi:folder-network"></span> [S3 серверы](/desc/s3.md)
+- <span class="iconify-inline" data-icon="mdi:folder-network"></span> [S3 servers](/desc/s3.md)
 
-  - <span class="iconify-inline" data-icon="mdi:magnify"></span> - кнопка [добавления][4] публичного S3 сервера
-  - <span class="iconify-inline" data-icon="mdi:plus"></span> - кнопка [создания][5] нового S3 сервера (при наличии разрешений в [тарифе][9])
-  - список добавленных/созданных S3 серверов
+  - <span class="iconify-inline" data-icon="mdi:magnify"></span> - button to [add](/desc/s3.md#adding-a-public-s3-server) a public S3 server
+  - <span class="iconify-inline" data-icon="mdi:plus"></span> - button to [create](/desc/s3.md#creating-an-s3-server) a new S3 server (if you have permissions in the [plan](/desc/billing.md#plans))
+  - list of added/created S3 servers
 
-- <span class="iconify-inline" data-icon="mdi:server"></span> [Серверы расчетов](/desc/executor.md)
-  - <span class="iconify-inline" data-icon="mdi:magnify"></span> - кнопка [добавления][6] публичного сервера расчетов
-  - <span class="iconify-inline" data-icon="mdi:plus"></span> - кнопка [cоздания][7] нового сервера расчетов (при наличии разрешений в [тарифе][9])
-  - список добавленных/созданных серверов расчетов
-- <span class="iconify-inline" data-icon="mdi:docker"></span> [Docker-образы](/desc/docker.md)
-  - <span class="iconify-inline" data-icon="mdi:plus"></span> - кнопка [создания][8] нового Докер образа
-  - список созданных Докер образов
+- <span class="iconify-inline" data-icon="mdi:server"></span> [Billing servers](/desc/executor.md)
+  - <span class="iconify-inline" data-icon="mdi:magnify"></span> - button for [adding][6] a public billing server
+  - <span class="iconify-inline" data-icon="mdi:plus"></span> - button for [creating][7] a new billing server (if you have permissions in the [plan](/desc/billing.md#plans))
+  - list of added/created billing servers
+- <span class="iconify-inline" data-icon="mdi:docker"></span> [Docker images](/desc/docker.md)
+  - <span class="iconify-inline" data-icon="mdi:plus"></span> - button for [creating][8] a new Docker image
+  - list of created Docker images
 
 ![Resources](/images/common/workspace_resources.png)
 
-## Биллинг
+## Billing
 
-Структура:
+Structure:
 
-- Информационная панель текущего [тарифа][1] c возможностью его изменения по нажатию кнопки **СМЕНИТЬ ТАРИФ**
-- Отчет о расходах и доходах за выбранный период времени
-  - Переводы - общий размер переводов
-  - Расходы - общие расходы
-  - Доходы (роли) - доходы за использование платных [ролей][2].
-  - Доходы (API ключи) -доходы за использование [API ключей][3].
-  - График переводов, расходов и доходов.
+- Information panel of the current [plan](/desc/billing.md#plans) with the ability to change it by clicking the button **CHANGE PLAN**
+- Report on expenses and incomes for the selected period of time
+  - Transfers - total amount of transfers
+  - Expenses - total expenses
+  - Incomes (roles) - income for using paid [roles][2].
+  - Incomes (API keys) - income for using [API keys][3].
+  - Chart of transfers, expenses and incomes.
 
 ![Billing](/images/common/workspace_billing.png)
 
-## Баланс
+## Balance
 
-Окно баланса рабочего пространства отображает баланс [счета][10] и список сырых или сгруппированных по типу ввода/вывода средств [транзакций][11].
+The workspace balance window displays the balance of the [account][10] and a list of raw or grouped by type of income/expense transactions [transactions][11].
 
 ![Workspace balance](/images/common/workspace_balance_raw.png)
 
-Структура:
+Structure:
 
-- Панель описания
+- Description panel
 
-  - Изображение
-  - Имя-ссылка
-  - <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс счета
-  - Кнопка "ПОПОЛНИТЬ" - кнопка ввода средств на счет рабочего пространства
-  - Кнопка "ВЫВЕСТИ" - кнопка вывода средств на счет владельца
+  - Image
+  - Name-link
+  - <span class='iconify-inline' data-icon='mdi:wallet'></span> Balance - account balance
+  - Button "TOP UP" - button to deposit funds to the workspace account
+  - Button "WITHDRAW" - button to withdraw funds to the owner's account
 
-- Панель отображения транзакций
+- Transaction display panel
 
-  - Панель инструментов
+  - Toolbar
 
-    - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Период
-    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления
+    - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Period
+    - <span class='iconify-inline' data-icon='mdi:refresh'></span> Refresh button
 
-  - Панель вкладок группировок транзакций
+  - Panel of tabs for transaction groupings
 
-    - ГРУППИРОВКА ПО ДАТЕ - суммарная информация по датам
-    - ПО ПОЛЬЗОВАТЕЛЮ - суммарная информация по пользователям
-    - ПО ПРОЕКТУ - суммарная информация по проектам
-    - ПО КОНТРАГЕНТУ - суммарная информация по контрагентам
-    - СЫРЫЕ ТРАНЗАКЦИИ - все транзакции без группировки
+    - GROUP BY DATE - summary information by dates
+    - BY USER - summary information by users
+    - BY PROJECT - summary information by projects
+    - BY COUNTERPARTY - summary information by counterparties
+    - RAW TRANSACTIONS - all transactions without grouping
 
-  - Таблица транзакций для вкладки **СЫРЫЕ ТРАНЗАКЦИИ**
-    - Создано - дата осуществления транзакции
-    - Назначение - тип транзакции
-    - Контрагент - контрагент транзакции
-    - Сумма - сумма транзакции
-  - Панель навигации
+  - Transaction table for the **RAW TRANSACTIONS** tab
+    - Created - date of the transaction
+    - Purpose - type of transaction
+    - Counterparty - counterparty of the transaction
+    - Amount - amount of the transaction
+  - Navigation panel
 
-После нажатия на кнопку **ПОПОЛНИТЬ** пользователь рабочего пространства может осуществить ввод средств на счет рабочего пространства.
+After clicking the **TOP UP** button, the workspace user can deposit funds to the workspace account.
 
 ![Workspace balance add](/images/common/workspace_balance_add.png)
 
-После нажатия на кнопку **ВЫВЕСТИ** владелец рабочего пространства может осуществить вывод средств на собственный счет.
+After clicking the **WITHDRAW** button, the workspace owner can withdraw funds to their own account.
 
 ![Workspace balance out](/images/common/workspace_balance_out.png)
 

@@ -1,84 +1,84 @@
-# Докер образы
+# Docker Images
 
-Платформа поддерживает возможность создания и пересборки Докер образов ([Docker images][1]).
+The platform supports the ability to create and rebuild Docker images ([Docker images][1]).
 
-Докер образы создаются на кластере платформы и могут быть загружены на внешние реестры ([registries][1]) и внутрение реестры.
+Docker images are created on the platform cluster and can be loaded onto external registries ([registries][1]) and internal registries.
 
-Докер образы относятся к [рабочему пространству][2].
+Docker images are associated with the [workspace][2].
 
 ::: danger <span class='iconify' data-icon='gg:danger' style='color: #cc0000; font-size: 24px;'></span>
-Для Докер образа действуют следующие правила:
+The following rules apply to Docker images:
 
-- Название образа должно быть уникальным для **всей** платформы.
-- Права пересборки образа имеет только владелец рабочего пространства, в котором он был создан.
-  :::
+- The image name must be unique across the **entire** platform.
+- Only the owner of the workspace in which the image was created has the rights to rebuild the image.
+ :::
 
-Управление Докер образами происходит на вкладке <span class='iconify-inline' data-icon='mdi:cogs'></span> **РЕСУРСЫ** в разделе <span class="iconify-inline" data-icon="mdi:docker"></span> **Docker-образы** соответствующего рабочего пространства.
+Docker image management is done on the <span class='iconify-inline' data-icon='mdi:cogs'></span> **RESOURCES** tab in the <span class="iconify-inline" data-icon="mdi:docker"></span> **Docker Images** section of the corresponding workspace.
 
 ![Docker images list](/images/common/dashboard_user_workspace_resources_dockers.png)
 
-Использование Докер образа происходит на вкладке <span class='iconify-inline' data-icon='mdi:kubernetes'></span> [**КОНТЕЙНЕР**][3] панели [расчетного узла][4] в выпадающем списке параметра **Докер образ**.
+Using a Docker image is done on the <span class='iconify-inline' data-icon='mdi:kubernetes'></span> [**CONTAINER**][3] tab of the [compute node][4] panel in the dropdown list of the **Docker Image** parameter.
 
 ![Docker images list](/images/common/node_panel_container_dockerslist.png)
 
-## Плитка
+## Tile
 
 ![Docker image after build](/images/common/dashboard_user_workspace_resources_docker_after_build.png)
 
-Структура:
+Structure:
 
-- Статус сборки
-  - <span class='iconify-inline' data-icon='mdi:check-circle' style='color: green'></span> - последние изменения образа собраны
-  - <span class='iconify-inline' data-icon='mdi:alert-circle' style='color: red'></span> - образ не собран
-  - <span class='iconify-inline' data-icon='mdi:update' style='color: orange'></span> - образ был изменен после сборки и после этого не было успешных сборок
-- Название образа
-- Описание образа
-- <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления
+- Build status
+ - <span class='iconify-inline' data-icon='mdi:check-circle' style='color: green'></span> - latest image changes are built
+ - <span class='iconify-inline' data-icon='mdi:alert-circle' style='color: red'></span> - image is not built
+ - <span class='iconify-inline' data-icon='mdi:update' style='color: orange'></span> - image was modified after the build and there have been no successful builds since then
+- Image name
+- Image description
+- <span class='iconify-inline' data-icon='mdi:delete'></span> Delete button
 
-## Редактор
+## Editor
 
-Редактор открывается по щелчку по плитке Докер образа.
+The editor is opened by clicking on the Docker image tile.
 
 ![Docker image editor after build](/images/common/dashboard_user_workspace_resources_docker_editor_аfter_build.png)
 
-Структура
+Structure
 
-- Редактируемое название образа
-- <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления образа
-- Редактируемое описание образа
-- Статус
-  - <span class='iconify-inline' data-icon='mdi:check-circle' style='color: green'></span> - последние изменения образа собраны
-  - <span class='iconify-inline' data-icon='mdi:alert-circle' style='color: red'></span> - образ не собран
-  - <span class='iconify-inline' data-icon='mdi:update' style='color: orange'></span> - образ был изменен после сборки и после этого не было успешных сборок
-- История изменений образа
-  - Создан - автор и время создания
-  - Изменен - автор и время последних изменений (кода в редакторе образа)
-  - Собран - автор и время последней успешной сборки
-- Параметры сборки
-  - Контекст сборки
-    - ЛОКАЛЬНАЯ ПАПКА - использовать для сборки данные текущего редактора Dockerfile.
-    - GIT РЕПОЗИТОРИЙ - использовать для сборки данные из GIT репозитория.
-  - Dockerfile - редактора кода создания Докер образа
-- Кнопка "СОХРАНИТЬ" - сохранение изменений в редакторе
-- Кнопка "СОБРАТЬ" - сборка Докер образа
-- Журнал сборок и <span class='iconify-inline' data-icon='mdi:refresh'></span> кнопка обновления журнала - история сборок Докер образа
+- Editable image name
+- <span class='iconify-inline' data-icon='mdi:delete'></span> Delete image button
+- Editable image description
+- Status
+ - <span class='iconify-inline' data-icon='mdi:check-circle' style='color: green'></span> - latest image changes are built
+ - <span class='iconify-inline' data-icon='mdi:alert-circle' style='color: red'></span> - image is not built
+ - <span class='iconify-inline' data-icon='mdi:update' style='color: orange'></span> - image was modified after the build and there have been no successful builds since then
+- Image change history
+ - Created - author and creation time
+ - Modified - author and time of last changes (code in image editor)
+ - Built - author and time of last successful build
+- Build parameters
+ - Build context
+   - LOCAL FOLDER - use the data from the current Dockerfile editor for the build.
+   - GIT REPOSITORY - use data from the Git repository for the build.
+ - Dockerfile - code editor for creating the Docker image
+- "SAVE" button - save changes in the editor
+- "BUILD" button - build the Docker image
+- Build log and <span class='iconify-inline' data-icon='mdi:refresh'></span> log refresh button - history of Docker image builds
 
-  - <span class='iconify-inline' data-icon='mdi:menu-down'></span> - открыть журнал сборки
-  - Начало - время начала сборки
-  - Статус - статус завершения
-    - <span class='iconify-inline' data-icon='vaadin:progressbar' style='color: green'></span> - в процессе сборки
-    - <span class='iconify-inline' data-icon='mdi:alert-circle' style='color: red'></span> - образ не собран
-    - <span class='iconify-inline' data-icon='mdi:check-circle' style='color: green'></span> -последние изменения образа собраны
-  - Длительность сборки
+ - <span class='iconify-inline' data-icon='mdi:menu-down'></span> - open build log
+ - Start - build start time
+ - Status - completion status
+   - <span class='iconify-inline' data-icon='vaadin:progressbar' style='color: green'></span> - in progress
+   - <span class='iconify-inline' data-icon='mdi:alert-circle' style='color: red'></span> - image not built
+   - <span class='iconify-inline' data-icon='mdi:check-circle' style='color: green'></span> - latest image changes are built
+ - Duration - build duration
 
-  При изменении контекста сборки на **GIT РЕПОЗИТОРИЙ** отображается:
+ When changing the build context to **GIT REPOSITORY**, the following is displayed:
 
-  - URL Git репозитория - репозиторий с файлами сборки Докер образа.
-  - Директория с Dockerfile - опциональный путь к директории с файлом Dockerfile, если он расположен не в корне репозитория.
-  
-  ![Docker image editor git context](/images/common/dashboard_user_workspace_resources_docker_editor_git.png)
+ - Git repository URL - repository with Docker image build files.
+ - Directory with Dockerfile - optional path to the directory with the Dockerfile, if it is not located in the root of the repository.
+ 
+ ![Docker image editor git context](/images/common/dashboard_user_workspace_resources_docker_editor_git.png)
 
 [1]: https://docs.docker.com/get-started/overview/
 [2]: /desc/workspace.md
-[3]: /desc/nodes.md#контеинер
-[4]: /desc/nodes.md#расчетныи-узел
+[3]: /desc/nodes.md#container
+[4]: /desc/nodes.md#compute-node

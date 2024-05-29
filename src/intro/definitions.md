@@ -1,75 +1,56 @@
-# Основные определения
+# Key Definitions
 
-[Рабочее пространство](/desc/workspace.md) (Workspace) - изолированное рабочее окружение пользователя или группы пользователей со своим набором проектов, ресурсов, правами доступа.
-
+[Workspace](/desc/workspace.md) - an isolated working environment for a user or group of users with their own set of projects, resources, and access rights.
 ![Workspaces](./images/workspaces.png)
 
-[Проект](/desc/project.md) (Project) - это конкретная реализация интеллектуального приложения или алгоритма средствами платформы.
+[Project](/desc/project.md) - a specific implementation of an intelligent application or algorithm using the platform's tools.
+![Projects](./images/projects.png)  
 
-![Projects](./images/projects.png)
-
-[API ключ](/desc/api_keys.md)- уникальный jWT идентификатор для программного доступа к проекту согласно разрешениям, которые определены в заданной ему при создании [роли](/desc/project_role.md) проекта.
-
+[API Key](/desc/api_keys.md) - a unique JWT identifier for programmatic access to a project according to the permissions defined in the [role](/desc/project_role.md) assigned to it during creation.
 ![API](/images/common/api.png)
 
-[Граф](/desc/project.md#граф) (Graph) - интегрированная последовательность узлов и направленных связей между ними, в которой узлы соответствуют отдельным этапам или операциям реализуемого алгоритма, а направленные связи определяют направление передачи данных между ними (результаты выполнения одних узлов передаются в качестве входных данных другим узлам).
-
+[Graph](/desc/project.md#graph) - an integrated sequence of nodes and directed links between them, where nodes correspond to individual stages or operations of the implemented algorithm, and directed links determine the direction of data transfer between them (the results of executing some nodes are passed as input data to other nodes).
 ![Graph](/images/common/graph.png)
 
-[Связь](/desc/links.md) (Link) - соединение, обеспечивающее перемещение пакетов от узла источника к узлу назначения.
-
+[Link](/desc/links.md) - a connection that enables the movement of packages from the source node to the destination node.
 ![Push link](/images/common/link_push.png)
 
-[Узел](/desc/nodes.md) (Node) - отдельный блок графа, представляющий собой этап (операцию) реализуемого алгоритма.
-
+[Node](/desc/nodes.md) - an individual block of the graph representing a stage (operation) of the implemented algorithm.
 ![Compute node](/images/common/node_compute.png)
 
-[Группа](/desc/nodes.md#группа) (Group) - совокупность узлов.
-
+[Group](/desc/nodes.md#group) - a collection of nodes.
 ![Group](/images/common/group.png)
 
-[Параметры узла](/desc/node_params.md) (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
-
+[Node Parameters](/desc/node_params.md) - control parameters for node execution, passed to the node's executable program (script).
 ![Node params](/images/common/node_panel_params.png)
 
-[Спецификация узла](/desc/nodes.md#спецификация) - опциональное описание состава входных и выходных пакетов узла.
-
+[Node Specification](/desc/nodes.md#specification) - an optional description of the input and output package composition of a node.
 ![Node desc](/images/common/node_panel_spec.png)
 
-[Слой данных](/desc/project.md#слои-данных) (Data layer) - это отдельное состояние графа проекта со своим независимым набором пакетов и параметрами узлов.
+[Data Layer](/desc/project.md#data-layers) - a separate state of a project's graph with its own independent set of packages and node parameters.
 
 ![Data layer](/images/common/datalayer.png)
 
-[Пакет](/desc/package.md) (Package) - единый набор данных, поступающих на обработку на соответствующий узел.
-
+[Package](/desc/package.md) - a single set of data coming for processing to the corresponding node.
 ![Package](/images/common/package.png)
 
-[Мастер пакет](/desc/package.md) (Master package) - выбранный пользователем корневой пакет слоя данных.
+[Master Package](/desc/package.md) - the root package of the data layer selected by the user.
 
-[Задание](/desc/job.md) (Job) - экземпляр выполнение узла с конкретными входными пакетами и параметрами.
-
+[Job](/desc/job.md) - an instance of node execution with specific input packages and parameters.
 ![Job](/images/common/job.png)
 
-[Интерфейс](/desc/interface.md) (Interface) - графический интерфейс управление проектом, предназначеный для предоставления пользователю возможности управления проектом без непосредственного взаимодействия с графом проекта.
-
+[Interface](/desc/interface.md) - a graphical interface for project management, designed to provide the user with the ability to manage the project without directly interacting with the project graph.
 ![Interface](/images/common/interface.png)
 
-[Сервер расчетов или исполнитель](/desc/executor.md) (Executor) - cпециальный программный модуль платформы, который отвечает за запуск задач на определенном вычислительном кластере (сервере расчетов).
-
-Отображение в панели управления проектом:
+[Computation Server or Executor](/desc/executor.md) - a special software module of the platform responsible for running tasks on a specific computing cluster (computation server). Displayed in the project management panel:
 
 ![Executor in project](/images/common/executor_project.png)
 
-Информационная панель сервера расчетов:
-
+Computation server information panel:
 ![Executor](/images/common/executor.png)
 
-[S3 сервер](/desc/s3.md) (S3 Server) - объектное (файловое) хранилище для размещения данных (скрипты, файлы пакетов и т.п.).
-
-Информационная панель S3 сервера:
-
+[S3 Server](/desc/s3.md) - an object (file) storage for storing data (scripts, package files, etc.). S3 server information panel:
 ![S3 manage](/images/common/admin_s3_disk.png)
 
-[Среда исполнения. Контейнер](/desc/nodes.md#контеинер) - Докер образ на основе которого будет создаваться контейнер для выполнения программных модулей узла в рамках конкретного задания.
-
+[Runtime Environment. Container](/desc/nodes.md#container) - A Docker image on which a container will be created to run the node's software modules within a specific job.
 ![Node container](/images/common/node_panel_container.png)

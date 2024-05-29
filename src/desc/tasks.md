@@ -1,44 +1,44 @@
-# Задачи
+# Tasks
 
-**Задачи** - задачи пользователей, которые требуется решить средствами платформы на возмездной или безвозмездной основе.
+**Tasks** are user tasks that need to be solved by the platform on a paid or unpaid basis.
 
-Плитка задачи:
+Task panel:
 
-1. Название
-2. Описание
-3. Автор
-4. Время создания
-5. <span class='iconify-inline' data-icon='mdi:comment'></span> - количество комментариев.
-6. <span class='iconify-inline' data-icon='mdi:delete'></span> - кнопка удаления
+1. Title
+2. Description
+3. Author
+4. Creation time
+5. <span class='iconify-inline' data-icon='mdi:comment'></span> - number of comments
+6. <span class='iconify-inline' data-icon='mdi:delete'></span> - delete button
 
 ![Task](/images/common/task.png)
 
-Редактирование задачи:
+Editing a task:
 
-Для редактирование задач необходимо щелкнуть по плитке задачи.
+To edit a task, click on the task panel.
 
-Структура:
+Structure:
 
-- Задача
-  - Заголовок
-    - Название
-    - <span class='iconify-inline' data-icon='mdi:pencil'></span> - кнопка редактирования задачи
-    - <span class='iconify-inline' data-icon='mdi:delete'></span> - кнопка удаления задачи
-    - Статус
-  - Описание
-  - Автор
-  - Время создания
-- Комментарии
-  - Время создания
-  - Заголовок
-    - Автор
-    - <span class='iconify-inline' data-icon='mdi:pencil'></span> - кнопка редактирования
-    - <span class='iconify-inline' data-icon='mdi:delete'></span> - кнопка удаления
-    - Комментарий
-- Раздел создания нового комментария
-  - Вкладки
-    - "РЕДАКТИРОВАНИЕ" - ввод комментария
-    - "ПРЕДОСМОТР" - предосмотр комментария
-  - "ДОБАВИТЬ КОММЕНТАРИЙ" - кнопка добавления
+- Task
+  - Title
+    - Name
+    - <span class='iconify-inline' data-icon='mdi:pencil'></span> - task editing button
+    - <span class='iconify-inline' data-icon='mdi:delete'></span> - task deletion button
+    - Status
+  - Description
+  - Author
+  - Creation time
+- Comments
+  - Creation time
+  - Title
+    - Author
+    - <span class='iconify-inline' data-icon='mdi:pencil'></span> - edit button
+    - <span class='iconify-inline' data-icon='mdi:delete'></span> - delete button
+    - Comment
+- New comment creation section
+  - Tabs
+    - "EDIT" - comment entry
+    - "PREVIEW" - comment preview
+  - "ADD COMMENT" - add button
 
 ![Task edit](/images/common/task_edit.png)

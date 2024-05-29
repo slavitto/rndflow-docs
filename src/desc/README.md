@@ -1,28 +1,28 @@
-# Панели
+# Panels
 
-## Панель инструментов
+## Toolbar Panel
 
 ![Link panel](/images/common/toolspanel.png)
 
-- <img src="/images/logo.svg" align="left" alt="logo" style="margin: 1%; width: 3%"> - переход на главную страницу
+- <img src="/images/logo.svg" align="left" alt="logo" style="margin: 1%; width: 3%"> - navigate to the main page
   <br clear="left"/>
-- <span class="iconify-inline" data-icon="mdi:magnify"></span>Поиск - панель поиска
-- Обзор - ссылка на [галерею][1] проектов
-- <span class="iconify-inline" data-icon="mdi:help-circle-outline"></span>- ссылка на документацию платформы
-- <span class="iconify-inline" data-icon="mdi:lightbulb"></span>- переключатель темы
-- <span class="iconify-inline" data-icon="mdi:translate"></span>- переключатель языка
-- Аватар пользователя - [панель ссылок](#панель-ссылок)
+- <span class="iconify-inline" data-icon="mdi:magnify"></span>Search - search panel
+- Overview - link to the project [gallery][1]
+- <span class="iconify-inline" data-icon="mdi:help-circle-outline"></span>- link to the platform documentation
+- <span class="iconify-inline" data-icon="mdi:lightbulb"></span>- theme switcher
+- <span class="iconify-inline" data-icon="mdi:translate"></span>- language switcher
+- User avatar - [link panel](#link-panel)
 
-## Панель ссылок
+## Link Panel
 
-Панель ссылок содержит ссылки для переходов между разделами платформы.
+The link panel contains links for navigating between sections of the platform.
 
-Структура:
+Structure:
 
-- Аватар - ссылка на [панель управления](./dashboard.md) пользователя
-- <span class="iconify-inline" data-icon="mdi:logout"></span> - кнопка выхода из платформы
-- <span class="iconify-inline" data-icon="mdi:wallet"></span> Баланс - ссылка на [баланс][2] пользователя
-- Документация API - cсылка на [API](/dev/README.md/#API) платформы
+- Avatar - link to the user's [dashboard](./dashboard.md)
+- <span class="iconify-inline" data-icon="mdi:logout"></span> - logout button
+- <span class="iconify-inline" data-icon="mdi:wallet"></span> Balance - link to the user's [balance][2]
+- API Documentation - link to the platform's [API](/dev/README.md/#API)
 
 ![Link panel](/images/common/link_panel.png)
 

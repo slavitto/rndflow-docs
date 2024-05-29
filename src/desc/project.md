@@ -1,270 +1,272 @@
-# Проект
+# Project
 
-## Общее
+## General
 
-**Проект** - это конкретная реализация интеллектуального приложения или алгоритма средствами платформы.
+**Project** - A specific implementation of an intelligent application or algorithm using the platform's tools.
 
-**Проект-сервис** - проект с разрешенным доступом через открытое API.
+**Project-service** - A project with authorized access through an open API.
 
-Состав проекта:
+Project composition:
 
-- [Граф](#граф) - последовательность узлов, реализующих конкретный алгоритм.
-  - [Узлы](./nodes.md) и [группы](./nodes.md#группа)
-  - [Пакеты](./package.md) - пакеты узлов в выбранном [слое данных][3]
-  - [Задания](./job.md) - задания узлов в выбраном [слое данных][3]
-- [Секреты](./secrets.md) - набор секретов для использования в узлах при их выполнении
-- [Интерфейсы](./interface.md) - графические интерфейсы управления графом
-- [Разрешения](#разрешения) - набор прав доступа
-- [API-ключи](./api_keys.md) - набор API для внешнего доступа к проекту
-- [Слои данных][3] - список наборов данных
-- [S3 сервер](./s3.md) - подключенное к проекту S3 хранилище
-- [Cервер расчетов](./executor.md) - подключенный к проекту основной сервер расчетов
-- [История проекта][4] - синхронизация проекта с [Git][5] репозиторием.
+- [Graph](#graph) - A sequence of nodes that implement a specific algorithm.
+    - [Nodes](./nodes.md) and [groups](./nodes.md#group)
+    - [Packages](./package.md) - Node packages in the selected [data layer][3]
+    - [Jobs](./job.md) - Node jobs in the selected [data layer][3]
+- [Secrets](./secrets.md) - A set of secrets for use in nodes when they are executed
+- [Interfaces](./interface.md) - Graphical interfaces for managing the graph
+- [Permissions](#permissions) - A set of access rights
+- [API keys](./api_keys.md) - A set of APIs for external access to the project
+- [Data layers][3] - A list of data sets
+- [S3 server](./s3.md) - An S3 storage connected to the project
+- [Executor server](./executor.md) - The main executor server connected to the project
+- [Project history][4] - Synchronization of the project with a [Git][5] repository.
 
-## Панель управления проектом
+## Project management panel
 
-Основные свойства проекта доступны через панель управления.
+The main project properties are available through the management panel.
 
 <img src="/images/common/project_manage_panel.png" align="right" alt="Project manage panel" style="margin: 5%;">
 
-Панель включает в себя:
+The panel includes:
 
-- Изображение проекта с кнопками
-  - <span class="iconify-inline" data-icon="mdi:star"></span> - добавления в избранные проекты
-  - <span class="iconify-inline" data-icon="mdi:pencil"></span> - редактирования информации о проекте
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> - удаления проекта
+- Project image with buttons
+    - <span class="iconify-inline" data-icon="mdi:star"></span> - Add to favorite projects
+    - <span class="iconify-inline" data-icon="mdi:pencil"></span> - Edit project information
+    - <span class="iconify-inline" data-icon="mdi:delete"></span> - Delete project
 
-- Название проекта
-- <span class="iconify-inline" data-icon="mdi:notebook"></span> Название родительского [рабочего пространства](#workspace.md)
-- <span class="iconify-inline" data-icon="mdi:folder-network"></span> Имя используемого [S3 сервера](./s3.md)
+- Project name
+- <span class="iconify-inline" data-icon="mdi:notebook"></span> Name of the parent [workspace](#workspace.md)
+- <span class="iconify-inline" data-icon="mdi:folder-network"></span> Name of the used [S3 server](./s3.md)
 
-  Дополнительно указывается общее количество файлов проекта и их объем.
-
----
-
-- <span class="iconify-inline" data-icon="mdi:information"></span> [О проекте](#описание-проекта) - доступ к окну описания проекта и списку доступных интерфейсов, платных ролей и API ключей
-
-- <span class="iconify-inline" data-icon="mdi:wallet"></span> [Баланс](#баланс) - доступ к окну баланса проекта
-
-- Опциональный список ссылок на [интерфейсы](./interface.md) проекта
-- <span class="iconify-inline" data-icon="mdi:sitemap"></span> [Граф](#граф) - дизайнер графа
-- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> [Интерфейсы](./interface.md) - дизайнер интерфейсов
-- <span class="iconify-inline" data-icon="mdi:eye-off"></span> [Секреты](./secrets.md) - управление секретами
-- <span class="iconify-inline" data-icon="mdi:shield-account"></span> [Разрешения](#разрешения) - управление разрешениями
-- <span class="iconify-inline" data-icon="mdi:shield-key"></span> [API-ключи](./api_keys.md) - управление API ключами
+  Additionally, the total number of project files and their volume are indicated.
 
 ---
 
-- <span class="iconify-inline" data-icon="mdi:power"></span> Проект включен/выключен - переключатель разрешения или запрета на передачу заданий на выполнение.
-- <span class="iconify-inline" data-icon="mdi:server"></span> [Cервер расчетов](./executor.md) - выбранный основной сервер расчетов для проекта, его описание и статус.
+- <span class="iconify-inline" data-icon="mdi:information"></span> [About the project](#project-description) - Access to the project description window and a list of available interfaces, paid roles, and API keys
+
+- <span class="iconify-inline" data-icon="mdi:wallet"></span> [Balance](#balance) - Access to the project balance window
+
+- Optional list of links to project [interfaces](./interface.md)
+- <span class="iconify-inline" data-icon="mdi:sitemap"></span> [Graph](#graph) - graph designer
+- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> [Interfaces](./interface.md) - interface designer
+- <span class="iconify-inline" data-icon="mdi:eye-off"></span> [Secrets](./secrets.md) - Manage secrets
+- <span class="iconify-inline" data-icon="mdi:shield-account"></span> [Permissions](#permissions) - Manage permissions
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> [API keys](./api_keys.md) - Manage API keys
 
 ---
 
-- <span class="iconify-inline" data-icon="mdi:layers"></span> [Слой данных][3] - список доступных слоев данных и команд управления ими.
-- <span class="iconify-inline" data-icon="mdi:power"></span> Слой данных включен/выключен - переключатель разрешения или запрета на передачу заданий слоя данных на выполнение.
-- <span class="iconify-inline" data-icon="mdi:account-eye"></span> Общий слой/Персональный слой - переключатель типа доступа к [слою данных][3].
+- <span class="iconify-inline" data-icon="mdi:power"></span> Project on/off - A switch to enable or disable the transfer of tasks for execution.
+- <span class="iconify-inline" data-icon="mdi:server"></span> [Executor server](./executor.md) - The selected main executor server for the project, its description, and status.
 
 ---
 
-- <span class="iconify-inline" data-icon="mdi:git"></span> [История проекта][4] - синхронизация проекта с [Git][5] репозиторием.
-- <span class="iconify-inline" data-icon="mdi:file-export"></span> Экспорт проекта - экспорт проекта в виде архива
-- <span class="iconify-inline" data-icon="mdi:file-import"></span> Импорт проекта - импорт проекта из внешнего архива
+- <span class="iconify-inline" data-icon="mdi:layers"></span> [Data layer][3] - A list of available data layers and commands for managing them.
+- <span class="iconify-inline" data-icon="mdi:power"></span> Data layer on/off - A switch to enable or disable the transfer of tasks of the data layer for execution.
+- <span class="iconify-inline" data-icon="mdi:account-eye"></span> Shared layer/Personal layer - [data layer] access type switch[3].
+
+---
+
+- <span class="iconify-inline" data-icon="mdi:git"></span> [Project history][4] - synchronization of the project with a [Git][5] repository.
+- <span class="iconify-inline" data-icon="mdi:file-export"></span> Project export - export project as an archive
+- <span class="iconify-inline" data-icon="mdi:file-import"></span> Project import - import project from an external archive
 
 <br clear="right"/>
 
-## Описание проекта
+## Project description
 
-Описание публичного проекта доступно пользователям.
+The description of a public project is available to users.
 
-Структура:
+Structure:
 
-- Название
-- Описание
-- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> Список интерфейсов
-- <span class="iconify-inline" data-icon="mdi:ticket-account"></span> Список платных ролей
+- Name
+- Description
+- <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span> List of interfaces
+- <span class="iconify-inline" data-icon="mdi:ticket-account"></span> List of paid roles
 
-  > Пользователь может [запросить][1] доступ к проекту с указанной ролью.
+  > User can [request][1] access to the project with the specified role.
 
-- <span class="iconify-inline" data-icon="mdi:shield-key"></span> Список [API-ключей](./api_keys.md)
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> List of [API keys](./api_keys.md)
 
-  > Пользователь может [запросить][2] доступ к проекту с использованием API ключа.
+  > User can [request][2] access to the project using an API key.
 
-## Баланс
+## Balance
 
-Окно баланса проекта отображает список сырых или сгруппированных по типу ввода/вывода средств [транзакций][8].
+The project balance window displays a list of raw or grouped by type of input/output of funds [transactions][8].
 
 ![Project balance](/images/common/project_balance_raw.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
+- Toolbar
 
-  - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Период
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления
+  - <span class='iconify-inline' data-icon='mdi:calendar-range'></span> Period
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Refresh button
 
-- Панель вкладок группировок транзакций
+- Transaction grouping tabs panel
 
-  - ГРУППИРОВКА ПО ДАТЕ - суммарная информация по датам
-  - ПО ПОЛЬЗОВАТЕЛЮ - суммарная информация по пользователям
-  - ПО ПРОЕКТУ - суммарная информация по текущему проекту
-  - ПО КОНТРАГЕНТУ - суммарная информация по контрагентам
-  - СЫРЫЕ ТРАНЗАКЦИИ - все транзакции без группировки
+  - GROUP BY DATE - summary information by dates
+  - BY USER - summary information by users
+  - BY PROJECT - summary information by the current project
+  - BY COUNTERPARTY - summary information by counterparties
+  - RAW TRANSACTIONS - all transactions without grouping
 
-- Таблица транзакций для вкладки **СЫРЫЕ ТРАНЗАКЦИИ**
-  - Создано - дата осуществления транзакции
-  - Назначение - тип транзакции
-  - Контрагент - контрагент транзакции
-  - Сумма - сумма транзакции
-- Панель навигации
+- Transaction table for the **RAW TRANSACTIONS** tab
+  - Created - date of the transaction
+  - Purpose - type of transaction
+  - Counterparty - counterparty of the transaction
+  - Amount - amount of the transaction
+- Navigation panel
 
 ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-  Проект не имеет отдельно [счета][9]. Информация о транзациях получается с использованием информации о движении средств со счета рабочего пространства.
+  The project does not have a separate [account][9]. Transaction information is obtained using information about the movement of funds from the workspace account.
 :::
 
-## Слой данных
+## Data layer
 
-**Слой данных** (Data layer) - это отдельное состояние графа проекта со своим независимым набором пакетов и параметрами узлов. Слои данных предназначены для изоляции отдельных наборов данных и параметров их обработки внутри одного проекта.
+**Data layer** (Data layer) is a separate state of the project graph with its own independent set of packages and node parameters. Data layers are designed to isolate individual datasets and their processing parameters within a single project.
 
-Типы слоев данных:
+Data layer types:
 
-- Общие - доступы всем пользователям проекта.
-- Персональные - доступ имеет только создавший пользователь.
+- Shared - accessible to all project users.
+- Personal - accessible only to the user who created it.
 
 ![Data layer](/images/common/datalayer.png)
 
-Структура
+Structure
 
-- Название текущего слоя
-- <span class='iconify-inline' data-icon='mdi:menu-down'></span> Список доступных слоев
-- <span class='iconify-inline' data-icon='mdi:pencil'></span> Кнопка редактирования
-- <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления
+- Name of the current layer
+- <span class='iconify-inline' data-icon='mdi:menu-down'></span> List of available layers
+- <span class='iconify-inline' data-icon='mdi:pencil'></span> Edit button
+- <span class='iconify-inline' data-icon='mdi:delete'></span> Delete button
 
-Автоматически создаваемые слои данных:
+Automatically created data layers:
 
-- Первоначальные слой данных проекта
-- Слой данных для нового пользователя с [платной ролью][6].
-- Слой данных для нового пользователя с [API ключа][7].
+- Initial data layer of the project
+- Data layer for a new user with a [paid role][6].
+- Data layer for a new user with an [API key][7].
 
-## Разрешения
+## Permissions
 
-Панель позволяет управлять доступом к проекту с помощью:
+The panel allows you to manage project access using:
 
-- [Ролей проекта](#роли-проекта)
-- [Пользователей проекта](#пользователи-проекта)
+- [Project roles](#project-roles)
+- [Project users](#project-users)
 
-### Роли проекта
+### Project roles
 
-Вкладка **РОЛИ** - yправление [ролями проекта](/desc/project_role.md)
+The **ROLES** tab - management of [project roles](/desc/project_role.md)
 
 ![Project roles](/images/common/permissions_roles.png)
 
-### Пользователи проекта
+### Project users
 
-Вкладка **ПОЛЬЗОВАТЕЛИ** - управление [пользователями](/desc/project_user.md)
+The **USERS** tab - management of [users](/desc/project_user.md)
 
 ![Project users](/images/common/permissions_users.png)
 
-## Граф
 
-### Описание
+## Graph
 
-**Граф** (Graph) - интегрированная последовательность узлов и направленных связей между ними, в которой узлы соответствуют отдельным этапам или операциям реализуемого алгоритма, а направленные связи определяют направление передачи данных между ними (результаты выполнения одних узлов передаются в качестве входных данных другим узлам).
+### Description
 
-Для управления графом предназначен дизайнер графа, который позволяет:
+**Graph** (Graph) is an integrated sequence of nodes and directed connections between them, where nodes correspond to individual stages or operations of the implemented algorithm, and directed connections determine the direction of data transfer between them (the results of the execution of some nodes are transferred as input data to other nodes).
 
-- Cоздавать и редактировать структуры графа.
-- Создавать и редактировать программный код узлов.
-- Управлять выполнением графа.
-- Загружать и выгружать данные из графа.
+The graph is managed by a graph designer, which allows you to:
 
-Общий вид дизайнера графа:
+- Create and edit graph structures.
+- Create and edit node code.
+- Manage graph execution.
+- Load and unload data from the graph.
+
+General view of the graph designer:
 
 ![Project general view](./images/project/general.png)
 
 ::: danger <span class='iconify' data-icon='gg:danger' style='color: #cc0000; font-size: 24px;'></span>
-Граф является единым для всего проекта и всех его пользователей!
+The graph is common to the entire project and all its users!
 :::
 
-### Панель действий
+### Action panel
 
 ![Project action panel](/images/common/project_action_panel.png)
 
-Включает в себя:
+Includes:
 
-- <span class="iconify-inline" data-icon="mdi:magnify"></span> Поиск узла по имени
-- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Опциональная кнопка отмены выбора текущего [мастер пакета](/desc/nodes.md#пакеты)
-- <span class="iconify-inline" data-icon="mdi:content-copy"></span> Копирование узлов
-- <span class="iconify-inline" data-icon="mdi:image-filter-center-focus"></span> Опциональная кнопка приближения к выбранному узлу/узлам
-  > Аналогично двойному щелчку на выбранном узле.
-- <span class="iconify-inline" data-icon="mdi:content-paste"></span> Опциональная кнопка вставки узла
-  > При вставке узла из другого проекта необходимо сначала обновить целевой проект по кнопке **F5**.
+- <span class="iconify-inline" data-icon="mdi:magnify"></span> Search for a node by name
+- <span class="iconify-inline" data-icon="mdi:pin-off" style="color: red"></span> Optional button to deselect the current [master package](/desc/nodes.md#packages)
+- <span class="iconify-inline" data-icon="mdi:content-copy"></span> Copy nodes
+- <span class="iconify-inline" data-icon="mdi:image-filter-center-focus"></span> Optional button to zoom in on the selected node/nodes
+  > Similar to double-clicking on the selected node.
+- <span class="iconify-inline" data-icon="mdi:content-paste"></span> Optional node paste button
+  > When pasting a node from another project, you must first update the target project by pressing the **F5** key.
 
-### Панель создания узлов
+### Node creation panel
 
-Для добавления узлов используется панель создания узлов.
+The node creation panel is used to add nodes.
 
 <img src="/images/common/project_create_nodes_panel.png" align="right" alt="Node create panel" style="margin: 5%;">
 
-Панель позволяет добавить:
+The panel allows you to add:
 
-- <span class="iconify-inline" data-icon="mdi:kubernetes"></span> - расчетный узел
-- <span class="iconify-inline" data-icon="mdi:download-circle"></span> - узел данных
-- <span class="iconify-inline" data-icon="mdi:database"></span> - SQL узел
-- <span class="iconify-inline" data-icon="mdi:group"></span> - группу узлов
-- <span class="iconify-inline" data-icon="mdi:view-gallery-outline"></span> - узел из других проектов с помощью [диалога коллекции узлов](#диалог-коллекции-узлов)
+- <span class="iconify-inline" data-icon="mdi:kubernetes"></span> - calculation node
+- <span class="iconify-inline" data-icon="mdi:download-circle"></span> - data node
+- <span class="iconify-inline" data-icon="mdi:database"></span> - SQL node
+- <span class="iconify-inline" data-icon="mdi:group"></span> - group of nodes
+- <span class="iconify-inline" data-icon="mdi:view-gallery-outline"></span> - node from other projects using the [node collection dialog](#node-collection-dialog)
 
 <br clear="right"/>
 
-### Панель управления внешним видом
+### Appearance control panel
 
 <img src="./images/project/view_panel.png" align="right" alt="Project view panel" style="margin: 5%;">
 
-Панель управления внешним видом позволяет:
+The appearance control panel allows you to:
 
-- <span class="iconify-inline" data-icon="mdi:magnify-plus"></span> <span class="iconify-inline" data-icon="mdi:magnify-minus"></span> Масштабировать граф
-- <span class="iconify-inline" data-icon="mdi:magnify-scan"></span> Отобразить граф в оптимальном масштабе (Оптимальный масштаб)
-- <span class="iconify-inline" data-icon="mdi:auto-fix"></span> Разместить узлы графа автоматичеки (Расположить узлы автоматически)
+- <span class="iconify-inline" data-icon="mdi:magnify-plus"></span> <span class="iconify-inline" data-icon="mdi:magnify-minus"></span> Zoom in or out on the graph
+- <span class="iconify-inline" data-icon="mdi:magnify-scan"></span> Display the graph at the optimal scale (Optimal scale)
+- <span class="iconify-inline" data-icon="mdi:auto-fix"></span> Automatically arrange the nodes of the graph (Arrange nodes automatically)
 
 <br clear="right"/>
 
-### Диалог коллекции узлов
+### Node collection dialog
 
-Диалог коллекции узлов позволяет:
+The node collection dialog allows you to:
 
-- Вставить в текущий проект некоторый узел из внешнего проекта.
-- Вставить в внешний проект некоторый узел, скопированный из текущего проекта.
+- Insert a node from an external project into the current project.
+- Insert a node copied from the current project into an external project.
 
-<b>Окно выбора проекта</b>
+<b>Project selection window</b>
 
 <img src="/images/common/nodes_collections_projects.png">
 
-Состав:
+Composition:
 
-- <span class="iconify-inline" data-icon="mdi:star" color="yellow"/> - переключатель поиска по избранным проектам
-  > Если отключен то поиск идет по всем проектам, доступным пользователю.
-- <span class="iconify-inline" data-icon="mdi:magnify"/> - поле ввода имени проекта
-  >  Ищется любое вхождение строки из поля ввода в имени проекта.
-- Список проектов
-- Кнопка закрытия диалога
+- <span class="iconify-inline" data-icon="mdi:star" color="yellow"/> - toggle search by favorite projects
+  > If disabled, the search is performed across all projects available to the user.
+- <span class="iconify-inline" data-icon="mdi:magnify"/> - project name input field
+  > Searches for any occurrence of the string from the input field in the project name.
+- Project list
+- Dialog close button
 
-По щелчку мышкой по одному из проектов открывается окно выбора узлов.
+Clicking on one of the projects opens the node selection window.
 
-<b>Окно выбора узла</b>
+<b>Node selection window</b>
 
 <img src="/images/common/nodes_collections_nodes.png">
 
-Состав:
+Composition:
 
-- <span class="iconify-inline" data-icon="mdi:magnify"/>  - поле ввода имени узла
-  >  Ищется любое вхождение строки из поля ввода в имени узла.
-- <span class="iconify-inline" data-icon="mdi:package-variant-minus"/> - кнопка разрешения копирования вместе с узлом и входящих в него пакетов.
-- <span class="iconify-inline" data-icon="mdi:arrow-left-circle"/> - кнопка возврата в окно выбора проектов или узлов (если находимся в группе узлов)
-- <span class="iconify-inline" data-icon="mdi:content-paste"/> - опциональная кнопка вставки в выбранный проект узлов, скопированных из текущего проекта.
-- Список узлов
-- Кнопка закрытия диалога
 
-По щелчку мышкой по одному из узлов открывается окно подтверждения вставки узла в текущий проект.
-При щелчке по группе узлов осуществляется открытие списка узлов данной группы.
+- <span class="iconify-inline" data-icon="mdi:magnify"></span> - Search field for the node name
+  > Searches for any occurrence of the string from the input field in the node name.
+- <span class="iconify-inline" data-icon="mdi:package-variant-minus"></span> - Button to allow copying the node along with its included packages.
+- <span class="iconify-inline" data-icon="mdi:arrow-left-circle"></span> - Button to return to the project or node selection window (if currently in a group of nodes)
+- <span class="iconify-inline" data-icon="mdi:content-paste"></span> - Optional button to insert nodes copied from the current project into the selected project.
+- List of nodes
+- Dialog close button
+
+Clicking on a node opens a confirmation window for inserting the node into the current project.
+Clicking on a group of nodes opens the list of nodes in that group.
 
 
 [1]: /instructions/role.md#запрос-платнои-роли

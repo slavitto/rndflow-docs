@@ -1,17 +1,17 @@
-# Пользователи проекта
+# Project Users
 
-**Пользователь** - уникальный персональный участник платформы.
+**User** - A unique personal participant of the platform.
 
 ![Project users](/images/common/permissions_users.png)
 
-Пользователи получают доступ к проекту взависимости от присвоенных им [ролей проекта](/desc/project_role.md).
+Users gain access to the project depending on the [project roles](/desc/project_role.md) assigned to them.
 
-## Плитка пользователя
+## User Tile
 
 ![Users panel](/images/common/permissions_user_panel.png)
 
-1. Аватар и имя пользователя
-2. Время последнего посещения проекта
-3. Список ролей
-4. <span class="iconify-inline" data-icon="mdi:close-circle"></span> Кнопка удаления всех ролей
-5. <span class="iconify-inline" data-icon="mdi:menu-down"></span> Меню добавления роли
+1. User avatar and name
+2. Time of last visit to the project
+3. List of roles
+4. <span class="iconify-inline" data-icon="mdi:close-circle"></span> Button to remove all roles
+5. <span class="iconify-inline" data-icon="mdi:menu-down"></span> Menu for adding a role

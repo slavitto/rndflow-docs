@@ -1,27 +1,21 @@
-# Введение
+# Introduction
 
-## Проблема
+## The Problem
 
-Мировая экономика предъявляет очень серьезные требования к эффективности бизнеса. Развиваясь в современной, иногда сверхконкурентной среде, бизнес должен очень быстро и своевременно отвечать на все диктуемые ему внешние вызовы. И одним из условий успеха является возможность быстрого внедрения инноваций в производственный процесс или вывод на рынок новых продуктов, которые бы смогли усилить позиции компании среди конкурентов.
+The global economy places very serious demands on business efficiency. Developing in today's highly competitive environment, businesses must respond quickly and promptly to all external challenges. One of the conditions for success is the ability to rapidly implement innovations in the production process or bring new products to the market that could strengthen the company's position among competitors. 
 
-В настоящий момент всем известно, что данные - это **новая нефть**! И умение их быстро и, самое главное, вовремя обработать - это важное преимущество для развития бизнеса.
+It is now well known that data is the **new oil**! And the ability to process it quickly and, most importantly, on time is an important advantage for business development. Currently, there is a large amount of various software for data analysis and processing (Data Science), but to implement a sustainable business based on it requires either special competencies or an unlimited budget, and often both. For this reason, only large corporations or specialized IT companies that independently build the necessary hardware and software infrastructure to solve their Data Science tasks can effectively use Data Science in their business.
 
-Сейчас существует большое количество различного программного обеспечения для анализа и обработки данных (Data Science), но для реализации на его основе устойчивого бизнеса требуются или особые компетенции, или неограниченный бюджет, а зачастую - и то, и другое.
+In recent years, solutions have emerged from companies [Google](https://colab.research.google.com/) and [Yandex](https://cloud.yandex.com/en/services/datasphere), but these solutions are still aimed at IT professionals.
 
-По этой причине сейчас эффективно использовать Data Science в своем бизнесе могут или крупные корпорации, или специализированные ИТ-компании, которые самостоятельно выстраивают необходимую аппаратную и программную инфраструктуру для решения своих Data Science задач. В последние годы появились решения от компаний [Google](https://colab.research.google.com/) и [Yandex](https://cloud.yandex.com/en/services/datasphere), но эти решения все еще предназначены для ИТ-специалистов.
+<img src="./images/q.jpeg" align="left" alt="Problems" height="200" style="margin: 1%;"> 
 
-<img src="./images/q.jpeg" align="left" alt="Problems" height="200" style="margin: 1%;">
+However, a significant and most passionate part of the business sphere is small and medium-sized businesses, and they are always narrowly specialized, constantly have financial constraints, and do not always clearly understand how to start profiting from their data. Owners of small and medium-sized businesses need an understandable internet service where they can order a solution for their data analysis task. The service should not only provide them with a list of contractors but also offer mechanisms for clear presentation of work results and protection against falsification, as well as the ability to reuse the created algorithms.
 
-Но значительная и самая пассионарная часть бизнес сферы - это малый и средний бизнес, а он всегда узко специализирован, постоянно имеет финансовые ограничения и не всегда четко осознает, как начать получать “прибыль” от своих данных. Владельцам малого и среднего бизнеса нужен понятный интернет-сервис, в котором они могли бы заказать решение своей задачи по анализу данных. Сервис должен не только предоставлять им список исполнителей, но и предлагать механизмы наглядной презентации результатов работ и защите от их фальсификации, а также предоставлять возможность повторного использования созданных алгоритмов.
+In the same vein, Data Science specialists, contrary to expectations, are not in much better shape. Currently, data analysis is the hottest topic and most in-demand IT specialty. There are many professional training courses that promise solid salaries and excellent career prospects upon completion. However, the prospects are mainly limited to working in large or specialized IT companies. But this does not suit everyone: some want complete independence and their own small business, some plan to do data analysis in their free time, and for others, it's just a hobby. Such specialists cannot go directly to large customers, and it is difficult for them to interest small customers and prove their competence. Thus, there are Customers who cannot find Contractors, and there are Contractors who cannot find Customers.
 
-В то же время специалисты по Data Sciencе, вопреки ожиданиям, находятся не намного в лучшем положении. Сейчас анализ данных - это самая “горячая” тема и востребованная ИТ-специальность. Существует много профессиональных курсов по обучению, по окончанию которых обещаются солидные зарплаты и прекрасные перспективы карьерного роста.
+## The Solution 
 
-Однако перспективы в основном ограничиваются работой в крупных или специализированных ИТ-компаниях. Но это подходит не всем: кто-то хочет полной независимости и собственного небольшого бизнеса, кто-то планирует заниматься анализом данных в свободное время, а для кого-то это просто хобби. Выйти напрямую на крупных заказчиков такие специалисты не могут, а небольших заказчиков им сложно заинтересовать и доказать собственную компетентность.
+The **R&D Flow** platform has been created to help Customers and Contractors find each other in the Data Science services market.
 
-Таким образом, есть Заказчики, которые не могут найти Исполнителей, и есть Исполнители, которые не могут найти Заказчиков.
-
-## Решение
-
-Платформа **R&D Flow** создана для того чтобы помочь Заказчикам и Исполнителям найти друг друга на рынке Data Science услуг.
-
-Ее цель – организовать взаимодействие между Заказчиками Data Science проектов и Исполнителями.
+Its goal is to organize the interaction between Customers of Data Science projects and Contractors.

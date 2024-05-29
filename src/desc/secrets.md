@@ -1,45 +1,45 @@
-# Секреты проекта
+# Project Secrets
 
-## Общее
+## General
 
-Секреты используется для хранения чувствительной информации, необходимой для функционирования проекта (например, логин и пароль к внешнему сервису, или токен [API ключа][1]). Значения секретов видны только пользователям с [разрешением][2] **project_manage**. Секреты используются в зависимости от их [типов](#типы-секретов).
+Secrets are used to store sensitive information that is required for the project to function (for example, a login and password to an external service, or an [API key][1] token). Secret values are visible only to users with the [permission][2] **project_manage**. Secrets are used depending on their [types](#secret-types).
 
 ![Secrets](/images/common/secrets.png)
 
-Структура панели:
+Panel structure:
 
-- Панель управления
-  - <span class="iconify-inline" data-icon="mdi:plus"/> кнопка добавления нового секрета
-  - <span class="iconify-inline" data-icon="mdi:key-plus"/> меню добавления [API ключа][1]
-  - <span class="iconify-inline" data-icon="mdi:eye"/> показать значения секретов
-- Список [панелей плиток](#плитка-секрета) секретов
+- Management panel
+  - <span class="iconify-inline" data-icon="mdi:plus"/> button to add a new secret
+  - <span class="iconify-inline" data-icon="mdi:key-plus"/> menu to add an [API key][1]
+  - <span class="iconify-inline" data-icon="mdi:eye"/> show secret values
+- List of secret [panels](#secret-panel)
 
-Также секреты отображаются на вкладке **ОПИСАНИЕ** узлов, которым доступен указанный секрет.
+Secrets are also displayed on the **DESCRIPTION** tab of nodes that have access to the specified secret.
 
 ![Node secrets](/images/common/secrets_node_definition.png)
 
-## Типы секретов
+## Secret types
 
-- <span class="iconify-inline" data-icon="mdi:variable"/> Переменная - значение секрета доступно в исполняемом [задании][3] через переменную окружения.
-- <span class="iconify-inline" data-icon="mdi:cloud-lock"/> Загрузка образов - учетные данные для загрузки Докер образов из приватных Докер реестров.
-  > В качестве учетных данных используются:
-  > - Доменное имя Докер реестра (например, rep.rndflow.com)
-  > - Имя пользователя
-  > - Пароль
+- <span class="iconify-inline" data-icon="mdi:variable"/> Variable - The secret value is available in the executable [job][3] through an environment variable.
+- <span class="iconify-inline" data-icon="mdi:cloud-lock"/> Image loading - credentials for loading Docker images from private Docker registries.
+  > The following credentials are used:
+  > - Docker registry domain name (e.g., rep.rndflow.com)
+  > - Username
+  > - Password
 
-## Плитка секрета
+## Secret panel
 
 ![Secret panel](/images/common/secrets_panel.png)
 
-1. Редактируемое имя
-2. Редактируемое описание
-3. Редактируемое значение
-4. [Тип](#типы-секретов) секрета
-5. Список узлов, которым доступен секрет
-6. <span class="iconify-inline" data-icon="mdi:magnify"/> Меню добавления узлов
-7. <span class="iconify-inline" data-icon="mdi:delete"/> Удалить
-8. <span class="iconify-inline" data-icon="mdi:eye"/> Показать значение
+1. Editable name
+2. Editable description
+3. Editable value
+4. Secret [type](#secret-types)
+5. List of nodes that have access to the secret
+6. <span class="iconify-inline" data-icon="mdi:magnify"/> Menu to add nodes
+7. <span class="iconify-inline" data-icon="mdi:delete"/> Delete
+8. <span class="iconify-inline" data-icon="mdi:eye"/> Show value
 
 [1]: /desc/api_keys.md
-[2]: /desc/project_role.md#типы-разрешении
+[2]: /desc/project_role.md#permission-types
 [3]: /desc/job.md

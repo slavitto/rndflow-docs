@@ -1,83 +1,83 @@
-# Связи узлов
+# Node Links
 
-**Связь** (Link) - соединение, обеспечивающее перемещение [пакетов][1] от [узла][5] источника к [узлу][5] назначения.
+**Link** - a connection that facilitates the movement of [packages][1] from the source [node][5] to the destination [node][5].
 
-Управление:
+Management:
 
-- Редактировать [свойства](#своиства)
+- Edit [properties](#properties)
 
-  Щелкнуть по связи и нажать на иконку <span class='iconify-inline' data-icon='mdi:edit'></span> для открытия свойств связи.
+  Click on the link and press the icon <span class='iconify-inline' data-icon='mdi:edit'></span> to open the link properties.
 
-  - Фильтрация передаваемых пакетов
-  - Переименование переменных пакетов
+  - Filtering of transmitted packages
+  - Renaming package variables
 
-- Удаление
+- Deletion
 
-  Щелкнуть по связи и нажать на иконку <span class='iconify-inline' data-icon='mdi:delete'></span>.
+  Click on the link and press the icon <span class='iconify-inline' data-icon='mdi:delete'></span>.
 
-## Типы связей
+## Types of Links
 
-- Активная (Push) - пакеты между соединяемыми узлами немедленно продвигаются от узла источника к узлу назначения.
+- Active (Push) - packages are immediately pushed from the source node to the destination node.
 
   ![Push link](/images/common/link_push.png)
 
-- Пассивная (Pull)- последний пакет из узла источника запрашивается при каждом новом запуске [задания][3] в узле назначения.
+- Passive (Pull) - the latest package from the source node is requested each time a new [job][3] is launched in the destination node.
 
   ![Pull link](/images/common/link_pull.png)
 
-- Вход группы (Group input) - связь соединящая вход [группы][2] с узлом.
+- Group input - a link connecting the [group][2] input to a node.
 
   ![Group input link](/images/common/link_group_input.png)
 
-- Выход группы (Group output) - связь соединящая выход [группы][2] с узлом.
+- Group output - a link connecting the [group][2] output to a node.
 
   ![Group output link](/images/common/link_group_output.png)
 
-Если связь производит переименование переменных, то связь приобретает вид для активного и пассивного типа соответственно:
+If the link renames variables, it appears as follows for active and passive types respectively:
 
 ![Link var renamed](/images/common/link_var_renamed.png)
 ![Link var renamed](/images/common/link_var_renamed_pass.png)
 
-## Свойства
+## Properties
 
-Структура:
+Structure:
 
-- Управляющие кнопки
+- Control buttons
 
-  - <span class='iconify-inline' data-icon='mdi:dock-bottom'></span> - изменить расположение панели (в нижней или правой части экрана)
-  - <span class='iconify-inline' data-icon='mdi:fullscreen'></span> - открыть панель на полный экран;
-  - <span class='iconify-inline' data-icon='mdi:close'></span> - закрыть панель.
+  - <span class='iconify-inline' data-icon='mdi:dock-bottom'></span> - change the panel position (bottom or right side of the screen)
+  - <span class='iconify-inline' data-icon='mdi:fullscreen'></span> - open the panel in full screen;
+  - <span class='iconify-inline' data-icon='mdi:close'></span> - close the panel.
 
-- Вкладка <span class='iconify-inline' data-icon='mdi:transit-connection-horizontal'></span>**СВЯЗЬ**
+- Tab <span class='iconify-inline' data-icon='mdi:transit-connection-horizontal'></span>**LINK**
 
   ![Link edit](/images/common/link_edit.png)
 
-  - Тип связи - изменение типа связи.
-  - <span class='iconify-inline' data-icon='mdi:magnify'></span> Фильтр пакетов - определения пакетов, которые будут передаваться по ней.
+  - Link type - change the type of link.
+  - <span class='iconify-inline' data-icon='mdi:magnify'></span> Package filter - define which packages will be transmitted through the link.
 
-  По этой связи будут продвигаться только пакеты с подходящими метками. Фильтр - это регулярное выражение с использованием [диалекта PostgreSQL](https://www.postgresql.org/current/functions-matching.html#FUNCTIONS-POSIX-REGEXP).
+  Only packages with appropriate labels will be transmitted through this link. The filter is a regular expression using [PostgreSQL dialect](https://www.postgresql.org/current/functions-matching.html#FUNCTIONS-POSIX-REGEXP).
 
-  - Кнопка **СОХРАНИТЬ** - сохранить изменения.
+  - **SAVE** button - save the changes.
 
-- Вкладка <span class='iconify-inline' data-icon='mdi:inbox-arrow-down'></span>**ПЕРЕИМЕНОВАНИЕ**
+- Tab <span class='iconify-inline' data-icon='mdi:inbox-arrow-down'></span>**RENAMING**
 
-  Вкладка позволяет задать правила переименования переменных пакетов, проходящих по ней. Переименовывать разрешается [поля][4] и [файлы][4] [пакетов][1].
+  This tab allows you to set rules for renaming package variables that pass through the link. You can rename [fields][4] and [files][4] of [packages][1].
 
   ![Link rename package variables](/images/common/link_rename_vars.png)
 
-  - Таблица действующих правил
+  - Table of current rules
 
-    - Вход - название входной переменной;
-    - Выход - название выходной переменной;
-    - <span class='iconify-inline' data-icon='mdi:delete'></span> - кнопка удаления правила
+    - Input - name of the input variable;
+    - Output - name of the output variable;
+    - <span class='iconify-inline' data-icon='mdi:delete'></span> - delete rule button
 
-  - Добавить правило - поля ввода нового правила
-    - Вход - название входной переменной;
-    - Выход - название выходной переменной;
-    - <span class='iconify-inline' data-icon='mdi:plus' style="color: green"></span> - кнопка добавления нового правила.
+  - Add rule - input fields for a new rule
+    - Input - name of the input variable;
+    - Output - name of the output variable;
+    - <span class='iconify-inline' data-icon='mdi:plus' style="color: green"></span> - add new rule button.
 
 [1]: /desc/package.md
-[2]: /desc/nodes.md#группа
+[2]: /desc/nodes.md#group
 [3]: /desc/job.md
-[4]: /desc/package.md#состав
+[4]: /desc/package.md#composition
 [5]: /desc/nodes.md

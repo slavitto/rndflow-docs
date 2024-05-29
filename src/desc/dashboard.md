@@ -1,148 +1,149 @@
-# Панель управления
+# Control Panel
 
-## Описание
+## Description
 
-Основные компоненты платформы пользователю доступны с помощью панели управления.
+The main components of the platform are available to the user through the control panel.
 
 ![User dashboard](/images/common/dashboard.png)
 
-Структура:
+Structure:
 
-- <span class="iconify-inline" data-icon="mdi:account"></span> Пользователь - [панель пользователя](#панель-пользователя).
-- [Рабочие пространства][1]
+- <span class="iconify-inline" data-icon="mdi:account"></span> User - [user panel](#user-panel).
+- [Workspaces][1]
 
-  - <span class='iconify-inline' data-icon='mdi:plus'></span> - кнопка создания нового рабочего пространства
-  - Список плиток доступных [рабочих пространств][1].
+  - <span class='iconify-inline' data-icon='mdi:plus'></span> - button to create a new workspace
+  - List of tiles of available [workspaces][1].
 
-    > Переход в рабочее пространство осуществляется щелчком по соответсвующем плитке.
+    > Navigate to a workspace by clicking on the corresponding tile.
 
-- Приглашения в рабочие пространства
+- Workspace Invitations
 
-  - Список плиток приглашений в рабочие пространства (только при наличии приглашения).
+  - List of tiles for workspace invitations (only if there is an invitation).
 
-- Проекты
+- Projects
 
-  - <span class="iconify-inline" data-icon="mdi:star"></span> - кнопка отображения избранных проектов
-  - Список плиток доступных [проектов][2], отсортированных по времени последнего доступа.
+  - <span class="iconify-inline" data-icon="mdi:star"></span> - button to display favorite projects
+  - List of tiles of available [projects][2], sorted by the time of last access.
 
-    > Переход в проект осуществляется щелчком по соответсвующем плитке. Отображаются проекты, в список пользователей которых непосредственно включен текущий пользователь.
+    > Navigate to a project by clicking on the corresponding tile. Projects in which the current user is directly included are displayed.
 
-## Структура плитки рабочего пространства
+## Workspace Tile Structure
 
-- Изображение
-- <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления рабочего пространства
-- Название
-- Описание
-- Владелец/Участник - [тип прав][3] пользователя
+- Image
+- <span class="iconify-inline" data-icon="mdi:delete"></span> - button to delete the workspace
+- Name
+- Description
+- Owner/Member - [user role][3]
 
 ![Workspace](/images/common/dashboard_workspace_panel.png)
 
-## Структура плитки проекта
+## Project Tile Structure
 
-- Изображение
-- <span class="iconify-inline" data-icon="mdi:star"></span> - кнопка добавления проекта в избранные
-- <span class='iconify-inline' data-icon='ph:number-square-two-fill' style="color: green"></span> - общее количество <span class="iconify-inline" data-icon="mdi:star"></span> проекта
-- <span class="iconify-inline" data-icon="mdi:delete"></span> - кнопка удаления проекта
-- Название
-- Описание
-- <span class="iconify-inline" data-icon="mdi:sitemap"></span> - cсылка для перехода в редактор графа проекта (Граф)
-- <span class="iconify-inline" data-icon="mdi:shield-account"></span> - cсылка для перехода в редактор разрешений проекта (Разрешения)
-- <span class="iconify-inline" data-icon="mdi:shield-key"></span> - cсылка для перехода в редактор API ключей проекта (API ключи)
+- Image
+- <span class="iconify-inline" data-icon="mdi:star"></span> - button to add the project to favorites
+- <span class='iconify-inline' data-icon='ph:number-square-two-fill' style="color: green"></span> - total number of <span class="iconify-inline" data-icon="mdi:star"></span> for the project
+- <span class="iconify-inline" data-icon="mdi:delete"></span> - button to delete the project
+- Name
+- Description
+- <span class="iconify-inline" data-icon="mdi:sitemap"></span> - link to open the project graph editor (Graph)
+- <span class="iconify-inline" data-icon="mdi:shield-account"></span> - link to open the project permissions editor (Permissions)
+- <span class="iconify-inline" data-icon="mdi:shield-key"></span> - link to open the project API keys editor (API Keys)
 
 ![Project](/images/common/dashboard_project_panel.png)
 
-## Панель пользователя
+## User Panel
 
-### Структура
+### Structure
 
-Панель пользователя отображает:
+The user panel displays:
 
-- Аватар
-- Список привязанных внешних регистраций (при их наличии)
-- Полное имя
-- <span class="iconify-inline" data-icon="mdi:at"></span> - логин
-- <span class="iconify-inline" data-icon="mdi:email"></span> - электронная почта
-- <span class="iconify-inline" data-icon="mdi:link"></span> - веб сайт/страница пользователя
-- <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс [счета][1]
+- Avatar
+- List of linked external registrations (if any)
+- Full name
+- <span class="iconify-inline" data-icon="mdi:at"></span> - username
+- <span class="iconify-inline" data-icon="mdi:email"></span> - email
+- <span class="iconify-inline" data-icon="mdi:link"></span> - website/user page
+- <span class='iconify-inline' data-icon='mdi:wallet'></span> Balance - account [balance][1]
 
-  При нажатии происходит открытие окна [баланса](#баланс) пользователя.
+  Clicking opens the [user balance](#balance) window.
 
-- Описание пользователя
-- Время последнего подключения
-- Кнопка "РЕДАКТИРОВАТЬ"
-- Кнопка "СМЕНИТЬ ПАРОЛЬ"
+- User description
+- Last connection time
+- "EDIT" button
+- "CHANGE PASSWORD" button
 
-Нажатие кнопки **РЕДАКТИРОВАТЬ** переведет панель в режим [редактирования](#редактирование).
+Clicking the **EDIT** button will switch the panel to [edit mode](#editing).
 
-Нажатие кнопки **СМЕНИТЬ ПАРОЛЬ** откроет панель [смены пароля](#смена-пароля).
+Clicking the **CHANGE PASSWORD** button will open the [change password](#change-password) panel.
 
-### Редактирование
+### Editing
 
-Структура:
+Structure:
 
-- Аватар
-  - <span class="iconify-inline" data-icon="mdi:pencil"/> - кнопка загрузки изображения аватара
-  - <span class="iconify-inline" data-icon="mdi:account-cog"/> - кнопка генерации случайного аватара
-  - <span class="iconify-inline" data-icon="mdi:delete"/> - кнопка удаления изображения аватара
+- Avatar
+  - <span class="iconify-inline" data-icon="mdi:pencil"/> - button to upload an avatar image
+  - <span class="iconify-inline" data-icon="mdi:account-cog"/> - button to generate a random avatar
+  - <span class="iconify-inline" data-icon="mdi:delete"/> - button to delete the avatar image
 
-- Кнопки добавления внешнего источника авторизации
+- Buttons to add external authentication sources
   ![Oauthlist](/images/common/oauth_list.png)
 
-- Список привязанных внешних регистраций (при их наличии)
-  - Иконка внешнего источника
-  - Внешний электронный адрес
-  - <span class="iconify-inline" data-icon="mdi:close-circle"></span> кнопка удаления привязки
+- List of linked external registrations (if any)
+  - External source icon
+  - External email
+  - <span class="iconify-inline" data-icon="mdi:close-circle"></span> button to delete the link
 
-- Логин
-- Полное имя
-- Почта - электронная почта
-- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> Показывать почту в профиле - включает/выключает отображение почты в [галерее][6] в разделе **ПОЛЬЗОВАТЕЛИ**.
-- Веб сайт - веб сайт пользователя
-- Локаль - язык пользователя
-- Временная зона - временная зона пользователя
-- Темная тема - включение/выключение темной темы
-- Оповещения в Telegram - переключатель интеграции с телеграмм.
-- Редактор - редактор ввода описания пользователя
-- Кнопка "СОХРАНИТЬ"
-- Кнопка "ОТМЕНА"
+- Username
+- Full name
+- Email - email address
+- <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> Show email in profile - toggles the display of email in the [gallery][6] in the **USERS** section.
+- Website - user's website
+- Locale - user's language
+- Time zone - user's time zone
+- Dark theme - toggle dark theme
+- Telegram notifications - toggle Telegram integration.
+- Editor - user description input editor
+- "SAVE" button
+- "CANCEL" button
 
 ![User edit](/images/common/dashboard_user_edit.png)
 
-### Смена пароля
+### Change Password
 
-Необходимо ввести текущий и новый пароли.
+You need to enter the current and new passwords.
 
 ![User password edit](/images/common/dashboard_user_password.png)
 
-## Баланс
 
-Окно баланса хранилища отображает баланс [счета][4] и список [транзакций][5] по вводу и выводу средств на счет.
+## Balance
+
+The balance window displays the [account][4] balance and a list of [transactions][5] for depositing and withdrawing funds.
 
 ![User balance](/images/common/dashboard_user_balance.png)
 
-Структура:
+Structure:
 
-- Панель описания
+- Description Panel
 
-  - Аватар
-  - Имя
-  - Имя-ссылка - имя рабочего пространства из которого был осуществлен переход на страницу баланса
-  - <span class='iconify-inline' data-icon='mdi:wallet'></span> Баланс - баланс счета
+  - Avatar
+  - Name
+  - Name-link - name of the workspace from which the balance page was accessed
+  - <span class='iconify-inline' data-icon='mdi:wallet'></span> Balance - account balance
 
-- Панель транзакций
-  - Панель инструментов
-    - Период <span class='iconify-inline' data-icon='mdi:calendar-range'></span> - отображаемый период
-    - <span class='iconify-inline' data-icon='mdi:refresh'></span> - кнопка обновления списка
-  - Таблица транзакций
-    - Создано - дата осуществления транзакции
-    - Назначение - тип транзакции
-    - Контрагент - контрагент транзакции
-    - Сумма - сумма транзакции
-  - Панель навигации
+- Transactions Panel
+  - Toolbar
+    - Period <span class='iconify-inline' data-icon='mdi:calendar-range'></span> - displayed period
+    - <span class='iconify-inline' data-icon='mdi:refresh'></span> - button to refresh the list
+  - Transactions Table
+    - Created - transaction date
+    - Purpose - type of transaction
+    - Counterparty - transaction counterparty
+    - Amount - transaction amount
+  - Navigation Panel
 
-[1]: /desc/finance.md#cчета
-[2]: /desc/finance.md#транзакции
-[3]: /desc/workspace.md#участники
+[1]: /desc/finance.md#accounts
+[2]: /desc/finance.md#transactions
+[3]: /desc/workspace.md#members
 [4]: ./workspace.md
 [5]: ./project.md
 [6]: ./explorer.md

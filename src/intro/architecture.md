@@ -1,75 +1,75 @@
-# Архитектура платформы
+# Platform Architecture  
 
-## Компоненты
+## Components
 
-В основе платформы лежит клиент-серверная архитектура, которая может быть условно представлена в виде трех программных уровней: сервер-облако, клиентский и вычислительный.
+The platform is based on a client-server architecture, which can be conditionally represented as three software levels: server-cloud, client, and computing.
 
-На схеме представлена архитектура платформы с двумя внешними вычислительными кластерами.
+The diagram shows the platform architecture with two external computing clusters.
 
-![Архитектура](./images/components_ru.png)
+![Architecture](./images/components_en.png)
 
-**Клиентский уровень** - веб приложение, обеспечивающие взаимодействие пользователей с сервисами платформы. Веб приложение разработано с использованием языка программирования [JavaScript](https://www.javascript.com/) и фреймворков [Quasar 2](https://quasar.dev/) и [Vue.js 3](https://v3.vuejs.org/) и развернут на веб сервере [NginX](https://nginx.org/en/).
+**Client Level** - a web application providing user interaction with platform services. The web application is developed using the [JavaScript](https://www.javascript.com/) programming language and the [Quasar 2](https://quasar.dev/) and [Vue.js 3](https://v3.vuejs.org/) frameworks and is deployed on the [NginX](https://nginx.org/en/) web server.
 
-Включает в себя:
+It includes:
 
-- Веб клиент
+- Web client
 
-**Сервер-облако** - программно-аппаратная инфраструктура, которая включает в себя комплекс прикладного и системного программного обеспечения, реализующая основные сервисы платформы и предоставляющая к ним удаленный доступ в интернет-среде. Сервер-облако является основным самодостаточными элементом платформы и может функционировать как изолированно в рамках отдельных организационных структур (компаний), так и совместно реализуя сложные распределенные последовательности обработки данных.
+**Server-Cloud** - a software and hardware infrastructure that includes a set of application and system software implementing the platform's main services and providing remote access to them in an Internet environment. The server-cloud is the main self-sufficient element of the platform and can function either in isolation within individual organizational structures (companies) or jointly implementing complex distributed data processing sequences.
 
-В него входят:
+It includes:
 
-- Контроллер доступа - контроллер доступа из сети Интернет [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
-- API сервер - REST сервер на основе [Fast API](https://fastapi.tiangolo.com/)
-- Планировщик фоновых задач - менеджер запуска длительных фоновых задач на [Celery](https://docs.celeryproject.org/)
-- Брокер сообщений - брокер обмена сообщениями между элементами платформы на [RabbitMQ](https://www.rabbitmq.com/)
-- СУБД - база данных [PostgreSQL](https://www.postgresql.org/) 13
-- Прокси брокера сообщений - прокси модуль обмена сообщениями между СУБД и брокером сообщений
-- S3 хранилище - объектное (файловое) хранилище данных [MinIO](https://min.io)
+- Access Controller - access controller from the Internet [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/)
+- API Server - REST server based on [Fast API](https://fastapi.tiangolo.com/)
+- Background Task Scheduler - manager for running long-running background tasks on [Celery](https://docs.celeryproject.org/)
+- Message Broker - message exchange broker between platform elements on [RabbitMQ](https://www.rabbitmq.com/)
+- DBMS - [PostgreSQL](https://www.postgresql.org/) 13 database
+- Message Broker Proxy - proxy module for message exchange between DBMS and message broker
+- S3 Storage - object (file) data storage [MinIO](https://min.io)
 
-_API сервер_ - базовый компонент, реализующий основную бизнес логику функционирования платформы и обработки пользовательских запросов. Взаимодействие с сервером реализуется с помощью специального открытого API, которое может быть использовано как в программном обеспечении платформы так и в программных продуктах сторонних разработчиков.
+_API Server_ - a basic component that implements the platform's main business logic and user request processing. Interaction with the server is implemented using a special open API, which can be used both in the platform's software and in third-party developers' software products.
 
-_Брокер сообщений_ создает единое пространство обмена сообщениями между серверными компонентами платформы и снижает нагрузку на системы реляционного хранения данных. Для оптимизации обмена сообщений платформа использует дополнительный прокси брокера сообщений (Message broker proxy).
+_Message Broker_ creates a unified space for message exchange between the platform's server components and reduces the load on relational data storage systems. To optimize message exchange, the platform uses an additional message broker proxy.
 
-_Сервер базы данных_ используется для хранения служебной информации платформы, структуры и метаинформации графов обработки, а также непосредственного хранения пользовательских данных небольших объемов.
-Обработчик фоновых задача на основе Celery используется для запуска длительных асинхронных служебных процедур.
+_Database Server_ is used to store the platform's service information, processing graph structure and metadata, as well as direct storage of small volumes of user data.
+The Celery-based background task handler is used to run long-running asynchronous service procedures.
 
-[S3 хранилище/сервер](/desc/s3.md) используется для хранение различных объектных (файловых) данных.
+The [S3 Storage/Server](/desc/s3.md) is used for storing various object (file) data.
 
-**Вычислительный уровень (кластер)** - высокопроизводительная программно-аппаратная инфраструктура, предназначенная для непосредственного выполнения пользовательских исполнительных модулей (скрипты, программы) узлов.
-Вычислительные кластера могут быть как интегрированными в сервер-облако так и кластерами общего пользования входящими в общедоступные вычислительные ресурсы.
+**Computing Level (Cluster)** - a high-performance software and hardware infrastructure designed for direct execution of user executable modules (scripts, programs) of nodes.
+Computing clusters can be either integrated into the server-cloud or shared general-purpose clusters that are part of publicly available computing resources.
 
-В него входят:
+It includes:
 
-- Исполнитель задач - планировщик запуска задач
-- Задача - выполняемая задача в среде Kubernetes
-- Интерактивный сервер - опциональный модуль интерактивного доступа к задаче на основе Jupyter сервера
+- Task Executor - task execution scheduler
+- Task - executable task in a Kubernetes environment
+- Interactive Server - an optional module for interactive access to a task based on a Jupyter server
 
-[Исполнитель задач](/desc/executor.md) - специальный программный модуль, который отслеживает появления новых данных (пакетов для обработки) через API сервер и отправляет их на [выполнение](#TODO) в планировщик задач конкретного кластера.
+The [Task Executor](/desc/executor.md) is a special software module that tracks the appearance of new data (packages for processing) through the API server and sends it for [execution](#TODO) to the task scheduler of a specific cluster.
 
-По умолчанию задачи выполняются в неинтерактивном режиме. Также платформа предоставляет возможность запуска задачи в интерактивном режиме, при этом в контейнере пользователя дополнительно запускается [Jupyter](https://jupyter.org/) сервер, с которым пользователь может взаимодействовать обычным образом.
+By default, tasks are executed in non-interactive mode. The platform also provides the ability to run a task in interactive mode, with a [Jupyter](https://jupyter.org/) server additionally launched in the user's container, with which the user can interact in the usual way.
 
-## Среда исполнения (контейнеры)
+## Runtime Environment (Containers)
 
-### Общее
+### Overview
 
-Все компоненты платформы предназначены для запуска в [Docker](https://www.docker.com/) контейнере и рекомендуется осуществлять их запуск в среде [Kubernetes](https://kubernetes.io/).
+All platform components are designed to run in a [Docker](https://www.docker.com/) container, and it is recommended to run them in a [Kubernetes](https://kubernetes.io/) environment.
 
-Все задания запускаемые пользователем исполняются в Docker контейнерах, которые в свою очередь запускаются на подключенных к платформе Kubernetest кластерах.
+All user-executed jobs run in Docker containers, which in turn are run on Kubernetes clusters connected to the platform.
 
-Использование Docker контейнеров как среды исполнения позволяет осуществлять изоляцию выполняемых пользовательских вычислительных задач, а пользователю самостоятельно настраивать среду исполнения под требования своих прикладных задач.
+Using Docker containers as a runtime environment allows for the isolation of executed user computing tasks, and the user can independently configure the runtime environment to meet the requirements of their applications.
 
-Для каждого конкретного узла графа пользователь может указать необходимую среду исполнения (Докер образ) с указанием конкретного репозитория в сети Интернет, с которого платформа должна загрузить указанный образ. Например, можно использовать хранилище Докер образов [DockerHub](https://hub.docker.com/).
+For each specific node of the graph, the user can specify the required runtime environment (Docker image) by specifying a specific repository on the Internet from which the platform should download the specified image. For example, you can use the [DockerHub](https://hub.docker.com/) Docker image repository.
 
-Доступ к образу на чтение должен осуществлять без дополнительной авторизации. После первого запуска образ будет закеширован на промежуточных прокси-реестрах платформы на уровне вычислительных кластеров, а также в локальных хранилищах образов Kubernetes на узлах.
+Read access to the image must be carried out without additional authorization. After the first run, the image will be cached on the platform's intermediate proxy registries at the level of computing clusters, as well as in local image stores of Kubernetes on the nodes.
 
-Исполняемые контейнеры должны содержать в себя специальную библиотеку [job.py](https://github.com/rndflow/rndflow-job-py). Для этого образ должен быть создан из доступных базовых образов платформы или библиотека должна быть установлена самостоятельно (см. раздел [Контейнеры](/dev/docker.md)).
+The executable containers must contain the special [job.py](https://github.com/rndflow/rndflow-job-py) library. To achieve this, the image must be created from the available base images of the platform, or the library must be installed independently (see the [Containers](/dev/docker.md) section).
 
 ### OpenCL
 
-Поддерживается счет только на специальных узлах кластера с использованием специализированных [контейнеров](/dev/docker.md#amd-gpu).
-При использовании необходимо указать количество требуемых карт в поле **ГПУ** в вкладке **Контейнер** панели узла соответствующего узла.
+Computation is supported only on special cluster nodes using specialized [containers](/dev/docker.md#amd-gpu).
+When using, you need to specify the required number of cards in the **GPU** field on the **Container** tab of the node panel of the corresponding node.
 
-### CUDA
+### CUDA  
 
-Поддерживается счет только на специальных узлах кластера с использованием специализированных [контейнеров](/dev/docker.md#nvida-gpu).
-При использовании необходимо указать количество требуемых карт в поле **ГПУ** в вкладке **Контейнер** панели узла соответствующего узла.
+Computation is supported only on special cluster nodes using specialized [containers](/dev/docker.md#nvida-gpu).
+When using, you need to specify the required number of cards in the **GPU** field on the **Container** tab of the node panel of the corresponding node.

@@ -1,172 +1,174 @@
-# Параметры узла
+# Node Parameters
 
-<span class="iconify-inline" data-icon="mdi:tune"></span> **Параметры узла** (Parameters) - управляющие параметры выполнения узла, передаваемые исполнительной программе (скрипту) узла.
+<span class="iconify-inline" data-icon="mdi:tune"></span> **Node Parameters** - parameters that control the execution of the node, passed to the node's script.
 
-Панель может находиться в 3 режимах:
+The panel can operate in three modes:
 
-- [Отображение параметров](#отображение-параметров)
+- [Parameter Display](#display-parameters)
 
-- [Управление параметрами](#управление-параметрами)
+- [Parameter Management](#manage-parameters)
 
-- [Создание/редактирование параметра](#создание-редактирование-параметра)
+- [Create/Edit Parameter](#create-edit-parameter)
 
-## Типы параметров
+## Parameter Types
 
-**Строка** ([настройки](#строка))
+**String** ([settings](#string))
 
 ![String parameter](/images/common/node_panel_params_string.png)
 
-**Число** ([настройки](#число))
+**Number** ([settings](#number))
 
 ![Number parameter](/images/common/node_panel_params_number.png)
 
-**Ползунок** ([настройки](#ползунок))
+**Slider** ([settings](#slider))
 
 ![Slider parameter](/images/common/node_panel_params_slider.png)
 
-**Интервал** ([настройки](#интервал))
+**Range** ([settings](#range))
 
 ![Range parameter](/images/common/node_panel_params_range.png)
 
-**Переключатель** ([настройки](#переключатель))
+**Toggle** ([settings](#toggle))
 
 ![Toggle parameter](/images/common/node_panel_params_toggle.png)
 
-**Дата** ([настройки](#дата))
+**Date** ([settings](#date))
 
 ![Date parameter](/images/common/node_panel_params_date.png)
 
-## Отображение параметров
+## Display Parameters
 
 ![Node params](/images/common/node_panel_params.png)
 
-Структура:
+Structure:
 
-- Плитки параметров
-- Кнопка "СОХРАНИТЬ" - сохранить значение параметра для этого слоя данных
-- Кнопка "РЕДАКТИРОВАТЬ" - перейти в [управление параметрами](#управление-параметрами)
+- Parameter tiles
+- "SAVE" button - save the parameter value for this data layer
+- "EDIT" button - switch to [parameter management](#manage-parameters)
 
-Общий вид плитки параметра:
+General view of a parameter tile:
 
 ![Param panel](/images/common/node_panel_params_panel_view.png)
 
-1. Описание
-2. Метка
-3. Редактирумое поле значения в этом [слое данных][1]
+1. Description
+2. Label
+3. Editable field for the value in this [data layer][1]
 
-Вид плитки также определяется типом параметра:
+The tile appearance also depends on the parameter type:
 
-- Число
-  - суффикс
+- Number
+  - suffix
 
-## Управление параметрами
+## Manage Parameters
 
 ![Edit params](/images/common/node_panel_params_edit.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
+- Toolbar
 
-  - <span class="iconify-inline" data-icon="mdi:content-duplicate"></span>Копировать все параметры в входную спецификацию узла
-  - <span class="iconify-inline" data-icon="mdi:content-copy"></span>Копировать все параметры
-  - <span class="iconify-inline" data-icon="mdi:content-paste"></span>Вставить параметры
+  - <span class="iconify-inline" data-icon="mdi:content-duplicate"></span> Copy all parameters to the node's input specification
+  - <span class="iconify-inline" data-icon="mdi:content-copy"></span> Copy all parameters
+  - <span class="iconify-inline" data-icon="mdi:content-paste"></span> Paste parameters
 
-- Плитки параметров
-- Кнопка "СОХРАНИТЬ" - сохранить значение параметра по умолчанию
-- Кнопка "ДОБАВИТЬ" - перейти в [режим создания](#создание-редактирование-параметра) нового параметрами
-- Кнопка "ЗАКРЫТЬ" - перейти в [режим отображения](#отображение-параметров) параметров
+- Parameter tiles
+- "SAVE" button - save the default parameter value
+- "ADD" button - switch to [create mode](#create-edit-parameter) for a new parameter
+- "CLOSE" button - switch to [display mode](#display-parameters) for parameters
 
-Плитка параметра:
+Parameter tile:
 
 ![Param panel](/images/common/node_panel_params_panel_edit.png)
 
-1. <span class="iconify-inline" data-icon="mdi:drag"></span>Перемещение
-2. Описание
-3. Метка
-4. Редактирумое поле значения по умолчанию
-5. <span class="iconify-inline" data-icon="mdi:delete"></span>Удалить параметр
-6. <span class="iconify-inline" data-icon="mdi:edit"></span>[Редактировать](#создание-редактирование-параметра) параметр
-7. <span class="iconify-inline" data-icon="mdi:content-copy"></span>Копировать параметр
-8. <span class="iconify-inline" data-icon="mdi:content-duplicate"></span>Копировать параметр в входную спецификацию узла
-9. Тип
-10. Имя
+1. <span class="iconify-inline" data-icon="mdi:drag"></span> Move
+2. Description
+3. Label
+4. Editable field for the default value
+5. <span class="iconify-inline" data-icon="mdi:delete"></span> Delete parameter
+6. <span class="iconify-inline" data-icon="mdi:edit"></span> [Edit](#create-edit-parameter) parameter
+7. <span class="iconify-inline" data-icon="mdi:content-copy"></span> Copy parameter
+8. <span class="iconify-inline" data-icon="mdi:content-duplicate"></span> Copy parameter to the node's input specification
+9. Type
+10. Name
 
-## Создание/редактирование параметра
+## Create/Edit Parameter
 
-Диалоговое окно создания/редактирования параметра состоит:
+The create/edit parameter dialog consists of:
 
-- Вкладка "ОПИСАНИЕ"
-- Вкладка "НАСТРОЙКИ"
-- Вкладка "ШИРИНА"
-- Кнопка "CОЗДАТЬ" или "СОХРАНИТЬ" - сохранить значения и выйти
-- Кнопка "ОТМЕНА" - выйти без сохранения
+- "DESCRIPTION" tab
+- "SETTINGS" tab
+- "WIDTH" tab
+- "CREATE" or "SAVE" button - save values and exit
+- "CANCEL" button - exit without saving
 
-### Вкладка "ОПИСАНИЕ"
+### DESCRIPTION Tab
 
 ![Create param description tab](/images/common/node_panel_params_create_desc.png)
 
-Структура:
+Structure:
 
-- Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
-- Имя - имя соответствующей переменной в вычислительном скрипте
-- Метка - метка видимая пользователю на панели узла
-- Редактор ввода описания параметра
+- Preview and default value - preview display and input field for the default value
+- Name - the corresponding variable name in the calculation script
+- Label - label visible to the user on the node panel
+- Parameter description input editor
 
-### Вкладка "ШИРИНА"
+### WIDTH Tab
 
-Задает ширину панели параметра. Ширина задается в терминах 12 колонок Bootstrap в засисимости от размера окна. Нулевые размеры игнорируются.
+Sets the width of the parameter panel. The width is set in terms of 12 Bootstrap columns depending on the window size. Zero sizes are ignored.
 
 ![Create param width tab](/images/common/node_panel_params_create_width.png)
 
-### Вкладка "НАСТРОЙКИ"
+### SETTINGS Tab
 
-Настройки зависят от [типа параметра](#типы-параметров)
+Settings depend on the [parameter type](#parameter-types)
 
-- Тип параметра
+![Create param settings tab](/images/common/node_panel_params_create_settings.png)
 
-#### Строка
+- Parameter type
 
-- Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
-- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Обязательное поле - требовать или нет ввода значения по умолчанию
-- Регулярное выражение - формат ввода строки, используется [синтаксис регулярных выражений JavaScript](https://developer.mozilla.org/ru/Web/JavaScript/Reference/Global_Objects/RegExp)
-- Сообщение об ошибке - сообщение при вводе значения, которое не соответствует регулярному выражению
+#### String
 
-#### Число
+- Preview and default value - preview display and input field for the default value
+- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Mandatory field - whether to require a default value
+- Regular expression - input format for the string, uses [JavaScript regular expression syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- Error message - message displayed when the input value does not match the regular expression
 
-- Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
-- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Обязательное поле - требовать или нет ввода значения по умолчанию
-- [Шаг][2] - устанавливает шаг изменения числа
+#### Number
 
-  По умолчанию разрешает ввод не целых чисел.
-  Для разрешения ввода только целых чисел необходимо установить в значение 1.
+- Preview and default value - preview display and input field for the default value
+- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Mandatory field - whether to require a default value
+- [Step][2] - sets the step for changing the number
 
-- Суффикс - для отображения суффикса после значения, например, для отображения единиц измерения
-- Минимальное значение
-- Максимальное значение
+  By default, allows the input of non-integer numbers.
+  To allow only integer input, set to 1.
 
-#### Ползунок
+- Suffix - to display a suffix after the value, for example, to show units of measurement
+- Minimum value
+- Maximum value
 
-- Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
-- Минимальное значение
-- Максимальное значение
-- [Шаг][2] - устанавливает шаг изменения числа
-- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Вертикальная ориентация - изменение ориентации: горизонтальная или вертикальная
+#### Slider
 
-#### Интервал
+- Preview and default value - preview display and input field for the default value
+- Minimum value
+- Maximum value
+- [Step][2] - sets the step for changing the number
+- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Vertical orientation - change orientation: horizontal or vertical
 
-- Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
-- Минимальное значение
-- Максимальное значение
-- [Шаг][2] - устанавливает шаг изменения числа
-- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Вертикальная ориентация - изменение ориентации: горизонтальная или вертикальная
+#### Range
 
-#### Переключатель
+- Preview and default value - preview display and input field for the default value
+- Minimum value
+- Maximum value
+- [Step][2] - sets the step for changing the number
+- <span class="iconify-inline" data-icon="mdi:checkbox-marked" style="color: green"></span> Vertical orientation - change orientation: horizontal or vertical
 
-- Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
+#### Toggle
 
-#### Дата
+- Preview and default value - preview display and input field for the default value
 
-- Предпросмотр и значение по умолчанию - предосмотр отображения и поле ввода значения по умолчанию
+#### Date
 
-[1]: /desc/project.md#слои-данных
+- Preview and default value - preview display and input field for the default value
+
+[1]: /desc/project.md#data-layers
 [2]: http://htmlbook.ru/html/input/step
