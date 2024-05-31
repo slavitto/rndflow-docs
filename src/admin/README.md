@@ -1,412 +1,409 @@
-# Администрирование
+# Administration
 
-## Доступ к разделу администрирования
+## Accessing the Administration Section
 
-Раздел администрирования доступен только для администраторов платформы.
+The administration section is only available to platform administrators.
 
-Для перехода в раздел администрирования необходимо:
+To go to the administration section:
 
-- Открыть панель ссылок <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>
-- Нажать на <span class='iconify-inline' data-icon='mdi:tools'></span> Администрирование <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
+1. Open the link panel <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>
+2. Click on <span class='iconify-inline' data-icon='mdi:tools'></span> Administration <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
 
   ![Admin link panel](/images/common/admin_link_panel.png)
 
-## Панель подразделов
+## Sub-Section Panel
 
-Панель подразделов предоставляет доступ к различным разделам администрирования
+The sub-section panel provides access to various administration sections
 
 <img src="/images/common/admin_manage_panel.png" align="right" alt="Admin action panel" style="margin: 1%;">
 
-- <span class='iconify-inline' data-icon='mdi:view-dashboard'></span>[Панель управления](#панель-управления) - обзорная информация о платформе
-- <span class='iconify-inline' data-icon='mdi:cog'></span>[Настройки](#настроики) - управление настройками платформы
-- <span class='iconify-inline' data-icon='mdi:wallet'></span>[Баланс](#баланс) - финансовая информация платформы
-- <span class='iconify-inline' data-icon='mdi:folder-network'></span>[S3 серверы](#s3-серверы) - управление [S3 хранилищами][1]
-- <span class='iconify-inline' data-icon='mdi:server'></span>[Серверы расчетов](#серверы-расчетов) - управления [серверами расчетов][2]
-- <span class='iconify-inline' data-icon='mdi:notebook-multiple'></span>[Рабочие пространства](#рабочие-пространства) - управление [рабочими пространствами][4]
-- <span class='iconify-inline' data-icon='mdi:graph-outline'></span>[Проекты](#проекты) - управление [проектами][13]
-- <span class='iconify-inline' data-icon='mdi:docker'></span>[Docker-образы](#докер-образы) - управления [Докер образами][14] платформы
-- <span class='iconify-inline' data-icon='mdi:account-multiple'></span>[Пользователи](#пользователи) - управления пользователями
-- <span class='iconify-inline' data-icon='mdi:cog-box'></span>[Задания](#задания) - управление всеми [заданиями][12]
-- <span class='iconify-inline' data-icon='mdi:credit-card-clock'></span>[Тарифы](#тарифы) - управления [тарифами][5]
+- <span class='iconify-inline' data-icon='mdi:view-dashboard'></span>[Dashboard](#dashboard) - overview information about the platform
+- <span class='iconify-inline' data-icon='mdi:cog'></span>[Settings](#settings) - manage platform settings
+- <span class='iconify-inline' data-icon='mdi:wallet'></span>[Balance](#balance) - financial information of the platform
+- <span class='iconify-inline' data-icon='mdi:folder-network'></span>[S3 Servers](#s3-servers) - manage [S3 storages][1]
+- <span class='iconify-inline' data-icon='mdi:server'></span>[Compute Servers](#compute-servers) - manage [compute servers][2]
+- <span class='iconify-inline' data-icon='mdi:notebook-multiple'></span>[Workspaces](#workspaces) - manage [workspaces][4]
+- <span class='iconify-inline' data-icon='mdi:graph-outline'></span>[Projects](#projects) - manage [projects][13]
+- <span class='iconify-inline' data-icon='mdi:docker'></span>[Docker Images](#docker-images) - manage [Docker images][14] of the platform
+- <span class='iconify-inline' data-icon='mdi:account-multiple'></span>[Users](#users) - manage users
+- <span class='iconify-inline' data-icon='mdi:cog-box'></span>[Jobs](#jobs) - manage all [jobs][12]
+- <span class='iconify-inline' data-icon='mdi:credit-card-clock'></span>[Plans and Billing](#plans-and-billing) - manage [plans][5]
 
 <br clear="right"/>
 
-## Панель управления
+## Dashboard
 
-Обзорная информация о платформе.
+Overview information about the platform.
 
 ![Dashboard panel](/images/common/admin_dashboard.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления информации
-  - Общая информация о настройка
-  - Общая финансовая информация
-  - Общая информация по состоянию пула соединений к базе данных платформы
-  - Общая информация по S3 серверам
-  - Общая информация по серверам расчетов
-  - Общая информация по рабочим пространствам
-  - Общая информация по проектам
-  - Общая информация по Докер образам
-  - Общая информация по пользователям
-  - Общая информация по заданиям
-  - Общая информация о тарифах
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Refresh information button
+  - General information about the configuration
+  - General financial information
+  - General information on the status of the platform's database connection pool
+  - General information about S3 servers
+  - General information about compute servers
+  - General information about workspaces
+  - General information about projects
+  - General information about Docker images
+  - General information about users
+  - General information about jobs
+  - General information about plans
 
-<span class='iconify-inline' data-icon='mdi:location-enter'></span> - кнопка перехода в соответствующий подраздел.
+<span class='iconify-inline' data-icon='mdi:location-enter'></span> - button to go to the corresponding subsection.
 
-## Настройки
+## Settings
 
-Управление настройками платформы - позволяет изменять значения параметров платформы
+Manage platform settings - allows you to change the values of platform parameters
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка S3 серверов
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Refresh S3 server list button
 
-- Таблица настроек
-  - Google - параметры для авторизация пользователей с использованием [Google](https://google.com).
-  - Яндекс - параметры для авторизация пользователей с использованием [Яндекс](https://yandex.ru).
-  - Mail.ru - параметры для авторизация пользователей с использованием [Mail.ru](https://e.mail.ru).
-  - <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> Регистрация - переключатель разрешения/запрета регистрации новых пользователей
-  - <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> Аудит -переключатель включения/выключения аудита администратором новых пользователей
-    > В случае активации аудита аккаунты новых пользователей по умолчанию деактивированы и должны быть активированы администратором.
+- Settings table
+  - Google - parameters for user authorization using [Google](https://google.com).
+  - Yandex - parameters for user authorization using [Yandex](https://yandex.ru).
+  - Mail.ru - parameters for user authorization using [Mail.ru](https://e.mail.ru).
+  - <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> Registration - switch to enable/disable registration of new users
+  - <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> Audit - switch to enable/disable administrator audit of new users
+    > If audit is activated, new user accounts are deactivated by default and must be activated by the administrator.
 
-- Управление
-  - Колонка *Значение* - позволяет изменить состояние параметра
-  - Колонка *Вкл/Выкл* - позволяет активировать или деактивировать параметр (опционально).
-  - Справа от параметра при изменении его значения/активности отображается кнопка сохранения <span class='iconify-inline' data-icon='mdi:content-save' style="color: black"></span> изменений.
+- Management
+  - The *Value* column allows you to change the parameter state
+  - The *On/Off* column allows you to activate or deactivate the parameter (optional).
+  - To the right of the parameter, when its value/activity is changed, a save button <span class='iconify-inline' data-icon='mdi:content-save' style="color: black"></span> of changes is displayed.
 
 ![Settings](/images/common/admin_settings.png)
 
-## Баланс
+## Balance
 
-Отображение текущего баланса платформы и списка [транзакций][8] с [счетом][9] платформы.
+Shows the current balance of the platform and a list of platform [transactions][8] with [accounts][9].
 
 ![Balance](/images/common/admin_balance.png)
 
-- Панель инструментов
+- Toolbar
 
-  - Период - выбор отчетного периода
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка транзакций
+  - Period - select the reporting period
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Transaction list refresh button
 
-- Список транзакций
+- Transaction list
 
-  - Создано - дата осуществления транзакции
-  - Назначение - тип транзакции
-  - Контрагент - контрагент транзакции
-  - Сумма - сумма транзакции
-  - Панель навигации
+  - Created - transaction date
+  - Purpose - transaction type
+  - Counterparty - transaction counterparty
+  - Amount - transaction amount
+  - Navigation panel
 
-## S3 серверы
+## S3 Servers
 
-Отображение списка существующих S3 серверов.
+Displays a list of existing S3 servers.
 
 ![S3 panel](/images/common/admin_s3s.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка S3 серверов
-- Таблица хранилищ
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> S3 server list refresh button
+- Storage table
 
-  - Наименование
+  - Name
 
-    При щелчке по наименованию хранилища открывается окно [управления хранилищем](#управление-хранилищем).
+    Clicking on the storage name opens the [storage management](#storage-management) window.
 
-  - URL - API интерфейс хранилища
-  - Общедоступный - переключатель общего доступа к хранилищу
+  - URL - storage API interface
+  - Public - public storage switch
 
-    При включенном <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> переключателе все пользователи платформы могут использовать его для хранения проектов.
+    When the <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> switch is on, all platform users can use it to store projects.
 
-  - Баланс - баланс счета хранилища
+  - Balance - storage account balance
 
-  - Только для чтения - переключатель возможности записи в хранилище
+  - Read only - storage write switch
 
-    При выключенном <span class='iconify-inline' data-icon='bi:toggle-off'></span> переключателе хранилище доступно и для чтения и для записи.
+    When the <span class='iconify-inline' data-icon='bi:toggle-off'></span> switch is off, the storage is available for both reading and writing.
 
-  - Основной - переключатель основного хранилища платформы
+  - Main - platform main storage switch
 
-    При включенном <span class='iconify-inline' data-icon='bi:toggle-on' style="color: blue"></span> переключателе хранилище будет использовано для хранения служебных данных платформы.
+    When the <span class='iconify-inline' data-icon='bi:toggle-on' style="color: blue"></span> switch is on, the storage will be used to store platform service data.
 
-  - <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления соответствующего хранилища
-  - ![Red add button](/images/common/red_plus.png) Кнопка добавления нового хранилища
+  - <span class='iconify-inline' data-icon='mdi:delete'></span> Button to delete the corresponding storage
+  - ![Red add button](/images/common/red_plus.png) Add new storage button
 
-## Серверы расчетов
+## Compute Servers
 
-Отображение списка существующих серверов расчетов.
+Displays a list of existing compute servers.
 
 ![Executors panel](/images/common/admin_executors.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка серверов расчетов
-- Таблица серверов расчетов
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Compute server list refresh button
+- Compute server table
 
-  - Наименование
+  - Name
 
-    При щелчке по наименованию сервера расчетов открывается окно с его [описанием][7].
+    Clicking on the compute server name opens the window with its [description][7].
 
-  - Баланс - баланс счета сервера расчетов.
+  - Balance - compute server account balance.
 
-  - Общедоступный - переключатель общего доступа
+  - Public - public access switch
 
-    При включенном <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> переключателе все пользователи платформы могут использовать сервер расчетов для выполнения заданий проектов.
+    When the <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> switch is on, all platform users can use the compute server to execute project tasks.
 
-  - Активен - переключатель активности
+  - Active - activity switch
 
-    При включенном переключателе <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> сервер расчетов будет принимать задания на выполнение.
+    When the switch <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> is on, the compute server will accept tasks for execution.
 
-  - <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления соответствующего сервера расчетов
-  - ![Red add button](/images/common/red_plus.png) Кнопка добавления нового сервера
+  - <span class='iconify-inline' data-icon='mdi:delete'></span> Button to delete the corresponding compute server
+  - ![Red add button](/images/common/red_plus.png) Add new server button
 
-## Пользователи
+## Users
 
-Отображение списка существующих пользователей платформы.
+Displays a list of existing platform users.
 
 ![Users panel](/images/common/admin_users.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> - кнопка обновления списка пользователей
-- Таблица пользователей
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> - button to refresh the user list
+- User table
 
-  - Логин
-  - Полное имя
-  - Почта - адрес электронной почты
-  - Баланс - баланс счета пользователя
-  - Был - время последнего посещения
-  - Активен - переключатель разрешения доступа пользователя в платформу
+  - Login
+  - Full name
+  - Email - email address
+  - Balance - user account balance
+  - Last seen - time of last visit
+  - Active - platform access permission switch
 
-    При включенном <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> переключателе пользователь может войти в платформу.
+    When the <span class='iconify-inline' data-icon='bi:toggle-on' style="color: green"></span> switch is on, the user can log in to the platform.
 
-  - Администратор - переключатель наличия административных привилегий
+  - Administrator - administrator privileges switch
 
-    При включенном<span class='iconify-inline' data-icon='bi:toggle-on' style="color: red"></span> переключателе пользователь обладает административными привилегиями.
+    When the <span class='iconify-inline' data-icon='bi:toggle-on' style="color: red"></span> switch is on, the user has administrator privileges.
 
     ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-    Если пользователь с административными привилегиями осуществит сброс пароля согласно [инструкции][11], то информация об этом будет отослана всем другим пользователям с административными привилегиями.
+    If a user with administrator privileges resets the password according to the [instructions][11], this information will be sent to all other users with administrator privileges.
     :::
-  - Кнопка удаления пользователя
+  - Delete user button
 
-## Рабочие пространства
+## Workspaces
 
-Отображение списка существующих рабочих пространств.
+Displays a list of existing workspaces.
 
 ![Workspaces panel](/images/common/admin_workspaces.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка рабочих пространств.
-- Таблица рабочих пространств
-  - Наименование
-  - Владельцы
-  - Создан
-  - Видно всем
-  - Баланс - баланс счета рабочего пространства
-  - <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления соответствующего рабочего пространства
-- ![Add button](/images/common/red_plus.png) - Кнопка создания нового рабочего пространства
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Workspace list refresh button
+- Workspace table
+  - Name
+  - Owners
+  - Created
+  - Visible to all
+  - Balance - workspace account balance
+  - <span class='iconify-inline' data-icon='mdi:delete'></span> Button to delete the corresponding workspace
+  - ![Add button](/images/common/red_plus.png) - Create new workspace button
 
+## Docker Images
 
-## Докер образы
-
-Управление [Докер образами][14] платформы.
+Manage platform [Docker images][14].
 
 ![Docker](/images/common/admin_docker.png)
 
-Cтруктура:
+Structure:
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка проектов
-  - Выпадающий список отображаемых колонок
-    - Рабочее пространство
-    - Наименование
-    - Состояние
-    - Контекс сборки
-    - Создал - пользователь, создавший образ
-    - Обновил - пользователь, последним обновивший образ
-    - Собрал - пользователь, последним собравший образ
-    - Создан
-    - Изменен
-    - Собран
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Project list refresh button
+  - Dropdown list of displayed columns
+    - Workspace
+    - Name
+    - State
+    - Build context
+    - Created by - user who created the image
+    - Updated by - user who last updated the image
+    - Built by - user who last built the image
+    - Created
+    - Modified
+    - Built
+- Image table
+  - Workspace
+  - Name
+  - State
+  - Created by - user who created the image
+  - Created - image creation date
 
+## Projects
 
-- Таблица образов
-  - Рабочее пространство
-  - Наименование
-  - Состояние
-  - Создал - пользователь, создавший образ
-  - Создан - дата создания образа
-
-## Проекты
-
-Отображение списка существующих проектов.
+Displays a list of existing projects.
 
 ![Workspaces panel](/images/common/admin_projects.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка проектов
-  - Выпадающий список отображаемых колонок
-- Таблица проектов
-  - Название
-  - Рабочее пространство
-  - Занятый объем
-  - Пользователи
-  > Отображается ограниченное количество пользователей. В случае если количество пользователей превышает установленный лимит, то справа от столбца с пользователями отображается флаг с количеством пользователей. Для получения полного списка пользователя необходимо навести указатель мыши на список пользователей и в появившейся таблице выбрать необходимое количество отображаемых пользователей или нужную страницу таблицы. Открытая таблица пользователей закроется самостоятельно через некоторое время. Также таблицу можно закрыть с помощью кнопки закрытия слева от столбца.
-  - Создан
-  - Проект включен
-  - S3 сервер проекта
-  - Сервер расчета
-  - Действия : <span class='iconify-inline' data-icon='mdi:delete'></span> кнопка удаления соответствующего проекта
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Project list refresh button
+  - Dropdown list of displayed columns
+- Project table
+  - Name
+  - Workspace
+  - Occupied volume
+  - Users
+    > A limited number of users are displayed. If the number of users exceeds the set limit, a flag with the number of users is displayed to the right of the users column. To get the full list of users, hover over the user list and select the required number of users or the desired page of the table in the pop-up table. The open user table will close automatically after some time. The table can also be closed using the close button to the left of the column.
+  - Created
+  - Project enabled
+  - Project S3 server
+  - Compute server
+  - Actions: <span class='iconify-inline' data-icon='mdi:delete'></span> button to delete the corresponding project
 
+## Plans
 
-## Тарифы
-
-Отображение списка существующих тарифов.
+Displays a list of existing plans.
 
 ![Payplans panel](/images/common/admin_payplans.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
-  - <span class='iconify-inline' data-icon='mdi:plus'></span> Кнопка добавления нового тарифа
-  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Кнопка обновления списка тарифов
-- Список плиток тарифов
+- Toolbar
+  - <span class='iconify-inline' data-icon='mdi:plus'></span> Add new plan button
+  - <span class='iconify-inline' data-icon='mdi:refresh'></span> Plan list refresh button
+- List of plan tiles
 
-Структура плитки тарифа:
+Plan tile structure:
 
-- Название
-- <span class='iconify-inline' data-icon='mdi:delete'></span> Кнопка удаления
-- Описание
-- Таблица с [показателями тарифа][10]
+- Name
+- <span class='iconify-inline' data-icon='mdi:delete'></span> Delete button
+- Description
+- Table with [plan parameters][10]
 
-  - Название показателя
-  - Редактируемое значение показателя (щелкнуть по значению)
+  - Parameter name
+  - Editable parameter value (click on the value)
 
     ![Payplan edit](/images/common/admin_payplan_edit.png)
 
-## Задания
+## Jobs
 
-Отображение и управление списком заданий на платформе.
+Displays and manages the list of jobs on the platform.
 
 ![Jobs panel](/images/common/admin_jobs.png)
 
-Структура:
+Structure:
 
-- Панель инструментов
+- Toolbar
 
-  - <span class="iconify-inline" data-icon="mdi:download"></span> Скачать выделенное задание
-  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Перезапустить выделенные задания
-  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Перезапустить выделенные задания в интерактивном режиме
-  - <span class="iconify-inline" data-icon="mdi:refresh"></span> Обновления списка
+  - <span class="iconify-inline" data-icon="mdi:download"></span> Download the selected job
+  - <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> Restart selected jobs
+  - <span class="iconify-inline" data-icon="mdi:motion-play"></span> Restart selected jobs in interactive mode
+  - <span class="iconify-inline" data-icon="mdi:refresh"></span> Refresh list
 
-    >  Может содержать дополнительный ярлык:
-    >  - Верхний ярлык зеленого цвета  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span>-  информирует об изменении количества заданий в узле.
+    > May contain additional label:
+    > - Green top label  <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: green"></span> - informs about the change in the number of jobs in the node.
 
-  - <span class="iconify-inline" data-icon="mdi:progress-check"></span> Фильтрация заданий по состоянию
-  - <span class="iconify-inline" data-icon="mdi:delete"></span> Удаление выбранных заданий
-  - Проекты - фильтрация по проектам
-  - Колонки - изменение отображаемых столбцов таблицы
+  - <span class="iconify-inline" data-icon="mdi:progress-check"></span> Filter jobs by status
+  - <span class="iconify-inline" data-icon="mdi:delete"></span> Delete selected jobs
+  - Projects - filter by projects
+  - Columns - change the displayed table columns
 
-- Таблица с списком заданий
-  - Столбцы таблицы
-    - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - переключатель выбора задания
-    - Id - идентификатор задания
-    - Проект - проект задания
-    - Создано - время инициации задания
-    - Владелец - пользователь создавший задание
-    - Состояние - текущее [состояние][6] выполнения задания
+- Table with the list of jobs
+  - Table columns
+    - <span class="iconify-inline" data-icon="mdi:checkbox-blank-outline"></span> - job selection checkbox
+    - Id - job identifier
+    - Project - job project
+    - Created - job initiation time
+    - Owner - user who created the job
+    - Status - current [execution status][6] of the job
 
-Для открытия окна конкретного задания необходимо щелкнуть по его идентификатору в столбце **Id**.
+To open the window for a specific job, click on its identifier in the **Id** column.
 
-## Инструкции
+## Instructions
 
-### Подключение внешней авторизации
+### Connecting External Authentication
 
-В настоящий момент поддерживается возможность внешней авторизации с использованием трех внешних источников:
+The platform currently supports external authentication using three providers:
 
 - [Google](https://google.com)
-- [Яндекс](https://yandex.ru)
+- [Yandex](https://yandex.ru)
 - [Mail.ru](https://e.mail.ru)
 
-Перед началом использования необходимо:
+Before you begin:
 
-- Зарегистрировать экземпляр платформы на соответстующем источнике
+- Register your platform instance with the chosen provider.
 
-  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-  1. Указывать тип приложения: **Веб приложение**.
-  2. В качестве Redirect URI указывать: https://**адрес_сервера**/provider/callback
+  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+  1. Specify the application type: **Web application**.
+  2. Set the Redirect URI to: https://**server_address**/provider/callback
   :::
 
-  - Google: [документация](https://developers.google.com/identity/protocols/oauth2/production-readiness/policy-compliance) и [консоль управления](https://console.cloud.google.com/apis/credentials)
+  - Google: [documentation](https://developers.google.com/identity/protocols/oauth2/production-readiness/policy-compliance) and [console](https://console.cloud.google.com/apis/credentials)
 
-  - Яндекс: [документация](https://yandex.ru/dev/id/doc/ru/register-client) и [консоль управления](https://oauth.yandex.ru/)
+  - Yandex: [documentation](https://yandex.ru/dev/id/doc/ru/register-client) and [console](https://oauth.yandex.ru/)
 
-  - Mail.ru : [документация](https://id.vk.com/about/business/go/docs/ru/vkid/latest/oauth-mail/create-application) и [консоль управления](https://o2.mail.ru/app/)
+  - Mail.ru: [documentation](https://id.vk.com/about/business/go/docs/ru/vkid/latest/oauth-mail/create-application) and [console](https://o2.mail.ru/app/)
 
 
 
-- Вставить полученные **client_id** и **client_secret** в соответстующие поля соответстующего источника в подразделе [**Настройки**](#настроики) платформы.
-- Активировать cooтветствующий внешний источник.
-- Сохранить внесенные изменения.
+- Enter the received **client_id** and **client_secret** into the corresponding fields for the chosen provider in the platform's [**Settings**](#settings) section.
+- Activate the desired external provider.
+- Save your changes.
 
-### Подключение Telegram бота
+### Connecting a Telegram Bot
 
-- Подключиться к [BotFather](https://t.me/botfather)
-- Создание бота
-  - Написать команду /newbot
-  - Ответить на вопросы по поводу имени нового бота (отображается в контактах и может быть изменено) и его username (короткое имя на латинице и не может быть изменено) и т.д.
-  - Записать полученный токен в конфигурационный файл и переустановить или обновить платформу.
+- Connect to [BotFather](https://t.me/botfather).
+- Create a bot:
+  - Use the command /newbot.
+  - Answer the questions about the new bot's name (displayed in contacts and can be changed) and username (short name in Latin characters, cannot be changed), etc.
+  - Write down the received token in the configuration file and reinstall or update the platform.
 
 ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-Для получения дополнительной информации обратитесь к [официальному сайту][15] или другим информационным ресурсам, например [сюда][16].
+For more information, refer to the [official website][15] or other resources, such as [here][16].
 :::
 
 
-## Установка
+## Installation
 
-### Установка платформы
+### Platform Installation
 
-<a href = "mailto: mail@rndflow.com">Свяжитесь с нами.</a>
+<a href = "mailto: mail@rndflow.com">Contact us.</a>
 
-### Установка сервера расчетов
+### Compute Server Installation
 
-<a href = "mailto: mail@rndflow.com">Свяжитесь с нами.</a>
+<a href = "mailto: mail@rndflow.com">Contact us.</a>
 
-### Компоненты платформы
+### Platform Components
 
-После установки платформы в среде Kubernetes будут доступны для управления и мониторинга следующие основные компоненты (поды):
+After installing the platform in a Kubernetes environment, the following main components (pods) will be available for management and monitoring:
 
-- Контроллер Nginx Ingress
+- Nginx Ingress Controller
   - nginx-ingress-nginx-controller-...
-- Менеджер сертификатов Cert-manager
+- Cert-manager certificate manager
   - cert-manager-...
   - cert-manager-cainjector-...
   - cert-manager-webhook-...
-- Сервер
-  - *название сервера*-rndflow-server-api-...
-  - *название сервера*-rndflow-server-celery-...
-  - *название сервера*-rndflow-server-docs-...
-  - *название сервера*-rndflow-server-frontend-...
-  - *название сервера*-rndflow-server-pg-rmq-proxy-...
-- База данных PostgreSQL
+- Server
+  - *server_name*-rndflow-server-api-...
+  - *server_name*-rndflow-server-celery-...
+  - *server_name*-rndflow-server-docs-...
+  - *server_name*-rndflow-server-frontend-...
+  - *server_name*-rndflow-server-pg-rmq-proxy-...
+- PostgreSQL database
   - rndflow-postgresql-0
-- Файловый сервер MinIO
+- MinIO file server
   - rndflow-minio-....
-- Брокер сообщений
+- Message broker
   - rndflow-rabbitmqserver-0
-- Модуль интеграции с Телеграмм
+- Telegram integration module
   - rndflow-server-tbot-*
-- Исполнитель
-  - *название исполнителя*-rndflow-executor-event-watcher-...
-  - *название исполнителя*-rndflow-executor-executor-...
-  - *название исполнителя*-rndflow-executor-jupyter-proxy-...
-  - *название исполнителя*-rndflow-executor-jupyter-watcher-..
-  - *название исполнителя*-rndflow-executor-metrics-reporter-...
-  - *название исполнителя*-rndflow-executor-pod-watcher-...
+- Executor
+  - *executor_name*-rndflow-executor-event-watcher-...
+  - *executor_name*-rndflow-executor-executor-...
+  - *executor_name*-rndflow-executor-jupyter-proxy-...
+  - *executor_name*-rndflow-executor-jupyter-watcher-..
+  - *executor_name*-rndflow-executor-metrics-reporter-...
+  - *executor_name*-rndflow-executor-pod-watcher-...
+
 
 [1]: /desc/s3.md
 [2]: /desc/executor.md

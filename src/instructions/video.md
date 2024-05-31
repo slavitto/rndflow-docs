@@ -1,21 +1,21 @@
-# Видео
+# Video
 
-- [Все видео](https://www.youtube.com/channel/UCTKQE6PxB9Ohbmi9gd9Rfvg)
+- [All videos](https://www.youtube.com/channel/UCTKQE6PxB9Ohbmi9gd9Rfvg)
 
-- [Обзор](https://youtu.be/r6M0ocMDo_w)
+- [Review](https://youtu.be/r6M0ocMDo_w)
 
-- [Первый проект](https://youtu.be/Cz58cIAJEKk) **Cos**
+- [First project](https://youtu.be/Cz58cIAJEKk) **Cos**
 
-- [Использование SQL узла](https://youtu.be/QDxujHQTxtA)
+- [Using SQL node](https://youtu.be/QDxujHQTxtA)
 
-- [Интегация с Jupyter Notebook](https://youtu.be/8a6uzeTHO8k)
+- [Integration with Jupyter Notebook](https://youtu.be/8a6uzeTHO8k)
 
-- [Создание графических интерфейсов](https://youtu.be/Jvlw78QcWio)
+- [Creation of graphical interfaces](https://youtu.be/Jvlw78QcWio)
 
-- [Интеграция с GitHUB](https://youtu.be/bnK1qZ-RB1I)
+- [Integration with GitHUB](https://youtu.be/bnK1qZ-RB1I)
 
-- [Сборка Докер образа](https://youtu.be/2yTzuTUcoss)
+- [Building a Docker image](https://youtu.be/2yTzuTUcoss)
 
-- [Возмездный веб доступ к проекту](https://youtu.be/Clvh7MlBrFI)
+- [Paid web access to the project](https://youtu.be/Clvh7MlBrFI)
 
-- [Возмездный API доступ к проекту](https://youtu.be/gDD2Xk95qdc)
+- [Paid API access to the project](https://youtu.be/gDD2Xk95qdc)

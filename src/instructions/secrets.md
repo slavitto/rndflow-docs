@@ -1,23 +1,23 @@
-# Секреты проекта
+# Secrets of the project
 
-## Добавить секрет
+## Add secret
 
-- Открыть проект
-- С помощью [панели управления проектом][1] перейти в окно редактора [секретов][1]
-- Напротив надписи **Секреты** нажать на кнопку <span class="iconify-inline" data-icon="mdi:plus"></span> и в диалоговом окне ввести уникальное имя нового [секрета][1] и нажать кнопку **ОК**.
+- Open project
+- Using the [project control panel][1] go to the [secrets][1] editor window
+- Opposite the **Secrets** inscription, click on the <span class="iconify-inline" data-icon="mdi:plus"></span> button and in the dialog box enter the unique name of the new [secret][1] and click **OK** button.
 
-  ::: danger <span class="iconify" data-icon="gg:danger" style="color: #cc0000; font-size: 24px;"></span>
-  Имя может содержать только латинские буквы, цифры и знак подчеркивания!
-  :::
+ ::: danger <span class="iconify" data-icon="gg:danger" style="color: #cc0000; font-size: 24px;"></span>
+ The name can only contain Latin letters, numbers and underscores!
+ :::
 
-  ![Add role](/images/common/secrets_add.png)
+ ![Add role](/images/common/secrets_add.png)
 
-- В новой [плитке секрета][3] в поле **Значение** ввести значение секрета.
-- В новой [плитке секрета][3] в поле **Узлы** с помощью кнопки <span class="iconify-inline" data-icon="mdi:magnify"></span> добавить узлы, которым будет доступно значение секрета.
+- In the new [secret tile][3], in the **Value** field, enter the secret value.
+- In the new [secret tile][3] in the **Nodes** field, using the <span class="iconify-inline" data-icon="mdi:magnify"></span> button, add nodes to which the value will be available secret.
 
-## Получение доступ к секрету в узле
+## Getting access to a secret in a node
 
-В вкладке [Файлы][4] узла, у которого есть доступ к секрету необходимо в программном модуле или скрипте обратиться к переменной окружения с именем [секрета][1].
+In the [Files][4] tab of the node that has access to the secret, you must access the environment variable named [secret][1] in a program module or script.
 
 ```python
 #!/usr/bin/env python
@@ -26,6 +26,6 @@ secret_value = job.secret('My_secret')
 ```
 
 [1]: /desc/secrets.md
-[2]: /desc/project.md#панель-управления-проектом
-[3]: /desc/secrets.md#плитка-секрета
-[4]: /desc/nodes.md#фаилы
+[2]: /desc/project.md#project-control panel
+[3]: /desc/secrets.md#secret-tile
+[4]: /desc/nodes.md#files

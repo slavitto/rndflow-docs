@@ -1,70 +1,70 @@
-# Рабочее пространство
+# Working space
 
-## Переход в рабочее пространство
+## Go to workspace
 
-Перейти в [панель управления](/desc/dashboard.md):
+Go to [control panel](/desc/dashboard.md):
 
-- Открыть панель ссылок <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>
-- Нажать на изображение аватара пользователя <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
+- Open link panel <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>
+- Click on the user avatar image <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
 
-  ![Link panel](/images/common/user_link_panel.png)
+ ![Link panel](/images/common/user_link_panel.png)
 
-- Нажать на [плитку](/desc/dashboard.md#структура-плитки-рабочего-пространства) необходимого [рабочего пространства][1] <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>.
+- Click on the [tile](/desc/dashboard.md#workspace-tile-structure) of the required [workspace][1] <span class='iconify-inline' data-icon='ph:number-circle- one-fill' style="color: red"></span>.
 
-  ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-  Для нового пользователя автоматически создается [рабочее пространство][1] <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span>.
-  :::
+ ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
+ A [workspace][1] <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span> is automatically created for the new user.
+ :::
 
-  ![New user dashboard](/images/common/dashboard_user_new.png)
+ ![New user dashboard](/images/common/dashboard_user_new.png)
 
-## Инициализация рабочего пространства
+## Initializing the workspace
 
-- Перейти на вкладку **РЕСУРСЫ**
+- Go to the **RESOURCES** tab
 
-  ![Resources](/images/common/dashboard_user_workspace_resources_new.png)
+ ![Resources](/images/common/dashboard_user_workspace_resources_new.png)
 
-- [Добавить](./executor.md#добавление-в-рабочее-пространство) новое [S3 хранилище](/desc/s3.md)
+- [Add](./executor.md#adding-to-workspace) new [S3 storage](/desc/s3.md)
 
-- [Добавить](./s3.md#добавление-в-рабочее-пространство) новый [cервер расчетов](/desc/executor.md)
+- [Add](./s3.md#adding-to-workspace) new [calculation server](/desc/executor.md)
 
-- Убедиться в наличии ресурсов
+- Make sure resources are available
 
 ![Resources](/images/common/dashboard_user_workspace_resources.png)
 
-## Открыть публичный доступ
+## Open to public access
 
-Разрешение публичного доступа к рабочему пространству позволяет размещать в нем проекты с [публичным][2] и [возмездным][3] доступом.
+Allowing public access to a workspace allows you to host projects with [public][2] and [paid][3] access.
 
-- [Перейти][4] в [рабочее пространство][1].
+- [Go][4] to [workspace][1].
 
-- На [панели описания][5] рабочего пространства нажать кнопку **РЕДАКТИРОВАТЬ**.
-- Установить переключатель **Видно всем**.
-- Нажать кнопку **СОХРАНИТЬ**.
+- On the [description panel][5] of the workspace, click the **EDIT** button.
+- Set the switch **Visible to everyone**.
+- Press the **SAVE** button.
 
-## Добавить участника
+## Add member
 
-- [Перейти][4] в [рабочее пространство][1]
+- [Go][4] to [workspace][1]
 
-- Перейти на вкладку <span class='iconify-inline' data-icon='mdi:account-multiple'></span> **УЧАСТНИКИ**
+- Go to the tab <span class='iconify-inline' data-icon='mdi:account-multiple'></span> **PARTICIPANTS**
 
-- Нажать на кнопку **ПРИГЛАСИТЬ ПОЛЬЗОВАТЕЛЯ**
+- Click on the **INVITE USER** button
 
-- В диалоговом окне выбрать участника, его [роль][8] и текст сообщения. Нажать кнопку **ОТПРАВИТЬ ПРИГЛАШЕНИЕ**.
+- In the dialog box, select the participant, his [role][8] and the text of the message. Click the **SEND INVITATION** button.
 
-- Пользователю будет отправлено по электронной почте письмо с приглашением вступить в рабочее простанство
-  ![Invite letter](/images/common/dashboard_invite_letter.png)
+- The user will be sent an email inviting them to join the workspace
+ ![Invite letter](/images/common/dashboard_invite_letter.png)
 
-- В [панели управления пользователя][7] также появится приглашение, которое пользователь может принять или отказаться.
+- A prompt will also appear in the [User Control Panel][7], which the user can accept or decline.
 
-  ![Invite letter](/images/common/dashboard_invitations.png)
+ ![Invite letter](/images/common/dashboard_invitations.png)
 
-## Удалить участника
+## Remove member
 
-- [Перейти][4] в [рабочее пространство][1]
+- [Go][4] to [workspace][1]
 
-- Перейти на вкладку <span class='iconify-inline' data-icon='mdi:account-multiple'></span> **УЧАСТНИКИ**
+- Go to the tab <span class='iconify-inline' data-icon='mdi:account-multiple'></span> **PARTICIPANTS**
 
-- На [плитке участника][6] нажать на кнопку <span class="iconify-inline" data-icon="mdi:close-circle"></span> для удаления роли и самого участника.
+- On the [participant tile][6] click on the <span class="iconify-inline" data-icon="mdi:close-circle"></span> button to delete the role and the participant himself.
 
 [1]: /desc/workspace.md
 [2]: ./project.md#открыть-публичныи-доступ

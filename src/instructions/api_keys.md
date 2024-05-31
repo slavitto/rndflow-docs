@@ -1,92 +1,92 @@
-# API ключи
+# API Keys
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-С видео примером можно ознакомиться в разделе [видео][video].
+You can see a video tutorial in the [video][video] section.
 :::
 
-## Создание шаблона
+## Creating a Template
 
-- Напротив надписи **Шаблоны [API ключей][1]** нажать на кнопку <span class="iconify-inline" data-icon="mdi:plus"></span> и в диалоговом окне ввести уникальное имя нового шаблона, выбрать роль и нажать кнопку **СОЗДАТЬ**.
+- Next to **Templates [API keys][1]** click the <span class="iconify-inline" data-icon="mdi:plus"></span> button and in the dialog box enter a unique name for the new template, select a role, and click the **CREATE** button.
 
   ![Add API](/images/common/api_keys_add.png)
 
-- В новой [плитке шаблона][2] добавить информационные поля (названия произвольные)
+- In the new [template tile][2] add information fields (names are arbitrary)
 
-  - Идентификатор проекта - идентификатор текущего проекта
-  - Идентификатор входного узла - узел, в который необходимо отправлять пакеты с данными
-  - Идентификатор выходного узла - узел, из которого необходимо забирать пакеты с результатом.
+  - Project ID - ID of the current project
+  - Input node ID - the node to which packets with data should be sent
+  - Output node ID - the node from which to fetch result packets.
 
   ![Add Information field](/images/common/api.png)
 
 ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-Роль, привязываемая к API шаблону, должна иметь [разрешение][permissions] **project_view** в случае, если в проекте отсутствует общедоступная роль.
+The role associated with the API template must have the [permission][permissions] **project_view** if there is no public role in the project.
 :::
 
-## Запрос ключа
+## Requesting a Key
 
-В проекте перейти в раздел <span class="iconify-inline" data-icon="mdi:information"></span>**О проекте** и в секции <span class="iconify-inline" data-icon="mdi:shield-key"></span>**API ключи** на плитке необходимого API нажать кнопку **ЗАПРОСИТЬ**.
+In the project, go to the <span class="iconify-inline" data-icon="mdi:information"></span>**About the project** section and in the <span class="iconify-inline" data-icon="mdi:shield-key"></span>**API keys** section, click the **REQUEST** button on the tile of the required API.
 
 ![API request](/images/common/api_request.png)
 
-Плитка API ключа примет следующий вид:
+The API key tile will look like this:
 
 ![API requested](/images/common/api_panel_wait.png)
 
-Далее следует ожидать подтверждения запроса со стороны владельца проекта, на электронную почту которого будет выслано соответстующее уведомление о запросе.
+Next, you should wait for the project owner to confirm the request, to whose email address a corresponding notification about the request will be sent.
 
-После того, как владелец проекта [одобрит запрос](#подтверждение-запроса-ключа), будет получено электронное информационное письмо.
+After the project owner [approves the request](#confirming-the-key-request), an email notification will be received.
 
 ![API confirmation letter](/images/common/api_request_confirmed_letter.png)
 
-Плитка API ключа примет следующий вид:
+The API key tile will look like this:
 
 ![API confirmed](/images/common/api_panel_confirmed.png)
 
-Кроме того, для пользователя будет создан новый персональный [слой данных][3] в этом проекте.
+In addition, a new personal [data layer][3] will be created for the user in this project.
 
-## Подтверждение запроса ключа
+## Confirming the Key Request
 
-Владелец проекта на электронную почту получит письмо с уведомлением о запросе.
+The project owner will receive an email notification about the request.
 
 ![API request letter](/images/common/api_request_letter.png)
 
-Владельцу необходимо перейти в соответствующий проект в раздел <span class="iconify-inline" data-icon="mdi:shield-key"></span>**API ключи** и в секции **Запросы** нажать на кнопку <span class="iconify-inline" data-icon="mdi:check" style="color: green"></span> подтверждения запроса.
+The owner should go to the appropriate project in the <span class="iconify-inline" data-icon="mdi:shield-key"></span>**API keys** section and in the **Requests** section click the <span class="iconify-inline" data-icon="mdi:check" style="color: green"></span> button to confirm the request.
 
 ![API request confirmation](/images/common/api_confirmation.png)
 
-Ознакомиться с списком выданных ключей и статистикой их использования ключа можно в разделе <span class="iconify-inline" data-icon="mdi:account-key"></span>[ВЫДАННЫЕ КЛЮЧИ][6].
+You can see the list of issued keys and their usage statistics in the <span class="iconify-inline" data-icon="mdi:account-key"></span>[ISSUED KEYS][6] section.
 
-## Отозвать ключ
+## Revoking a Key
 
-- Перейти в раздел <span class="iconify-inline" data-icon="mdi:account-key"></span> [**ВЫДАННЫЕ КЛЮЧИ**][6].
-- В таблице выданных ключей напротив необходимого к отзыву ключа нажать кнопку <span class='iconify-inline' data-icon='mdi:delete'></span>.
+- Go to the <span class="iconify-inline" data-icon="mdi:account-key"></span> [**ISSUED KEYS**][6] section.
+- In the table of issued keys, click the <span class='iconify-inline' data-icon='mdi:delete'></span> button next to the key you want to revoke.
 
-## Импорт ключа
+## Importing a Key
 
-- [Запросить](#запрос-ключа) [API ключ][1] и дождать подтверждения запроса.
+- [Request an API key](#requesting-a-key) and wait for the request to be confirmed.
 
-- Перейти в проект, из которого будет осуществляться програмный доступ, и в нем перейти в раздел <span class="iconify-inline" data-icon="mdi:eye-off"></span>**Секреты**.
+- Go to the project from which you will be accessing the programmatically, and in it go to the <span class="iconify-inline" data-icon="mdi:eye-off"></span>**Secrets** section.
 
-- Открыть <span class="iconify-inline" data-icon="mdi:key-plus"></span> меню добавления [API ключа][1] и выбрать необходимый ключ.
+- Open the <span class="iconify-inline" data-icon="mdi:key-plus"></span> menu for adding an [API key][1] and select the required key.
 
   ![API confirmed](/images/common/api_import.png)
 
-- Ввести префикс для создаваемых [секретов][3].
+- Enter a prefix for the created [secrets][3].
 
   ![API insert](/images/common/api_insert.png)
 
-- Будет создан [секрет][3] с токеном ключа _префикс_\_**token**, а также секреты для всех информационных панелей ключа.
+- A [secret][3] will be created with the key token _prefix_\_**token**, as well as secrets for all information panels of the key.
 
   ![API inserted](/images/common/api_inserted.png)
 
-- Разрешить доступ к [секретам][3] узлам из которых будет осуществляться доступ.
+- Grant access to the [secrets][3] to the nodes from which access will be made.
 
-  В поле **Узлы** соответствующего [секрета][3] нажать на кнопку <span class="iconify-inline" data-icon="mdi:magnify"></span> и выбрать необходимые узлы.
+  In the **Nodes** field of the corresponding [secret][3], click the <span class="iconify-inline" data-icon="mdi:magnify"></span> button and select the required nodes.
 
-## Использование ключа
+## Using the Key
 
-- [Импортировать ключ в проект](#импорт-ключа)
-- Перейти в раздел <span class="iconify-inline" data-icon="mdi:sitemap"></span>**Граф** и в вкладке [Файлы][4] узла, у которого есть доступ к [секрету][3] соответствующего [API ключа][1], в программном модуле или скрипте необходимо использовать следующий [код][5].
+- [Import the key into the project](#importing-a-key)
+- Go to the <span class="iconify-inline" data-icon="mdi:sitemap"></span>**Graph** section and in the [Files][4] tab of the node that has access to the [secret][3] of the corresponding [API key][1], you need to use the following [code][5] in the program module or script.
 
 [1]: /desc/api_keys.md
 [2]: /desc/api_keys.md#плитка-шаблона

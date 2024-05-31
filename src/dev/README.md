@@ -1,3 +1,3 @@
 # API
 
-[API](https://server.rndflow.com/api/redoc) для взаимодействия с платформой.
+[API](https://rnd-srv.nowecom.ru/api/docs#/) to interact with the platform

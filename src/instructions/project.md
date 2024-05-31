@@ -1,93 +1,93 @@
-# Проект
+# Project
 
-## Создание нового проекта
+## Creating a new project
 
-- [Перейти][1] в [рабочее пространство][2]
+- [Go][1] to [workspace][2]
 
 ![Projects](/images/common/dashboard_user_workspace_projects_clear.png)
 
-- Перейти на вкладку **РЕСУРСЫ** и убедиться в наличии ресурсов
+- Go to the **RESOURCES** tab and make sure the resources are available
 
 ![Resources](/images/common/dashboard_user_workspace_resources.png)
 
-- В случае отсутствия ресурсов [инициализировать][3] [рабочее пространство][2].
+- In case of lack of resources, [initialize][3] [workspace][2].
 
-- Перейти в вкладку <span class="iconify-inline" data-icon="mdi:file-code"></span>**ПРОЕКТЫ** и нажать кнопку создания нового проекта ![Add button](/images/common/red_plus.png)
+- Go to the <span class="iconify-inline" data-icon="mdi:file-code"></span>**PROJECTS** tab and click the create a new project button ![Add button](/images/common /red_plus.png)
 
 ![New project](/images/common/dashboard_user_workspace_projects_clear.png)
 
-- Ввести название и описание проекта. Выбрать S3 сервер проекта для хранения данных проекта. Нажать кнопку **СОЗДАТЬ**.
+- Enter the name and description of the project. Select an S3 project server to store project data. Click the **CREATE** button.
 
 ![New project](/images/common/project_create.png)
 
-- В рабочем пространстве будет создан новый проект.
+- A new project will be created in the workspace.
 
 ![New project created](/images/common/project_created.png)
 
-## Открытие проекта
+## Opening a project
 
-- [Перейти][1] в [рабочее пространство][2]
+- [Go][1] to [workspace][2]
 
-- На вкладке <span class="iconify-inline" data-icon="mdi:file-code"></span>**ПРОЕКТЫ** нажать на [плитку проекта][11].
+- On the <span class="iconify-inline" data-icon="mdi:file-code"></span>**PROJECTS** tab, click on [project tile][11].
 
-## Импорт проекта
+## Import project
 
-- При необходимосит [создать][14] новый проект.
+- If necessary, you will [create][14] a new project.
 
-- [Открыть][13] проект
+- [Open][13] project
 
-- В нижней части [панели управления проектом][8] нажать кнопку <span class='iconify-inline' data-icon='mdi:file-import'></span>**Импорт проекта**.
+- At the bottom of the [project control panel][8], click the <span class='iconify-inline' data-icon='mdi:file-import'></span>**Import project** button.
 
-- В файловой системе выбрать необходимый файл архива проекта.
+- In the file system, select the required project archive file.
 
-## Экспорт проекта
+## Export project
 
-- [Открыть][13] проект
+- [Open][13] project
 
-- В нижней части [панели управления проектом][8] нажать кнопку <span class='iconify-inline' data-icon='mdi:file-export'></span>**Экспорт проекта**.
+- At the bottom of the [project control panel][8], click the <span class='iconify-inline' data-icon='mdi:file-export'></span>**Export project** button.
 
-- Файл архива будет скачан.
+- The archive file will be downloaded.
 
-## Активация проекта
+## Project activation
 
-Для того, чтобы в проекте появилась возможность обработки пакетов необходимо в [панели управления проектом][8]:
+In order for the project to have the ability to process packages, it is necessary in the [project control panel][8]:
 
-- [Добавить][12] необходимый [сервер расчетов][9]
+- [Add][12] required [calculation server][9]
 
-  ![Executor select](/images/common/project_manage_panel_executor_add.png)
+ ![Executor select](/images/common/project_manage_panel_executor_add.png)
 
-- Активировать [слой данных][10]
+- Activate [data layer][10]
 
-  ![Datalayer activate toggle](/images/common/project_manage_panel_datalayer_activate_toggle.png)
+ ![Datalayer activate toggle](/images/common/project_manage_panel_datalayer_activate_toggle.png)
 
-- Активировать проект
+- Activate the project
 
-  ![Project activate toggle](/images/common/project_manage_panel_project_activate_toggle.png)
+ ![Project activate toggle](/images/common/project_manage_panel_project_activate_toggle.png)
 
-## Открыть публичный доступ
+## Open to public access
 
-1. [Создать][5] новую [роль][6] (например, public).
+1. [Create][5] a new [role][6] (for example, public).
 
-   Минимально необходимое разрешение: project_view.
+ Minimum required permission: project_view.
 
-2. На [плитке][7] роли включить переключатель <span class='iconify-inline' data-icon='mdi:eye'></span> (Общедоступная роль).
+2. On the [tile][7] role, enable the <span class='iconify-inline' data-icon='mdi:eye'></span> (Public role) switch.
 
-3. Если требуется отображение пакетов, то убедиться, что присутствует не менее одного <span class='iconify-inline' data-icon='mdi:accuont-eye'></span> Общего слоя данных.
+3. If you need to display packages, make sure that there is at least one <span class='iconify-inline' data-icon='mdi:accuont-eye'></span> General Data Layer.
 
-## Открыть возмездный доступ
+## Open paid access
 
-1. [Открыть публичный доступ][15] к проекту с минимальными правами.
+1. [Open public access][15] to the project with minimal rights.
 
-   > Необходимо для демонстрации проекта в общедоступной [галерее][16].
+ > Required to demonstrate the project in a public [gallery][16].
 
-2. [Создать][5] новую [роль][6] с необходимыми разрешениями.
+2. [Create][5] a new [role][6] with the necessary permissions.
 
-3. На [плитке][7] роли включить переключатель <span class='iconify-inline' data-icon='mdi:currency-usd'></span> (Платная роль).
+3. On the [tile][7] role, turn on the <span class='iconify-inline' data-icon='mdi:currency-usd'></span> switch (Paid role).
 
-4. На [плитке][7] роли установить необходимый **Стоимостной коэффициент**.
+4. On the role [tile][7] set the required **Cost coefficient**.
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-С видео примером можно ознакомиться в разделе [видео][17].
+A video example can be found in the [video][17] section.
 :::
 
 [1]: ./workspace.md#переход-в-рабочее-пространство

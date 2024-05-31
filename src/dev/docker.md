@@ -1,54 +1,43 @@
-# Докер образы
+# Docker Images
+## Standard Docker Images
+### Base
+- [rndflow/job.py](https://hub.docker.com/r/rndflow/job.py/tags?page=1&ordering=last_updated) - base container image
+Repository available at [link](https://github.com/rndflow/rndflow-job-py).
+- [rndflow/apps-job.py](https://hub.docker.com/r/rndflow/apps-job.py) - base container image with additional Python libraries
+Repository available at [link](https://github.com/rndflow/rndflow-images/tree/main/multi/apps).
 
-## Стандартные Докер образы
+### NVIDIA GPU
 
-### Базовые
-
-- [rndflow/job.py](https://hub.docker.com/r/rndflow/job.py/tags?page=1&ordering=last_updated) - базовый образ контейнера
-
-  Репозиторий доступен по [ссылке](https://github.com/rndflow/rndflow-job-py).
-
-- [rndflow/apps-job.py](https://hub.docker.com/r/rndflow/apps-job.py) - базовый образ контейнера с дополнительными библиотеками Python
-  Репозиторий доступен по [ссылке](https://github.com/rndflow/rndflow-images/tree/main/multi/apps).
-
-### NVIDA GPU
-
-::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-Примеры Докер образов для использования видеокарты NVIDIA V100.  
+::: warning
+<span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span> Examples of Docker images for using NVIDIA V100 GPU.
 :::
 
-- [rndflow/cuda-job.py](https://hub.docker.com/r/rndflow/cuda-job.py/tags?page=1&ordering=last_updated) - базовый образ
+- [rndflow/cuda-job.py](https://hub.docker.com/r/rndflow/cuda-job.py/tags?page=1&ordering=last_updated) - base image
+Repository available at [link](https://github.com/rndflow/rndflow-images/tree/main/gpu/cuda).
 
-  Репозиторий доступен по [ссылке](https://github.com/rndflow/rndflow-images/tree/main/gpu/cuda).
+- [rndflow/pycuda-job.py](https://hub.docker.com/r/rndflow/pycuda-job.py/tags?page=1&ordering=last_updated) - image with support for [PyCuda](https://documen.tician.de/pycuda/) library.
+Repository available at [link](https://github.com/rndflow/rndflow-images/tree/main/gpu/pycuda).
+[Example](https://server.rndflow.com/projects/3) of usage on the platform.
 
-- [rndflow/pycuda-job.py](https://hub.docker.com/r/rndflow/pycuda-job.py/tags?page=1&ordering=last_updated) - образ c поддержкой библиотеки [PyCuda](https://documen.tician.de/pycuda/).
+- [rndflow/pyopencl-cuda-job.py](https://hub.docker.com/r/rndflow/pyopencl-cuda-job.py/tags?page=1&ordering=last_updated) - image with support for [PyOpenCL](https://documen.tician.de/pyopencl/) library.
+Repository available at [link](https://github.com/rndflow/rndflow-images/tree/main/gpu/pyopencl-cuda).
 
-  Репозиторий доступен по [ссылке](https://github.com/rndflow/rndflow-images/tree/main/gpu/pycuda).
+[Example](https://server.rndflow.com/projects/5) of usage on the platform.
+- [rndflow/tensorflow-job.py:cuda](https://hub.docker.com/r/rndflow/tensorflow-job.py/tags?page=1&ordering=last_updated) - image with support for [Tensorflow](https://www.tensorflow.org/) library.
+Repository available at [link](https://github.com/rndflow/rndflow-images/tree/main/gpu/tensorflow).
 
-  [Пример](https://server.rndflow.com/projects/3) использования на платформе.
-
-- [rndflow/pyopencl-cuda-job.py](https://hub.docker.com/r/rndflow/pyopencl-cuda-job.py/tags?page=1&ordering=last_updated) - образ c поддержкой библиотеки [PyOpenCL](https://documen.tician.de/pyopencl/).
-
-  Репозиторий доступен по [ссылке](https://github.com/rndflow/rndflow-images/tree/main/gpu/pyopencl-cuda).
-
-  [Пример](https://server.rndflow.com/projects/5) использования на платформе.
-
-- [rndflow/tensorflow-job.py:cuda](https://hub.docker.com/r/rndflow/tensorflow-job.py/tags?page=1&ordering=last_updated) - образ c поддержкой библиотеки [Tensorflow](https://www.tensorflow.org/).
-
-  Репозиторий доступен по [ссылке](https://github.com/rndflow/rndflow-images/tree/main/gpu/tensorflow).
-
-  [Пример](https://server.rndflow.com/projects/4) использования на платформе.
+[Example](https://server.rndflow.com/projects/4) of usage on the platform.
 
 ### AMD GPU
 
-::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-Примеры Докер образов для использования видеокарты AMD Radeon HD 7970.  
+::: warning
+<span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span> Examples of Docker images for using AMD Radeon HD 7970 GPU.
 :::
 
-- [rndflow/opencl-amd-job.py](https://hub.docker.com/r/rndflow/opencl-amd-job.py/tags?page=1&ordering=last_updated) - базовый образ
+- [rndflow/opencl-amd-job.py](https://hub.docker.com/r/rndflow/opencl-amd-job.py/tags?page=1&ordering=last_updated) - base image
 
-  Репозиторий доступен по [ссылке](https://github.com/rndflow/rndflow-images/tree/main/gpu/amd).
+Repository available at [link](https://github.com/rndflow/rndflow-images/tree/main/gpu/amd).
 
-- [rndflow/pyopencl-amd-job.py](https://hub.docker.com/r/rndflow/pyopencl-amd-job.py/tags?page=1&ordering=last_updated) - образ c поддержкой библиотеки [PyOpenCL](https://documen.tician.de/pyopencl/).
+- [rndflow/pyopencl-amd-job.py](https://hub.docker.com/r/rndflow/pyopencl-amd-job.py/tags?page=1&ordering=last_updated) - image with support for [PyOpenCL](https://documen.tician.de/pyopencl/) library.
 
-  Репозиторий доступен по [ссылке](https://github.com/rndflow/rndflow-images/tree/main/gpu/pyopencl-amd).
+Repository available at [link](https://github.com/rndflow/rndflow-images/tree/main/gpu/pyopencl-amd).

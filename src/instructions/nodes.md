@@ -1,93 +1,93 @@
-# Узлы
+# Nodes
 
-## Перейти в граф проекта
+## Go to project graph
 
-- [Перейти](./project.md#открытие-проекта) в [проект](/desc/project.md)
+- [Go](./project.md#opening-project) to [project](/desc/project.md)
 
-- В [панели управления проектом](/desc/project.md#панель-управления-проектом) нажать на <span class="iconify-inline" data-icon="mdi:sitemap"></span>**ГРАФ** и перейти в [дизайнер графа](/desc/project.md#граф).
+- In [project control panel](/desc/project.md#project-control panel) click on <span class="iconify-inline" data-icon="mdi:sitemap"></span>**GRAPH* * and go to [graph designer](/desc/project.md#graph).
 
-## Создание расчетного узла
+## Creating a calculation node
 
-- Открыть [панель создания узлов][1].
-- Щелкнуть по иконке <span class="iconify-inline" data-icon="mdi:kubernetes"></span> [расчетного узла](/desc/nodes.md#расчетныи-узел).
-- Разместить в необходимом месте экрана и соединить с необходимыми узлами.
-- Переименовать узел и добавить описание
-  - Перейти в панель [Описание](/desc/nodes.md#описание) щелкнув по иконке <span class="iconify-inline" data-icon="mdi:card-text"></span> на узле.
-  - Нажать кнопку **РЕДАКТИРОВАТЬ**.
-  - Ввести необходимое имя в поле **Название**.
-  - Ввести необходимое описание в редакторе **Описание**.
-  - Нажать кнопку **СОХРАНИТЬ**.
-- Создать исполнительный скрипт узла
+- Open [node creation panel][1].
+- Click on the icon <span class="iconify-inline" data-icon="mdi:kubernetes"></span> [calculation node](/desc/nodes.md#calculation-node).
+- Place in the required location on the screen and connect to the necessary nodes.
+- Rename the node and add a description
+ - Go to the [Description](/desc/nodes.md#description) panel by clicking on the <span class="iconify-inline" data-icon="mdi:card-text"></span> icon on the node.
+ - Click the **EDIT** button.
+ - Enter the required name in the **Name** field.
+ - Enter the required description in the **Description** editor.
+ - Press the **SAVE** button.
+- Create node execution script
 
-  - Перейти в панель [Файлы][2] щелкнув по иконке <span class="iconify-inline" data-icon="mdi:file-code"></span> на узле.
-  - Добавить новый файл нажав на кнопку <span class="iconify-inline" data-icon="mdi:file-plus"></span> и дать уникальное для этого узла название. Название требуется вводить с расширением файла (например, **run.py** ).
-  - Щелчком по строке с файлом открыть редактор файла и набрать необходимый [код](/dev/compute.md#код-расчетного-узла).
-  - Нажать кнопку **СОХРАНИТЬ**
-  - Установить для файла свойство "Исполняемый" нажав на иконку <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> напротив имени файла .
+ - Go to the [Files][2] panel by clicking on the <span class="iconify-inline" data-icon="mdi:file-code"></span> icon on the node.
+ - Add a new file by clicking on the <span class="iconify-inline" data-icon="mdi:file-plus"></span> button and give a name unique to this node. The name must be entered with the file extension (for example, **run.py** ).
+ - Click on the line with the file to open the file editor and type the required [code](/dev/compute.md#compute-node-code).
+ - Press the **SAVE** button
+ - Set the “Executable” property for the file by clicking on the icon <span class="iconify-inline" data-icon="mdi:cog-clockwise"></span> next to the file name.
 
-- Задать исполнительное окружение
+- Set the execution environment
 
-  - Перейти в панель [Контейнер](/desc/nodes.md#контейнер) щелкнув по иконке <span class="iconify-inline" data-icon="mdi:kubernetes"></span> на узле.
-  - В поле **Докер образ** ввести имя используемого докер образа. Можно использовать как [стандартные образы платформы](/dev/docker.md#стандартные-докер-образы) (например, **rndflow/job.py**), так и [создать собственный докер образ](/dev/docker.md#создание-докер-образа).
-  - В поле редактора ниже указать скрипт, который должен быть запущен после запуска контейнера. Требуется указать команду запуска файла, который был добавлен в панели <span class="iconify-inline" data-icon="mdi:file-code"></span>[Файлы][2].
+ - Go to the [Container](/desc/nodes.md#container) panel by clicking on the <span class="iconify-inline" data-icon="mdi:kubernetes"></span> icon on the node.
+ - In the **Docker image** field, enter the name of the Docker image used. You can use either [standard platform images](/dev/docker.md#standard-docker-images) (for example, **rndflow/job.py**) or [create your own docker image](/dev/docker. md#create-docker-image).
+ - In the editor field below, specify the script that should be launched after starting the container. You need to specify the command to launch the file that was added to the <span class="iconify-inline" data-icon="mdi:file-code"></span>[Files][2] panel.
 
-## Создание узла данных
+## Create a data node
 
-- Открыть [панель создания узлов][1].
-- Щелкнуть по иконке <span class="iconify-inline" data-icon="mdi:download-circle"></span> [узла данных](/desc/nodes.md#узел-данных).
-- Разместить в необходимом месте экрана и соединить с необходимыми узлами.
+- Open [node creation panel][1].
+- Click on the <span class="iconify-inline" data-icon="mdi:download-circle"></span> [data node](/desc/nodes.md#data node) icon.
+- Place in the required location on the screen and connect to the necessary nodes.
 
-## Создание SQL узла
+## Creating a SQL node
 
-- Открыть [панель создания узлов][1].
-- Щелкнуть по иконке <span class="iconify-inline" data-icon="mdi:database"></span> [SQL узла](/desc/nodes.md#sql-узел).
-- Разместить в необходимом месте экрана и соединить с необходимыми узлами.
-- Создать SQL запрос
-  - Перейти в панель [SQL](/desc/nodes.md#запрос) щелкнув по иконке <span class="iconify-inline" data-icon="mdi:database"></span> на узле.
-  - В вкладке **ТЕКСТ ЗАПРОСА** ввести код запроса.
-  - В вкладке **ТЕСТ** ознакомиться с результатами тествого запуска запроса.
-  - Нажать кнопку **СОХРАНИТЬ**.
+- Open [node creation panel][1].
+- Click on the icon <span class="iconify-inline" data-icon="mdi:database"></span> [SQL node](/desc/nodes.md#sql-node).
+- Place in the required location on the screen and connect to the necessary nodes.
+- Create SQL query
+ - Go to the [SQL](/desc/nodes.md#query) panel by clicking on the <span class="iconify-inline" data-icon="mdi:database"></span> icon on the node.
+ - In the **REQUEST TEXT** tab, enter the request code.
+ - In the **TEST** tab, view the results of a test run of the request.
+ - Press the **SAVE** button.
 
-## Создание соединений между узлами
+## Creating connections between nodes
 
-- Потянуть выход <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"></span> одного узла к входу <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 10px;"></span> второго узла.
+- Pull the output <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 15px;"></span> of one node to the input <span class="iconify-inline" data-icon="akar-icons:circle-fill" style="color: green; font-size: 10px;"></span> of the second node.
 
-- Отпустить кнопку мыши после выделения второго узла (появление красной рамки вокруг второго узла)
+- Release the mouse button after selecting the second node (a red frame appears around the second node)
 
-## Выполнение узла
+## Executing a node
 
-Смотреть [обработка пакета](./package.md#обработка-пакета) в разделе [Пакеты](./package.md) .
+See [package processing](./package.md#package processing) in the [Packages](./package.md) section.
 
-## Выделение нескольких узлов
+## Allocating multiple nodes
 
-- Нажать и не отпускать кнопку <span class='iconify-inline' data-icon='vaadin:ctrl'></span>
-- Нажать на необходимые узлы (каждый узел будет выделен зеленой рамкой)
-- Отпустить кнопку <span class='iconify-inline' data-icon='vaadin:ctrl'></span>
+- Press and hold the button <span class='iconify-inline' data-icon='vaadin:ctrl'></span>
+- Click on the required nodes (each node will be highlighted with a green frame)
+- Release the button <span class='iconify-inline' data-icon='vaadin:ctrl'></span>
 
-Выделенные узлы можно одновременно:
+Dedicated nodes can be simultaneously:
 
-- перемещать по экрану
-- копировать
-- перемещать в группы
+- move around the screen
+- copy
+- move to groups
 
-## Копирование узлов
+## Copying nodes
 
-- Выделить узел (нажать на узел) или [несколько узлов](выделение-нескольких-узлов).
-- Нажать на кнопку <span class="iconify-inline" data-icon="mdi:content-copy"></span> на [панели действий][3].
+- Select a node (click on a node) or [multiple nodes] (select-multiple-nodes).
+- Click on the <span class="iconify-inline" data-icon="mdi:content-copy"></span> button on the [action panel][3].
 
-  ![Project action panel](/images/common/project_action_panel.png)
+ ![Project action panel](/images/common/project_action_panel.png)
 
-  На [панели действий][3] должна появиться кнопка <span class="iconify-inline" data-icon="mdi:content-paste"></span>.
+ A <span class="iconify-inline" data-icon="mdi:content-paste"></span> button should appear on the [Action Bar][3].
 
-- Для копирования в этот же проект нажать на кнопку <span class="iconify-inline" data-icon="mdi:content-paste"></span>
+- To copy to the same project, click on the button <span class="iconify-inline" data-icon="mdi:content-paste"></span>
 
-- Для копирования в другой проект
-  - Открыть в новый вкладке необходимый проект или если проект уже открыт, то обновить его по кнопке **F5**.
-    > На [панели действий][3] должна появиться кнопка <span class="iconify-inline" data-icon="mdi:content-paste"></span>.
-  - Нажать на кнопку <span class="iconify-inline" data-icon="mdi:content-paste"></span>
+- To copy to another project
+ - Open the required project in a new tab, or if the project is already open, then update it using the **F5** button.
+ > A <span class="iconify-inline" data-icon="mdi:content-paste"></span> button should appear on the [Action Bar][3].
+ - Click on the button <span class="iconify-inline" data-icon="mdi:content-paste"></span>
 
 ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-Пакеты при копировании узла не копируются!
+Packages are not copied when copying a node!
 :::
 
 [1]: /desc/project.md#панель-создания-узлов

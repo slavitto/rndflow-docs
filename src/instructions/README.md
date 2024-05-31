@@ -1,138 +1,138 @@
-# Общие
+# Are common
 
-## Регистрация
+## Registration
 
-### Общая
+### General
 
-- Нажать кнопку **ВХОД** в верхнем правом углу главной страницы платформы.
+- Click the **LOGIN** button in the upper right corner of the platform’s main page.
 
-  ![Signin](/images/common/signin.png)
+ ![Signin](/images/common/signin.png)
 
-- Нажать на кнопку **НОВЫЙ ПОЛЬЗОВАТЕЛЬ**
+- Click on the **NEW USER** button
 
-- Ввести желаемый логин, электронную почту и пароль.
+- Enter your desired login, email and password.
 
-  ![Registration](/images/common/registration.png)
+ ![Registration](/images/common/registration.png)
 
-- Подтвердить, что Вы явлетесь не роботом, нажав на кнопку <span class="iconify-inline" data-icon="mdi:robot-confused-outline"/> и введя отображенную капчу (небходимо вводить английский текст, различая прописные и строчные буквы).
+- Confirm that you are not a robot by clicking on the <span class="iconify-inline" data-icon="mdi:robot-confused-outline"/> button and entering the displayed captcha (you must enter English text, distinguishing between uppercase and lowercase letters).
 
-  ![Registration](/images/common/captcha.png)
+ ![Registration](/images/common/captcha.png)
 
-- Нажать на кнопку **НОВЫЙ ПОЛЬЗОВАТЕЛЬ**
+- Click on the **NEW USER** button
 
-  Если введены корректные данные, то будет сообщено об отправке сообщения на электронную почту.
+ If the correct data is entered, you will be notified that a message has been sent by email.
 
-  ![Registration info](/images/common/registration_info.png)
+ ![Registration info](/images/common/registration_info.png)
 
-- Открыть пришедшее письмо от пользователя **server@rndflow** (адрес может отличаться и определяется администратором экземпляра платформы).
+- Open an incoming letter from the user **server@rndflow** (the address may differ and is determined by the administrator of the platform instance).
 
-  ![Registration confirm letter](/images/common/registration_confirm.png)
+ ![Registration confirm letter](/images/common/registration_confirm.png)
 
-- Перейти по указанной в письме ссылке.
+- Follow the link provided in the letter.
 
-  Регистрация подтверждена - [Перейти][1] в [рабочее пространство][2]!
+ Registration confirmed - [Go][1] to [workspace][2]!
 
-  ![Registration confirmed](/images/common/registration_confirmed.png)
+ ![Registration confirmed](/images/common/registration_confirmed.png)
 
-- Нажать кнопку **ВХОД** и войти в систему.
+- Press the **LOGIN** button and log in.
 
 ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-Внимание! Администрацией экземпляра платформы может быть установлен [аудит регистрации](#аудит-регистрации) пользователей или регистрация может быть полностью [запрещена](#запрет-регистрации).
+Attention! The administration of a platform instance can set [registration audit](#registration audit) for users or registration can be completely [prohibited](#registration ban).
  :::
 
 
-### Использование внешней авторизации
+### Using external authorization
 
-- Нажать кнопку **ВХОД** в верхнем правом углу главной страницы платформы.
+- Click the **LOGIN** button in the upper right corner of the platform’s main page.
 
-  ![Signin](/images/common/signin.png)
+ ![Signin](/images/common/signin.png)
 
-- Нажать на кнопку **НОВЫЙ ПОЛЬЗОВАТЕЛЬ**
+- Click on the **NEW USER** button
 
-  ![Registration](/images/common/registration.png)
+ ![Registration](/images/common/registration.png)
 
-- Подтвердить, что Вы не являтесь роботом, нажав на кнопку <span class="iconify-inline" data-icon="mdi:robot-confused-outline"/> и введя отображенную капчу (небходимо вводить текст различая прописные и строчные буквы).
+- Confirm that you are not a robot by clicking on the <span class="iconify-inline" data-icon="mdi:robot-confused-outline"/> button and entering the displayed captcha (you must enter the text distinguishing between uppercase and lowercase letters) .
 
-  ![Captcha](/images/common/captcha.png)
+ ![Captcha](/images/common/captcha.png)
 
-- После ввода капчи станут доступны кнопки внешней авторизации.
+- After entering the captcha, external authorization buttons will become available.
 
-  ![OAuthList](/images/common/oauth_list.png)
+ ![OAuthList](/images/common/oauth_list.png)
 
-- Нажать на необходимую кнопку внешней авторизации.
+- Click on the required external authorization button.
 
-- Следовать стандарной для выбранного источника внешней авторизации процедуре разрешения доступа внешнего приложения. При необходимости ввести имя пользователя и пароль (данная информация не передается платформе).
+- Follow the standard procedure for allowing access to an external application for the selected external authorization source. If necessary, enter your username and password (this information is not transmitted to the platform).
 
-- В случае успешного разрешения доступа новый пользователь будет авторизован и перенаправлен на главную страницу платформы.
+- If access is successfully granted, the new user will be authorized and redirected to the main page of the platform.
 
 ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"/>
-На платформе будет создан новый пользователь, к которому будет привязана указанная ранее внешняя учетная запись.
-Если планируется использовать не только внешнюю авторизацию, но и внутреннюю платформы, то необходимо уточнить на странице [информации о пользователе][3], полученный логин и [сбросить пароль](#cброс-пароля).
+A new user will be created on the platform, to which the previously specified external account will be linked.
+If you plan to use not only external authorization, but also internal platforms, then you need to check on the [user information] page[3] the received login and [reset password](#reset-password).
 :::
 
 ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-Внимание! Администрацией экземпляра платформы может быть установлен [аудит регистрации](#аудит-регистрации) пользователей или регистрация может быть полностью [запрещена](#запрет-регистрации).
+Attention! The administration of a platform instance can set [registration audit](#registration audit) for users or registration can be completely [prohibited](#registration ban).
  :::
 
-## Подключение внешней авторизации
+## Connecting external authorization
 
-- Авторизироваться
-- Перейти на [панель пользователя][3]
-- Нажать на кнопку *РЕДАКТИРОВАТЬ*
-- Нажать на необходимую кнопку внешней авторизации.
-  ![OAuthList](/images/common/oauth_list.png)
+- Log in
+- Go to [user panel][3]
+- Click on the *EDIT* button
+- Click on the required external authorization button.
+ ![OAuthList](/images/common/oauth_list.png)
 
-- Следовать стандарной для выбранного источника внешней авторизации процедуре разрешения доступа внешнего приложения. При необходимости ввести имя пользователя и пароль (данная информация не передается платформе).
+- Follow the standard procedure for allowing access to an external application for the selected external authorization source. If necessary, enter your username and password (this information is not transmitted to the platform).
 
-- В случае успешного разрешения доступа будет добавлена возможность входа в приложение с использованием выбранного внешней источника авторизации.
+- If access is successfully granted, the ability to log into the application using the selected external authorization source will be added.
 
-## Запрет регистрации
+## Deny registration
 
-В случае запрета регистрации окно регистрации принимает вид:
+If registration is prohibited, the registration window looks like:
 
 ![Registration disabled](/images/common/registration_disabled.png)
 
 
-## Аудит регистрации
+## Registration audit
 
-В случае включения на платформе режима аудита новых пользователей их автоматическая активация не производится. Активация новых пользователей производится администраторами платформы.
+If the audit mode for new users is enabled on the platform, they are not automatically activated. New users are activated by platform administrators.
 
-В этом случае после подтверждения регистрации пользователь получает письмо следующего вида:
+In this case, after confirming registration, the user receives a letter of the following type:
 
 ![Registration audit letter](/images/common/registration_audit_wait.png)
 
-## Cброс пароля
+## Password reset
 
-- Нажать кнопку **CБРОС** на панели страницы логина или регистрации.
+- Press the **RESET** button on the panel of the login or registration page.
 
-- Ввести корректный логин пользователя и его почтовый адрес.
+- Enter the correct user login and email address.
 
-- Нажать кнопку **СБРОС**.
+- Press the **RESET** button.
 
 ![Password reset](/images/common/password_recovery.png)
 
-- При наличии активного пользователя с указанным логином и почтовым адресом будет отображено подтвержение запроса на сброс пароля.
+- If there is an active user with the specified login and email address, confirmation of the password reset request will be displayed.
 
 ![Password reset message](/images/common/password_recovery_message.png)
 
-- На указанный почтовый ящик придет письмо с подтверждением на сброс пароля.
+- A confirmation email will be sent to the specified mailbox to reset the password.
 
 ![Password reset email](/images/common/password_recovery_email.png)
 
-- Для сброса пароля необходимо нажать на кнопку с надписью **Confirm your password reset request**.
+- To reset your password, you must click on the button labeled **Confirm your password reset request**.
 
-- Будет открыто окно с новым паролем
+- A window with a new password will open
 
 ![Password reset email](/images/common/password_recovery_reset.png)
 
-- На указанный ранее почтовый ящик придет информация с подтверждением о завершении процедуры сброса пароля
+- Information will be sent to the previously specified mailbox confirming the completion of the password reset procedure
 
 ![Password reset email](/images/common/password_recovery_reset_email.png)
 
 
-## Выход из платформы
+## Exit the platform
 
-Открыть панель ссылок в верхнем правом углу экрана и нажать на кнопку <span class="iconify-inline" data-icon="mdi:logout"></span>.
+Open the link bar in the upper right corner of the screen and click on the <span class="iconify-inline" data-icon="mdi:logout"></span> button.
 
 ![Exit](/images/common/link_panel.png)
 

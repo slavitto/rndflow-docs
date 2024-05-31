@@ -1,25 +1,25 @@
-# Интерфейс проекта
+# Project interface
 
-## Создать
+## Create
 
-Для создания нового [интерфейса][1] необходимо:
+To create a new [interface][1] you need to:
 
-- [Открыть][2] необходимый проект.
+- [Open][2] required project.
 
-- В [панели управления проектом][3] перейти в раздел <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span>**Интерфейсы**
+- In the [project control panel][3] go to the <span class="iconify-inline" data-icon="mdi:view-dashboard-edit"></span>**Interfaces** section
 
-- Нажать на кнопку <span class='iconify-inline' data-icon='mdi:plus'></span>
+- Click on the button <span class='iconify-inline' data-icon='mdi:plus'></span>
 
-- Ввести уникальное имя и нажать кнопку **ОК**.
+- Enter a unique name and click the **OK** button.
 
-- Щелкнуть по [плитке нового интерфейса][4]
+- Click on [new interface tile][4]
 
-- Перевести открывшийся пустой интерфейс в [режим редактирования][5] нажав в правом нижнем углу экрана кнопку <span class="iconify-inline" data-icon="mdi:view-dashboard-edit" style="color: white; background-color: red"></span>.
+- Switch the opened empty interface to [edit mode][5] by clicking the button in the lower right corner of the screen<span class="iconify-inline" data-icon="mdi:view-dashboard-edit" style="color: white; background" -color: red"></span>.
 
-- [Добавить][6] необходимые виджеты с помощью кнопки <span class="iconify-inline" data-icon="mdi:view-grid-plus"></span> в верхней части экрана.
+- [Add][6] necessary widgets using the <span class="iconify-inline" data-icon="mdi:view-grid-plus"></span> button at the top of the screen.
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-С видео примером можно ознакомиться в разделе [видео](./video.md).
+A video example can be found in the [video](./video.md) section.
 :::
 
 [1]: /desc/interface.md

@@ -1,23 +1,23 @@
-# Тарифы
+# Rates
 
-## Сменить тариф
+## Change tariff
 
-- [Перейти][1] в [рабочее пространство][2].
+- [Go][1] to [workspace][2].
 
-- Перейти на вкладку <span class="iconify-inline" data-icon="mdi:credit-card-clock"></span>[Биллинг][3]
+- Go to the <span class="iconify-inline" data-icon="mdi:credit-card-clock"></span>[Billing][3] tab
 
-- На плитке текущего тарифа нажать на кнопку **СМЕНИТЬ ТАРИФ**
+- On the current tariff tile, click on the **CHANGE TARIFF** button
 
-- Выбрать новый [тариф][4] нажав на кнопку **ВЫБРАТЬ** на плитке необходимого [тарифа][4].
+- Select a new [tariff][4] by clicking on the **SELECT** button on the tile of the required [tariff][4].
 
-  ![Billing](/images/common/workspace_billing_payplans_change.png)
+ ![Billing](/images/common/workspace_billing_payplans_change.png)
 
 ::: tip <span class="iconify" data-icon="mdi:information" style="color: #42b983; font-size: 24px;"></span>
-  В настоящий момент поменять тариф могут только администраторы платформы.
+ Currently, only platform administrators can change the tariff.
 :::
 
 
-[1]: ./workspace.md#переход-в-рабочее-пространство
+[1]: ./workspace.md#go-to-workspace
 [2]: /desc/workspace.md
-[3]: /desc/workspace.md#биллинг
+[3]: /desc/workspace.md#billing
 [4]: /desc/payplan.md

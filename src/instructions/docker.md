@@ -1,143 +1,142 @@
-# Докер образы
+# Docker Images
 
-## Создание Докер образа в рабочем пространстве
+## Creating a Docker Image in a Workspace
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-С видео примером можно ознакомиться в разделе [видео](./video.md).
+You can see a video tutorial in the [video](./video.md) section.
 :::
 
-Для создания [Докер образа][1] необходимо:
+To create a [Docker image][1], you need to:
 
-- [Перейти][2] в [рабочее пространство][3]
+- [Go to][2] your [workspace][3]
 
-- Перейти на вкладку <span class='iconify-inline' data-icon='mdi:cogs'></span> **РЕСУРСЫ**
+- Go to the <span class='iconify-inline' data-icon='mdi:cogs'></span> **RESOURCES** tab
 
   ![Docker images](/images/common/dashboard_user_workspace_resources_new.png)
 
-- Напротив надписи <span class="iconify-inline" data-icon="mdi:docker"></span> **Docker-образы** нажать на кнопку <span class="iconify-inline" data-icon="mdi:plus"></span> <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span> и далее набрать полное название Докер образа <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
+- Next to the <span class="iconify-inline" data-icon="mdi:docker"></span> **Docker images** label, click the <span class="iconify-inline" data-icon="mdi:plus"></span> <span class='iconify-inline' data-icon='ph:number-circle-one-fill' style="color: red"></span> button and then type the full name of the Docker image <span class='iconify-inline' data-icon='ph:number-circle-two-fill' style="color: red"></span>.
 
   ![Docker image add](/images/common/dashboard_user_workspace_resources_add_docker.png)
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-Примеры названий:
+Examples of names:
 
-- `docker.io/myrepo/myimagename:latest` - при размещении образа в общем реестре на [Dockerhub](https://hub.docker.com/)
-- `myrepo/myimagename:latest` - при размещении образа в общем реестре на [Dockerhub](https://hub.docker.com/)
-- `mycompanyregister.com/myrepo/myimagename:latest` - при размещении образа в собственном реестре
+- `docker.io/myrepo/myimagename:latest` - when placing the image in a public registry on [Dockerhub](https://hub.docker.com/)
+- `myrepo/myimagename:latest` - when placing the image in a public registry on [Dockerhub](https://hub.docker.com/)
+- `mycompanyregister.com/myrepo/myimagename:latest` - when placing the image in your own registry
   :::
 
 ::: warning <span class='iconify' data-icon='emojione-v1:warning' style='color: #e7c000; font-size: 24px;'></span>
-При размещении образа на [Dockerhub](https://hub.docker.com/) или на собственном реестре необходимо предоставление публичных прав на чтение образа.
+When placing the image on [Dockerhub](https://hub.docker.com/) or your own registry, you need to provide public read rights to the image.
 :::
 
 ::: tip <span class='iconify' data-icon='mdi:information' style='color: #42b983; font-size: 24px;'></span>
-В тестовых целях возможно использовать локальный публичный реестре платформы. В этом случае названия Докер образов будут иметь вид:
+For testing purposes, you can use the platform's public local registry. In this case, Docker image names will look like this:
 
 `rep.rndflow.com/myrepo/myimagename:latest`
 
 <div class="custom-container danger">
   <p class="custom-container-title"><span class='iconify' data-icon='gg:danger' style='color: #cc0000; font-size: 18px;'/></p>
-  <p style='font-size: 14px;'>Внимание! Использовать только для "одноразовых" тестовых целей. Файлы, размещенные в тестовом репозитории, могут быть удалены без предупреждения в любой момент! Сам тествый сервис также может быть отключен в любой момент без предупреждения!</p>
+  <p style='font-size: 14px;'>Attention! Use only for "one-time" testing purposes. Files placed in the test repository may be deleted without warning at any time! The test service itself may also be disabled at any time without warning!</p>
 </div>
 
 :::
 
-
 ::: danger <span class='iconify' data-icon='gg:danger' style='color: #cc0000; font-size: 24px;'/>
-Для Докер образа действуют следующие правила:
+The following rules apply to Docker images:
 
-- Название образа должно быть уникальным для **всей** платформы.
-- Права пересборки образа имеет только владелец рабочего пространства, в котором он был создан.
+- The image name must be unique for the **entire** platform.
+- Only the owner of the workspace in which it was created has the rights to rebuild the image.
   :::
 
-- После нажатия кнопки будет создана [плитка][4] Докер образа
+- After clicking the button, a Docker image [tile][4] will be created
   ![Docker image add](/images/common/dashboard_user_workspace_resources_docker_not_build.png)
 
-- После щелчка по плитке Докер образа будет открыто окно редактора
+- Clicking on the Docker image tile will open the editor window
 
   ![Docker image editor](/images/common/dashboard_user_workspace_resources_docker_editor_not_build.png)
 
 
-Существет две возможности предоставления файлов для сборки образа:
+There are two ways to provide files for building the image:
 
-  - [Непосредственное создание файла Dockefile](#непосредственное-создание-фаила-сборки)
+  - [Directly create a Dockerfile file](#direct-creation-of-a-build-file)
 
-  - [Использование внешнего Git репозитория с файлами сборки](#использование-внешнего-git-репозитория-с-фаилами-сборки)
+  - [Using an external Git repository with build files](#using-an-external-git-repository-with-build-files)
 
-### Непосредственное создание файла сборки
+### Directly create a build file
 
-- В **Параметры сборки** выбрать **ЛОКАЛЬНАЯ ПАПКА**.
+- Select **LOCAL FOLDER** in **Build Options**.
 
-- Ввести [команды создания образа][7] в редакторе **Dockerfile**.
+- Enter the [image creation commands][7] in the **Dockerfile** editor.
 
-  Смотреть примеры в инструкции [Создание Докер образа вне платформы][5]
+  See examples in the instruction [Creating a Docker image outside the platform][5]
 
-- Нажать кнопку **СОХРАНИТЬ**.
+- Click the **SAVE** button.
 
-- Нажать кнопку **СОБРАТЬ**.
+- Click the **BUILD** button.
 
-- Убедиться, что определенный платформой Докер реестр корректен. При необходимости изменить.
+- Make sure the platform-defined Docker registry is correct. Change it if necessary.
 
-- Ввести, при необходимости, логин и пароль к Докер реестру, в который будет загружаться созданный образ.
+- Enter, if necessary, the login and password to the Docker registry to which the created image will be uploaded.
 
-  > Если Докер реестр не требует авторизации для записи образов, то оставить данные поля незаполненными.
+  > If the Docker registry does not require authorization for writing images, leave these fields blank.
 
   ![Docker image editor](/images/common/dashboard_user_workspace_resources_docker_editor_auth.png)
 
-- Нажать кнопку **СОБРАТЬ**.
+- Click the **BUILD** button.
 
-- Будет запущена сборка
+- The build will start
 
   ![Docker image build process](/images/common/dashboard_user_workspace_resources_docker_editor_build.png)
 
-- После успешного завершения редактор примет вид:
+- After successful completion, the editor will look like:
 
   ![Docker image editor after build](/images/common/dashboard_user_workspace_resources_docker_editor_аfter_build.png)
 
-- На вкладке <span class='iconify-inline' data-icon='mdi:cogs'></span> **РЕСУРСЫ** в разделе <span class="iconify-inline" data-icon="mdi:docker"></span> **Docker-образы** соответстующая плитка примет вид:
+- On the <span class='iconify-inline' data-icon='mdi:cogs'></span> **RESOURCES** tab in the <span class="iconify-inline" data-icon="mdi:docker"></span> **Docker images** section, the corresponding tile will look like:
 
   ![Docker image after build](/images/common/dashboard_user_workspace_resources_docker_after_build.png)
 
-### Использование внешнего Git репозитория с файлами сборки
+### Using an external Git repository with build files
 
-- В **Параметры сборки** выбрать **GIT РЕПОЗИТОРИЙ**.
-- Ввести URL Git репозитория с файлами сборки Докер образа.
-- Нажать кнопку **СОХРАНИТЬ**.
-- Нажать кнопку **СОБРАТЬ**.
+- Select **GIT REPOSITORY** in **Build Options**.
+- Enter the URL of the Git repository with the Docker image build files.
+- Click the **SAVE** button.
+- Click the **BUILD** button.
 
-- Убедиться, что определенный платформой Докер реестр корректен. При необходимости изменить.
+- Make sure the platform-defined Docker registry is correct. Change it if necessary.
 
-- Ввести, при необходимости, логин и пароль к Докер реестру, в который будет загружаться созданный образ.
+- Enter, if necessary, the login and password to the Docker registry to which the created image will be uploaded.
 
-  > Если Докер реестр не требует авторизации для записи образов, то оставить данные поля незаполненными.
+  > If the Docker registry does not require authorization for writing images, leave these fields blank.
 
-- В случае использования приватного Git репозитория для загрузки файлов сборки образа вести персональный токен для доступа.
+- If you are using a private Git repository to upload image build files, enter your personal access token.
 
-> Если Git репозиторий является публичным и не требует авторизации, то поле для ввода токена оставить незаполненным.
-> Описание создания персонального токена для [GitHub][8] и [GitLab][9].
+> If the Git repository is public and does not require authorization, leave the token field blank.
+> Description of creating a personal token for [GitHub][8] and [GitLab][9].
 
 ![Docker image editor git context](/images/common/dashboard_user_workspace_resources_docker_editor_git.png)
 
-- Нажать кнопку **СОБРАТЬ**.
+- Click the **BUILD** button.
 
-- Будет запущена сборка
+- The build will start
 
-## Создание Докер образа вне платформы
+## Creating a Docker Image Outside the Platform
 
-1. Зарегистрироваться на [публичном Докер реестре](https://hub.docker.com/).
-2. Создать новый репозиторий _imagename_
+1. Register on a [public Docker registry](https://hub.docker.com/).
+2. Create a new repository _imagename_
 
-   _imagename_ - произвольное название: mycoolimage или python-projectXX
+   _imagename_ is an arbitrary name: mycoolimage or python-projectXX
 
-3. Установить [Докер приложение](https://www.docker.com/) на локальный компьютер. Пользователи Windows могут установливать [Docker Desktop](https://www.docker.com/products/docker-desktop).
+3. Install the [Docker application](https://www.docker.com/) on your local computer. Windows users can install [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
-   Также можно использовать публичные сервисы работы с Докер образами, например [Play with Docker](https://labs.play-with-docker.com/).
+   You can also use public Docker image services, such as [Play with Docker](https://labs.play-with-docker.com/).
 
-4. Создать новый _Dockerfile_ файл на основе [стандартных образов][6].
+4. Create a new _Dockerfile_ file based on the [standard images][6].
 
-   **Вариант 1**
+   **Option 1**
 
-   Для создания собственного образа необходимо использовать базовый образ [rndflow/job.py](https://hub.docker.com/r/rndflow/job.py/tags?page=1&ordering=last_updated).
+   To create your own image, you need to use the base image [rndflow/job.py](https://hub.docker.com/r/rndflow/job.py/tags?page=1&ordering=last_updated).
 
    ```dockerfile:no-line-numbers
    FROM docker.io/rndflow/job.py
@@ -147,7 +146,7 @@
 
    **Вариант 2**
 
-   В случае необходимости использовать образ операционной системы отличный от используемого в [rndflow/job.py](https://hub.docker.com/r/rndflow/job.py/tags?page=1&ordering=last_updated) необходимо самостоятельно устанавливать библиотекy [job.py](https://github.com/rndflow/rndflow-job-py). Также необходимо установить библиотеки moreutils, procps, curl, zlib1g-dev, libjpeg-dev.
+   If you need to use an operating system image different from that used in [rndflow/job.py](https://hub.docker.com/r/rndflow/job.py/tags?page=1&ordering=last_updated), you must install the library yourself [ job.py](https://github.com/rndflow/rndflow-job-py). You also need to install the moreutils, procps, curl, zlib1g-dev, libjpeg-dev libraries.
 
    ```dockerfile:no-line-numbers
    FROM ...
@@ -158,41 +157,41 @@
    ...
    ```
 
-   Если при этом требуется поддержка интерактивного сервера [Jupyter](https://jupyter.org/), то необходимо установить:
+   If you require support for the interactive server [Jupyter](https://jupyter.org/), then you need to install:
 
    ```dockerfile:no-line-numbers
    RUN pip3 install notebook jupytext
    ```
 
-   **Вариант 3**
+   **Option 3**
 
-   Если требуется поддержка счета на AMD или NVIDIA GPU картах, то необходимо использовать соответствующие базовые образы.
+ If account support is required on AMD or NVIDIA GPU cards, then you must use the appropriate base images.
 
-5. Собрать образ из _Dockerfile_ (если используется _podman_, то заменить _docker_ на _podman_).
+5. Build the image from _Dockerfile_ (if _podman_ is used, then replace _docker_ with _podman_).
 
-   В папке с _Dockerfile_: `docker build -t user/imagename:1.0 .` или `docker build -t user/imagename:1.0 -f _Dockerfile_ .`
+ In the folder with _Dockerfile_: `docker build -t user/imagename:1.0 .` or `docker build -t user/imagename:1.0 -f _Dockerfile_ .`
 
-   Здесь _user/imagename_ - пользователь реестра/название образа (репозитория реестра из пункта _2_ ), _:1.0_ - версия.
+ Here _user/imagename_ is the registry user/image name (registry repository from point _2_), _:1.0_ is the version.
 
-   ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
-   При пересборке образа без изменения _Dockerfile_ файла необходимо очистить кеш предыдущей сборки. Например, можно удалить последний образ: `docker rmi user/imagename:1.0`
+ ::: warning <span class="iconify" data-icon="emojione-v1:warning" style="color: #e7c000; font-size: 24px;"></span>
+ When rebuilding an image without changing the _Dockerfile_ file, you must clear the cache of the previous build. For example, you can delete the latest image: `docker rmi user/imagename:1.0`
 
-   или осуществлять сборку без использования кеша: `docker build -t user/imagename:1.0 . --no-cache`
-   :::
+ or build without using the cache: `docker build -t user/imagename:1.0 . --no-cache`
+ :::
 
-6. Проверить появление образа: `docker image ls`
-7. Тестовый запуск: `docker run -it --rm imagename`
-8. Загрузить новый образ на [публичный Докер реестр](https://hub.docker.com/)
+6. Check the appearance of the image: `docker image ls`
+7. Test run: `docker run -it --rm imagename`
+8. Upload a new image to the [public Docker registry](https://hub.docker.com/)
 
-   - Подключиться к реестру : `docker login -u user -p **********`
+ - Connect to the registry: `docker login -u user -p **********`
 
-     или чтобы не оставлять пароль в истории команд : `docker login -u user`
+ or to avoid leaving the password in the command history: `docker login -u user`
 
-   - Загрузить образ в реестр: `docker push user/imagename:1.0`
+ - Upload the image to the registry: `docker push user/imagename:1.0`
 
-9. Если необходимо удалить ошибочно загруженный образ из реестра: [Инструкция удаления образа](https://stackoverflow.com/questions/30680703/remove-an-image-tag-from-docker-hub/60112300#60112300)
+9. If you need to remove an erroneously downloaded image from the registry: [Image removal instructions](https://stackoverflow.com/questions/30680703/remove-an-image-tag-from-docker-hub/60112300#60112300)
 
-10. Если сборка идет на стороннем сервисе, то рекомендуется отсоединиться от реестра: `docker logout`
+10. If the build is performed on a third-party service, it is recommended to disconnect from the registry: `docker logout`
 
 [1]: /desc/docker.md
 [2]: /instructions/workspace.html#переход-в-рабочее-пространство

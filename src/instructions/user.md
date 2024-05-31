@@ -1,53 +1,53 @@
-# Пользователи
+# Users
 
-## Проект
+## Project
 
-### Добавить пользователя
+###Add user
 
-Для создания нового [пользователя проекта][1] необходимо:
+To create a new [project user][1], you must:
 
-- [Открыть][2] необходимый проект.
+- [Open][2] required project.
 
-- В [панели управления проектом][3] перейти в раздел <span class="iconify-inline" data-icon="mdi:shield-account"></span>**Разрешения**
+- In the [project control panel][3] go to the <span class="iconify-inline" data-icon="mdi:shield-account"></span>**Permissions** section
 
-- [Добавить][5] новую [роль][6] при необходимости.
+- [Add][5] new [role][6] if necessary.
 
-- Перейти на вкладку <span class='iconify-inline' data-icon='mdi:account-multiple'></span> **Пользователи**.
+- Go to the <span class='iconify-inline' data-icon='mdi:account-multiple'></span> **Users** tab.
 
-- Нажать на кнопку добавления нового пользователя ![Add button](/images/common/red_plus.png) в правом нижнем углу экрана.
+- Click on the add new user button ![Add button](/images/common/red_plus.png) in the lower right corner of the screen.
 
-- В диалоговом окне выбрать пользователя и его роли. Нажать кнопку **ДОБАВИТЬ**.
+- In the dialog box, select the user and his roles. Click the **ADD** button.
 
-  ![User add](/images/common/permissions_user_add.png)
+ ![User add](/images/common/permissions_user_add.png)
 
-### Удалить пользователя
+### Delete user
 
-Для удаления [пользователя из проекта][1]:
+To remove [user from project][1]:
 
-- [Открыть][2] необходимый проект.
+- [Open][2] required project.
 
-- В [панели управления проектом][3] перейти в раздел <span class="iconify-inline" data-icon="mdi:shield-account"></span>**Разрешения**
+- In the [project control panel][3] go to the <span class="iconify-inline" data-icon="mdi:shield-account"></span>**Permissions** section
 
-- Перейти на вкладку <span class='iconify-inline' data-icon='mdi:account-multiple'></span> **Пользователи**.
+- Go to the <span class='iconify-inline' data-icon='mdi:account-multiple'></span> **Users** tab.
 
-- На [плитке пользователя][4] нажать на кнопку <span class="iconify-inline" data-icon="mdi:close-circle"></span> для удаления всех ролей пользователя.
+- On the [user tile][4] click on the <span class="iconify-inline" data-icon="mdi:close-circle"></span> button to delete all user roles.
 
-## Рабочее пространство
+## Working space
 
-### Добавить пользователя
+###Add user
 
-Смотреть [добавление][7] участника в разделе [Рабочее пространство][8].
+See [addition][7] of the participant in the [Workspace][8] section.
 
-### Удалить пользователя
+### Delete user
 
-Смотреть [удаление][9] участника в разделе [Рабочее пространство][8].
+See [removal][9] of a participant in the [Workspace][8] section.
 
 [1]: /desc/project_user.md
-[2]: ./project.md#открытие-проекта
-[3]: /desc/project.md#панель-управления-проектом
-[4]: /desc/project_user.md#плитка-пользователя
-[5]: ./role.md#создание-новой-роли
+[2]: ./project.md#opening-project
+[3]: /desc/project.md#project-control panel
+[4]: /desc/project_user.md#user-tile
+[5]: ./role.md#create-new-role
 [6]: /desc/project_role.md
-[7]: ./workspace.md#добавить-участника
+[7]: ./workspace.md#add-participant
 [8]: ./workspace.md
-[9]: ./workspace.md#удалить-участника
+[9]: ./workspace.md#remove-participant
