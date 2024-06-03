@@ -1,4 +1,4 @@
-# Are common
+# General
 
 ## Registration
 

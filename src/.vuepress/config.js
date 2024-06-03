@@ -53,7 +53,7 @@ module.exports = {
           },
           {
             text: 'Platform',
-            link: 'https://server.rndflow.com',
+            link: 'https://rnd-srv.nowecom.ru/',
           },
         ],
         sidebar: {
@@ -128,5 +128,6 @@ module.exports = {
         },
       },
     ),
+    'vuepress-plugin-export'
   ],
 };

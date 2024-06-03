@@ -14,7 +14,7 @@ To create a new [interface][1] you need to:
 
 - Click on [new interface tile][4]
 
-- Switch the opened empty interface to [edit mode][5] by clicking the button in the lower right corner of the screen<span class="iconify-inline" data-icon="mdi:view-dashboard-edit" style="color: white; background" -color: red"></span>.
+- Switch the opened empty interface to [edit mode][5] by clicking the button in the lower right corner of the screen <span class="iconify-inline" data-icon="mdi:view-dashboard-edit" style="color: white; background-color: red"></span>.
 
 - [Add][6] necessary widgets using the <span class="iconify-inline" data-icon="mdi:view-grid-plus"></span> button at the top of the screen.
 
